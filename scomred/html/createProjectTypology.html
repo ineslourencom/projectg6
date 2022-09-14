@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/geral.css">
+<script src="../js/createTypology.js"></script>
+
+</head>
+
+<body>
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Homepage</a>
+</div>
+<div class="container">
+    <div style="text-align:left">
+        <h2>Create New Project Typology</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="name">Name:</label>
+                <input  id="name" type=text placeholder="Enter your Name...">
+                <br>
+                <br>
+                <label for="description">Description:</label>
+                <br>
+                <textarea id="description" placeholder="Enter a Description..."rows=4 cols=40></textarea>
+                <br>
+                <input type="button" id="submit" name="submit" value="Submit" onclick="createTypology()">
+
+                <hr/>
+                <div id ="result"></div>
+
+
+            </form></div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+
+</html>

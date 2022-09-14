@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor Administrator
+
+usecase (US024 - As Administrator, I want to get a list all user accounts and their status.)
+
+:Administrator: -- (US024 - As Administrator, I want to get a list all user accounts and their status.)
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor Director
+
+usecase (US012 - As Director,  I want to create a new project typology.)
+
+:Director: -- (US012 - As Director,  I want to create a new project typology.)
+@enduml

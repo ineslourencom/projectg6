@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="744px" preserveAspectRatio="none" style="width:552px;height:744px;background:#FFFFFF;" version="1.1" viewBox="0 0 552 744" width="552px" zoomAndPan="magnify"><defs><filter height="300%" id="f1w9kzythblole" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[675d8d0c25edfef09fe39bb1ae3ca18f]
+class NewDateSprintUI--><rect codeLine="3" fill="#FFFFFF" filter="url(#f1w9kzythblole)" height="48" id="NewDateSprintUI" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,3.0;" width="127" x="7" y="21"/><ellipse cx="22" cy="37" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><path d="M24,33.5 Q24.2031,33 24.4375,32.75 Q24.6719,32.5 24.9375,32.5 Q25.4063,32.5 25.7031,32.7813 Q26,33.0625 26,33.7188 L26,35.2813 Q26,35.9375 25.7188,36.2188 Q25.4375,36.5 25,36.5 Q24.6094,36.5 24.3594,36.3281 Q24.1094,36.1563 24,35.7031 Q23.9531,35.3906 23.7813,35.2188 Q23.4688,34.8906 22.9063,34.7031 Q22.3438,34.5 21.7813,34.5 Q21.0781,34.5 20.4844,34.7813 Q19.9063,35.0625 19.4531,35.6875 Q19,36.3125 19,37.1719 L19,38.0938 Q19,39.125 19.8438,39.8125 Q20.6875,40.5 22.1875,40.5 Q23.0781,40.5 23.7031,40.2969 Q24.0625,40.1875 24.4688,39.8281 Q24.7344,39.625 24.875,39.5625 Q25.0156,39.5 25.1875,39.5 Q25.5156,39.5 25.75,39.7656 Q26,40.0156 26,40.375 Q26,40.7188 25.6563,41.125 Q25.1563,41.7188 24.3594,42.0469 Q23.3125,42.5 22.0313,42.5 Q20.5313,42.5 19.3281,41.9063 Q18.3594,41.4375 17.6719,40.4219 Q17,39.4063 17,38.2031 L17,37.1094 Q17,35.8594 17.5938,34.7656 Q18.2031,33.6719 19.25,33.0938 Q20.3125,32.5 21.5,32.5 Q22.2188,32.5 22.8438,32.75 Q23.4688,33 24,33.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="95" x="36" y="41.9102">NewDateSprintUI</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,3.0;" x1="8" x2="133" y1="53" y2="53"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,3.0;" x1="8" x2="133" y1="61" y2="61"/><!--MD5=[49cc92b0f05f86cb8640fdc18765f698]
+class NewSprintDateController--><rect codeLine="58" fill="#FFFFFF" filter="url(#f1w9kzythblole)" height="75.6719" id="NewSprintDateController" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,3.0;" width="369" x="169" y="7"/><ellipse cx="280.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><path d="M282.75,19.5 Q282.9531,19 283.1875,18.75 Q283.4219,18.5 283.6875,18.5 Q284.1563,18.5 284.4531,18.7813 Q284.75,19.0625 284.75,19.7188 L284.75,21.2813 Q284.75,21.9375 284.4688,22.2188 Q284.1875,22.5 283.75,22.5 Q283.3594,22.5 283.1094,22.3281 Q282.8594,22.1563 282.75,21.7031 Q282.7031,21.3906 282.5313,21.2188 Q282.2188,20.8906 281.6563,20.7031 Q281.0938,20.5 280.5313,20.5 Q279.8281,20.5 279.2344,20.7813 Q278.6563,21.0625 278.2031,21.6875 Q277.75,22.3125 277.75,23.1719 L277.75,24.0938 Q277.75,25.125 278.5938,25.8125 Q279.4375,26.5 280.9375,26.5 Q281.8281,26.5 282.4531,26.2969 Q282.8125,26.1875 283.2188,25.8281 Q283.4844,25.625 283.625,25.5625 Q283.7656,25.5 283.9375,25.5 Q284.2656,25.5 284.5,25.7656 Q284.75,26.0156 284.75,26.375 Q284.75,26.7188 284.4063,27.125 Q283.9063,27.7188 283.1094,28.0469 Q282.0625,28.5 280.7813,28.5 Q279.2813,28.5 278.0781,27.9063 Q277.1094,27.4375 276.4219,26.4219 Q275.75,25.4063 275.75,24.2031 L275.75,23.1094 Q275.75,21.8594 276.3438,20.7656 Q276.9531,19.6719 278,19.0938 Q279.0625,18.5 280.25,18.5 Q280.9688,18.5 281.5938,18.75 Q282.2188,19 282.75,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="137" x="301.25" y="27.9102">NewSprintDateController</text><line style="stroke:#000000;stroke-width:1.5;" x1="170" x2="537" y1="39" y2="39"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="170" x2="537" y1="47" y2="47"/><ellipse cx="180" cy="58" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="189" y="62.4189">getProjectList () : ListProjDTO</text><ellipse cx="180" cy="71.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="343" x="189" y="76.2549">setNewStartDateSprint (LocalDate newStartDate, int number) : boolean</text><!--MD5=[0b093365228622c45137660e80ad3da3]
+class iTCompany--><rect codeLine="53" fill="#FFFFFF" filter="url(#f1w9kzythblole)" height="70.0234" id="iTCompany" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,3.0;" width="111" x="298" y="143"/><ellipse cx="320.2" cy="163.0938" fill="#FFC0CB" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><path d="M318.7,167.0938 Q318.4188,167.7344 318.2313,167.9219 Q318.0594,168.0938 317.8094,168.0938 Q317.3094,168.0938 316.9969,167.875 Q316.7,167.6406 316.7,167.0938 L316.7,166.0938 Q316.7,165.5469 316.95,165.3281 Q317.2,165.0938 317.6063,165.0938 Q317.9188,165.0938 318.1375,165.1719 Q318.3563,165.25 318.4656,165.4375 Q318.575,165.625 318.7,165.6875 Q318.8563,165.8281 319.2625,165.9688 Q319.6688,166.0938 320.1531,166.0938 Q320.9031,166.0938 321.3875,165.6406 Q321.7,165.375 321.7,164.9844 Q321.7,164.7188 321.5438,164.4844 Q321.3875,164.25 321.0438,164.0938 Q320.825,163.9844 320.0438,163.8125 Q318.5906,163.5938 318.075,163.25 Q317.575,162.9063 317.1375,162.2969 Q316.7,161.6719 316.7,160.9531 Q316.7,159.8125 317.5594,158.9531 Q318.4344,158.0938 319.8094,158.0938 Q320.3719,158.0938 320.6531,158.3438 Q320.9344,158.5938 321.7,159.0938 Q322.1375,158.0938 322.575,158.0938 Q323.075,158.0938 323.3875,158.3125 Q323.7,158.5313 323.7,159.0469 L323.7,160.125 Q323.7,160.6563 323.45,160.875 Q323.2,161.0938 322.8094,161.0938 Q322.4813,161.0938 322.2313,161 Q322.0438,160.9375 321.95,160.7344 Q321.8563,160.5313 321.7,160.4531 Q321.5125,160.2969 321.1375,160.2031 Q320.7625,160.0938 320.2625,160.0938 Q319.5438,160.0938 319.1219,160.4531 Q318.7,160.8125 318.7,161.2031 Q318.7,161.4688 318.8406,161.7188 Q318.9969,161.9531 319.2938,162.0938 Q319.4813,162.1875 320.5594,162.4063 Q321.6375,162.625 322.1844,162.9219 Q322.7313,163.2031 323.2156,163.8125 Q323.7,164.4219 323.7,165.2813 Q323.7,166.4531 323.0281,167.1563 Q322.1219,168.0938 320.7313,168.0938 Q320.2,168.0938 319.6844,167.8438 Q319.1844,167.5938 318.7,167.0938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="66" x="334.3" y="160.457">«Singleton»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="63" x="335.8" y="175.5508">iTCompany</text><line style="stroke:#000000;stroke-width:1.5;" x1="299" x2="408" y1="183.1875" y2="183.1875"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="299" x2="408" y1="191.1875" y2="191.1875"/><ellipse cx="309" cy="202.1875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="318" y="206.6064">getProjectStore ()</text><!--MD5=[0cf43f64de24b70e8ffe65ff9ee7abee]
+class ProjectStore--><rect codeLine="48" fill="#FFFFFF" filter="url(#f1w9kzythblole)" height="61.8359" id="ProjectStore" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,3.0;" width="206" x="250.5" y="273"/><ellipse cx="315.75" cy="289" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><path d="M317.75,285.5 Q317.9531,285 318.1875,284.75 Q318.4219,284.5 318.6875,284.5 Q319.1563,284.5 319.4531,284.7813 Q319.75,285.0625 319.75,285.7188 L319.75,287.2813 Q319.75,287.9375 319.4688,288.2188 Q319.1875,288.5 318.75,288.5 Q318.3594,288.5 318.1094,288.3281 Q317.8594,288.1563 317.75,287.7031 Q317.7031,287.3906 317.5313,287.2188 Q317.2188,286.8906 316.6563,286.7031 Q316.0938,286.5 315.5313,286.5 Q314.8281,286.5 314.2344,286.7813 Q313.6563,287.0625 313.2031,287.6875 Q312.75,288.3125 312.75,289.1719 L312.75,290.0938 Q312.75,291.125 313.5938,291.8125 Q314.4375,292.5 315.9375,292.5 Q316.8281,292.5 317.4531,292.2969 Q317.8125,292.1875 318.2188,291.8281 Q318.4844,291.625 318.625,291.5625 Q318.7656,291.5 318.9375,291.5 Q319.2656,291.5 319.5,291.7656 Q319.75,292.0156 319.75,292.375 Q319.75,292.7188 319.4063,293.125 Q318.9063,293.7188 318.1094,294.0469 Q317.0625,294.5 315.7813,294.5 Q314.2813,294.5 313.0781,293.9063 Q312.1094,293.4375 311.4219,292.4219 Q310.75,291.4063 310.75,290.2031 L310.75,289.1094 Q310.75,287.8594 311.3438,286.7656 Q311.9531,285.6719 313,285.0938 Q314.0625,284.5 315.25,284.5 Q315.9688,284.5 316.5938,284.75 Q317.2188,285 317.75,285.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="67" x="336.25" y="293.9102">ProjectStore</text><line style="stroke:#000000;stroke-width:1.5;" x1="251.5" x2="455.5" y1="305" y2="305"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="251.5" x2="455.5" y1="313" y2="313"/><ellipse cx="261.5" cy="324" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="180" x="270.5" y="328.4189">findProjectByCode (int code) : Project</text><!--MD5=[79d378210367c0c6ec62ef762ddfbd1b]
+class Project--><rect codeLine="27" fill="#FFFFFF" filter="url(#f1w9kzythblole)" height="131.0156" id="Project" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,3.0;" width="355" x="176" y="395"/><ellipse cx="330.25" cy="411" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><path d="M332.25,407.5 Q332.4531,407 332.6875,406.75 Q332.9219,406.5 333.1875,406.5 Q333.6563,406.5 333.9531,406.7813 Q334.25,407.0625 334.25,407.7188 L334.25,409.2813 Q334.25,409.9375 333.9688,410.2188 Q333.6875,410.5 333.25,410.5 Q332.8594,410.5 332.6094,410.3281 Q332.3594,410.1563 332.25,409.7031 Q332.2031,409.3906 332.0313,409.2188 Q331.7188,408.8906 331.1563,408.7031 Q330.5938,408.5 330.0313,408.5 Q329.3281,408.5 328.7344,408.7813 Q328.1563,409.0625 327.7031,409.6875 Q327.25,410.3125 327.25,411.1719 L327.25,412.0938 Q327.25,413.125 328.0938,413.8125 Q328.9375,414.5 330.4375,414.5 Q331.3281,414.5 331.9531,414.2969 Q332.3125,414.1875 332.7188,413.8281 Q332.9844,413.625 333.125,413.5625 Q333.2656,413.5 333.4375,413.5 Q333.7656,413.5 334,413.7656 Q334.25,414.0156 334.25,414.375 Q334.25,414.7188 333.9063,415.125 Q333.4063,415.7188 332.6094,416.0469 Q331.5625,416.5 330.2813,416.5 Q328.7813,416.5 327.5781,415.9063 Q326.6094,415.4375 325.9219,414.4219 Q325.25,413.4063 325.25,412.2031 L325.25,411.1094 Q325.25,409.8594 325.8438,408.7656 Q326.4531,407.6719 327.5,407.0938 Q328.5625,406.5 329.75,406.5 Q330.4688,406.5 331.0938,406.75 Q331.7188,407 332.25,407.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="350.75" y="415.9102">Project</text><line style="stroke:#000000;stroke-width:1.5;" x1="177" x2="530" y1="427" y2="427"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="182" y="442.4189">startDate : LocalDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="182" y="456.2549">endDate : LocalDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="44" x="182" y="470.0908">code : int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="182" y="483.9268">sprintDuration :int</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="177" x2="530" y1="490.3438" y2="490.3438"/><ellipse cx="187" cy="501.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="196" y="505.7627">getProjectList() : ProjectStore</text><ellipse cx="187" cy="515.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="329" x="196" y="519.5986">setNewStartDateSprint (LocalDate newStartDate, number) : boolean</text><!--MD5=[452a66c2e8d45f5bd209be454bbcd04f]
+class Sprint--><rect codeLine="37" fill="#FFFFFF" filter="url(#f1w9kzythblole)" height="144.8516" id="Sprint" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,3.0;" width="357" x="175" y="586"/><ellipse cx="333.25" cy="602" fill="#ADD1B2" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><path d="M335.25,598.5 Q335.4531,598 335.6875,597.75 Q335.9219,597.5 336.1875,597.5 Q336.6563,597.5 336.9531,597.7813 Q337.25,598.0625 337.25,598.7188 L337.25,600.2813 Q337.25,600.9375 336.9688,601.2188 Q336.6875,601.5 336.25,601.5 Q335.8594,601.5 335.6094,601.3281 Q335.3594,601.1563 335.25,600.7031 Q335.2031,600.3906 335.0313,600.2188 Q334.7188,599.8906 334.1563,599.7031 Q333.5938,599.5 333.0313,599.5 Q332.3281,599.5 331.7344,599.7813 Q331.1563,600.0625 330.7031,600.6875 Q330.25,601.3125 330.25,602.1719 L330.25,603.0938 Q330.25,604.125 331.0938,604.8125 Q331.9375,605.5 333.4375,605.5 Q334.3281,605.5 334.9531,605.2969 Q335.3125,605.1875 335.7188,604.8281 Q335.9844,604.625 336.125,604.5625 Q336.2656,604.5 336.4375,604.5 Q336.7656,604.5 337,604.7656 Q337.25,605.0156 337.25,605.375 Q337.25,605.7188 336.9063,606.125 Q336.4063,606.7188 335.6094,607.0469 Q334.5625,607.5 333.2813,607.5 Q331.7813,607.5 330.5781,606.9063 Q329.6094,606.4375 328.9219,605.4219 Q328.25,604.4063 328.25,603.2031 L328.25,602.1094 Q328.25,600.8594 328.8438,599.7656 Q329.4531,598.6719 330.5,598.0938 Q331.5625,597.5 332.75,597.5 Q333.4688,597.5 334.0938,597.75 Q334.7188,598 335.25,598.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="32" x="353.75" y="606.9102">Sprint</text><line style="stroke:#000000;stroke-width:1.5;" x1="176" x2="531" y1="618" y2="618"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="181" y="633.4189">number : int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="181" y="647.2549">startDate : LocalDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="181" y="661.0908">endDate : LocalDate</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="176" x2="531" y1="667.5078" y2="667.5078"/><ellipse cx="186" cy="678.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="111" x="195" y="682.9268">getSprintNumber () : int</text><ellipse cx="186" cy="692.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="331" x="195" y="696.7627">isNewStartDateAfterPreviousEndDate (startDate, endDate) : boolean</text><ellipse cx="186" cy="706.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="292" x="195" y="710.5986">isNewEnDateBeforeThanNewStartDate (startDate) : boolean</text><ellipse cx="186" cy="720.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="195" y="724.4346">saveNewStartDate (newStartDate)</text><!--MD5=[008a6c0d81de74009b6ab640f39e7e06]
+link NewDateSprintUI to NewSprintDateController--><path codeLine="17" d="M134.06,45 C143.92,45 153.77,45 163.63,45 " fill="none" id="NewDateSprintUI-to-NewSprintDateController" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#000000" points="168.78,45,159.78,41,163.78,45,159.78,49,168.78,45" style="stroke:#000000;stroke-width:1.0;"/><!--MD5=[596b3d94476a35c24862fc60f58f5776]
+link NewSprintDateController to iTCompany--><path codeLine="18" d="M353.5,83.19 C353.5,100.19 353.5,120.34 353.5,137.6 " fill="none" id="NewSprintDateController-to-iTCompany" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#000000" points="353.5,142.86,357.5,133.86,353.5,137.86,349.5,133.86,353.5,142.86" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="277.9234" y="132.1628">iTCompany</text><!--MD5=[73b481ec798ad4ea716ee3ec2cc1f2c1]
+link iTCompany to ProjectStore--><path codeLine="19" d="M353.5,213.21 C353.5,230.1 353.5,250.46 353.5,267.52 " fill="none" id="iTCompany-to-ProjectStore" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="353.5,272.7,357.5,263.7,353.5,267.7,349.5,263.7,353.5,272.7" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="341.1641" y="234.4311">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96" x="243.1875" y="262.1427">allProjectStore 1</text><!--MD5=[c2999c5e21c0a7115ef87c36c02875b6]
+reverse link ProjectStore to Project--><path codeLine="22" d="M353.5,348.32 C353.5,362.76 353.5,379.19 353.5,394.9 " fill="none" id="ProjectStore-backto-Project" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="353.5,335.16,349.5,341.16,353.5,347.16,357.5,341.16,353.5,335.16" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="341.4172" y="356.4155">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70" x="275.4531" y="384.3635">projects 0..*</text><!--MD5=[d6d7f4a9855853da0e2cab67ce85ccf9]
+link Project to Sprint--><path codeLine="23" d="M353.5,526.22 C353.5,543.65 353.5,562.67 353.5,580.69 " fill="none" id="Project-to-Sprint" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="353.5,585.74,357.5,576.74,353.5,580.74,349.5,576.74,353.5,585.74" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="341.9328" y="547.3348">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="249.3953" y="574.9325">listOfSprints 0..*</text><!--MD5=[f25a5f6761679f00303512d6ceb4ab9b]
+@startuml
+'https://plantuml.com/class-diagram
+
+Class NewDateSprintUI #white;line:black;line.dotted;text:black
+Class NewSprintDateController #white;line:black;line.dotted;text:black
+Class iTCompany #white;line:black;line.dotted;text:black
+Class ProjectStore #white;line:black;line.dotted;text:black
+Class Project #white;line:black;line.dotted;text:black
+Class Sprint #white;line:black;line.dotted;text:black
+
+
+skinparam class {
+BackgroundColor #white
+ArrowColor #black
+BorderColor #black
+}
+
+NewDateSprintUI .right.>  NewSprintDateController
+NewSprintDateController  ..> "iTCompany " iTCompany
+iTCompany " 1 " - -> "allProjectStore 1 " ProjectStore
+
+
+ProjectStore "1 " o-down-"projects 0..* " Project
+Project "1 " - -> "listOfSprints 0..* " Sprint
+
+Class  ProjectStore #white;line:black;line.dotted;text:black
+
+Class  Project #white;line:black;line.dotted;text:black {
+startDate : LocalDate
+endDate : LocalDate
+code : int
+sprintDuration :int
+..
++ getProjectList() : ProjectStore
++ setNewStartDateSprint (LocalDate newStartDate, number) : boolean
+}
+
+Class Sprint #white;line:black;line.dotted;text:black {
+number : int
+startDate : LocalDate
+endDate : LocalDate
+..
++ getSprintNumber () : int
++ isNewStartDateAfterPreviousEndDate (startDate, endDate) : boolean
++ isNewEnDateBeforeThanNewStartDate (startDate) : boolean
++ saveNewStartDate (newStartDate)
+}
+
+Class ProjectStore #white;line:black;line.dotted;text:black {
+..
++ findProjectByCode (int code) : Project
+}
+
+Class iTCompany <<(S,pink)Singleton>> #white;line:black;line.dotted;text:black {
+..
++ getProjectStore ()
+}
+
+Class NewSprintDateController #white;line:black;line.dotted;text:black {
+..
++ getProjectList () : ListProjDTO
++ setNewStartDateSprint (LocalDate newStartDate, int number) : boolean
+}
+@enduml
+
+@startuml
+
+Class NewDateSprintUI #white;line:black;line.dotted;text:black
+Class NewSprintDateController #white;line:black;line.dotted;text:black
+Class iTCompany #white;line:black;line.dotted;text:black
+Class ProjectStore #white;line:black;line.dotted;text:black
+Class Project #white;line:black;line.dotted;text:black
+Class Sprint #white;line:black;line.dotted;text:black
+
+
+skinparam class {
+BackgroundColor #white
+ArrowColor #black
+BorderColor #black
+}
+
+NewDateSprintUI .right.>  NewSprintDateController
+NewSprintDateController  ..> "iTCompany " iTCompany
+iTCompany " 1 " - -> "allProjectStore 1 " ProjectStore
+
+
+ProjectStore "1 " o-down-"projects 0..* " Project
+Project "1 " - -> "listOfSprints 0..* " Sprint
+
+Class  ProjectStore #white;line:black;line.dotted;text:black
+
+Class  Project #white;line:black;line.dotted;text:black {
+startDate : LocalDate
+endDate : LocalDate
+code : int
+sprintDuration :int
+..
++ getProjectList() : ProjectStore
++ setNewStartDateSprint (LocalDate newStartDate, number) : boolean
+}
+
+Class Sprint #white;line:black;line.dotted;text:black {
+number : int
+startDate : LocalDate
+endDate : LocalDate
+..
++ getSprintNumber () : int
++ isNewStartDateAfterPreviousEndDate (startDate, endDate) : boolean
++ isNewEnDateBeforeThanNewStartDate (startDate) : boolean
++ saveNewStartDate (newStartDate)
+}
+
+Class ProjectStore #white;line:black;line.dotted;text:black {
+..
++ findProjectByCode (int code) : Project
+}
+
+Class iTCompany <<(S,pink)Singleton>> #white;line:black;line.dotted;text:black {
+..
++ getProjectStore ()
+}
+
+Class NewSprintDateController #white;line:black;line.dotted;text:black {
+..
++ getProjectList () : ListProjDTO
++ setNewStartDateSprint (LocalDate newStartDate, int number) : boolean
+}
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

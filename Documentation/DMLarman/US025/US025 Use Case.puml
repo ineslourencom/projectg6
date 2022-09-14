@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor Admnistrator
+
+usecase (US025 - As Admnistrator, I want to inactivate a user account.)
+
+:Admnistrator: -- (US025 - As Admnistrator, I want to inactivate a user account.)
+@enduml

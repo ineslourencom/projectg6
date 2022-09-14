@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1141px" preserveAspectRatio="none" style="width:1189px;height:1141px;background:#FFFFFF;" version="1.1" viewBox="0 0 1189 1141" width="1189px" zoomAndPan="magnify"><defs/><g><!--MD5=[77349be1bd27b81b697a0f9b3aded3c8]
+cluster infrastructure--><g id="cluster_infrastructure"><path d="M351.5,6 L449.5,6 A3.75,3.75 0 0 1 452,8.5 L459,29.6094 L728.5,29.6094 A2.5,2.5 0 0 1 731,32.1094 L731,257.5 A2.5,2.5 0 0 1 728.5,260 L351.5,260 A2.5,2.5 0 0 1 349,257.5 L349,8.5 A2.5,2.5 0 0 1 351.5,6 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="349" x2="459" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="353" y="22.5332">Infrastructure</text></g><!--MD5=[0334151241c2df87d13997940bbf650c]
+cluster persistence--><g id="cluster_persistence"><path d="M375.5,50 L460.5,50 A3.75,3.75 0 0 1 463,52.5 L470,73.6094 L704.5,73.6094 A2.5,2.5 0 0 1 707,76.1094 L707,233.5 A2.5,2.5 0 0 1 704.5,236 L375.5,236 A2.5,2.5 0 0 1 373,233.5 L373,52.5 A2.5,2.5 0 0 1 375.5,50 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="373" x2="470" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="84" x="377" y="66.5332">Persistence</text></g><!--MD5=[4a54ade28916d8d6c306c7d3e7d665ac]
+cluster IJPARepo--><g id="cluster_IJPARepo"><path d="M399.5,94 L520.5,94 A3.75,3.75 0 0 1 523,96.5 L530,117.6094 L680.5,117.6094 A2.5,2.5 0 0 1 683,120.1094 L683,209.5 A2.5,2.5 0 0 1 680.5,212 L399.5,212 A2.5,2.5 0 0 1 397,209.5 L397,96.5 A2.5,2.5 0 0 1 399.5,94 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="397" x2="530" y1="117.6094" y2="117.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="120" x="401" y="110.5332">iJPARepositories</text></g><!--MD5=[90092f0f228c2e0685fe851a711fbc98]
+cluster DataModel--><g id="cluster_DataModel"><path d="M757.5,103 L833.5,103 A3.75,3.75 0 0 1 836,105.5 L843,126.6094 L1092.5,126.6094 A2.5,2.5 0 0 1 1095,129.1094 L1095,443.5 A2.5,2.5 0 0 1 1092.5,446 L757.5,446 A2.5,2.5 0 0 1 755,443.5 L755,105.5 A2.5,2.5 0 0 1 757.5,103 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="755" x2="843" y1="126.6094" y2="126.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="75" x="759" y="119.5332">DataModel</text></g><!--MD5=[fc96b7229b26b3ac4ea5bdc9a627e26b]
+cluster folderinter--><g id="cluster_folderinter"><path d="M54.5,284 L185.5,284 A3.75,3.75 0 0 1 188,286.5 L195,307.6094 L697.5,307.6094 A2.5,2.5 0 0 1 700,310.1094 L700,467.5 A2.5,2.5 0 0 1 697.5,470 L54.5,470 A2.5,2.5 0 0 1 52,467.5 L52,286.5 A2.5,2.5 0 0 1 54.5,284 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="52" x2="195" y1="307.6094" y2="307.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130" x="56" y="300.5332">Interface Adapters</text></g><!--MD5=[9bdef6ba970f735873d6ed5c9ac79112]
+cluster packrepoImpl--><g id="cluster_packrepoImpl"><path d="M470.5,328 L561.5,328 A3.75,3.75 0 0 1 564,330.5 L571,351.6094 L673.5,351.6094 A2.5,2.5 0 0 1 676,354.1094 L676,443.5 A2.5,2.5 0 0 1 673.5,446 L470.5,446 A2.5,2.5 0 0 1 468,443.5 L468,330.5 A2.5,2.5 0 0 1 470.5,328 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="468" x2="571" y1="351.6094" y2="351.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="90" x="472" y="344.5332">Repositories</text></g><!--MD5=[d381aecd4ea6dc803d4d2e3b84969cfa]
+cluster packcontrol--><g id="cluster_packcontrol"><path d="M78.5,328 L187.5,328 A3.75,3.75 0 0 1 190,330.5 L197,351.6094 L441.5,351.6094 A2.5,2.5 0 0 1 444,354.1094 L444,443.5 A2.5,2.5 0 0 1 441.5,446 L78.5,446 A2.5,2.5 0 0 1 76,443.5 L76,330.5 A2.5,2.5 0 0 1 78.5,328 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="76" x2="197" y1="351.6094" y2="351.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="108" x="80" y="344.5332">implControllers</text></g><!--MD5=[7b8bc9ee8bb84b99fb3a3f9477c19238]
+cluster DTO--><g id="cluster_DTO"><path d="M768.5,494 L798.5,494 A3.75,3.75 0 0 1 801,496.5 L808,517.6094 L1179.5,517.6094 A2.5,2.5 0 0 1 1182,520.1094 L1182,924.5 A2.5,2.5 0 0 1 1179.5,927 L768.5,927 A2.5,2.5 0 0 1 766,924.5 L766,496.5 A2.5,2.5 0 0 1 768.5,494 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="766" x2="808" y1="517.6094" y2="517.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="29" x="770" y="510.5332">DTO</text></g><!--MD5=[1969eb49accf14e28bce7c74db8cc840]
+cluster mapper--><g id="cluster_mapper"><path d="M792.5,538 L846.5,538 A3.75,3.75 0 0 1 849,540.5 L856,561.6094 L1155.5,561.6094 A2.5,2.5 0 0 1 1158,564.1094 L1158,653.5 A2.5,2.5 0 0 1 1155.5,656 L792.5,656 A2.5,2.5 0 0 1 790,653.5 L790,540.5 A2.5,2.5 0 0 1 792.5,538 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="790" x2="856" y1="561.6094" y2="561.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="794" y="554.5332">mapper</text></g><!--MD5=[d13fcb855108a23cf11211063221295a]
+cluster Application Services--><g id="cluster_Application Services"><path d="M8.5,494 L153.5,494 A3.75,3.75 0 0 1 156,496.5 L163,517.6094 L739.5,517.6094 A2.5,2.5 0 0 1 742,520.1094 L742,677.5 A2.5,2.5 0 0 1 739.5,680 L8.5,680 A2.5,2.5 0 0 1 6,677.5 L6,496.5 A2.5,2.5 0 0 1 8.5,494 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="6" x2="163" y1="517.6094" y2="517.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="144" x="10" y="510.5332">Application Services</text></g><!--MD5=[aecf8044dfddb7d20151bf0fcd25f270]
+cluster packAppService--><g id="cluster_packAppService"><path d="M32.5,538 L151.5,538 A3.75,3.75 0 0 1 154,540.5 L161,561.6094 L443.5,561.6094 A2.5,2.5 0 0 1 446,564.1094 L446,653.5 A2.5,2.5 0 0 1 443.5,656 L32.5,656 A2.5,2.5 0 0 1 30,653.5 L30,540.5 A2.5,2.5 0 0 1 32.5,538 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="30" x2="161" y1="561.6094" y2="561.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="118" x="34" y="554.5332">implAppServices</text></g><!--MD5=[5850865a129e18cd152c0f82d3987a85]
+cluster iRepositories--><g id="cluster_iRepositories"><path d="M472.5,538 L567.5,538 A3.75,3.75 0 0 1 570,540.5 L577,561.6094 L715.5,561.6094 A2.5,2.5 0 0 1 718,564.1094 L718,653.5 A2.5,2.5 0 0 1 715.5,656 L472.5,656 A2.5,2.5 0 0 1 470,653.5 L470,540.5 A2.5,2.5 0 0 1 472.5,538 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="470" x2="577" y1="561.6094" y2="561.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="94" x="474" y="554.5332">iRepositories</text></g><!--MD5=[27f772719433d509ddbc20ff768eba08]
+cluster domain--><g id="cluster_domain"><path d="M100.5,704 L210.5,704 A3.75,3.75 0 0 1 213,706.5 L220,727.6094 L375.5,727.6094 A2.5,2.5 0 0 1 378,730.1094 L378,1131.5 A2.5,2.5 0 0 1 375.5,1134 L100.5,1134 A2.5,2.5 0 0 1 98,1131.5 L98,706.5 A2.5,2.5 0 0 1 100.5,704 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="98" x2="220" y1="727.6094" y2="727.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109" x="102" y="720.5332">Domain/Entities</text></g><!--MD5=[c684817be5cb24f22715f17135028f47]
+cluster packVO--><g id="cluster_packVO"><path d="M144.5,975 L242.5,975 A3.75,3.75 0 0 1 245,977.5 L252,998.6094 L331.5,998.6094 A2.5,2.5 0 0 1 334,1001.1094 L334,1107.5 A2.5,2.5 0 0 1 331.5,1110 L144.5,1110 A2.5,2.5 0 0 1 142,1107.5 L142,977.5 A2.5,2.5 0 0 1 144.5,975 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="142" x2="252" y1="998.6094" y2="998.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="146" y="991.5332">Value Objects</text></g><!--MD5=[2a53bf55b807f27adccc2831e547688e]
+cluster aggregates--><g id="cluster_aggregates"><path d="M124.5,748 L206.5,748 A3.75,3.75 0 0 1 209,750.5 L216,771.6094 L351.5,771.6094 A2.5,2.5 0 0 1 354,774.1094 L354,948.5 A2.5,2.5 0 0 1 351.5,951 L124.5,951 A2.5,2.5 0 0 1 122,948.5 L122,750.5 A2.5,2.5 0 0 1 124.5,748 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="122" x2="216" y1="771.6094" y2="771.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81" x="126" y="764.5332">Aggregates</text></g><!--MD5=[91dd1e2d141d3908752779281935dd7b]
+cluster packEntity--><g id="cluster_packEntity"><path d="M148.5,792 L206.5,792 A3.75,3.75 0 0 1 209,794.5 L216,815.6094 L327.5,815.6094 A2.5,2.5 0 0 1 330,818.1094 L330,924.5 A2.5,2.5 0 0 1 327.5,927 L148.5,927 A2.5,2.5 0 0 1 146,924.5 L146,794.5 A2.5,2.5 0 0 1 148.5,792 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="146" x2="216" y1="815.6094" y2="815.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57" x="150" y="808.5332">Account</text></g><!--MD5=[eee2586318aa3aa941c8e2058b74a71c]
+class IAccountJPARepo--><g id="elem_IAccountJPARepo"><rect codeLine="8" fill="#F1F1F1" height="65.6094" id="IAccountJPARepo" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="253" x="413.5" y="130"/><ellipse cx="428.5" cy="146" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M430.5,142.5 Q430.7031,142 430.9375,141.75 Q431.1719,141.5 431.4375,141.5 Q431.9063,141.5 432.2031,141.7813 Q432.5,142.0625 432.5,142.7188 L432.5,144.2813 Q432.5,144.9375 432.2188,145.2188 Q431.9375,145.5 431.5,145.5 Q431.1094,145.5 430.8594,145.3281 Q430.6094,145.1563 430.5,144.7031 Q430.4531,144.3906 430.2813,144.2188 Q429.9688,143.8906 429.4063,143.7031 Q428.8438,143.5 428.2813,143.5 Q427.5781,143.5 426.9844,143.7813 Q426.4063,144.0625 425.9531,144.6875 Q425.5,145.3125 425.5,146.1719 L425.5,147.0938 Q425.5,148.125 426.3438,148.8125 Q427.1875,149.5 428.6875,149.5 Q429.5781,149.5 430.2031,149.2969 Q430.5625,149.1875 430.9688,148.8281 Q431.2344,148.625 431.375,148.5625 Q431.5156,148.5 431.6875,148.5 Q432.0156,148.5 432.25,148.7656 Q432.5,149.0156 432.5,149.375 Q432.5,149.7188 432.1563,150.125 Q431.6563,150.7188 430.8594,151.0469 Q429.8125,151.5 428.5313,151.5 Q427.0313,151.5 425.8281,150.9063 Q424.8594,150.4375 424.1719,149.4219 Q423.5,148.4063 423.5,147.2031 L423.5,146.1094 Q423.5,144.8594 424.0938,143.7656 Q424.7031,142.6719 425.75,142.0938 Q426.8125,141.5 428,141.5 Q428.7188,141.5 429.3438,141.75 Q429.9688,142 430.5,142.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="221" x="442.5" y="151.7285">&lt;interface&gt; IAccountJPARepository</text><line style="stroke:#181818;stroke-width:0.5;" x1="414.5" x2="665.5" y1="162" y2="162"/><line style="stroke:#181818;stroke-width:0.5;" x1="414.5" x2="665.5" y1="170" y2="170"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="419.5" y="188.5332">+findAll() : List&lt;AccountJPA&gt;</text></g><!--MD5=[bbe23128ebd3042a9dd2660e4a24a3ff]
+class AccountJPA--><g id="elem_AccountJPA"><rect codeLine="16" fill="#F1F1F1" height="48" id="AccountJPA" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="107" x="821.5" y="139"/><ellipse cx="836.5" cy="155" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M838.5,151.5 Q838.7031,151 838.9375,150.75 Q839.1719,150.5 839.4375,150.5 Q839.9063,150.5 840.2031,150.7813 Q840.5,151.0625 840.5,151.7188 L840.5,153.2813 Q840.5,153.9375 840.2188,154.2188 Q839.9375,154.5 839.5,154.5 Q839.1094,154.5 838.8594,154.3281 Q838.6094,154.1563 838.5,153.7031 Q838.4531,153.3906 838.2813,153.2188 Q837.9688,152.8906 837.4063,152.7031 Q836.8438,152.5 836.2813,152.5 Q835.5781,152.5 834.9844,152.7813 Q834.4063,153.0625 833.9531,153.6875 Q833.5,154.3125 833.5,155.1719 L833.5,156.0938 Q833.5,157.125 834.3438,157.8125 Q835.1875,158.5 836.6875,158.5 Q837.5781,158.5 838.2031,158.2969 Q838.5625,158.1875 838.9688,157.8281 Q839.2344,157.625 839.375,157.5625 Q839.5156,157.5 839.6875,157.5 Q840.0156,157.5 840.25,157.7656 Q840.5,158.0156 840.5,158.375 Q840.5,158.7188 840.1563,159.125 Q839.6563,159.7188 838.8594,160.0469 Q837.8125,160.5 836.5313,160.5 Q835.0313,160.5 833.8281,159.9063 Q832.8594,159.4375 832.1719,158.4219 Q831.5,157.4063 831.5,156.2031 L831.5,155.1094 Q831.5,153.8594 832.0938,152.7656 Q832.7031,151.6719 833.75,151.0938 Q834.8125,150.5 836,150.5 Q836.7188,150.5 837.3438,150.75 Q837.9688,151 838.5,151.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="850.5" y="160.7285">AccountJPA</text><line style="stroke:#181818;stroke-width:0.5;" x1="822.5" x2="927.5" y1="171" y2="171"/><line style="stroke:#181818;stroke-width:0.5;" x1="822.5" x2="927.5" y1="179" y2="179"/></g><!--MD5=[19b85ce9372a04286a8b41f5e1ddd3f0]
+class AccountDomainDataAssembler--><g id="elem_AccountDomainDataAssembler"><rect codeLine="18" fill="#F1F1F1" height="65.6094" id="AccountDomainDataAssembler" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="307" x="771.5" y="364"/><ellipse cx="823.25" cy="380" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M825.25,376.5 Q825.4531,376 825.6875,375.75 Q825.9219,375.5 826.1875,375.5 Q826.6563,375.5 826.9531,375.7813 Q827.25,376.0625 827.25,376.7188 L827.25,378.2813 Q827.25,378.9375 826.9688,379.2188 Q826.6875,379.5 826.25,379.5 Q825.8594,379.5 825.6094,379.3281 Q825.3594,379.1563 825.25,378.7031 Q825.2031,378.3906 825.0313,378.2188 Q824.7188,377.8906 824.1563,377.7031 Q823.5938,377.5 823.0313,377.5 Q822.3281,377.5 821.7344,377.7813 Q821.1563,378.0625 820.7031,378.6875 Q820.25,379.3125 820.25,380.1719 L820.25,381.0938 Q820.25,382.125 821.0938,382.8125 Q821.9375,383.5 823.4375,383.5 Q824.3281,383.5 824.9531,383.2969 Q825.3125,383.1875 825.7188,382.8281 Q825.9844,382.625 826.125,382.5625 Q826.2656,382.5 826.4375,382.5 Q826.7656,382.5 827,382.7656 Q827.25,383.0156 827.25,383.375 Q827.25,383.7188 826.9063,384.125 Q826.4063,384.7188 825.6094,385.0469 Q824.5625,385.5 823.2813,385.5 Q821.7813,385.5 820.5781,384.9063 Q819.6094,384.4375 818.9219,383.4219 Q818.25,382.4063 818.25,381.2031 L818.25,380.1094 Q818.25,378.8594 818.8438,377.7656 Q819.4531,376.6719 820.5,376.0938 Q821.5625,375.5 822.75,375.5 Q823.4688,375.5 824.0938,375.75 Q824.7188,376 825.25,376.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="843.75" y="385.7285">AccountDomainDataAssembler</text><line style="stroke:#181818;stroke-width:0.5;" x1="772.5" x2="1077.5" y1="396" y2="396"/><line style="stroke:#181818;stroke-width:0.5;" x1="772.5" x2="1077.5" y1="404" y2="404"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="295" x="777.5" y="422.5332">+toDomain(AccountJPA AccountJPA) : Account</text></g><!--MD5=[40e1163e683c157568d9e831d582aef2]
+class classrepo--><g id="elem_classrepo"><rect codeLine="25" fill="#F1F1F1" height="65.6094" id="classrepo" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="176" x="484" y="364"/><ellipse cx="499" cy="380" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M501,376.5 Q501.2031,376 501.4375,375.75 Q501.6719,375.5 501.9375,375.5 Q502.4063,375.5 502.7031,375.7813 Q503,376.0625 503,376.7188 L503,378.2813 Q503,378.9375 502.7188,379.2188 Q502.4375,379.5 502,379.5 Q501.6094,379.5 501.3594,379.3281 Q501.1094,379.1563 501,378.7031 Q500.9531,378.3906 500.7813,378.2188 Q500.4688,377.8906 499.9063,377.7031 Q499.3438,377.5 498.7813,377.5 Q498.0781,377.5 497.4844,377.7813 Q496.9063,378.0625 496.4531,378.6875 Q496,379.3125 496,380.1719 L496,381.0938 Q496,382.125 496.8438,382.8125 Q497.6875,383.5 499.1875,383.5 Q500.0781,383.5 500.7031,383.2969 Q501.0625,383.1875 501.4688,382.8281 Q501.7344,382.625 501.875,382.5625 Q502.0156,382.5 502.1875,382.5 Q502.5156,382.5 502.75,382.7656 Q503,383.0156 503,383.375 Q503,383.7188 502.6563,384.125 Q502.1563,384.7188 501.3594,385.0469 Q500.3125,385.5 499.0313,385.5 Q497.5313,385.5 496.3281,384.9063 Q495.3594,384.4375 494.6719,383.4219 Q494,382.4063 494,381.2031 L494,380.1094 Q494,378.8594 494.5938,377.7656 Q495.2031,376.6719 496.25,376.0938 Q497.3125,375.5 498.5,375.5 Q499.2188,375.5 499.8438,375.75 Q500.4688,376 501,376.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="513" y="385.7285">AccountRepositoryImpl</text><line style="stroke:#181818;stroke-width:0.5;" x1="485" x2="659" y1="396" y2="396"/><line style="stroke:#181818;stroke-width:0.5;" x1="485" x2="659" y1="404" y2="404"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="490" y="422.5332">+findAll() : List&lt;Account&gt;</text></g><!--MD5=[0d8b0c26e9e466b32189db84028e2298]
+class classcontroller--><g id="elem_classcontroller"><rect codeLine="30" fill="#F1F1F1" height="65.6094" id="classcontroller" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="336" x="92" y="364"/><ellipse cx="173.75" cy="380" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M175.75,376.5 Q175.9531,376 176.1875,375.75 Q176.4219,375.5 176.6875,375.5 Q177.1563,375.5 177.4531,375.7813 Q177.75,376.0625 177.75,376.7188 L177.75,378.2813 Q177.75,378.9375 177.4688,379.2188 Q177.1875,379.5 176.75,379.5 Q176.3594,379.5 176.1094,379.3281 Q175.8594,379.1563 175.75,378.7031 Q175.7031,378.3906 175.5313,378.2188 Q175.2188,377.8906 174.6563,377.7031 Q174.0938,377.5 173.5313,377.5 Q172.8281,377.5 172.2344,377.7813 Q171.6563,378.0625 171.2031,378.6875 Q170.75,379.3125 170.75,380.1719 L170.75,381.0938 Q170.75,382.125 171.5938,382.8125 Q172.4375,383.5 173.9375,383.5 Q174.8281,383.5 175.4531,383.2969 Q175.8125,383.1875 176.2188,382.8281 Q176.4844,382.625 176.625,382.5625 Q176.7656,382.5 176.9375,382.5 Q177.2656,382.5 177.5,382.7656 Q177.75,383.0156 177.75,383.375 Q177.75,383.7188 177.4063,384.125 Q176.9063,384.7188 176.1094,385.0469 Q175.0625,385.5 173.7813,385.5 Q172.2813,385.5 171.0781,384.9063 Q170.1094,384.4375 169.4219,383.4219 Q168.75,382.4063 168.75,381.2031 L168.75,380.1094 Q168.75,378.8594 169.3438,377.7656 Q169.9531,376.6719 171,376.0938 Q172.0625,375.5 173.25,375.5 Q173.9688,375.5 174.5938,375.75 Q175.2188,376 175.75,376.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="194.25" y="385.7285">ViewAllAccountsController</text><line style="stroke:#181818;stroke-width:0.5;" x1="93" x2="427" y1="396" y2="396"/><line style="stroke:#181818;stroke-width:0.5;" x1="93" x2="427" y1="404" y2="404"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="324" x="98" y="422.5332">+getListOfAllAccountsAndStatus() : ResponseEntity</text></g><!--MD5=[7a3f677e62d08ccf691684bafc193c34]
+class dto--><g id="elem_dto"><rect codeLine="43" fill="#F1F1F1" height="83.2188" id="dto" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="178" x="885" y="828"/><ellipse cx="900" cy="844" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M902,840.5 Q902.2031,840 902.4375,839.75 Q902.6719,839.5 902.9375,839.5 Q903.4063,839.5 903.7031,839.7813 Q904,840.0625 904,840.7188 L904,842.2813 Q904,842.9375 903.7188,843.2188 Q903.4375,843.5 903,843.5 Q902.6094,843.5 902.3594,843.3281 Q902.1094,843.1563 902,842.7031 Q901.9531,842.3906 901.7813,842.2188 Q901.4688,841.8906 900.9063,841.7031 Q900.3438,841.5 899.7813,841.5 Q899.0781,841.5 898.4844,841.7813 Q897.9063,842.0625 897.4531,842.6875 Q897,843.3125 897,844.1719 L897,845.0938 Q897,846.125 897.8438,846.8125 Q898.6875,847.5 900.1875,847.5 Q901.0781,847.5 901.7031,847.2969 Q902.0625,847.1875 902.4688,846.8281 Q902.7344,846.625 902.875,846.5625 Q903.0156,846.5 903.1875,846.5 Q903.5156,846.5 903.75,846.7656 Q904,847.0156 904,847.375 Q904,847.7188 903.6563,848.125 Q903.1563,848.7188 902.3594,849.0469 Q901.3125,849.5 900.0313,849.5 Q898.5313,849.5 897.3281,848.9063 Q896.3594,848.4375 895.6719,847.4219 Q895,846.4063 895,845.2031 L895,844.1094 Q895,842.8594 895.5938,841.7656 Q896.2031,840.6719 897.25,840.0938 Q898.3125,839.5 899.5,839.5 Q900.2188,839.5 900.8438,839.75 Q901.4688,840 902,840.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="914" y="849.7285">AccountAndStatusDTO</text><line style="stroke:#181818;stroke-width:0.5;" x1="886" x2="1062" y1="860" y2="860"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="891" y="878.5332">+String : email</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="891" y="896.1426">+boolean : active</text><line style="stroke:#181818;stroke-width:0.5;" x1="886" x2="1062" y1="903.2188" y2="903.2188"/></g><!--MD5=[c67e8694cd0dcda2ef320465dd37a05e]
+class AccountMapper--><g id="elem_AccountMapper"><rect codeLine="39" fill="#F1F1F1" height="65.6094" id="AccountMapper" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="335" x="806.5" y="574"/><ellipse cx="920.25" cy="590" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M922.25,586.5 Q922.4531,586 922.6875,585.75 Q922.9219,585.5 923.1875,585.5 Q923.6563,585.5 923.9531,585.7813 Q924.25,586.0625 924.25,586.7188 L924.25,588.2813 Q924.25,588.9375 923.9688,589.2188 Q923.6875,589.5 923.25,589.5 Q922.8594,589.5 922.6094,589.3281 Q922.3594,589.1563 922.25,588.7031 Q922.2031,588.3906 922.0313,588.2188 Q921.7188,587.8906 921.1563,587.7031 Q920.5938,587.5 920.0313,587.5 Q919.3281,587.5 918.7344,587.7813 Q918.1563,588.0625 917.7031,588.6875 Q917.25,589.3125 917.25,590.1719 L917.25,591.0938 Q917.25,592.125 918.0938,592.8125 Q918.9375,593.5 920.4375,593.5 Q921.3281,593.5 921.9531,593.2969 Q922.3125,593.1875 922.7188,592.8281 Q922.9844,592.625 923.125,592.5625 Q923.2656,592.5 923.4375,592.5 Q923.7656,592.5 924,592.7656 Q924.25,593.0156 924.25,593.375 Q924.25,593.7188 923.9063,594.125 Q923.4063,594.7188 922.6094,595.0469 Q921.5625,595.5 920.2813,595.5 Q918.7813,595.5 917.5781,594.9063 Q916.6094,594.4375 915.9219,593.4219 Q915.25,592.4063 915.25,591.2031 L915.25,590.1094 Q915.25,588.8594 915.8438,587.7656 Q916.4531,586.6719 917.5,586.0938 Q918.5625,585.5 919.75,585.5 Q920.4688,585.5 921.0938,585.75 Q921.7188,586 922.25,586.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="940.75" y="595.7285">AccountMapper</text><line style="stroke:#181818;stroke-width:0.5;" x1="807.5" x2="1140.5" y1="606" y2="606"/><line style="stroke:#181818;stroke-width:0.5;" x1="807.5" x2="1140.5" y1="614" y2="614"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="323" x="812.5" y="632.5332">+toDTO(Account account) : AccountAndStatusDTO</text></g><!--MD5=[667fb94da4bca85f6fcdaf236a591920]
+class classService--><g id="elem_classService"><rect codeLine="51" fill="#F1F1F1" height="65.6094" id="classService" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="384" x="46" y="574"/><ellipse cx="103.25" cy="590" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M105.25,586.5 Q105.4531,586 105.6875,585.75 Q105.9219,585.5 106.1875,585.5 Q106.6563,585.5 106.9531,585.7813 Q107.25,586.0625 107.25,586.7188 L107.25,588.2813 Q107.25,588.9375 106.9688,589.2188 Q106.6875,589.5 106.25,589.5 Q105.8594,589.5 105.6094,589.3281 Q105.3594,589.1563 105.25,588.7031 Q105.2031,588.3906 105.0313,588.2188 Q104.7188,587.8906 104.1563,587.7031 Q103.5938,587.5 103.0313,587.5 Q102.3281,587.5 101.7344,587.7813 Q101.1563,588.0625 100.7031,588.6875 Q100.25,589.3125 100.25,590.1719 L100.25,591.0938 Q100.25,592.125 101.0938,592.8125 Q101.9375,593.5 103.4375,593.5 Q104.3281,593.5 104.9531,593.2969 Q105.3125,593.1875 105.7188,592.8281 Q105.9844,592.625 106.125,592.5625 Q106.2656,592.5 106.4375,592.5 Q106.7656,592.5 107,592.7656 Q107.25,593.0156 107.25,593.375 Q107.25,593.7188 106.9063,594.125 Q106.4063,594.7188 105.6094,595.0469 Q104.5625,595.5 103.2813,595.5 Q101.7813,595.5 100.5781,594.9063 Q99.6094,594.4375 98.9219,593.4219 Q98.25,592.4063 98.25,591.2031 L98.25,590.1094 Q98.25,588.8594 98.8438,587.7656 Q99.4531,586.6719 100.5,586.0938 Q101.5625,585.5 102.75,585.5 Q103.4688,585.5 104.0938,585.75 Q104.7188,586 105.25,586.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="261" x="123.75" y="595.7285">ApplicationServiceListAccountsAndStatus</text><line style="stroke:#181818;stroke-width:0.5;" x1="47" x2="429" y1="606" y2="606"/><line style="stroke:#181818;stroke-width:0.5;" x1="47" x2="429" y1="614" y2="614"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="372" x="52" y="632.5332">+getAllAccountsAndStatus() : List&lt;AccountAndStatusDTO&gt;</text></g><!--MD5=[1635fbcf1bcf94d9c7cc30e7ed64c652]
+class accountRepoApp--><g id="elem_accountRepoApp"><rect codeLine="56" fill="#F1F1F1" height="65.6094" id="accountRepoApp" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="215" x="486.5" y="574"/><ellipse cx="501.5" cy="590" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M503.5,586.5 Q503.7031,586 503.9375,585.75 Q504.1719,585.5 504.4375,585.5 Q504.9063,585.5 505.2031,585.7813 Q505.5,586.0625 505.5,586.7188 L505.5,588.2813 Q505.5,588.9375 505.2188,589.2188 Q504.9375,589.5 504.5,589.5 Q504.1094,589.5 503.8594,589.3281 Q503.6094,589.1563 503.5,588.7031 Q503.4531,588.3906 503.2813,588.2188 Q502.9688,587.8906 502.4063,587.7031 Q501.8438,587.5 501.2813,587.5 Q500.5781,587.5 499.9844,587.7813 Q499.4063,588.0625 498.9531,588.6875 Q498.5,589.3125 498.5,590.1719 L498.5,591.0938 Q498.5,592.125 499.3438,592.8125 Q500.1875,593.5 501.6875,593.5 Q502.5781,593.5 503.2031,593.2969 Q503.5625,593.1875 503.9688,592.8281 Q504.2344,592.625 504.375,592.5625 Q504.5156,592.5 504.6875,592.5 Q505.0156,592.5 505.25,592.7656 Q505.5,593.0156 505.5,593.375 Q505.5,593.7188 505.1563,594.125 Q504.6563,594.7188 503.8594,595.0469 Q502.8125,595.5 501.5313,595.5 Q500.0313,595.5 498.8281,594.9063 Q497.8594,594.4375 497.1719,593.4219 Q496.5,592.4063 496.5,591.2031 L496.5,590.1094 Q496.5,588.8594 497.0938,587.7656 Q497.7031,586.6719 498.75,586.0938 Q499.8125,585.5 501,585.5 Q501.7188,585.5 502.3438,585.75 Q502.9688,586 503.5,586.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="515.5" y="595.7285">&lt;interface&gt;AcountRepository</text><line style="stroke:#181818;stroke-width:0.5;" x1="487.5" x2="700.5" y1="606" y2="606"/><line style="stroke:#181818;stroke-width:0.5;" x1="487.5" x2="700.5" y1="614" y2="614"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="492.5" y="632.5332">+findAll() : List&lt;Account&gt;</text></g><!--MD5=[78bec0fde86ad92ec1dc3fb343b83709]
+class Email--><g id="elem_Email"><rect codeLine="65" fill="#F1F1F1" height="83.2188" id="Email" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="159" x="158.5" y="1011"/><ellipse cx="216.75" cy="1027" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M218.75,1023.5 Q218.9531,1023 219.1875,1022.75 Q219.4219,1022.5 219.6875,1022.5 Q220.1563,1022.5 220.4531,1022.7813 Q220.75,1023.0625 220.75,1023.7188 L220.75,1025.2813 Q220.75,1025.9375 220.4688,1026.2188 Q220.1875,1026.5 219.75,1026.5 Q219.3594,1026.5 219.1094,1026.3281 Q218.8594,1026.1563 218.75,1025.7031 Q218.7031,1025.3906 218.5313,1025.2188 Q218.2188,1024.8906 217.6563,1024.7031 Q217.0938,1024.5 216.5313,1024.5 Q215.8281,1024.5 215.2344,1024.7813 Q214.6563,1025.0625 214.2031,1025.6875 Q213.75,1026.3125 213.75,1027.1719 L213.75,1028.0938 Q213.75,1029.125 214.5938,1029.8125 Q215.4375,1030.5 216.9375,1030.5 Q217.8281,1030.5 218.4531,1030.2969 Q218.8125,1030.1875 219.2188,1029.8281 Q219.4844,1029.625 219.625,1029.5625 Q219.7656,1029.5 219.9375,1029.5 Q220.2656,1029.5 220.5,1029.7656 Q220.75,1030.0156 220.75,1030.375 Q220.75,1030.7188 220.4063,1031.125 Q219.9063,1031.7188 219.1094,1032.0469 Q218.0625,1032.5 216.7813,1032.5 Q215.2813,1032.5 214.0781,1031.9063 Q213.1094,1031.4375 212.4219,1030.4219 Q211.75,1029.4063 211.75,1028.2031 L211.75,1027.1094 Q211.75,1025.8594 212.3438,1024.7656 Q212.9531,1023.6719 214,1023.0938 Q215.0625,1022.5 216.25,1022.5 Q216.9688,1022.5 217.5938,1022.75 Q218.2188,1023 218.75,1023.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="237.25" y="1032.7285">Email</text><line style="stroke:#181818;stroke-width:0.5;" x1="159.5" x2="316.5" y1="1043" y2="1043"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="164.5" y="1061.5332">-Email : email</text><line style="stroke:#181818;stroke-width:0.5;" x1="159.5" x2="316.5" y1="1068.6094" y2="1068.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="147" x="164.5" y="1087.1426">+of(Email email) : Email</text></g><!--MD5=[fc050e0d144802bdd05af1e137e159b3]
+class classAccount--><g id="elem_classAccount"><rect codeLine="74" fill="#F1F1F1" height="83.2188" id="classAccount" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="151" x="162.5" y="828"/><ellipse cx="208.25" cy="844" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M210.25,840.5 Q210.4531,840 210.6875,839.75 Q210.9219,839.5 211.1875,839.5 Q211.6563,839.5 211.9531,839.7813 Q212.25,840.0625 212.25,840.7188 L212.25,842.2813 Q212.25,842.9375 211.9688,843.2188 Q211.6875,843.5 211.25,843.5 Q210.8594,843.5 210.6094,843.3281 Q210.3594,843.1563 210.25,842.7031 Q210.2031,842.3906 210.0313,842.2188 Q209.7188,841.8906 209.1563,841.7031 Q208.5938,841.5 208.0313,841.5 Q207.3281,841.5 206.7344,841.7813 Q206.1563,842.0625 205.7031,842.6875 Q205.25,843.3125 205.25,844.1719 L205.25,845.0938 Q205.25,846.125 206.0938,846.8125 Q206.9375,847.5 208.4375,847.5 Q209.3281,847.5 209.9531,847.2969 Q210.3125,847.1875 210.7188,846.8281 Q210.9844,846.625 211.125,846.5625 Q211.2656,846.5 211.4375,846.5 Q211.7656,846.5 212,846.7656 Q212.25,847.0156 212.25,847.375 Q212.25,847.7188 211.9063,848.125 Q211.4063,848.7188 210.6094,849.0469 Q209.5625,849.5 208.2813,849.5 Q206.7813,849.5 205.5781,848.9063 Q204.6094,848.4375 203.9219,847.4219 Q203.25,846.4063 203.25,845.2031 L203.25,844.1094 Q203.25,842.8594 203.8438,841.7656 Q204.4531,840.6719 205.5,840.0938 Q206.5625,839.5 207.75,839.5 Q208.4688,839.5 209.0938,839.75 Q209.7188,840 210.25,840.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="228.75" y="849.7285">Account</text><line style="stroke:#181818;stroke-width:0.5;" x1="163.5" x2="312.5" y1="860" y2="860"/><line style="stroke:#181818;stroke-width:0.5;" x1="163.5" x2="312.5" y1="868" y2="868"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="168.5" y="886.5332">+getActive() : boolean</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="168.5" y="904.1426">+getEmail() : Email</text></g><!--MD5=[7055e647601c4b893aefb6b6fc2c8630]
+link classcontroller to classService--><g id="link_classcontroller_classService"><path codeLine="84" d="M256.61,430.04 C252.65,467.45 246.12,529.22 241.94,568.74 " fill="none" id="classcontroller-to-classService" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="241.39,573.92,246.3191,565.3933,241.9186,568.948,238.364,564.5475,241.39,573.92" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7064029e68dce0dac45a41275e5564bd]
+link classService to classAccount--><g id="link_classService_classAccount"><path codeLine="85" d="M238,640.2 C238,686 238,770.19 238,822.54 " fill="none" id="classService-to-classAccount" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="238,827.82,242,818.82,238,822.82,234,818.82,238,827.82" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c0247e43c23574e75f342ded432f7adc]
+link classService to AccountMapper--><g id="link_classService_AccountMapper"><path codeLine="86" d="M280.48,573.93 C327.87,540 408.31,490.94 487.5,482 C534.53,476.69 653.47,476.69 700.5,482 C708.43,482.89 710.46,483.39 718,486 C785.3,509.29 858.42,544.97 909.21,571.56 " fill="none" id="classService-to-AccountMapper" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="913.75,573.94,907.6456,566.211,909.3245,571.613,903.9225,573.2919,913.75,573.94" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5ff45daaa26ca173e6b3857e3114f35c]
+link AccountMapper to dto--><g id="link_AccountMapper_dto"><path codeLine="87" d="M974,640.2 C974,686 974,770.19 974,822.54 " fill="none" id="AccountMapper-to-dto" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="974,827.82,978,818.82,974,822.82,970,818.82,974,827.82" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c697fe26d75bd3991fb7afa13b5362fd]
+link classService to accountRepoApp--><g id="link_classService_accountRepoApp"><path codeLine="88" d="M430.25,607 C447.16,607 464.07,607 480.97,607 " fill="none" id="classService-to-accountRepoApp" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="486.22,607,477.22,603,481.22,607,477.22,611,486.22,607" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d9a92e0cfc6ee44574bb0741aa55ea4d]
+link classrepo to accountRepoApp--><g id="link_classrepo_accountRepoApp"><path codeLine="89" d="M575.39,430.04 C578.88,463.02 584.37,514.94 588.48,553.85 " fill="none" id="classrepo-to-accountRepoApp" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="595.46,553.29,590.61,573.92,581.54,554.77,595.46,553.29" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[37ba829947a4e5870271377326b32f8a]
+reverse link IAccountJPARepo to classrepo--><g id="link_IAccountJPARepo_classrepo"><path codeLine="90" d="M545.15,201.32 C551.35,246.27 561.66,321.03 567.54,363.64 " fill="none" id="IAccountJPARepo-backto-classrepo" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="544.45,196.26,541.7209,205.7232,545.1351,201.2128,549.6455,204.627,544.45,196.26" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[aac51b7969a6f6b76599095319b58d9c]
+reverse link AccountJPA to AccountDomainDataAssembler--><g id="link_AccountJPA_AccountDomainDataAssembler"><path codeLine="91" d="M881.07,192.17 C890.41,235.48 908.23,318.17 918.06,363.79 " fill="none" id="AccountJPA-backto-AccountDomainDataAssembler" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="879.98,187.09,877.9738,196.7324,881.0374,191.9769,885.7929,195.0405,879.98,187.09" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1230f6e0ac1d07e951b242f713aa325e]
+link IAccountJPARepo to AccountJPA--><g id="link_IAccountJPARepo_AccountJPA"><path codeLine="92" d="M666.61,163 C716.45,163 766.29,163 816.14,163 " fill="none" id="IAccountJPARepo-to-AccountJPA" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="821.27,163,812.27,159,816.27,163,812.27,167,821.27,163" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[73d4842dfc70f0fe5260a031805deec6]
+link classrepo to AccountDomainDataAssembler--><g id="link_classrepo_AccountDomainDataAssembler"><path codeLine="93" d="M660.25,397 C695.57,397 730.89,397 766.21,397 " fill="none" id="classrepo-to-AccountDomainDataAssembler" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="771.42,397,762.42,393,766.42,397,762.42,401,771.42,397" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[503bcec05fb6a07901359b689a773909]
+link classAccount to Email--><g id="link_classAccount_Email"><path codeLine="107" d="M238,911.12 C238,939.08 238,976.29 238,1005.37 " fill="none" id="classAccount-to-Email" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="238,1010.7,242,1001.7,238,1005.7,234,1001.7,238,1010.7" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="190.4938" y="1000.2688">Email 1</text></g><!--MD5=[d56ce1a4f26ee31796757e63a77ebcd6]
+@startuml
+'https://plantuml.com/class-diagramheader IMPLEMENTATION VIEW
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infrastructure" as infrastructure{
+package "Persistence" as persistence {
+package "iJPARepositories" as IJPARepo {
+class "<interface> IAccountJPARepository" as IAccountJPARepo {
++findAll() : List<AccountJPA>
+}
+}
+}
+}
+
+folder "DataModel" as DataModel{
+class "AccountJPA" as AccountJPA{
+}
+class "AccountDomainDataAssembler" as AccountDomainDataAssembler {
++toDomain(AccountJPA AccountJPA) : Account
+}
+}
+
+folder "Interface Adapters" as folderinter{
+ package "Repositories" as packrepoImpl{
+    class "AccountRepositoryImpl" as classrepo{
+     +findAll() : List<Account>
+    }
+    }
+ package "implControllers" as packcontrol {
+    class "ViewAllAccountsController" as classcontroller{
+    +getListOfAllAccountsAndStatus() : ResponseEntity
+    }
+ }
+}
+
+
+folder "DTO"{
+package "mapper" as mapper{
+class "AccountMapper" as AccountMapper{
++toDTO(Account account) : AccountAndStatusDTO
+}
+}
+class "AccountAndStatusDTO" as dto {
++ String : email
++ boolean : active
+}
+}
+
+folder "Application Services"{
+package implAppServices as packAppService{
+ class "ApplicationServiceListAccountsAndStatus" as classService{
+ +getAllAccountsAndStatus() : List<AccountAndStatusDTO>
+}
+}
+package iRepositories as iRepositories{
+class "<interface>AcountRepository" as accountRepoApp{
++findAll() : List<Account>
+}
+}
+}
+
+folder "Domain/Entities" as domain{
+package "Value Objects" as packVO{
+
+  class "Email" as Email {
+  -Email : email
+  +{static}of(Email email) : Email
+  }
+
+  }
+
+folder "Aggregates" as aggregates{
+package Account as packEntity{
+class "Account" as classAccount{
++getActive() : boolean
++getEmail() : Email
+
+}
+
+}
+}
+}
+
+classcontroller..>classService
+classService..>classAccount
+classService..right> AccountMapper
+AccountMapper- ->dto
+classService..right>accountRepoApp
+classrepo..|>accountRepoApp
+classrepo..up>IAccountJPARepo
+AccountDomainDataAssembler- -up>AccountJPA
+IAccountJPARepo- -right>AccountJPA
+classrepo..r>AccountDomainDataAssembler
+
+
+
+
+
+
+/'classAccount- ->"SprintDuration 1"classSprintDuration
+classAccount- ->"ProjectID 1"classProjID
+classAccount- ->"Name 1" className
+classAccount- ->"Period 1"classPeriod
+classAccount- ->"Description 1"classDescription
+classAccount- ->"Budget 1"classBudget
+classAccount- ->"Status 1"classStatus'/
+classAccount- ->"Email 1"Email
+/'classAccount- ->"Customer 1"customer
+classAccount- ->"BusinessSector 1"businessSector'/
+@enduml
+
+@startuml
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infrastructure" as infrastructure{
+package "Persistence" as persistence {
+package "iJPARepositories" as IJPARepo {
+class "<interface> IAccountJPARepository" as IAccountJPARepo {
++findAll() : List<AccountJPA>
+}
+}
+}
+}
+
+folder "DataModel" as DataModel{
+class "AccountJPA" as AccountJPA{
+}
+class "AccountDomainDataAssembler" as AccountDomainDataAssembler {
++toDomain(AccountJPA AccountJPA) : Account
+}
+}
+
+folder "Interface Adapters" as folderinter{
+ package "Repositories" as packrepoImpl{
+    class "AccountRepositoryImpl" as classrepo{
+     +findAll() : List<Account>
+    }
+    }
+ package "implControllers" as packcontrol {
+    class "ViewAllAccountsController" as classcontroller{
+    +getListOfAllAccountsAndStatus() : ResponseEntity
+    }
+ }
+}
+
+
+folder "DTO"{
+package "mapper" as mapper{
+class "AccountMapper" as AccountMapper{
++toDTO(Account account) : AccountAndStatusDTO
+}
+}
+class "AccountAndStatusDTO" as dto {
++ String : email
++ boolean : active
+}
+}
+
+folder "Application Services"{
+package implAppServices as packAppService{
+ class "ApplicationServiceListAccountsAndStatus" as classService{
+ +getAllAccountsAndStatus() : List<AccountAndStatusDTO>
+}
+}
+package iRepositories as iRepositories{
+class "<interface>AcountRepository" as accountRepoApp{
++findAll() : List<Account>
+}
+}
+}
+
+folder "Domain/Entities" as domain{
+package "Value Objects" as packVO{
+
+  class "Email" as Email {
+  -Email : email
+  +{static}of(Email email) : Email
+  }
+
+  }
+
+folder "Aggregates" as aggregates{
+package Account as packEntity{
+class "Account" as classAccount{
++getActive() : boolean
++getEmail() : Email
+
+}
+
+}
+}
+}
+
+classcontroller..>classService
+classService..>classAccount
+classService..right> AccountMapper
+AccountMapper- ->dto
+classService..right>accountRepoApp
+classrepo..|>accountRepoApp
+classrepo..up>IAccountJPARepo
+AccountDomainDataAssembler- -up>AccountJPA
+IAccountJPARepo- -right>AccountJPA
+classrepo..r>AccountDomainDataAssembler
+
+
+
+
+
+
+classAccount- ->"Email 1"Email
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

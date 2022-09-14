@@ -1,0 +1,170 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Director as dir
+boundary UI as ui
+participant "dto : AssociateResourceDTO" as dto
+participant ": CreateResourceController" as ctl
+participant "_iTCompany: ITCompany" as company
+participant "accStore : AccountStore" as astr
+participant "roleStore : ResoureceRoleStore" as rstr
+participant "pStore: ProjectStore" as pstr
+participant "proj : Project" as prj
+participant "newMember : Resource" as rsc
+participant "role : ResoureceRole" as role
+participant "resList : ResourceList" as resList
+
+
+activate dir
+dir -> ui: Initiate process to create resource
+activate ui
+ref over ui
+ref US007SD1.svg
+end ref
+ui --> dir: Request user to select and enter necessary information to create resource
+deactivate ui
+
+dir -> ui: Choose project, user, role and enter cost per hour and percentage of allocation
+activate ui
+create dto
+ui -> dto : dto = new AssociateResourceDTO(projectCode : int, email : String,\n startDate : LocalDate, percentageOfAllocation : double,\n costPerHour : double, role : String) : AssociateResourceDTO
+
+ui -> ctl : createResource(dto) : boolean
+activate ctl
+ctl -> company : pStore = getProjectStore()
+activate company
+deactivate company
+ctl -> company : accStore = getAccountStore()
+activate company
+deactivate company
+ctl -> company : roleStore = getResourceRoleStore()
+activate company
+deactivate company
+ctl -> dto : email = getEmail() : String
+activate dto
+deactivate dto
+ctl -> astr : account = findAccountByEmail(email) : Account
+activate astr
+deactivate astr
+ctl -> dto : roleString = getRole() : String
+activate dto
+deactivate dto
+ctl -> rstr : role = findResourceRoleByRole(roleString) : ResourceRole
+activate rstr
+deactivate rstr
+ctl -> pstr : createResource(dto, account, role) : boolean
+activate pstr
+
+pstr -> dto : projectCode = getProjectCode() : int
+activate dto
+deactivate dto
+pstr -> pstr : proj = findProjectByCode(projectCode) : Project
+pstr -> dto : allocation = getPercentageOfAllocation() : double
+activate dto
+deactivate dto
+pstr -> dto : startDate = getStartDate() : LocalDate
+activate dto
+deactivate dto
+pstr -> dto : email = getEmail() : String
+activate dto
+deactivate dto
+pstr -> pstr : true= allocationIsValidInPeriod(email, allocation, startDate) : boolean
+activate pstr
+pstr -> pstr : determineStartDateOfLastAllocation(email)
+pstr -> prj: getStartDateOfUserLastAllocation(email)
+activate prj
+prj -> resList: getStartDateOfUserLastAllocation(email)
+activate resList
+deactivate resList
+deactivate prj
+pstr -> pstr : getAllocation(email, date)
+pstr -> prj : getAllocation(email, date)
+activate prj
+prj -> resList : getAllocation(email, date)
+activate resList
+resList -> rsc : getAllocation()
+activate rsc
+deactivate rsc
+deactivate resList
+deactivate prj
+deactivate pstr
+pstr-> prj : createTeamMember(dto,account, role) : boolean
+activate prj
+prj -> dto : startDate = getStartDate() : LocalDate
+activate dto
+deactivate dto
+prj -> dto : email = getEmail() : String
+activate dto
+deactivate dto
+prj -> dto : allocation = getPercentageOfAllocation() : double
+activate dto
+deactivate dto
+prj -> dto : cost = getCostPerHour() : double
+activate dto
+deactivate dto
+
+prj -> prj : meetsConditionsForResourceCreation(startDate, email) : boolean
+activate prj
+prj -> prj: isProjectClosed()
+prj -> resList: isOwnProjectInPeriod(email, startDate)
+activate resList
+resList -> resList: getLastAllocationStartDate()
+loop
+resList -> rsc: hasEmail(email)
+activate rsc
+resList -> rsc: isActiveInDate(date)
+deactivate rsc
+end
+resList --> prj: false
+deactivate resList
+prj -> prj: isDateNotBeforeTheProjectStartDate(startDate)
+deactivate prj
+prj -> role: isRolePO() : boolean
+activate role
+deactivate role
+prj -> role : isRoleEqualTo("Project Manager")
+activate role
+deactivate role
+prj -> prj: ensureThereIsNotARunningSprint(startDate)
+prj -> role : isDev = isRoleDeveloper() : boolean
+activate role
+deactivate role
+opt case isDev = false
+prj -> resList: hasActiveResourceWithRoleInPeriod(startDate, role)
+activate resList
+resList -> resList: date = getLastAllocationStartDate()
+resList -> resList: hasActiveResourceWithRole(date, role)
+activate resList
+loop
+resList -> rsc: isRoleEqualTo(role)
+activate rsc
+resList -> rsc: isActiveInDate(date)
+end
+deactivate resList
+deactivate rsc
+resList --> prj: false
+else
+end
+deactivate resList
+
+prj -> resList: createResource(resourceStartDate, percentageOfAllocation, costPerHour, account, role)
+activate resList
+resList -> resList: checkPercentageOfAllocationRules(percentageAllocation)
+resList -> resList: checkCostPerHourRules(costPerHour)
+resList -> rsc: newMember = Resource(startDate, percAlloc, costPerHour, account, role)
+activate rsc
+deactivate rsc
+resList -> resList: addResource(newMember)
+
+resList --> prj: true
+deactivate resList
+prj --> pstr: true
+deactivate prj
+pstr --> ctl : true
+deactivate pstr
+ctl --> ui  : true
+deactivate ctl
+ui  --> dir : Inform operation success
+deactivate ui
+@enduml

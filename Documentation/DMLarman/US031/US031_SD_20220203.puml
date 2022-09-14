@@ -1,0 +1,54 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+actor "Team Member" as TM
+participant ": UI" as UI
+participant ": CreateTaskController" as controller
+participant ": ITCompany" as IT
+participant ": ProjectStore"
+participant "project : Project" as project
+participant ": ProductBacklog" as pB
+participant "sprint : Sprint" as sprint
+participant "newTask : Task"
+
+autonumber
+
+TM -> UI : Create a Task in a given\n project inside a scope of \n a User Story
+activate UI
+UI -> controller: createTaskRelatedToUserStory(taskDTO)
+activate controller
+
+controller -> IT : getProjectStore()
+activate IT
+controller <-- IT : return projectStore
+deactivate IT
+controller -> ": ProjectStore" : findProjectByCode(projCode)
+activate ": ProjectStore"
+controller <-- ": ProjectStore" : return project
+
+deactivate ": ProjectStore"
+controller-> project : createNewTask(taskDTO.sprintNumber, taskDTO.usCode, \n name, taskDTO.description, taskDTO.startDate, taskDTO.endDate, taskDTO.effortEstimate, \n taskType, taskDTO.associatedResource)
+activate project
+project -> project : sprint = findSprintByNumber( sprintNumber)
+project -> pB : userStory = findUserStoryByNumber(usNumber)
+activate pB
+deactivate pB
+project -> sprint : createNewTask(userStory, \n name, description, startDate, endDate, effortEstimate, \n taskType, associatedResource)
+activate sprint
+sprint -> sprint : validateTaskInformation()
+sprint -> sprint : taskCode = generateCode()
+sprint-> "newTask : Task" ** : newTask = createNewTaskInUS(userStory, taskCode, name, description, \n startDate, endDate, effortEstimate, \n taskType, associatedResource)
+sprint -> sprint : addTaskToTaskList(newTask)
+sprint -> project : return newTask
+deactivate sprint
+controller <-- project : return newTask
+deactivate project
+
+
+UI <-- controller : return True
+deactivate controller
+TM <-- UI : return True
+deactivate UI
+
+
+
+@enduml

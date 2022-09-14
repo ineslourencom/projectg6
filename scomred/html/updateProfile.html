@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="../css/geral.css?v=1" />
+    <script src="../js/updateProfile.js"></script>
+
+</head>
+<body onload="initData()">
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Entrance</a>
+</div>
+
+<div class="container">
+    <div style="text-align:center">
+        <h2>Update Account Profile</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <form action="/action_page.php">
+
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" placeholder="Your e-mail..." onchange="validateEmail()">
+                <label for="profiles">Profile</label>
+                <select id="profiles" name="profiles">
+                </select>
+                <input type="button" value="Save Change" onclick="updateProfile()">
+            </form>
+        </div>
+    </div>
+</div>
+<div id="result" ></div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+
+participant ": ApplicationServiceUpdateAccount" as appservice
+participant "a : Account" as accountI
+participant "AccountMapper" as accMapper
+participant "AccountShortDTO" as accShortDTO
+participant "asDTO : AccountShortDTO" as accShortDTOI
+participant "Email" as email
+participant "NoNumberNoSymbolString" as nnnss
+participant "Photo" as photo
+
+
+
+
+appservice o-> accMapper : asDTO = toShortDTO(a)
+activate accMapper
+accMapper -> accShortDTO : asDTO = new AccountShortDTO()
+activate accShortDTO
+accShortDTO -> accShortDTOI** : new
+deactivate accShortDTO
+
+accMapper -> accountI : a.getEmail()
+activate accountI
+accountI --> accMapper : (email : Email)
+deactivate accountI
+accMapper -> email : email.getEmailData()
+activate email
+email -->accMapper : (email : String)
+deactivate email
+accMapper -> accShortDTOI : dto.email = email
+activate accShortDTOI
+deactivate accShortDTOI
+
+accMapper -> accountI : a.getName()
+activate accountI
+accountI --> accMapper : (name : NoNumberNoSymbolString)
+deactivate accountI
+accMapper -> nnnss : NoNumberNoSymbolString.getValue()
+activate nnnss
+nnnss -->accMapper : (name : String)
+deactivate nnnss
+accMapper -> accShortDTOI : dto.name = name
+activate accShortDTOI
+deactivate accShortDTOI
+
+accMapper -> accountI : a.getFunction()
+activate accountI
+accountI --> accMapper : (function : NoNumberNoSymbolString)
+deactivate accountI
+accMapper -> nnnss : NoNumberNoSymbolString.getValue()
+activate nnnss
+nnnss -->accMapper : (function : String)
+deactivate nnnss
+accMapper -> accShortDTOI : dto.function = function
+activate accShortDTOI
+deactivate accShortDTOI
+
+accMapper -> accountI : a.getPhoto()
+activate accountI
+accountI --> accMapper : (function : Photo)
+deactivate accountI
+accMapper -> photo : Photo.getPhotoString()
+activate photo
+photo -->accMapper : (function : String)
+deactivate photo
+accMapper -> accShortDTOI : dto.photo = photo
+activate accShortDTOI
+deactivate accShortDTOI
+deactivate accMapper
+
+
+@enduml

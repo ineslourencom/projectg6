@@ -1,0 +1,34 @@
+@startuml
+autonumber
+actor ProjectTeamMember
+boundary ": ViewScrumBoardUI"
+participant ": ViewScrumBoardController"
+participant ": ITCompany"
+participant "listProj: ProjectStore"
+participant "proj: Project"
+participant "sprint: Sprint"
+participant ScrumBoardDTOMapper
+ProjectTeamMember -> ": ViewScrumBoardUI" : View Project Scrum Board
+": ViewScrumBoardUI" -> ": ViewScrumBoardController" : listOwnProjects(email)
+": ViewScrumBoardController" -> ": ITCompany" : getProjectStore()
+": ITCompany" --> ": ViewScrumBoardController" : listProj
+": ViewScrumBoardController" -> "listProj: ProjectStore" : getListOwnProjectsDTO(email)
+"listProj: ProjectStore" --> ": ViewScrumBoardController" : listOwnProjectsDTO
+": ViewScrumBoardController" --> ": ViewScrumBoardUI" : listOwnProjectsDTO
+": ViewScrumBoardUI" --> ProjectTeamMember : asks for Project
+ProjectTeamMember -> ": ViewScrumBoardUI" : selects a project
+": ViewScrumBoardUI" -> ": ViewScrumBoardController" : viewScrumBoard(projectCode)
+": ViewScrumBoardController" -> ": ITCompany" : getProjectStore()
+": ITCompany" -> "listProj: ProjectStore" : findProjectByCode(projectCode)
+"listProj: ProjectStore" -> "proj: Project" : sprint = determineRunningSprint()
+"proj: Project" -> "sprint: Sprint" : sb = getSprintBacklog()
+"sprint: Sprint" --> ": ViewScrumBoardController" : sb
+": ViewScrumBoardController" -> ScrumBoardDTOMapper : viewScrumBoard(sb)
+ref over ScrumBoardDTOMapper
+ref US30_SD_ScrumBoardDTO
+end ref
+ScrumBoardDTOMapper --> ": ViewScrumBoardController" : scrumBoardDTO
+": ViewScrumBoardController" --> ": ViewScrumBoardUI" : scrumBoardDTO
+": ViewScrumBoardUI" --> ProjectTeamMember : scrumBoardDTO
+
+@enduml

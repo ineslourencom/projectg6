@@ -1,0 +1,25 @@
+@startuml
+actor "PO / SM / Team Member" as user
+participant "UI" as ui
+participant "Backend" as be
+participant "DBMS" as dbms
+autonumber
+
+[o-> user : Project(s) with option to view product backlog
+user -> ui : Selects Project and chooses\n to view Product Backlog
+activate ui
+ui -> be : Get Product Backlog
+activate be
+be -> dbms : Validate Project and User
+activate dbms
+dbms --> be : true
+deactivate dbms
+be -> dbms : Get Project User Stories
+activate dbms
+dbms --> be : Return User Stories
+deactivate dbms
+be -> be : Create Product Backlog\nordered by priority
+be --> ui : Return Product Backlog
+ui --> user : View Product Backlog
+deactivate ui
+@enduml

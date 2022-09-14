@@ -1,0 +1,73 @@
+@startuml
+skinparam classAttributeIconSize 0
+class SearchResourcesUI
+class ListResourcesInProjectController{
+
+    +ListResourcesInProjectController()
+    +findProjectResources(int code) : List<ResourcesInProjectDTO>
+}
+class ITCompany << (S,#FF7700) Singleton>>{
+
+    +getProjectStore()
+}
+class ProjectStore{
+
+    +findProjectByCode(int code) : Project
+}
+class Project{
+
+    -int code
+    -String name
+    -String description
+    -LocalDate startDate
+    -int sprintDuration
+    -int plannedSprints
+    -LocalDate endDate
+    -String projectStatus
+    -double budget
+
+    +hasId(int id) : boolean
+    +getProjectTeam () : List <ResourcesInProjectDTO>
+}
+
+class ResourceList{
+    +getProjectTeam () : List <ResourcesInProjectDTO>
+}
+
+class ResourceMapper{
++createlistResourcesInProjectDTO(List<Resource> projectTeam) : List <ResourcesInProjectDTO>
+}
+
+class ResourcesInProjectDTO{
+    -String associatedAccountName;
+    -String associatedAccountEmail;
+    -String associatedResourceRole;
+    -LocalDate startDate;
+    -LocalDate endDate;
+
++resourcesInProjectDTO (String associatedAccountName, String associatedAccountEmail,
+                                      String associatedResourceRole, LocalDate startDate, LocalDate endDate) : resourcesInProjectDTO
+}
+class Resource{
+-LocalDate startDate;
+-double percentageOfAllocation;
+-double costPerHour;
+-LocalDate endDate;
+
+    +getAssociatedName() : String
+    +getAssociatedEmail() : String
+    +getAssociatedResourceRole() : String
+    +getResourceStarDate() : LocalDate
+    +getResourceEndDate() : LocalDate
+}
+SearchResourcesUI ..> ListResourcesInProjectController
+ListResourcesInProjectController -> "ITCompany" ITCompany
+ITCompany "1" --> "allProjectStore 1" ProjectStore
+ProjectStore "1" o--"projects 0.*" Project
+Project "1 " --> "projectTeam 1" ResourceList
+ResourceList "1"-->"projectTeam 0.*" Resource
+ResourceList "1"..> ResourceMapper
+
+ResourceMapper "1" ..> ResourcesInProjectDTO
+
+@enduml

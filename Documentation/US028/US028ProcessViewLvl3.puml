@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+participant Routes as route
+participant "Controllers" as Controller
+participant "Application Services" as Application
+participant "Repositories" as ResRepo
+participant "JPARepositories" as JPARepo
+participant "DataModel" as dataModel
+participant "Domain" as Domain
+participant "DTO" as DTO
+
+autonumber
+
+[o--> route : GET/projects/{pid}/resources
+activate route
+route -> Controller :Get resources in project
+activate Controller
+Controller -> Application : get all resources in project
+activate Application
+Application-> ResRepo : find all resources in project
+activate ResRepo
+ResRepo -> JPARepo : find all resources in JPA Repository
+activate JPARepo
+
+JPARepo --> ResRepo : resources in JPA Repository
+deactivate JPARepo
+
+
+ResRepo -> dataModel : resources to Domain
+activate dataModel
+dataModel -> Domain : create resources
+activate Domain
+Domain --> dataModel : resources in project
+deactivate Domain
+dataModel --> ResRepo : resources
+deactivate dataModel
+ResRepo --> Application :  resources
+deactivate ResRepo
+Application -> DTO : resources to DTO
+activate DTO
+DTO --> Application : list of resources DTOs
+deactivate DTO
+Application --> Controller :  list of resources DTOs
+deactivate Application
+Controller --> route : list of resources DTOs
+
+deactivate Controller
+deactivate route
+
+
+@enduml

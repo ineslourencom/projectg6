@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant "Project Repository" as repoProj
+participant "IProjectJPARepository " as projJPARepo <<interface>>
+participant "projectJPA: ProjectJPA" as projJPA
+participant "ProjectDomainDataAssembler" as projAssembler
+participant "project: Project" as proj
+
+
+[-> repoProj
+activate repoProj
+repoProj->projJPARepo : findById(id)
+
+activate projJPARepo
+projJPARepo -->projJPA**
+projJPARepo --> repoProj : projectJPA
+deactivate projJPARepo
+repoProj->projAssembler : toDomain(projectJPA)
+activate projAssembler
+projAssembler --> proj** : project
+projAssembler --> repoProj : project
+deactivate projAssembler
+[<-- repoProj
+@enduml

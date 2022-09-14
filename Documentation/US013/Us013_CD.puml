@@ -1,0 +1,117 @@
+@startuml
+'https://plantuml.com/class-diagram
+left to right direction
+
+
+package InterfaceAdapters{
+    package impController{
+        class "CreateProfileController" as cntrl{
+        +createNewProfile(profType : ProfileType, description : Text) : boolean
+        }
+    }
+
+
+
+    package Repositories{
+        class ProfileRepository{
+           +findProfileById (ProfileID prID) : Optional<Profile>
+           +getAllProfiles() : List<Profile>
+           +save() : boolean
+        }
+    }
+
+}
+
+package ApplicationServices{
+
+
+    package impAppServices{
+        class AppServiceCreateProfile{
+            # generateProfileID(profileType) : ProfileID
+            # isProfileDataValid(profileType) : boolean
+            + createNewProfile(profType : ProfileType, description : Text) : Optional <ProfileDTO>
+
+        }
+    }
+
+
+}
+
+package Domain{
+
+    package Aggregates{
+
+        package Profile{
+           entity Profile{
+             ProfileID profType
+             Text description
+           }
+           interface IProfileCreatable{
+                {static} createNewProfile(profType:ProfileType, desc:Text, profileID:ProfileID) : Profile
+           }
+
+           abstract class ProfileFactory{
+                {static} createNewProfile(profType:ProfileType, desc:Text, profileID:ProfileID) : Profile
+           }
+
+        }
+
+    }
+
+    package ValueObjects{
+         class "<<VO>> ProfileID"{
+            - ProfileType profileType
+         }
+         class "<<VO>> ProfileType"{
+            - String profileTypeData
+         }
+         class "<<VO>> Text"{
+            - String text
+         }
+    }
+
+
+}
+
+'layout definitions'
+InterfaceAdapters --down[hidden]> ApplicationServices
+ApplicationServices --down[hidden]> Domain
+
+impController --[hidden]> Repositories
+impController --down[hidden]> impAppServices
+Repositories --down[hidden]> impAppServices
+
+ApplicationServices --down[hidden]> Domain
+impAppServices --down[hidden]> Domain
+
+ApplicationServices --down[hidden]> Aggregates
+Aggregates --right[hidden]> Domain
+Aggregates --down[hidden]> ValueObjects
+Domain --left[hidden]> Aggregates
+
+Profile --up[hidden]> ProfileFactory
+IProfileCreatable --up[hidden]> ProfileFactory
+ProfileFactory --up[hidden]> IProfileCreatable
+impAppServices --[hidden]>ProfileRepository
+
+
+
+
+
+'Interfaces relations'
+IProfileCreatable <|.. ProfileFactory
+
+
+'relations'
+Profile -> "<<VO>> ProfileID"
+Profile -> "<<VO>> Text"
+Profile -> "<<VO>> ProfileType"
+
+AppServiceCreateProfile ..> ProfileRepository
+AppServiceCreateProfile ..> ProfileFactory
+cntrl ..> AppServiceCreateProfile
+ProfileFactory ..> Profile
+AppServiceCreateProfile ..> "<<VO>> ProfileID"
+
+
+@enduml

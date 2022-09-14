@@ -1,0 +1,39 @@
+@startuml
+
+
+interface "UI" as ui
+
+
+class "CreateNewProfileController" as ctrl {
+createNewProfile(profileType : String, description : String ) : boolean
+}
+
+class itc as "ITCompany" << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getProfileStore() : ProfileStore
+}
+
+class "ProfileStore" as profStr{
+createNewProfile(profileType : String, description : String ) : boolean
+checkIfProfileIsDuplicated(profileType : String)
+isProfileValid(profileType : String)
+isDescriptionValid(description : String)
+}
+
+
+
+class "Profile" as prof{
+  profileType : String
+  description : String
+
+Profile(profileType : String, description : String)
+
+}
+
+ui "1"-[dashed]->"1" ctrl
+ctrl "1"-[dashed]-> "1" itc
+itc "1" --> "1" profStr
+profStr "1" --> "*" prof
+
+
+@enduml

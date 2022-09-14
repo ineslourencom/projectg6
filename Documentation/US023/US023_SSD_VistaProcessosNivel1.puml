@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor TeamMember as po
+participant System as sys
+
+po-> sys : Initiates process
+sys -> po : Displays all projects
+po -> sys : Selects a project
+sys-> po : Displays possible actions for that project
+po -> sys : Selects the option ProductBacklog
+sys-> po : Requests necessary information\nto add User Story to SprintBacklog
+po -> sys : Selects a User Story and a number\nfrom the Fibonacci Sequence
+sys -> po : Informs about operation result and returns\nsuccess or failure message
+@enduml

@@ -1,0 +1,80 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 0
+skinparam sequenceParticipant underline
+
+skinparam sequence {
+ArrowColor black
+ActorBorderColor #black
+LifeLineBorderColor black
+LifeLineBackgroundColor white
+
+ParticipantBorderColor black
+ParticipantBackgroundColor #blank
+ParticipantFontName Aapex
+ParticipantFontSize 14
+ParticipantFontColor black
+
+ActorBackgroundColor #blank
+ActorFontColor black
+ActorFontSize 14
+ActorFontName Aapex
+}
+
+autonumber
+actor "Project Manager" as PM
+Participant ":NewDateSprintUI" as UI
+Participant ":NewSprintDateController" as Controller
+Participant ":iTCompany" as iT
+Participant ":ProjectStore" as Store
+Participant "proj:Project" as pj
+Participant "sprint:Sprint" as sprint
+
+
+PM -> UI : starts the definition of a new date sprint
+activate UI
+UI -> Controller : getProjectsList()
+activate Controller
+ref over Controller
+refers ABC
+end ref
+
+Controller --> UI : listProjDTO
+deactivate Controller
+UI --> PM : shows and request project
+deactivate UI
+PM -> UI : enters data to start a new sprint
+activate UI
+UI -> Controller : setNewStartDateSprint (startDate, sprintNumber, code)
+activate  Controller
+Controller -> Store : findProjectByCode (code)
+activate Store
+Controller <-- Store : proj
+deactivate Store
+Controller -> pj : setNewStartDateSprint (sprintNumber, startDate)
+activate pj
+pj -> sprint : getSprintNumber (sprintNumber) : sprint
+activate sprint
+sprint --> pj : number
+deactivate sprint
+pj -> sprint : isNewStartDateAfterPreviousEndDate (startDate)
+activate sprint
+sprint --> pj : true
+deactivate sprint
+pj -> sprint : isNewEndDateBeforeThanNewStartDate (startDate)
+activate sprint
+sprint --> pj : true
+deactivate sprint
+pj -> sprint : saveNewStartDate (newStartDate)
+activate sprint
+deactivate sprint
+Controller <-- pj : informs operation success
+deactivate pj
+UI <-- Controller : informs operation success
+deactivate Controller
+PM <-- UI : informs operation success
+deactivate UI
+
+@enduml

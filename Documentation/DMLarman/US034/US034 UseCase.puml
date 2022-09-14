@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor ProjectMember
+
+usecase (US034 - Update the status of a user story in the scope of the current sprint backlog.)
+
+:ProjectMember: -- (US034 - Update the status of a user story in the scope of the current sprint backlog.)
+
+@enduml

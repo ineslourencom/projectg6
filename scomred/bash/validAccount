@@ -1,0 +1,79 @@
+#!/bin/bash
+
+#Temporary data container
+M_CONTENT_FILE="/tmp/content.tmp"
+
+#AccountStore location
+ACCOUNTS_STORE="/var/www/data/accounts"
+
+#Working instance (file) of transferred content
+PASSFILENAME="/tmp/file2.tmp"
+
+
+#Error function
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $M_CONTENT_FILE
+exit
+}
+
+###Checks###
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+###
+#if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+###
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Transfer content file to working variable CONTENT
+CONTENT=$(cat $M_CONTENT_FILE);
+
+#Save first variable
+EMAILDATA=$(echo $CONTENT | cut -d "-" -f 1 )
+EMAILDATA=${EMAILDATA#emaildata=}
+EMAILDATA=$(echo $EMAILDATA | xargs)
+if [ -z "$EMAILDATA" ]; then error_response "empty email"; fi
+
+#Save second variable
+PASSWORD=$(echo $CONTENT | cut -d "-" -f 2 )
+PASSWORD=${PASSWORD#pass=}
+PASSWORD=$(echo $PASSWORD | xargs)
+if [ -z "$PASSWORD" ]; then error_response "empty password"; fi
+
+#Save third variable
+ACTIONDATA=$(echo $CONTENT | cut -d "-" -f 3 )
+ACTIONDATA=${ACTIONDATA#actiondata=}
+ACTIONDATA=$(echo $ACTIONDATA | xargs)
+if [ -z "$ACTIONDATA" ]; then error_response "empty action"; fi
+
+#Prepare search for account
+USER=$(echo $EMAILDATA | cut -d "@" -f 1 )
+FILENAME="$ACCOUNTS_STORE/$USER.txt"
+
+if [ -f "$FILENAME" ]; then
+  ACCOUNTEMAIL=$(grep -o '<email>.*</email>' $FILENAME | sed 's/\(<email>\|<\/email>\)//g')
+  PASSDATAREF=$(grep -o '<passwordhash>.*</passwordhash>' $FILENAME | sed 's/\(<passwordhash>\|<\/passwordhash>\)//g')
+  ALG=$(grep -o '<hashalgorithm>.*</hashalgorithm>' $FILENAME | sed 's/\(<hashalgorithm>\|<\/hashalgorithm>\)//g')
+  STATUS=$(grep -o '<isactive>.*</isactive>' $FILENAME | sed 's/\(<isactive>\|<\/isactive>\)//g')
+  echo $PASSWORD > $PASSFILENAME
+  PASSDATA=$(/var/www/cgi-bin/hashFunction $PASSFILENAME $ALG)
+  rm -f $PASSFILENAME;
+else
+    error_response "unknown account"
+fi
+
+#debug log
+echo "user="$USER" filename="$FILENAME" emailref="$ACCOUNTEMAIL" passdataref="$PASSDATAREF" emaildata="$EMAILDATA" passdata="$PASSDATA" actiondata="$ACTIONDATA" password="$PASSWORD" alg="$ALG" status="$STATUS"" > logfile.log;
+
+#test
+if [ "$PASSDATA" != "$PASSDATAREF" ] || [ "$STATUS" != "Yes" ]; then error_response "invalid login"; fi
+
+
+#Send answer http
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""
+echo "Valid login"

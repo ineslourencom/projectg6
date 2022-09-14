@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Director as dir
+participant System as sys
+
+dir-> sys : Initiates process
+sys -> dir : Displays all projects
+dir -> sys : Selects a project
+sys-> dir : Requests necessary information\nto appoint Product Owner
+dir -> sys : Insert percentage of allocation,\n start date, end date, cost per hour value\nand associated account email
+sys -> dir : Inform operation result and return information\n about the created resource if successfull
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant ": ResourceRepository" as repoResource
+participant "IResourceJPARepository" as resourceJPARepo <<interface>>
+participant "resourceJPA\n: Optional<ResourceJPA>" as resourceJPA
+participant ": ResourceDomainDataAssembler" as resourceAssembler
+participant "resource\n: Resource" as res
+
+[-> repoResource : findActiveResource\n(Role role, ProjectID projectID, LocalDate date)
+activate repoResource
+repoResource ->resourceJPARepo: findByRoleAndProjectIDAndAndStartDateLessThanEqualAndEndDateGreaterThanEqual\n(role.getRoleAsString(), projectID, date, date)
+
+activate resourceJPARepo
+resourceJPARepo --> resourceJPA**
+resourceJPARepo --> repoResource : resourceJPA
+deactivate resourceJPARepo
+repoResource -> resourceAssembler : toDomain(resourceJPA.get())
+activate resourceAssembler
+resourceAssembler --> res**
+resourceAssembler--> repoResource : resource
+deactivate resourceAssembler
+[<-- repoResource : Optional.of(resource)
+deactivate repoResource
+
+@enduml

@@ -1,0 +1,85 @@
+#!/bin/bash
+
+#AccountStore location
+ACCOUNTS_STORE="/var/www/data/accounts"
+
+#Working instance (file) of transferred content
+PASSFILENAME="/tmp/file2.tmp"
+
+
+#Error function
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $M_CONTENT_FILE
+exit
+}
+
+###Checks###
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+###
+#if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+###
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Transfer content file to working variable CONTENT
+CONTENT=$(cat $M_CONTENT_FILE);
+
+#Save first variable
+EMAILDATA=$(echo $CONTENT | cut -d "-" -f 1 )
+EMAILDATA=${EMAILDATA#emaildata=}
+EMAILDATA=$(echo $EMAILDATA | xargs)
+if [ -z "$EMAILDATA" ]; then error_response "empty email"; fi
+
+#Save second variable
+PASSWORD=$(echo $CONTENT | cut -d "-" -f 3 )
+PASSWORD=${PASSWORD#pass=}
+PASSWORD=$(echo $PASSWORD | xargs)
+if [ -z "$PASSWORD" ]; then error_response "empty password"; fi
+echo $PASSWORD > $PASSFILENAME
+PASSDATA=$(/var/www/cgi-bin/hashFunction $PASSFILENAME $ALG)
+rm -f $PASSFILENAME;
+
+#Save first variable
+FUNCTION=$(echo $CONTENT | cut -d "-" -f 1 )
+FUNCTION=${FUNCTION#function=}
+FUNCTION=$(echo $FUNCTION | xargs)
+if [ -z "$FUNCTION" ]; then error_response "empty function"; fi
+
+USER=$(echo $EMAILDATA | cut -d "@" -f 1 )
+FILENAME="$ACCOUNTS_STORE/$USER.txt"
+
+if [ -f "$FILENAME" ]; then
+  ACCOUNTEMAIL=$(grep -o '<email>.*</email>' $FILENAME | sed 's/\(<email>\|<\/email>\)//g')
+  NAME=$(grep -o '<name>.*</name>' $FILENAME | sed 's/\(<name>\|<\/name>\)//g')
+  PASSDATAREF=$(grep -o '<passwordhash>.*</passwordhash>' $FILENAME | sed 's/\(<passwordhash>\|<\/passwordhash>\)//g')
+  ALG=$(grep -o '<hashalgorithm>.*</hashalgorithm>' $FILENAME | sed 's/\(<hashalgorithm>\|<\/hashalgorithm>\)//g')
+  STATUS=$(grep -o '<isactive>.*</isactive>' $FILENAME | sed 's/\(<isactive>\|<\/isactive>\)//g')
+  FUNCTIONREF=$(grep -o '<function>.*</function>' $FILENAME | sed 's/\(<function>\|<\/function>\)//g')
+  PHOTO=$(grep -o '<photo>.*</photo>' $FILENAME | sed 's/\(<photo>\|<\/photo>\)//g')
+  PROFILE=$(grep -o '<profile>.*</profile>' $FILENAME | sed 's/\(<profile>\|<\/profile>\)//g')
+else
+    error_response "unknown account"
+fi
+    echo '<?xml version="1.0"?>' > "$ACCOUNTS_STORE/$USER.txt"
+    echo "<holder>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "<email>"$EMAILDATA"</email>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "<name>"$NAME"</name>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "<passwordhash>"$PASSDATA"</passwordhash>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "<hashalgorithm>"$ALG"</hashalgorithm>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "<function>"$FUNCTION"</function>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "<photo>"$PHOTO"</photo>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "<isactive>Yes</isactive>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "<profile>$PROFILE</profile>" >> "$ACCOUNTS_STORE/$USER.txt"
+    echo "</holder>" >> "$ACCOUNTS_STORE/$USER.txt"
+
+
+#Enviar resposta http
+
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""
+echo "Saved changes"

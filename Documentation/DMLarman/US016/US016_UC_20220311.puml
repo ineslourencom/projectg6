@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor Director
+actor "Project Manager"
+actor "Product Owner"
+actor "Scrum Master"
+
+usecase (View status of activities in a project)
+
+:Director: --(View status of activities in a project)
+:Project Manager: --(View status of activities in a project)
+:Product Owner: --(View status of activities in a project)
+:Scrum Master: --(View status of activities in a project)
+
+
+@enduml

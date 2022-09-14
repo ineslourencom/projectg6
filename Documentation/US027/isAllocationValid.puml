@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "period\n: Period" as period
+participant "additionalPercentage\n: LimitedPercentage" as perc
+participant " service\n: ServiceValidateResource" as serv
+participant "resource\n:Resource" as res
+
+
+ -> serv : validatePercentageOfAllocation(List<Resource> listResource,  period, additionalPercentage)
+activate serv
+serv -> period : startDate = getStartingDate() : LocalDate
+activate period
+deactivate period
+serv -> period : endDate = getEndingDate() : LocalDate
+activate period
+deactivate period
+loop !startDate.isAfter(endDate)
+serv -> perc :  percent = getPercentValue() : double
+activate perc
+deactivate perc
+loop for each resource in listResource
+
+serv ->res :isActive = isActiveInDate(startDate) : boolean
+activate res
+deactivate res
+opt if isActive
+serv -> res : p = getPercentageOfAllocation : LimitedPercentage
+activate res
+deactivate res
+serv -> serv : percent += p.getValue() : double
+end opt
+end loop
+opt percent >100
+<-- serv : false
+end opt
+serv -> serv : startDate = startDate.plusDays(1)
+end loop
+<-- serv : true
+deactivate serv
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+autonumber
+actor Administrator as admin
+participant UI as ui
+participant backend as bck
+participant "SGBD" as db
+
+
+admin-> ui : Initiates process
+ui-> bck : get accounts and status
+bck -> db : get accounts and status
+db --> bck : accounts and status
+bck--> ui : accounts and status
+ui --> admin : display all accounts
+
+
+
+@enduml

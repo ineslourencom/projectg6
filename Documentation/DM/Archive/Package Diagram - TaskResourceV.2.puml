@@ -1,0 +1,26 @@
+@startuml
+
+package Resource{
+class Resource<< Aggregate Root >>
+class Role << Value Object >>
+class ResourceID << Value Object ID >>
+}
+
+package Task{
+class Task << Aggregate Root >>
+class EffortUpdate << Value Object >>
+class TaskID << Value Object ID >>
+}
+
+
+ResourceID <-- "identified by 1" Resource
+
+TaskID --> "identifies 1" Task
+Task --> "has a responsible 1" ResourceID
+Task --> "is updated by 0..*" EffortUpdate
+Resource --> "has 1" Role
+EffortUpdate --> "is submitted by 1" ResourceID
+
+
+
+@enduml

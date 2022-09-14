@@ -1,0 +1,92 @@
+#!/bin/bash
+PROJECTS_STORE=/var/www/data/projects
+
+M_CONTENT_FILE=/tmp/.newproj.$$.tmp
+
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+exit
+}
+
+#Verifica se o request tem conteúdo.
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+
+#Verifica se o tipo de request é POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+#Verifica se a query-string não está vazia, pois queremos que esteja
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Criar content
+CONTENT=$(cat $M_CONTENT_FILE);
+
+PROJECT_CODE=$(($(ls -1 $PROJECTS_STORE | wc -l)+1))
+
+NAME=$(echo $CONTENT | cut -d "_" -f 1 )
+NAME=${NAME#project=}
+NAME=$(echo $NAME | xargs)
+if [ -z "$NAME" ]; then error_response "empty name"; fi
+
+for FILE in /var/www/data/projects/*; do
+if [ $(grep "<name>$NAME" $FILE | wc -l) -ge "1" ]; then error_response "There is a project with the same name"; fi;
+done
+
+DESCRIPTION=$(echo $CONTENT | cut -d "_" -f 2 )
+DESCRIPTION=${DESCRIPTION#description=}
+DESCRIPTION=$(echo $DESCRIPTION | xargs)
+if [ -z "$DESCRIPTION" ]; then error_response "empty description"; fi
+
+
+CLIENT=$(echo $CONTENT | cut -d "_" -f 3 )
+CLIENT=${CLIENT#client=}
+CLIENT=$(echo $CLIENT | xargs)
+if [ -z "$CLIENT" ]; then error_response "empty client"; fi
+
+BSSECTOR=$(echo $CONTENT | cut -d "_" -f 4 )
+BSSECTOR=${BSSECTOR#businessector=}
+BSSECTOR=$(echo $BSSECTOR | xargs)
+if [ -z "$BSSECTOR" ]; then error_response "empty business sector"; fi
+
+BUDGET=$(echo $CONTENT | cut -d "_" -f 5 )
+BUDGET=${BUDGET#budget=}
+BUDGET=$(echo $BUDGET | xargs)
+if [ -z "$BUDGET" ]; then error_response "empty budget"; fi
+
+TYPOLOGY=$(echo $CONTENT | cut -d "_" -f 6 )
+TYPOLOGY=${TYPOLOGY#typology=}
+TYPOLOGY=$(echo $TYPOLOGY | xargs)
+if [ -z "$TYPOLOGY" ]; then error_response "empty typology"; fi
+
+SPRINT_DURATION=$(echo $CONTENT | cut -d "_" -f 7 )
+SPRINT_DURATION=${SPRINT_DURATION#sprintduration=}
+SPRINT_DURATION=$(echo $SPRINT_DURATION | xargs)
+if [ -z "$SPRINT_DURATION" ]; then error_response "empty sprint duration"; fi
+
+START_DATE=$(echo $CONTENT | cut -d "_" -f 8 )
+START_DATE=${START_DATE#startdate=}
+START_DATE=$(echo $START_DATE | xargs)
+if [ -z "$START_DATE" ]; then error_response "empty start date"; fi
+
+
+echo '<?xml version="1.0"?>' > "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<project>"$PROJECT_CODE"</project>">> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<name>"$NAME"</name>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<description>"$DESCRIPTION"</description>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<client>"$CLIENT"</client>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<businessector>"$BSSECTOR"</businessector>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<budget>"$BUDGET"</budget>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<typology>"$TYPOLOGY"</typology>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<sprintduration>"$SPRINT_DURATION"</sprintduration>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<startdate>"$START_DATE"</startdate>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<enddate></enddate>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<plannedsprints></plannedsprints>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+echo "<status>"Planned"</status>" >> "$PROJECTS_STORE/$PROJECT_CODE.txt"
+
+#Enviar resposta http
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""

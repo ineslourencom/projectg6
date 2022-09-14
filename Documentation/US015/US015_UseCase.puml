@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor Director
+
+usecase (US015 - As Director, I want to get a list of all projects.)
+
+:Director: -- (US015 - As Director, I want to get a list of all projects.)
+@enduml

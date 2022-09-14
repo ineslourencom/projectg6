@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant "Task Repository" as repo
+participant "ITaskJPARepository " as taskJPARepo <<interface>>
+participant "taskJPA: TaskJPA" as taskJPA
+participant "TaskDomainDataAssembler" as assembler
+participant "task: Task" as task
+
+
+[-> repo
+activate repo
+repo->taskJPARepo : findAllByContainerIDStartingWith(int projId)
+
+activate taskJPARepo
+taskJPARepo -->taskJPA**
+taskJPARepo --> repo : taskJPA
+deactivate taskJPARepo
+repo->assembler : toDomain(taskJPA)
+activate assembler
+assembler --> task** : task
+assembler --> repo : task
+deactivate assembler
+[<-- repo
+@enduml

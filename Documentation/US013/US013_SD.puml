@@ -1,0 +1,71 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+participant Routes
+participant "newProfileInfoDTO : NewProfileInfoDTO" as dto
+control CreateNewProfileController as cntrl
+
+participant "profType : ProfileType" as vo2
+participant "desc : Text" as voText2
+participant "AppServiceCreateProfile" as appServ
+collections "profRep : ProfileRepository" as repo
+participant " profileID : ProfileID" as profID
+participant "ProfileDTO" as profDTO
+participant "ProfileFactory" as profFact
+participant " newProfile : Profile" as prof
+
+
+
+[o-> Routes : POST createProfile
+
+Routes -> dto ** :
+Routes -> cntrl : createNewProfile(newProfileInfoDTO : NewProfileInfoDTO )
+activate cntrl
+
+
+cntrl -> vo2 ** : ProfileType.of(newProfileInfoDTO.getProfileType())
+
+cntrl -> voText2 ** : Text.write(newProfileInfoDTO.getDescription())
+
+cntrl -> appServ : createAndSaveProfile(@autowired ProfileRepository, profType:ProfileType, desc:Text)
+activate appServ
+
+
+
+
+
+appServ -> profID ** : profileID = generateProfileID(profType : ProfileType)
+
+appServ -> prof ** : newProfile = ProfileCreatable.createNewProfile(profileID : ProfileID, desc : Text)
+appServ -> repo : isProfileDataValid(profType : ProfileType)
+activate repo
+deactivate repo
+alt true  if isProfileDataValid(profType : ProfileType)
+appServ -> repo : save(newProfile)
+activate repo
+appServ <-- repo :true
+deactivate repo
+
+appServ -> profDTO ** : ProfileDomainDTOMapper.toDTO(newProfile)
+
+cntrl <-- appServ : return Optional.of(newProfile : ProfileDTO)
+
+else false
+appServ -> profDTO ** : ProfileDomainDTOMapper.toDTO(newProfile)
+
+cntrl <-- appServ : return Optional.ofNullable(newProfile : ProfileDTO)
+deactivate appServ
+
+
+end
+deactivate appServ
+
+Routes <-- cntrl : return ResponseEntity<Object>
+deactivate cntrl
+ <-- Routes : return (in)success of the action
+
+
+@enduml

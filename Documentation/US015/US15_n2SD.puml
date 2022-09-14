@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+autonumber
+actor Director as dir
+participant UI as ui
+participant backend as bck
+participant "SGBD" as db
+
+
+dir-> ui : Initiates process
+ui-> bck : get all projects
+bck -> db : get all projects
+db --> bck : projects
+bck--> ui : success
+ui --> dir : Inform operation result and return information\n about all project if successfull
+
+
+
+@enduml

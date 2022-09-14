@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+participant " sprintRepo : SprintRepositoryImpl" as spRepo
+participant "ISprintJPARepository" as spJPARepo <<interface>>
+participant "SprintDomainDataAssembler" as spAssembler
+
+
+
+autonumber
+
+[-> spRepo : findAllSprintsByProjectID(ProjectID projId)
+activate spRepo
+spRepo -> spJPARepo : findAllUsByProjectID(int projId)
+activate spJPARepo
+spRepo <- spJPARepo : return List<SprintJPA> listSprintJPA
+deactivate spJPARepo
+
+loop for each SprintJPA in listSprintJPA
+
+
+spRepo -> spAssembler : toDomain(spJPA)
+activate spAssembler
+spAssembler-->"sprint : Sprint" ** :
+spAssembler-->spRepo : Sprint sprint
+deactivate spAssembler
+
+spRepo -> spRepo : returnList.add(sprint)
+
+
+end
+
+[<-- spRepo : List<Sprint> returnList
+deactivate spRepo
+
+@enduml

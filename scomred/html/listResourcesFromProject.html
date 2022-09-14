@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="../css/addResourceToProject.css?v=1" />
+    <script src="../js/listResourcesFromProject.js"></script>
+
+</head>
+
+<body onload="showProjects()">
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Homepage</a>
+</div>
+<div class="container">
+    <div style="text-align:left">
+        <h2>Resources</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="projects">Project</label>
+                <select id="projects" name="projects">
+                </select>
+                <input type="button" id="submit" name="submit" value="Load resources" onclick="loadResources()">
+                <p id="showData"></p>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="result" ></div>
+
+</body>
+</html>

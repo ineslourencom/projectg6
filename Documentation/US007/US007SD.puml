@@ -1,0 +1,164 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant "Routes" as routes
+participant ": ResourceController" as control
+participant ":ApplicationServiceCreateResource" as ASResource
+
+participant ":ProjectRepository" as RepProject
+participant "opProject\n : Optional<Project>" as opProj
+participant "proj : Project" as proj
+participant ":AccountRepository" as RepAccount
+participant "AccountJPARepository" as accjparepo <<Interface>>
+participant ":ResourceRepository" as RepResource
+participant ": ServiceValidateResource" as service
+participant ":SprintRepository" as RepSprint
+participant ":Account" as Account
+participant ":Project" as Project
+participant "ResourceFactory" as FactResource
+participant "Resource" as Resource
+participant "createResourceService" as DomainService
+
+
+
+note left
+As Director I want to
+associate a human resource
+to a project.
+end note
+[o-> routes : POST /projects/{projectID}/resources/
+routes -> control : createResource(NewResourceDTO dto, int projectID) : ResponseEntity<Object>
+activate control
+control -> ASResource : createResource(dto, projectID)
+activate ASResource
+ref over ASResource
+
+Convert_To_Value_Objects
+
+end ref
+
+ASResource -> RepProject : findById(pID) : Optional<Project>
+ref over RepProject
+
+findProject
+
+end ref
+activate RepProject
+create opProj
+RepProject ->opProj
+RepProject --> ASResource : opProject
+deactivate RepProject
+ASResource -> opProj : get() : Project
+activate opProj
+create proj
+opProj -> proj
+opProj --> ASResource : proj
+deactivate opProj
+
+ASResource -> RepAccount : true = existsByAccountID(accountID): boolean
+activate RepAccount
+RepAccount -> accjparepo : true = existsByID(accountID) : boolean
+activate accjparepo
+deactivate accjparepo
+deactivate RepAccount
+
+ASResource -> proj : true = containsPeriod(period) : boolean
+activate proj
+deactivate proj
+ASResource -> RepResource : resourcesOfAccount = findAllByAccountID(email) :List<Resource>
+activate RepResource
+ref over RepResource
+
+Find_All_resources_By_AccountID
+
+end ref
+RepResource -[hidden]>
+deactivate RepResource
+ASResource -> service : true = validatePercentageOfAllocation(resourcesOfAccount, period, percentage) : boolean
+ref over service
+
+isAllocationValid
+
+end ref
+activate service
+service-[hidden]>
+deactivate service
+ASResource -> RepResource : resourcesOfProject = findAllByProjectID(pID)
+activate RepResource
+ref over RepResource
+
+Find_All_resources_By_ProjectID
+
+end ref
+RepResource-[hidden]>
+deactivate RepResource
+ASResource -> service : true = validateResourceIsNotRepeated(resourcesOfProject, period, email)
+activate service
+ref over service
+
+isResourceNotRepeated
+
+end ref
+service -[hidden]>
+
+deactivate service
+
+opt !Erole.valueOf(dto.associatedRole).equals(Erole.DEVELOPER)
+
+ASResource -> service : true = validateRoleIsUniqueInPeriod(resourcesOfProject, period, role)
+activate service
+ref over service
+
+isRoleUnique
+
+end ref
+service -[hidden]>
+deactivate service
+
+end opt
+
+
+ASResource -> RepResource : findAllByAccountID(acntID)
+activate RepResource
+RepResource --> ASResource : accountList
+deactivate RepResource
+ASResource -> DomainService : accountList
+ASResource -> RepProject : findProjectByID(projID)
+activate RepProject
+RepProject--> ASResource : project
+deactivate RepProject
+ASResource -> DomainService : project
+
+DomainService -> DomainService : checkProjectEndDate()
+
+
+ASResource -> RepSprint : findAllSprintsbyProjectID(projID)
+RepSprint --> ASResource : sprintList
+ASResource -> DomainService : sprintList
+DomainService -> DomainService : isStartDateValid()
+DomainService -> DomainService : isEndDateValid()
+
+
+ASResource -> DomainService : accountList
+DomainService -> FactResource :
+activate FactResource
+
+
+ASResource -> DomainService : createNewResource( projID, acntID, role,allPRd, prct, cost)
+deactivate DomainService
+FactResource --> Resource**
+activate Resource
+deactivate FactResource
+Resource -> ASResource : resource
+ASResource -> RepResource : addAndSave(resource)
+activate RepResource
+RepResource --> ASResource : true
+deactivate RepResource
+ASResource --> control : true
+deactivate ASResource
+
+deactivate control
+
+@enduml

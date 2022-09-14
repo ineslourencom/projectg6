@@ -1,0 +1,682 @@
+
+###
+POST http://localhost:8080/customers/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "NIF": "257715347",
+  "name": "Porto Tech Hub"
+}
+
+<> 2022-05-20T112504.406.json
+<> 2022-05-20T112447.406.json
+<> 2022-05-20T112424.201.json
+
+
+###
+POST http://localhost:8080/businessSectors/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "code": "00000",
+  "description": "Information technology"
+}
+
+<> 2022-05-20T112504-1.406.json
+<> 2022-05-20T112447-1.406.json
+<> 2022-05-20T112433.201.json
+
+###
+POST http://localhost:8080/projectTypologies/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Time and Materials",
+  "description": "name"
+}
+
+
+
+<> 2022-05-20T112504-2.406.json
+<> 2022-05-20T112448.406.json
+<> 2022-05-20T112436.201.json
+
+
+###
+POST http://localhost:8080/projects/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "name",
+  "description": "desc",
+  "startDate": "2022-01-01",
+  "endDate": "2022-10-01",
+  "sprintDuration": "20",
+  "budget": "1000",
+  "CustomerID": "257715347",
+  "BusinessSectorID": "00000",
+  "ProjectTypologyID": "Time and Materials"
+}
+
+<> 2022-05-20T112505.201.json
+<> 2022-05-20T112448.201.json
+
+###
+POST http://localhost:8080/projects/1/userStories/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "statement": "This is a statement",
+  "detail": "This is a detail"
+}
+
+<> 2022-05-20T112505-1.201.json
+<> 2022-05-20T112449.201.json
+
+###
+POST http://localhost:8080/projects/1/sprints
+Content-Type: application/json
+Accept: application/json
+
+{
+  "startDate": "2022-05-10"
+}
+
+###
+GET http://localhost:8080/projects/1/sprints
+
+<> 2022-05-20T112506.201.json
+<> 2022-05-20T112450.201.json
+
+
+
+###
+POST http://localhost:8080/projects/1/sprintBacklogItems
+Content-Type: application/json
+Accept: application/json
+
+{
+  "usID": "1.001",
+  "effort": "1"
+}
+
+<> 2022-05-20T112506-1.201.json
+<> 2022-05-20T112450-1.201.json
+
+
+
+
+
+###
+GET http://localhost:8080/profiles
+
+
+###
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+  "email": "andre@isep.ipp.pt",
+  "name": "Andre",
+  "function": "minion",
+  "password": "testing01",
+  "photo": ";)"
+}
+
+###
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+  "email": "marta@isep.ipp.pt",
+  "name": "Marta",
+  "function": "minion",
+  "password": "testing02",
+  "photo": "XD"
+}
+
+
+###
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+  "email": "ines@isep.ipp.pt",
+  "name": "Ines",
+  "function": "minion",
+  "password": "testing05",
+  "photo": ":D"
+}
+
+###
+GET http://localhost:8080/accounts/andre@isep.ipp.pt?type=short
+
+###
+GET http://localhost:8080/accounts/andre@isep.ipp.pt?type=long
+
+###
+POST http://localhost:8080/projects/1/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "andre@isep.ipp.pt",
+  "associatedRole": "DEVELOPER",
+  "startDate": "2022-01-01",
+  "endDate": "2022-01-02",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+###
+POST http://localhost:8080/projects/1/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "ines@isep.ipp.pt",
+  "associatedRole": "DEVELOPER",
+  "startDate": "2022-01-01",
+  "endDate": "2022-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+###
+GET http://localhost:8080/projects?uid=andre@isep.ipp.pt&role=SCRUM_MASTER
+
+
+###
+POST http://localhost:8080/projects/
+Content-Type: application/json
+Accept: application/json
+
+
+{
+  "name": "Book-sharing",
+  "description": "Share and review books",
+  "startDate": "2022-01-01",
+  "endDate": "2023-10-01",
+  "sprintDuration": "1",
+  "budget": "1000",
+  "CustomerID": "257715347",
+  "BusinessSectorID": "00000",
+  "ProjectTypologyID": "Time and Materials"
+}
+
+
+###
+POST http://localhost:8080/projects/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Lunch Express",
+  "description": "Meal home delivery",
+  "startDate": "2021-03-01",
+  "endDate": "2022-10-01",
+  "sprintDuration": "1",
+  "budget": "1000",
+  "CustomerID": "257715347",
+  "BusinessSectorID": "00000",
+  "ProjectTypologyID": "Time and Materials"
+}
+
+
+###
+POST http://localhost:8080/projects/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "NYC Fashion",
+  "description": "Buy clothing and accessories",
+  "startDate": "2022-01-01",
+  "endDate": "2023-10-01",
+  "sprintDuration": "1",
+  "budget": "1000",
+  "CustomerID": "257715347",
+  "BusinessSectorID": "00000",
+  "ProjectTypologyID": "Time and Materials"
+}
+
+###
+POST http://localhost:8080/projects/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Piggy Bank",
+  "description": "Home banking and personal finances",
+  "startDate": "2022-01-01",
+  "endDate": "2023-10-01",
+  "sprintDuration": "1",
+  "budget": "1000",
+  "CustomerID": "257715347",
+  "BusinessSectorID": "00000",
+  "ProjectTypologyID": "Time and Materials"
+}
+
+
+###
+POST http://localhost:8080/projects/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Wheelers",
+  "description": "Car rental",
+  "startDate": "2021-03-01",
+  "endDate": "2022-10-01",
+  "sprintDuration": "1",
+  "budget": "1000",
+  "CustomerID": "257715347",
+  "BusinessSectorID": "00000",
+  "ProjectTypologyID": "Time and Materials"
+}
+
+
+###
+POST http://localhost:8080/projects/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Fly Away",
+  "description": "Book flights and hotels",
+  "startDate": "2022-01-01",
+  "endDate": "2023-10-01",
+  "sprintDuration": "1",
+  "budget": "1000",
+  "CustomerID": "257715347",
+  "BusinessSectorID": "00000",
+  "ProjectTypologyID": "Time and Materials"
+}
+
+
+###
+POST http://localhost:8080/projects/2/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "andre@isep.ipp.pt",
+  "associatedRole": "PROJECT_MANAGER",
+  "startDate": "2022-01-01",
+  "endDate": "2023-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+
+###
+POST http://localhost:8080/projects/3/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "andre@isep.ipp.pt",
+  "associatedRole": "PROJECT_MANAGER",
+  "startDate": "2021-03-01",
+  "endDate": "2022-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+###
+POST http://localhost:8080/projects/1/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "ines@isep.ipp.pt",
+  "associatedRole": "DEVELOPER",
+  "startDate": "2022-01-01",
+  "endDate": "2022-10-01",
+  "percentageOfAllocation": "0.9",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+
+
+###
+POST http://localhost:8080/projects/4/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "andre@isep.ipp.pt",
+  "associatedRole": "PROJECT_MANAGER",
+  "startDate": "2022-01-01",
+  "endDate": "2022-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+###
+POST http://localhost:8080/projects/7/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "andre@isep.ipp.pt",
+  "associatedRole": "PRODUCT_OWNER",
+  "startDate": "2022-01-01",
+  "endDate": "2022-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+
+###
+POST http://localhost:8080/projects/6/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "andre@isep.ipp.pt",
+  "associatedRole": "SCRUM_MASTER",
+  "startDate": "2022-03-01",
+  "endDate": "2022-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+
+###
+POST http://localhost:8080/projects/5/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "andre@isep.ipp.pt",
+  "associatedRole": "DEVELOPER",
+  "startDate": "2022-01-01",
+  "endDate": "2022-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+###
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+  "email": "salome@isep.ipp.pt",
+  "name": "Salome",
+  "function": "minion",
+  "password": "testing01",
+  "photo": ";)"
+}
+
+###
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+  "email": "andreia@isep.ipp.pt",
+  "name": "Andreia",
+  "function": "minion",
+  "password": "testing01",
+  "photo": ";)"
+}
+
+
+###
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+  "email": "lino@isep.ipp.pt",
+  "name": "Lino",
+  "function": "minion",
+  "password": "testing01",
+  "photo": ";)"
+}
+
+
+
+
+###
+GET http://localhost:8080/projects/2/resources
+
+###
+POST http://localhost:8080/projects/2/sprints
+Content-Type: application/json
+Accept: application/json
+
+{
+  "startDate": "2022-01-01"
+}
+
+###
+POST http://localhost:8080/projects/2/sprints
+Content-Type: application/json
+Accept: application/json
+
+{
+  "startDate": "2022-01-09"
+}
+
+###
+POST http://localhost:8080/projects/2/sprints
+Content-Type: application/json
+Accept: application/json
+
+{
+  "startDate": "2022-01-17"
+}
+
+###
+PATCH http://localhost:8080/projects/2/sprints/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "startDate": "2022-01-30"
+}
+###
+POST http://localhost:8080/projects/2/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "andreia@isep.ipp.pt",
+  "associatedRole": "SCRUM_MASTER",
+  "startDate": "2022-01-01",
+  "endDate": "2023-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+###
+POST http://localhost:8080/projects/2/resources
+Content-Type: application/json
+
+{
+  "associatedAccount": "lino@isep.ipp.pt",
+  "associatedRole": "DEVELOPER",
+  "startDate": "2022-01-01",
+  "endDate": "2023-10-01",
+  "percentageOfAllocation": "0.1",
+  "costPerHourValue": "5",
+  "currency": "EUR"
+}
+
+
+###
+PUT http://localhost:8080/projects/2/resources/scrumMaster
+Content-Type: application/json
+
+{
+  "associatedAccount": "lino@isep.ipp.pt",
+  "startDate": "2022-01-09",
+  "endDate": "2022-01-16",
+  "percentageOfAllocation": "0.1"
+}
+
+
+###
+POST http://localhost:8080/projects/1/userStories/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "statement": "This is a statement for 2nd US",
+  "detail": "This is a detail of statement"
+}
+
+
+###
+POST http://localhost:8080/projects/1/userStories/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "statement": "This is a statement for 3rd US",
+  "detail": "This is a detailed detail of a statement"
+}
+
+
+###
+POST http://localhost:8080/projects/1/userStories/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "statement": "This is a statement for 4th US",
+  "detail": "This is a bold statement, for a detail"
+}
+
+
+###
+PATCH http://localhost:8080/accounts/andre@isep.ipp.pt/profiles
+Content-Type: application/json
+Accept: application/json
+
+{
+  "profileID": "Director",
+  "description": "An employee with special management functions and consequently special permissions in the project administration sphere."
+}
+
+
+###
+GET http://localhost:8080/projects/1/productBacklog?email=andre@isep.ipp.pt
+
+
+
+###
+POST http://localhost:8080/project/1/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Task One",
+  "description": "description One",
+  "startDate": "2022-06-20",
+  "endDate": "2022-06-25",
+  "effortEstimate": 3,
+  "type" : "Meeting",
+  "resourceID": "655419110",
+  "option": "Sprint",
+  "containerID": "1.001"
+
+}
+
+
+###
+POST http://localhost:8080/project/1/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+"name": "Task Two",
+"description": "description two",
+"startDate": "2022-06-20",
+"endDate": "2022-06-25",
+"effortEstimate": 3,
+"type" : "Documentation",
+"resourceID": "655419110",
+"option": "Sprint",
+"containerID": "1.001"
+
+}
+
+
+###
+POST http://localhost:8080/project/1/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Task Three",
+  "description": "description three",
+  "startDate": "2022-06-20",
+  "endDate": "2022-06-25",
+  "effortEstimate": 3,
+  "type" : "Documentation",
+  "resourceID": "655419110",
+  "option": "Sprint",
+  "containerID": "1.001"
+
+}
+
+###
+POST http://localhost:8080/project/1/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Task Four",
+  "description": "description four",
+  "startDate": "2022-06-20",
+  "endDate": "2022-06-25",
+  "effortEstimate": 3,
+  "type" : "Documentation",
+  "resourceID": "655419110",
+  "option": "User Story",
+  "containerID": "1.001"
+
+}
+
+###
+POST http://localhost:8080/project/1/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Task Five",
+  "description": "description five",
+  "startDate": "2022-06-20",
+  "endDate": "2022-06-25",
+  "effortEstimate": 3,
+  "type" : "Documentation",
+  "resourceID": "655419110",
+  "option": "User Story",
+  "containerID": "1.001"
+
+}
+
+###
+POST http://localhost:8080/project/1/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Task Six",
+  "description": "description six ",
+  "startDate": "2022-06-20",
+  "endDate": "2022-06-25",
+  "effortEstimate": 3,
+  "type" : "Documentation",
+  "resourceID": "655419110",
+  "option": "User Story",
+  "containerID": "1.001"
+
+}
+
+

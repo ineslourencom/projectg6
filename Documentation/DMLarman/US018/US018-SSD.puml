@@ -1,0 +1,10 @@
+@startuml
+actor "PO / SM / Team Member" as user
+participant "System" as system
+autonumber
+[o-> user : Output from US017
+user -> system : Selects project and chooses\n view product backlog
+activate system
+system -> user : show product backlog
+deactivate system
+@enduml

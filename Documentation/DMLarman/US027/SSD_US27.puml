@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Director as dir
+participant System as sys
+dir -> sys: Initiate process to appoint PO
+sys --> dir: Request necessary information to appoint PO
+dir -> sys: Indicate project code, \n account email, start date,\npercentage of allocation\nand cost per hour
+
+sys --> dir: Inform operation (in)success
+
+@enduml

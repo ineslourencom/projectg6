@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "appService : ApplicationServiceCreateResource" as appService
+participant "project : Project" as proj
+participant "domainService: ServiceValidateResource" as service
+
+appService -> proj : containsPeriod(period) : boolen
+activate appService
+activate proj
+proj --> appService : true
+deactivate proj
+
+appService -> service : validatePercentageOfAllocation(resourcesOfAccount, period, percentage)
+activate service
+service --> appService : true
+deactivate service
+
+appService -> service : validateResourceIsNotRepeated(resourcesOfProject, period, email) : boolean
+
+activate service
+service --> appService : true
+deactivate service
+
+
+deactivate appService
+@enduml

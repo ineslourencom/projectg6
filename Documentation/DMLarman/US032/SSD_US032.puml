@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "SM/Team Member" as User
+participant ":System" as System
+
+activate User
+
+User -> System: Requests all Projects
+System --> User: return Projects List
+User -> System: Inserts the project code
+System --> User: return Sprint List
+User -> System: Inserts the sprint ID
+System --> User: request the task information: name, description, \n startDate, endDate, effortEstimate,  taskType and associatedResource
+User -> System: Inserts task name, description, \n startDate, endDate, effortEstimate,  taskType and associatedResource
+System -> System: Create Task in Sprint
+System --> User: task created successfully
+@enduml

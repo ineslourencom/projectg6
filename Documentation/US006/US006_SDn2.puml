@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+autonumber
+actor Director as admin
+participant UI as ui
+participant backend as bck
+participant "SGBD" as db
+
+
+admin-> ui : Initiates process
+ui-> bck : get profiles DTOS
+bck -> db : find all
+db --> bck : List<Profiles>
+bck--> ui : profile DTO List
+ui --> admin : display profiles
+admin-> ui : Select profile and insert email account
+ui-> bck : update profile
+bck -> db : update
+db --> bck : account
+bck--> ui : account DTO
+ui --> admin : update with success
+
+
+
+@enduml

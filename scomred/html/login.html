@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login into TeamSix project tracking software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="../css/geral.css?v=1" />
+    <script src="../js/login.js"></script>
+</head>
+
+
+<body>
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexOuter.html">Return to Entrance</a>
+</div>
+<div class="container">
+    <div style="text-align:center">
+        <h2>Login</h2>
+        <h3>Enter your credentials</h3>
+    </div>
+    <div class="row">
+        <div class="column">
+            <form id="form">
+                <div class="required">
+                    <label for="emailData">E-mail</label>
+                </div>
+                <input type="text" id="emailData" name="emailData" placeholder="Your e-mail...">
+                <div class="required">
+                    <label for="passwordData">Password</label>
+                </div>
+                <input type="password" id="passwordData" name="passwordData" placeholder="Your password...">
+                <p></p>
+                <p></p>
+                <p></p>
+                <input type="button" value="Enter" onclick="logInAccount()">
+            </form>
+        </div>
+    </div>
+</div>
+<div id="result" ></div>
+<div id="result2" ></div>
+</body>
+</html>

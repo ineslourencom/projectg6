@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="771px" preserveAspectRatio="none" style="width:1980px;height:771px;background:#FFFFFF;" version="1.1" viewBox="0 0 1980 771" width="1980px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="656.1016" style="stroke:#181818;stroke-width:1.0;" width="10" x="243" y="69.9609"/><rect fill="#FFFFFF" height="616.75" style="stroke:#181818;stroke-width:1.0;" width="10" x="398" y="100.3125"/><rect fill="#FFFFFF" height="556.0469" style="stroke:#181818;stroke-width:1.0;" width="10" x="595.5" y="130.6641"/><rect fill="#FFFFFF" height="286.7188" style="stroke:#181818;stroke-width:1.0;" width="10" x="778" y="161.0156"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="936" y="380.0313"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="1132" y="319.6797"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="1353" y="233.9766"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="1526" y="546.0469"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="1843" y="619.0078"/><rect height="139.4063" style="stroke:#000000;stroke-width:1.5;fill:none;" width="546" x="706" y="278.9766"/><rect height="152.0156" style="stroke:#000000;stroke-width:1.5;fill:none;" width="1489" x="485" y="505.3438"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="247.5" x2="247.5" y1="37.6094" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="403" x2="403" y1="37.6094" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="600" x2="600" y1="37.6094" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="783" x2="783" y1="37.6094" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="941" x2="941" y1="200.3203" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="1137" x2="1137" y1="37.6094" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="1358" x2="1358" y1="37.6094" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="1531" x2="1531" y1="37.6094" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="1660" x2="1660" y1="585.3516" y2="735.0625"/><line style="stroke:#181818;stroke-width:0.5;fill:none;stroke-dasharray:5.0,5.0;" x1="1848" x2="1848" y1="487.0391" y2="735.0625"/><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="59" x="218.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="225.5" y="26.5332">Routes</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="59" x="218.5" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="225.5" y="755.5957">Routes</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="164" x="321" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="328" y="26.5332">: ViewProjectsController</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="164" x="321" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="328" y="755.5957">: ViewProjectsController</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="211" x="495" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="197" x="502" y="26.5332">: ApplicationServiceListProjects</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="211" x="495" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="197" x="502" y="755.5957">: ApplicationServiceListProjects</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="716" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="723" y="26.5332">: ProjectRepository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="716" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="723" y="755.5957">: ProjectRepository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="860" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="871" y="755.5957">projects : List&lt;Project&gt;</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="210" x="1032" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="196" x="1039" y="26.5332">: ProjectDomainDataAssembler</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="210" x="1032" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="196" x="1039" y="755.5957">: ProjectDomainDataAssembler</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="212" x="1252" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198" x="1259" y="26.5332">: IProjectRepository &lt;Interface&gt;</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="212" x="1252" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198" x="1259" y="755.5957">: IProjectRepository &lt;Interface&gt;</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="1474" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="1481" y="26.5332">: ProjectMapper</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="1474" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="1481" y="755.5957">: ProjectMapper</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="124" x="1598" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="1609" y="755.5957">dto : ProjectDTO</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="232" x="1732" y="734.0625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="214" x="1739" y="755.5957">: projectDTOS : List&lt;ProjectDTO&gt;</text><rect fill="#FFFFFF" height="656.1016" style="stroke:#181818;stroke-width:1.0;" width="10" x="243" y="69.9609"/><rect fill="#FFFFFF" height="616.75" style="stroke:#181818;stroke-width:1.0;" width="10" x="398" y="100.3125"/><rect fill="#FFFFFF" height="556.0469" style="stroke:#181818;stroke-width:1.0;" width="10" x="595.5" y="130.6641"/><rect fill="#FFFFFF" height="286.7188" style="stroke:#181818;stroke-width:1.0;" width="10" x="778" y="161.0156"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="936" y="380.0313"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="1132" y="319.6797"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="1353" y="233.9766"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="1526" y="546.0469"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="1843" y="619.0078"/><ellipse cx="7.5" cy="69.2109" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.5;"/><polygon fill="#181818" points="231,65.9609,241,69.9609,231,73.9609,235,69.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="12" x2="237" y1="69.9609" y2="69.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="15" y="65.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="205" x="26" y="65.1045">GET https://localhost:8080/projects</text><polygon fill="#181818" points="386,96.3125,396,100.3125,386,104.3125,390,100.3125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="253" x2="392" y1="100.3125" y2="100.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="260" y="95.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="115" x="271" y="95.4561">getListOfAllProjects</text><polygon fill="#181818" points="583.5,126.6641,593.5,130.6641,583.5,134.6641,587.5,130.6641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="408" x2="589.5" y1="130.6641" y2="130.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="415" y="125.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="426" y="125.8076">getAllProjects</text><polygon fill="#181818" points="766,157.0156,776,161.0156,766,165.0156,770,161.0156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="605.5" x2="772" y1="161.0156" y2="161.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="612.5" y="156.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="623.5" y="156.1592">findAll</text><polygon fill="#181818" points="848,187.3672,858,191.3672,848,195.3672,852,191.3672" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="788" x2="854" y1="191.3672" y2="191.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="795" y="186.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="806" y="186.5107"> </text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="860" y="169.0156"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="871" y="190.5488">projects : List&lt;Project&gt;</text><polygon fill="#181818" points="1341,229.9766,1351,233.9766,1341,237.9766,1345,233.9766" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="788" x2="1347" y1="233.9766" y2="233.9766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="795" y="229.1201">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="234" x="806" y="229.1201">List&lt;ProjectsJPA&gt; projectsJPA = findAll</text><path d="M706,278.9766 L779,278.9766 L779,287.3281 L769,297.3281 L706,297.3281 L706,278.9766 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="139.4063" style="stroke:#000000;stroke-width:1.5;" width="546" x="706" y="278.9766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="721" y="293.4717">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="197" x="794" y="292.3955">[for each projectsJPA in repository]</text><polygon fill="#181818" points="1120,315.6797,1130,319.6797,1120,323.6797,1124,319.6797" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="788" x2="1126" y1="319.6797" y2="319.6797"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="795" y="314.8232">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="806" y="314.8232">project = toDomain(projectJPA)</text><polygon fill="#181818" points="924,376.0313,934,380.0313,924,384.0313,928,380.0313" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="788" x2="930" y1="380.0313" y2="380.0313"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="795" y="375.1748">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="806" y="375.1748">add(project)</text><polygon fill="#181818" points="799,406.3828,789,410.3828,799,414.3828,795,410.3828" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="793" x2="940" y1="410.3828" y2="410.3828"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="805" y="405.5264">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="816" y="405.5264">projects</text><polygon fill="#181818" points="616.5,443.7344,606.5,447.7344,616.5,451.7344,612.5,447.7344" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="610.5" x2="782" y1="447.7344" y2="447.7344"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="622.5" y="442.8779">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="640.5" y="442.8779">projects</text><polygon fill="#181818" points="1720,474.0859,1730,478.0859,1720,482.0859,1724,478.0859" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="605.5" x2="1726" y1="478.0859" y2="478.0859"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="612.5" y="473.2295">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="630.5" y="473.2295"> </text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="232" x="1732" y="455.7344"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="214" x="1739" y="477.2676">: projectDTOS : List&lt;ProjectDTO&gt;</text><path d="M485,505.3438 L558,505.3438 L558,513.6953 L548,523.6953 L485,523.6953 L485,505.3438 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="152.0156" style="stroke:#000000;stroke-width:1.5;" width="1489" x="485" y="505.3438"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="500" y="519.8389">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="169" x="573" y="518.7627">[for each project in repository]</text><polygon fill="#181818" points="1514,542.0469,1524,546.0469,1514,550.0469,1518,546.0469" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="605.5" x2="1520" y1="546.0469" y2="546.0469"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="612.5" y="541.1904">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="630.5" y="541.1904">dto = toDTO(project)</text><polygon fill="#181818" points="1586,572.3984,1596,576.3984,1586,580.3984,1590,576.3984" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1531" x2="1592" y1="576.3984" y2="576.3984"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1538" y="571.542">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="1556" y="571.542"> </text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="124" x="1598" y="554.0469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="1609" y="575.5801">dto : ProjectDTO</text><polygon fill="#181818" points="1831,615.0078,1841,619.0078,1831,623.0078,1835,619.0078" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="605.5" x2="1837" y1="619.0078" y2="619.0078"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="612.5" y="614.1514">14</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="630.5" y="614.1514">add(dto)</text><polygon fill="#181818" points="616.5,645.3594,606.5,649.3594,616.5,653.3594,612.5,649.3594" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="610.5" x2="1847" y1="649.3594" y2="649.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="622.5" y="644.5029">15</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74" x="640.5" y="644.5029">projectDTOS</text><polygon fill="#181818" points="419,682.7109,409,686.7109,419,690.7109,415,686.7109" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="413" x2="599.5" y1="686.7109" y2="686.7109"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="425" y="681.8545">16</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74" x="443" y="681.8545">projectDTOS</text><polygon fill="#181818" points="264,713.0625,254,717.0625,264,721.0625,260,717.0625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="258" x2="402" y1="717.0625" y2="717.0625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="270" y="712.2061">17</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="288" y="712.2061">ResponseEntity</text><!--MD5=[afc01b238264613e64ba4dfe9ceba788]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "Routes" as server
+participant ": ViewProjectsController" as ctrl
+participant ": ApplicationServiceListProjects" as appService
+participant ": ProjectRepository" as repo
+participant " projects : List<Project>" as listProject
+participant ": ProjectDomainDataAssembler" as assembler
+participant ": IProjectRepository <Interface>" as IRepo
+participant ": ProjectMapper" as mapper
+participant " dto : ProjectDTO" as dto
+participant ": projectDTOS : List<ProjectDTO> " as listProjectDTO
+
+[o- -> server : GET https://localhost:8080/projects
+activate server
+server -> ctrl : getListOfAllProjects
+activate ctrl
+ctrl -> appService : getAllProjects
+activate appService
+appService -> repo : findAll
+activate repo
+repo - -> listProject**
+repo -> IRepo : List<ProjectsJPA> projectsJPA = findAll
+activate IRepo
+deactivate IRepo
+
+
+loop for each projectsJPA in repository
+repo -> assembler : project = toDomain(projectJPA)
+activate assembler
+deactivate assembler
+repo -> listProject : add(project)
+activate listProject
+listProject - -> repo : projects
+deactivate listProject
+end loop
+
+repo - -> appService : projects
+deactivate repo
+appService - -> listProjectDTO**
+
+loop for each project in repository
+appService -> mapper : dto = toDTO(project)
+activate mapper
+mapper - -> dto**
+deactivate mapper
+appService -> listProjectDTO : add(dto)
+activate listProjectDTO
+listProjectDTO - -> appService : projectDTOS
+deactivate listProjectDTO
+end loop
+
+appService - -> ctrl : projectDTOS
+deactivate appService
+
+
+ctrl - -> server : ResponseEntity
+deactivate ctrl
+
+
+@enduml
+
+@startuml
+
+autonumber
+participant "Routes" as server
+participant ": ViewProjectsController" as ctrl
+participant ": ApplicationServiceListProjects" as appService
+participant ": ProjectRepository" as repo
+participant " projects : List<Project>" as listProject
+participant ": ProjectDomainDataAssembler" as assembler
+participant ": IProjectRepository <Interface>" as IRepo
+participant ": ProjectMapper" as mapper
+participant " dto : ProjectDTO" as dto
+participant ": projectDTOS : List<ProjectDTO> " as listProjectDTO
+
+[o- -> server : GET https://localhost:8080/projects
+activate server
+server -> ctrl : getListOfAllProjects
+activate ctrl
+ctrl -> appService : getAllProjects
+activate appService
+appService -> repo : findAll
+activate repo
+repo - -> listProject**
+repo -> IRepo : List<ProjectsJPA> projectsJPA = findAll
+activate IRepo
+deactivate IRepo
+
+
+loop for each projectsJPA in repository
+repo -> assembler : project = toDomain(projectJPA)
+activate assembler
+deactivate assembler
+repo -> listProject : add(project)
+activate listProject
+listProject - -> repo : projects
+deactivate listProject
+end loop
+
+repo - -> appService : projects
+deactivate repo
+appService - -> listProjectDTO**
+
+loop for each project in repository
+appService -> mapper : dto = toDTO(project)
+activate mapper
+mapper - -> dto**
+deactivate mapper
+appService -> listProjectDTO : add(dto)
+activate listProjectDTO
+listProjectDTO - -> appService : projectDTOS
+deactivate listProjectDTO
+end loop
+
+appService - -> ctrl : projectDTOS
+deactivate appService
+
+
+ctrl - -> server : ResponseEntity
+deactivate ctrl
+
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

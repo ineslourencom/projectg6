@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="../css/addResourceToProject.css?v=1" />
+    <script src="../js/promoteDevToSM.js"></script>
+</head>
+
+<body onload="initData()">
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Entrance</a>
+</div>
+<div class="container">
+    <div style="text-align:left">
+        <h2>Promote Developer to SM</h2>
+        <p>Please choose a project and a resource to be promoted</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="projects">Project</label>
+                <select id="projects" name="projects">
+                </select>
+                <input type="button" id="submit" name="submit" value="Load Dev Team" onclick="loadAccounts()">
+                <br><br>
+                <label for="accounts">Choose a team member to promote</label>
+                <select id="accounts" name="accounts">
+                </select>
+                <input type="button" id="promote" name="submit" value="Promote to SM" onclick="promoteToSM()">
+                <br>
+                <br>
+
+            </form>
+        </div>
+    </div>
+</div>
+<div id="result" ></div>
+
+</body>
+</html>

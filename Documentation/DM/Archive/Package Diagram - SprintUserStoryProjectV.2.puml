@@ -1,0 +1,33 @@
+@startuml
+
+package Sprint{
+class Sprint << Aggregate Root >>
+class SprintBacklogItem << Value Object >>
+class Status << Value Object >>
+class SprintID << Value Object ID >>
+}
+
+package UserStory{
+class UserStory << Aggregate Root >>
+class EffortEstimate << Value Object >>
+class UserStoryID << Value Object ID >>
+}
+
+package Project{
+class Project << Aggregate Root >>
+class ProjectID << Value Object ID >>
+}
+
+ProjectID <-- "identified by 1" Project
+Sprint --> "belongs to 1" ProjectID
+SprintID <-- "identified by 1" Sprint
+SprintBacklogItem --> "has 1" Status
+Sprint --> "has *" SprintBacklogItem
+
+SprintBacklogItem --> "represents 1" UserStoryID
+UserStoryID <-- "identified by 1" UserStory
+UserStory --> "has 1" EffortEstimate
+
+UserStory --> "belongs to pB 1" ProjectID
+
+@enduml

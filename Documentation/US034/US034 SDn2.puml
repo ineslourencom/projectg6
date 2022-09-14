@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+autonumber
+actor Project_Member as admin
+participant UI as ui
+participant backend as bck
+participant "SGBD" as db
+
+
+admin-> ui : Initiates process
+ui-> bck : update status of us on scrum board
+bck -> db : find running sprint by project id
+db --> bck : running sprint
+bck -> db : does us id exist on running sprint and update new status
+db --> bck : sprint
+bck -> db : save sprint
+db --> bck : sprint
+bck--> ui : true
+ui --> admin : update with success
+
+
+
+@enduml

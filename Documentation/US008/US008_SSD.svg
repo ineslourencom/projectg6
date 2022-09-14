@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="571px" preserveAspectRatio="none" style="width:475px;height:571px;background:#FFFFFF;" version="1.1" viewBox="0 0 475 571" width="475px" zoomAndPan="magnify"><defs><filter height="300%" id="ft44wjua1xypv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="154" x2="154" y1="89.6094" y2="486.1797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="433" x2="433" y1="89.6094" y2="486.1797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="99" y="86.5332">Project Manager</text><ellipse cx="154" cy="15" fill="#FEFECE" filter="url(#ft44wjua1xypv)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M154,23 L154,50 M141,31 L167,31 M154,50 L141,65 M154,50 L167,65 " fill="none" filter="url(#ft44wjua1xypv)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="99" y="499.7129">Project Manager</text><ellipse cx="154" cy="512.7891" fill="#FEFECE" filter="url(#ft44wjua1xypv)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M154,520.7891 L154,547.7891 M141,528.7891 L167,528.7891 M154,547.7891 L141,562.7891 M154,547.7891 L167,562.7891 " fill="none" filter="url(#ft44wjua1xypv)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#ft44wjua1xypv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="60" x="401" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="408" y="74.5332">System</text><rect fill="#FEFECE" filter="url(#ft44wjua1xypv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="60" x="401" y="485.1797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="408" y="506.7129">System</text><polygon fill="#A80036" points="421,139.3125,431,143.3125,421,147.3125,425,143.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="154" x2="427" y1="143.3125" y2="143.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="161" y="138.4561">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="172" y="138.4561">Initiate process</text><path d="M5,104.6094 L5,163.6094 L145,163.6094 L145,114.6094 L135,104.6094 L5,104.6094 " fill="#FBBBBB" filter="url(#ft44wjua1xypv)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M135,104.6094 L135,114.6094 L145,114.6094 L135,104.6094 " fill="#FBBBBB" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="11" y="123.1045">As Project Manager,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="11" y="139.4561">I want to edit some</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="11" y="155.8076">project information.</text><polygon fill="#A80036" points="165,191.0156,155,195.0156,165,199.0156,161,195.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="159" x2="432" y1="195.0156" y2="195.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="171" y="190.1592">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="203" x="182" y="190.1592">Display projects managed by Actor</text><polygon fill="#A80036" points="421,221.3672,431,225.3672,421,229.3672,425,225.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="154" x2="427" y1="225.3672" y2="225.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="161" y="220.5107">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="172" y="220.5107">Select one of the projects</text><polygon fill="#A80036" points="165,251.7188,155,255.7188,165,259.7188,161,255.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="159" x2="432" y1="255.7188" y2="255.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="171" y="250.8623">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="244" x="182" y="250.8623">Display more information about the project</text><polygon fill="#A80036" points="421,282.0703,431,286.0703,421,290.0703,425,286.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="154" x2="427" y1="286.0703" y2="286.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="161" y="281.2139">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="172" y="281.2139">Start edition of project</text><polygon fill="#A80036" points="165,312.4219,155,316.4219,165,320.4219,161,316.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="159" x2="432" y1="316.4219" y2="316.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="171" y="311.5654">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="182" y="311.5654">Display edition fields</text><polygon fill="#A80036" points="421,342.7734,431,346.7734,421,350.7734,425,346.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="154" x2="427" y1="346.7734" y2="346.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="161" y="341.917">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="172" y="341.917">Edit information</text><polygon fill="#A80036" points="421,373.125,431,377.125,421,381.125,425,377.125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="154" x2="427" y1="377.125" y2="377.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="161" y="372.2686">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="172" y="372.2686">Save information</text><polygon fill="#A80036" points="165,403.4766,155,407.4766,165,411.4766,161,407.4766" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="159" x2="432" y1="407.4766" y2="407.4766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="171" y="402.6201">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="182" y="402.6201">Request confirmation</text><polygon fill="#A80036" points="421,433.8281,431,437.8281,421,441.8281,425,437.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="154" x2="427" y1="437.8281" y2="437.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="161" y="432.9717">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="179" y="432.9717">Confirm</text><polygon fill="#A80036" points="165,464.1797,155,468.1797,165,472.1797,161,468.1797" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="159" x2="432" y1="468.1797" y2="468.1797"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="171" y="463.3232">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="223" x="189" y="463.3232">Inform operation success or insuccess</text><!--MD5=[21c082fdcc1028481fdf0c49793f971d]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Project Manager" as PM
+participant "System" as sys
+
+
+
+PM->sys : Initiate process
+note left #Fbbbbb
+As Project Manager,
+I want to edit some
+project information.
+end note
+sys -> PM : Display projects managed by Actor
+PM -> sys : Select one of the projects
+sys -> PM : Display more information about the project
+PM -> sys : Start edition of project
+sys -> PM : Display edition fields
+PM -> sys : Edit information
+PM -> sys : Save information
+sys -> PM : Request confirmation
+PM -> sys : Confirm
+sys -> PM : Inform operation success or insuccess
+@enduml
+
+@startuml
+
+autonumber
+
+actor "Project Manager" as PM
+participant "System" as sys
+
+
+
+PM->sys : Initiate process
+note left #Fbbbbb
+As Project Manager,
+I want to edit some
+project information.
+end note
+sys -> PM : Display projects managed by Actor
+PM -> sys : Select one of the projects
+sys -> PM : Display more information about the project
+PM -> sys : Start edition of project
+sys -> PM : Display edition fields
+PM -> sys : Edit information
+PM -> sys : Save information
+sys -> PM : Request confirmation
+PM -> sys : Confirm
+sys -> PM : Inform operation success or insuccess
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

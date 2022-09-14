@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor TeamMember as dir
+participant Frontend as ui
+participant Backend as bck
+participant "SGBD" as db
+
+dir-> ui : Initiates process
+ui-> bck : HTTP GET http://localhost:8080/projects
+bck -> db : get projects
+db --> bck : projects
+bck--> ui : projects
+ui -> dir : Displays all projects
+dir -> ui : Selects a project
+ui-> dir : Displays possible actions
+dir -> ui : Selects ProductBacklog
+ui-> bck : HTTP GET http://localhost:8080/projects/{id}/productBacklog
+bck -> db : get ProductBacklog
+db --> bck : ProductBacklog
+bck--> ui : ProductBacklog
+ui-> dir : Shows ProductBacklog and requests necessary\n information to add User Story to SprintBacklog
+dir -> ui : Selects a User Story and a number\nfrom the Fibonacci Sequence
+ui -> bck : HTTP POST http://localhost:8080/projects/{pid}/sprintBacklogItems
+bck -> db : project exists?
+db --> bck : yes
+bck -> db : is there a sprint running?
+db --> bck : yes
+bck -> db : save SprintBacklogItem
+bck --> ui : success
+ui -> dir : Informs about operation's success
+@enduml

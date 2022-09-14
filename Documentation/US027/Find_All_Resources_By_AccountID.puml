@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant "repo\n: ResourceRepository" as resrepo
+participant "ResourceJPARepository" as resjparepo <<Interface>>
+participant "resourceJPAList\n: List<ResourceJPA>" as lsresjpa
+participant "resourceList\n: List<Resource>" as lsres
+participant "assembler\n: ResourceDomainDataAssembler" as assembler
+participant " resource : Resource" as res
+-> resrepo : findAllByAccountID(Email email) : List<Resource>
+activate resrepo
+resrepo -> resjparepo : findByAssociatedAccount_Id(email)
+activate resjparepo
+create lsresjpa
+resjparepo -> lsresjpa
+resjparepo --> resrepo : resourceJPAList
+deactivate resjparepo
+create lsres
+resrepo -> lsres
+loop for resJPA in resourceJPAList
+resrepo -> assembler : toDomain(resJPA)
+activate assembler
+create res
+assembler -> res
+assembler --> resrepo : resource
+deactivate assembler
+resrepo -> lsres : add(resource)
+activate lsres
+deactivate lsres
+end loop
+<-- resrepo  : resourceList
+deactivate resrepo
+@enduml

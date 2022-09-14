@@ -1,0 +1,43 @@
+#!/bin/bash
+
+
+#FunÃ§Ã£o de erro
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+rm -f $M_CONTENT_FILE
+exit
+}
+
+#Verifica se o request tem conteÃºdo
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+
+#Verifica se o tipo de request Ã© POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+#Verifica se a query-string nÃ£o estÃ¡ vazia, pois queremos que esteja
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Criar content
+CONTENT=$(cat $M_CONTENT_FILE);
+
+#Guardar a primeira variÃ¡vel
+EMAILDATA=$(echo $CONTENT | cut -d "=" -f 2 )
+EMAILDATA=${EMAILDATA#emaildata=}
+EMAILDATA=$(echo $EMAILDATA | xargs)
+if [ -z "$EMAILDATA" ]; then error_response "empty email"; fi
+
+
+#Enviar email
+echo -e "From: SCOMRED <no-reply@dei.isep.ipp.pt>\r\nSubject:SCOMRED Prototype - user activation link\r\n\r\nPlease click on the link to activate your account.\nActivation link: https://vs-gate.dei.isep.ipp.pt:10571/activateAccount.html?emaildata=$EMAILDATA" | ssmtp "$EMAILDATA"
+
+#Enviar resposta http
+
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""
+echo "Saved changes"
+echo "$EMAILDATA"

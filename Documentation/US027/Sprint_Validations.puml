@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "resourcePeriod\n: Period" as period
+participant "service\n: Service" as service
+participant "sprint\n: Sprint" as sprint
+participant "invalidEndDatePeriod\n: Period" as iedp
+participant "invalidStartDatePeriod\n: Period" as isdp
+
+
+-> service : validateSprintRules(resourcePeriod, List<Sprint> sprints)
+activate service
+service -> period : resourceStartDate = getStartingDate() : LocalDate
+activate period
+deactivate period
+service -> period : resourceEndDate = getEndingDate() : LocalDate
+activate period
+deactivate period
+loop for each sprint in sprints
+service-> sprint : sprintStartDate = getStartDate() : LocalDate
+activate sprint
+deactivate sprint
+service -> sprint : sprintEndDate = getStartDate() : LocalDate
+activate sprint
+deactivate sprint
+create iedp
+service -> iedp : Period.between(sprintStartDate, sprintEndDate.minusDays(1))
+service -> iedp : endDateIsInvalid = containsDate(resourceEndDate) : boolean
+activate iedp
+deactivate iedp
+opt endDateIsInvalid
+<-- service : false
+end opt
+create isdp
+service -> isdp :  Period.between(sprintStartDate.plusDays(1), sprintEndDate)
+service -> isdp : startDateIsInvalid = containsDate(resourceStartDate) : boolean
+activate isdp
+deactivate isdp
+opt endDateIsInvalid
+<-- service : false
+end opt
+
+end loop
+
+
+deactivate service
+@enduml

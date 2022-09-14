@@ -1,0 +1,166 @@
+@startuml
+'https://plantuml.com/class-diagram
+left to right direction
+
+package Infrastructure{
+    package Persistance{
+        class ProfileDomainDataAssembler{
+
+        }
+
+        class ProfileJPA{
+
+        }
+    }
+}
+
+package InterfaceAdapters{
+    package impController{
+        class "CreateProfileController" as cntrl{
+        createNewProfile(profType : ProfileType, description : Text) : boolean
+        }
+    }
+
+    package iController{
+        interface ICreateProfileController{
+            createNewProfile(profType : ProfileType, description : Text) : boolean
+        }
+    }
+
+    package Repositories{
+        class ProfileRepository{
+           findProfileById (ProfileID prID) : Optional<Profile>
+           getAllProfiles() : List<Profile>
+           save() : boolean
+        }
+    }
+
+}
+
+package ApplicationServices{
+
+    package AppService{
+        interface IApplicationServiceCreateProfile{
+            generateProfileID(profileType) : ProfileID
+            isProfileDataValid(profileType) : boolean
+            createNewProfile(profType : ProfileType, description : Text) : Optional <ProfileDTO>
+        }
+
+    }
+
+    package impAppServices{
+        class AppServiceCreateProfile{
+            createNewProfile(profType : ProfileType, description : Text) : boolean
+        }
+    }
+
+
+    package iRepositories{
+        interface IProfileRepository{
+
+        }
+    }
+}
+
+package Domain{
+
+    package Aggregates{
+
+        package Profile{
+           entity Profile{
+             ProfileID profType
+             Text description
+           }
+           interface IProfileCreatable{
+                createNewProfile(profType:ProfileType, desc:Text, profileID:ProfileID) : Profile
+           }
+
+           abstract class ProfileFactory{
+                createNewProfile(profType:ProfileType, desc:Text, profileID:ProfileID) : Profile
+           }
+
+        }
+
+    }
+
+    package ValueObjects{
+         class "<<VO>> ProfileID"{}
+         class "<<VO>> ProfileType"{}
+         class "<<VO>> Text"{}
+    }
+
+    package DomainServices{
+        class ServiceCreateProfile {
+            createProfileID() : ProfileID
+            createNewProfile(profType:ProfileType, desc:Text, profileID:ProfileID) : boolean
+            isProfileValid(List<Profile>) : boolean
+
+        }
+
+    }
+
+}
+
+'layout definitions'
+InterfaceAdapters --down[hidden]> ApplicationServices
+ApplicationServices --down[hidden]> Domain
+
+iController --[hidden]> impController
+impController --[hidden]> Repositories
+impController --down[hidden]> impAppServices
+Repositories --down[hidden]> iRepositories
+
+AppService --down[hidden]> iRepositories
+AppService --down[hidden]> impAppServices
+impAppServices --right[hidden]> AppService
+impAppServices --down[hidden]> DomainServices
+
+ApplicationServices --down[hidden]> Aggregates
+Aggregates --right[hidden]> DomainServices
+Aggregates --down[hidden]> ValueObjects
+DomainServices --left[hidden]> Aggregates
+
+Profile --up[hidden]> ProfileFactory
+IProfileCreatable --up[hidden]> ProfileFactory
+ProfileFactory --up[hidden]> IProfileCreatable
+
+
+
+
+
+'Interfaces relations'
+ICreateProfileController <|.. cntrl
+IApplicationServiceCreateProfile <|... AppServiceCreateProfile
+IProfileRepository <|... ProfileRepository
+IProfileRepository--[hidden]>ProfileRepository
+IProfileCreatable <|.. ProfileFactory
+
+
+'relations'
+ProfileRepository ..up> ProfileDomainDataAssembler
+ProfileDomainDataAssembler ..left> ProfileJPA
+Profile -> "<<VO>> ProfileID"
+Profile -> "<<VO>> Text"
+Profile -> "<<VO>> ProfileType"
+
+ServiceCreateProfile ..> ProfileFactory
+AppServiceCreateProfile ..> ServiceCreateProfile
+cntrl ..> AppServiceCreateProfile
+ProfileFactory ..> Profile
+AppServiceCreateProfile ..> IProfileRepository
+ServiceCreateProfile ..> "<<VO>> ProfileID"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml

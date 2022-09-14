@@ -1,0 +1,105 @@
+@startuml
+actor "Administrator" as user
+participant "UpdateUserProfileUI" as UI
+participant "UpdateUserProfileController" as Controller
+participant "APServiveGetProfileList" as ITCompany
+participant "APServiceUpDateProfile" as upservice
+participant "profs: ProfileRepository" as ps
+participant "ProfileMapper" as mapper
+participant "pf: Profile" as pf
+participant "as : AccountRepository" as accstore
+participant "a : AccountID" as accID
+participant "Service" as service
+
+
+autonumber
+user -> UI : Open 'Update User Profile' UI
+activate UI
+UI -> Controller : getProfileList()
+activate Controller
+
+
+Controller -> ITCompany : getProfileListDTO()
+activate ITCompany
+ITCompany -> ps : getProfileListDTO()
+activate ps
+ps -> mapper :getProfileListDTO()
+activate mapper
+deactivate mapper
+mapper -> listProfileDTO ** : listProfileDTO()
+group Loop
+activate mapper
+group Loop
+mapper ->  pf : ID = getProfileID()
+
+mapper ->  pf : profileType = getProfileType()
+mapper ->  pf : description = getDescription()
+deactivate pf
+mapper -> ": ProfileDTO" ** : profileDTO = ProfileDTO(ID, profileType,description)
+mapper -> listProfileDTO : add(profileDTO)
+activate listProfileDTO
+deactivate listProfileDTO
+end
+
+mapper --> ps : return listProfileDTO
+
+ps --> ITCompany : return listProfileDTO
+deactivate ps
+
+ITCompany --> Controller : return listProfileDTO
+
+deactivate ITCompany
+deactivate mapper
+Controller --> UI : return listProfileDTO
+deactivate Controller
+UI --> user : Show Profile List
+deactivate UI
+
+user -> UI : Select Profile and email
+activate UI
+
+
+
+UI -> Controller : updateProfile(email,profile)
+activate Controller
+Controller -> upservice : updateProfile(email,profile)
+activate upservice
+upservice -> accstore : findAccountByEmail(email)
+activate accstore
+loop
+accstore -> accID: hasEmail(email)
+activate accID
+
+
+accID --> accstore : true
+deactivate accID
+end
+accstore --> upservice : a :Account
+
+deactivate accstore
+
+upservice -> ps :updateProfile(profile,a)
+activate ITCompany
+
+activate ps
+ps --> upservice : pf:Profile
+
+deactivate
+
+upservice ->service :updateProfile(profile,a)
+activate service
+service -> service :  validateProfileUpdate(profile)
+
+
+service --> upservice : true
+deactivate service
+
+upservice --> Controller : true
+
+deactivate upservice
+
+
+Controller --> UI : true
+deactivate Controller
+UI --> user : Successful Update
+@enduml

@@ -1,0 +1,124 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface "UI" as ui
+class "CreateTaskFromUserStoryController" as ctrl {
+showListOfProjects(email : String) : list<ProjectDTO>
+showListOfNotClosedSprint(projectCode : int) : list<SprintsDTO>
+createTaskRelatedToUserStory(taskDTO : TaskDTO) : boolean
+}
+
+class itc as "ITCompany" << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getProjectStore() : ProjectStore
+}
+
+class "ProjectStore" as pstr{
+findProjectByCode(projCode) : project
+
+}
+
+
+
+class "Project" as proj{
+  code : int
+  name : String
+  description : String
+  starDate : Localdate
+  sprintDuration : int
+  plannedSprints : int
+  endDate : Localdate
+  projectStatus : String
+  budget : double
+
+
+
+findSprintByNumber(sprintNumber)
+createTaskInSprint(usNumber : Integer, sprintNumber : int, name : String, \n description : String, taskType : String, taskStartDate : Localdate, \n taskEndDate : Localdate, effortEstimate : Integer, associatedResource : Resource)
+}
+
+
+
+class "Sprint" as sprint{
+  number : int
+  startDate : Localdate
+  endDate : Localdate
+
+validateTaskName(name) : boolean
+validateTaskDescription(description) : boolean
+validateTaskType(taskType) : boolean
+isStartDateTaskAfterStartDateProject(startDate) : boolean
+isNumberFibonacciOrNull(effortEstimate) : boolean
+
+createNewTask(usCode : int, name : String, description : String, \n startDate : Localdate, endDate : Localdate, effortEstimate : Integer, \n taskType : String, associatedResource : Resource) : Task
+addTaskToTaskList(newTask)
+
+}
+
+class "Task" as task{
+    number : int
+    name : String
+    description : String
+    startDate : Localdate
+    endDate : Localdate
+    effortEstimate : Integer
+    taskType : String
+    taskStatus : String
+    hoursSpent : double
+    percentageOfExecution : double
+
+Task.Taskbuilder(usCode : int, name : String, description : String, \n startDate : Localdate, endDate : Localdate, effortEstimate : Integer, \n taskType : String, associatedResource : Resource) : Task
+}
+
+
+class "ProjectMapper" as mapper{
+createListOfProjectDTO(projectList : List<ProjectDTO> )
+}
+
+
+class "SprintMapper" as sprintMapper{
+createListOfSprintDTO(sprintList : List<SprintDTO>)
+}
+
+
+class "ProjectDTO" as projDTO{
+  code : int
+  name : String
+  description : String
+
+ProjectDTO(code : int, name : String, description : String)
+
+}
+
+class "SprintDTO" as sprDTO{
+   number : int
+   startDate : Localdate
+SprintDTO(number : int, startDate : Localdate)
+
+
+}
+
+class "UserStoryDTO" as usDTO{
+    number : int
+    statement : String
+
+UserStoryDTO(number : int, statement : String)
+}
+
+
+
+
+ui "1"-[dashed]->"1" ctrl
+ctrl "1"-[dashed]-> "1" itc
+pstr "1" -[dashed]-> "1" mapper
+proj "1" -[dashed]-> "1" sprintMapper
+mapper "1" -[dashed]-> "0...*" projDTO
+sprintMapper "1" -[dashed]-> "0...*" sprDTO
+itc "1" --> "1" pstr
+proj o-- pstr
+proj "1" --> "0...*"sprint
+sprint "1" --> "0...*" task
+
+
+
+
+@enduml

@@ -1,0 +1,77 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+participant Routes as route
+participant ":ResourceController" as Controller
+participant ":ApplicationServiceCreateResource" as Application
+participant "projectID: ProjectID " as VOprojID <<Value Object>>
+participant "resourcesDTO:List<ResourceDTO>" as DTOlist
+participant ":ResourceRepositoryImpl" as ResRepo
+participant ":IResourceRepositoryJPA" as JPARepo
+participant "resourceJPA:List<ResourceJPA>" as JPAresource
+participant ":ResourceDomaintoDataAssembler" as AssemblerRes
+participant "resources:List<Resource>" as list
+participant ":ResourceMapper" as Mapper
+participant "resourceDTO:ResourceDTO" as DTO
+
+autonumber
+
+[o--> route : GET/projects/{pid}/resources
+activate route
+route -> Controller :getResourcesByProjectID(pid,type)
+activate Controller
+Controller -> Application : getAllResourcesByProjectID(pid);
+activate Application
+Application-->VOprojID**
+Application-> ResRepo : findAllByProjectID(projectID)
+activate ResRepo
+loop all resources in project
+ResRepo -> JPARepo : findByProjectID(projectID)
+activate JPARepo
+JPARepo --> JPAresource**
+JPARepo -> JPAresource : add(resourceJPA);
+activate JPAresource
+deactivate JPAresource
+JPARepo --> ResRepo : addresourceJPA
+end loop
+deactivate JPARepo
+
+
+loop all the resourceJPA in the list
+
+ResRepo -> AssemblerRes : toDomain(resourceJPA)
+activate AssemblerRes
+AssemblerRes --> ResRepo : resource
+deactivate  AssemblerRes
+ResRepo --> list**
+ResRepo -> list : add(resource)
+activate list
+deactivate list
+end loop
+
+
+ResRepo --> Application :  addResource
+deactivate ResRepo
+
+
+loop all the resourceDTO in the list
+Application -> Mapper : toDTO(resource)
+activate Mapper
+Mapper-->DTO**
+Mapper--> Application : resourceDTO
+deactivate Mapper
+
+Application --> DTOlist**
+Application--> DTOlist : add(resourceDTO)
+activate DTOlist
+deactivate DTOlist
+end loop
+Application --> Controller : resourcesDTO
+deactivate Application
+
+Controller --> route : ResponseEntity(result,HttpStatus)
+
+deactivate Controller
+deactivate route
+
+
+@enduml

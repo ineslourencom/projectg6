@@ -1,0 +1,73 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+participant "AccountRepository" as accountRepoI <<interface>>
+participant ":AccountRepositoryImpl" as accountRepo
+participant "IAccountJPARepository" as accountJPARepo <<interface>>
+participant "accountJPAOpt\n: Optional<AccountJPA>" as accountJPA
+participant "AccountDomainDataAssembler" as accountAssembler
+participant "Account : Account" as proj
+participant "e : Email" as email
+participant "n : NoNumberNoSymbolString" as nnnssI
+participant "f : NoNumberNoSymbolString" as nnnssII
+participant "p : Photo" as photo
+participant "pw : Password" as password
+participant "pID : ProfileID" as profileID
+participant "IAccountCreatable" as accountFacI
+participant "accountFac: AccountFactory" as accountFac
+participant ": Account" as account
+
+
+[-> accountRepoI : findByEmail(Email email)
+activate accountRepoI
+accountRepoI->accountRepo : findByEmail(Email email)
+activate accountRepo
+accountRepo->accountJPARepo : findByEmail(String email)
+activate accountJPARepo
+accountJPARepo->accountJPA** : findByEmail(String email)
+accountJPARepo-->accountRepo : accountJPAOpt
+deactivate accountJPARepo
+
+accountRepo->accountRepo : accountJPAOpt.isPresent() : boolean
+
+accountRepo->accountAssembler : toDomain(accountJPA)
+activate accountAssembler
+
+accountAssembler->accountJPA : (accountID : AccountID) = accountJPA.getAccountID()
+activate accountJPA
+accountAssembler->accountJPA : (email : String) = accountJPA.getEmail())
+accountAssembler --> email** : e = Email.of (email : String)
+accountAssembler->accountJPA : (name : String) = NoNumberNoSymbolString.of(accountJPA.getName())
+accountAssembler-->nnnssI** : n = NoNumberNoSymbolString.of(name)
+accountAssembler->accountJPA : (function : String) = NoNumberNoSymbolString.of(accountJPA.getFunction())
+accountAssembler->nnnssII** : f = NoNumberNoSymbolString.of(function)
+accountAssembler->accountJPA : (photo : String) = accountJPA.getPhoto()
+accountAssembler->photo** : p = Photo.of(photo)
+accountAssembler->accountJPA : (password : String) = accountJPA.getPassword()
+accountAssembler->password** : pw = Password.of(password, 1)
+loop "String pid : ProfileIDs()"
+    accountAssembler->accountJPA : (pid : String) = accountJPA.getProfileIDs()
+    accountAssembler->profileID** : (pID : ProfileID) = ProfileID.ofProfileType(pid)
+    accountAssembler->accountAssembler : pIDs = add(pID)
+end
+accountAssembler->accountJPA : (a : boolean) = accountJPA.isActive()
+deactivate accountJPA
+
+accountAssembler->accountFacI : accountFac.createAccount(accountID, e, n, f, p, pw, pIDs, a)
+activate accountFacI
+accountFacI->accountFac : createAccount(accountID, e, n, f, p, pw, pIDs, a)
+activate accountFac
+accountFac->account : account = createAccount(accountID, e, n, f, p, pw, pIDs, a)
+accountFac->accountFacI : account
+deactivate accountFac
+accountFacI->accountAssembler : account
+deactivate accountFacI
+
+
+accountAssembler->accountRepo : account
+deactivate accountAssembler
+
+accountRepo->accountRepo : accountOpt = Optional.of(account)
+accountRepo->accountRepoI : accountOpt
+[<-- accountRepoI : accountOpt
+@enduml

@@ -1,0 +1,82 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+actor "Non-Registered User" as user
+participant ": CreateNewAccount UI" as ui
+participant ": CreateNewAccountController" as ctrl
+participant ": Email" as email
+participant ": Password" as password
+participant ": NoNumberNoSymbolString" as name
+participant ": NoNumberNoSymbolString" as function
+participant ": Photo" as photo
+participant ": ApplicationServiceCreateAccount" as service
+participant ": ProfileRepository" as repoProfile
+participant ": AccountID" as id
+participant ": AccountRepository" as repo
+participant ": AccountFactory" as factory
+participant ": Account" as account
+participant ": AccountMapper" as mapper
+participant ":AccountDto" as accountDto
+
+activate user
+
+user -> ui : Create new account
+activate ui
+ui --> user : Request data (email, name, function, photo, password)
+deactivate ui
+
+user -> ui : Type requested data (email, name, function, photo, password)
+activate ui
+ui -> ctrl : createNewAccount (email, name, function, photo, password)
+activate ctrl
+
+ctrl --> email** : e = Email.of(info.getEmail())
+
+ctrl --> password** : pwd = Password.of(info.getPassword())
+
+ctrl --> name** : n = NoNumberNoSymbolString.of(info.getName())
+
+ctrl --> function** : f = NoNumberNoSymbolString.of(info.getFunction())
+
+ctrl --> photo** : pht = Photo.of(info.getPhoto())
+
+ctrl --> service: createNewAccount (e, pwd, n, f, pht)
+activate service
+service -> repoProfile : p = findProfileByProfileType ("Visitor").getID
+activate repoProfile
+deactivate repoProfile
+
+
+service -> repo : null = findAccountByEmail (email)
+activate repo
+deactivate repo
+service -> id** : id = AccountID
+
+service -> repo : createNewAccount (id, e, n, f, pht, pwd, p)
+activate repo
+
+
+
+
+repo -> factory : newAccount = createAndSaveAccount (id, e, n, f, pht, pwd, p)
+
+activate factory
+factory --> account** : newAccount = Account
+deactivate factory
+
+repo -> mapper : newAccountDto = toDto(newAccount)
+activate mapper
+mapper --> accountDto** : newAccountDto = AccountDto
+deactivate mapper
+
+
+repo --> service : newAccountDto
+
+service --> ctrl : newAccountDto
+ctrl --> ui : newAccountDto
+deactivate ctrl
+ui --> user : success
+deactivate ui
+
+
+@enduml

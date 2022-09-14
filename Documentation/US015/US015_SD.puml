@@ -1,0 +1,63 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "Routes" as server
+participant ": ViewProjectsController" as ctrl
+participant ": ApplicationServiceListProjects" as appService
+participant ": ProjectRepository" as repo
+participant " projects : List<Project>" as listProject
+participant ": ProjectDomainDataAssembler" as assembler
+participant ": IProjectRepository <Interface>" as IRepo
+participant ": ProjectMapper" as mapper
+participant " dto : ProjectDTO" as dto
+participant ": projectDTOS : List<ProjectDTO> " as listProjectDTO
+
+[o--> server : GET https://localhost:8080/projects
+activate server
+server -> ctrl : getListOfAllProjects
+activate ctrl
+ctrl -> appService : getAllProjects
+activate appService
+appService -> repo : findAll
+activate repo
+repo --> listProject**
+repo -> IRepo : List<ProjectsJPA> projectsJPA = findAll
+activate IRepo
+deactivate IRepo
+
+
+loop for each projectsJPA in repository
+repo -> assembler : project = toDomain(projectJPA)
+activate assembler
+deactivate assembler
+repo -> listProject : add(project)
+activate listProject
+listProject --> repo : projects
+deactivate listProject
+end loop
+
+repo --> appService : projects
+deactivate repo
+appService --> listProjectDTO**
+
+loop for each project in repository
+appService -> mapper : dto = toDTO(project)
+activate mapper
+mapper --> dto**
+deactivate mapper
+appService -> listProjectDTO : add(dto)
+activate listProjectDTO
+listProjectDTO --> appService : projectDTOS
+deactivate listProjectDTO
+end loop
+
+appService --> ctrl : projectDTOS
+deactivate appService
+
+
+ctrl --> server : ResponseEntity
+deactivate ctrl
+
+
+@enduml

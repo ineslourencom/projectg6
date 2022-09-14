@@ -1,0 +1,77 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "Routes" as server
+participant ": CreateProjectTypologyController" as ctrl
+participant ": ProjectTypologyDTO" as dto
+participant ": ApplicationServiceCreateProjectTypology" as appService
+participant ": NoNumberNoSymbolString" as noNumberNoSymbol
+participant ": Describable" as describable
+participant ": ProjectTypologyID" as projTypologyID
+participant ": ProjectTypologyRepository" as repo
+participant ": IProjectTypologyRepository <Interface>" as IRepo
+participant ": ProjectTypologyDomainDataAssembler" as assembler
+participant ": ProjectTypologyFactory" as factory
+participant "projectTypologyCreated : ProjectTypology" as newProjectTypology
+participant ": ProjectTypologyMapper" as mapper
+
+
+[o--> server : POST https://localhost:8080/projectTypologies
+activate server
+
+activate server
+server -> ctrl : createAndSaveProjectTypology(String name, String description)
+activate ctrl
+ctrl --> dto : name = info.name
+ctrl --> dto : description = info.description
+ctrl -> appService : createAndSaveProjectTypology (name, description)
+activate appService
+appService --> noNumberNoSymbol** : name = NoNumberNoSymbolString.of(name)
+appService --> describable** : description = Text.write(description)
+appService --> projTypologyID** : projectTypologyID = ProjectTypologyID.of(name)
+appService -> repo : findProjectTypologyByID(projectTypologyID)
+activate repo
+repo -> IRepo : projectTypologyJPAFound = findByID(projectTypologyID)
+activate IRepo
+repo -> assembler : projectTypologyFound = toDomain(projectTypologyJPAFound.get())
+deactivate IRepo
+activate assembler
+repo --> appService : projectTypologyWithSameID
+deactivate assembler
+deactivate repo
+
+appService --> factory : projectTypologyCreated = createProjectTypology(projectTypologyID, description)
+activate factory
+
+factory --> newProjectTypology**
+deactivate factory
+appService -> repo : saveProjectTypology(projectTypologyCreated)
+activate repo
+
+repo -> assembler : projectTypologyJPA = toData(projectTypology)
+activate assembler
+deactivate assembler
+repo -> IRepo : savedProjectTypologyJPA = save(projectTypologyJPA)
+activate IRepo
+deactivate IRepo
+repo -> assembler : toDomain(savedProjectTypologyJPA)
+activate assembler
+deactivate repo
+
+assembler --> appService : projectTypologySaved
+deactivate assembler
+
+appService -> mapper : toSingleDTO(projectTypologySaved)
+activate mapper
+mapper --> appService : projectTypologyCreated
+deactivate mapper
+appService-->ctrl : projectTypologyCreated
+deactivate appService
+
+ctrl --> server : ResponseEntity
+
+
+
+
+@enduml

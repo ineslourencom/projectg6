@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="../css/addResourceToProject.css?v=1" />
+    <script src="../js/addResourceToProject.js"></script>
+</head>
+
+<body onload="initData()">
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Homepage</a>
+</div>
+<div class="container">
+    <div style="text-align:left">
+        <h2>Allocate new Resource to Project</h2>
+        <p>Please fill in the resource data</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="accounts">Account</label>
+                <select id="accounts" name="accounts">
+                </select>
+                <br>
+                <br>
+                <label for="projects">Project</label>
+                <select id="projects" name="projects">
+                </select>
+                <br><br>
+                <label for="role">Role</label>
+                <input list="rolesList" id="role" name="roles" placeholder="Select a role" onchange="validateRole()">
+                <datalist id="rolesList">
+                    <option value="Project Manager">
+                    <option value="Product Owner">
+                    <option value="Scrum Master">
+                    <option value="Developer">
+                </datalist>
+                <br><br>
+                <label for="percAllocation">Percentage of allocation</label>
+                <input type="number" id="percAllocation" name="percAllocation" placeholder="Nr. between 0 and 100" onchange="validatePercent()">
+                <br><br>
+                <label for="costPerHour">Cost per hour</label>
+                <input type="number" step=0.01 id="costPerHour" name="costPerHour" placeholder="(euro/hour)" onchange="validateNumber()">
+                <br><br>
+                <input type="button" id="submit" name="submit" value="Submit" onclick="createResource()">
+            </form>
+        </div>
+    </div>
+</div>
+<div id="result" ></div>
+
+</body>
+</html>

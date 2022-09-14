@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor TeamMember
+
+usecase (US032 - As SM/TeamMember , I want to create a task outside the scoope of a user story.)
+
+:TeamMember: --(US032 - As SM/TeamMember , I want to create a task outside the scoope of a user story.)
+
+actor SM
+
+usecase (US032 - As SM/TeamMember , I want to create a task outside the scoope of a user story.)
+
+:SM: --(US032 - As SM/TeamMember , I want to create a task outside the scoope of a user story.)
+@enduml

@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 0
+skinparam sequenceParticipant underline
+
+skinparam sequence {
+ArrowColor black
+ActorBorderColor #black
+LifeLineBorderColor black
+LifeLineBackgroundColor white
+
+ParticipantBorderColor black
+ParticipantBackgroundColor #blank
+ParticipantFontName Aapex
+ParticipantFontSize 14
+ParticipantFontColor black
+
+ActorBackgroundColor #blank
+ActorFontColor black
+ActorFontSize 14
+ActorFontName Aapex
+}
+
+autonumber
+
+Participant ":NewSprintDateController" as Controller
+Participant ":iTCompany" as iT
+Participant ":ProjectStore" as Store
+
+mainframe This is a ** ABC **
+Controller -> iT : getProjectList()
+activate Controller
+activate iT
+Controller <-- iT : projectStore()
+deactivate iT
+Controller ->Store : getProjectList()
+activate Store
+Store -> Store :getProjectList()
+Controller <-- Store : projectList
+deactivate Controller
+deactivate Store
+
+
+
+
+@enduml

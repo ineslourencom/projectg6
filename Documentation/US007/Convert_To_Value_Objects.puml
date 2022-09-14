@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "appService\n: ApplicationServiceCreateResource" as appService
+participant "pID : ProjectID" as pID
+participant "email : Email" as email
+participant "accountID\n: AccountID" as accountID
+participant "desc\n: NoNumberNoSymbolString" as desc
+participant "role : Role" as role
+participant "resourceID\n: ResourceID" as resourceID
+participant "period : Period" as period
+participant "percentage\n: LimitedPercentage" as percentage
+participant "Currency" as currency
+participant "cost : Monetary" as cost
+
+-> appService :createResource(NewResourceDTO dto, int projectID)
+create pID
+activate appService
+appService -> pID : new (projectID)
+create email
+appService -> email : Email.of(dto.associatedAccount)
+create accountID
+appService -> accountID: AccountID.of(email)
+create desc
+appService -> desc :  NoNumberNoSymbolString.of(Erole.valueOf(dto.associatedRole))
+create role
+appService -> role : new (Erole.valueOf(dto.associatedRole), desc)
+create resourceID
+appService -> resourceID : ResourceID.create()
+create period
+appService -> period : Period.between(dto.startDate, dto.endDate)
+create percentage
+appService -> percentage : LimitedPercentage.decimal(dto.percentageOfAllocation)
+appService -> currency : curr = getInstance(dto.currency) : Currency
+activate currency
+deactivate currency
+create cost
+appService -> cost : Monetary.of(dto.costPerHourValue, curr)
+
+
+deactivate appService
+
+
+@enduml

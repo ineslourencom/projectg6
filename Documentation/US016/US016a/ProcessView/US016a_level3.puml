@@ -1,0 +1,110 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant Routes
+control Controller as cntrl
+participant ApplicationService as appService
+participant Repositories as repos
+participant DataModel as DM
+participant JPARepositories as jpaRepo
+participant Domain as domain
+participant DTO as DTO
+
+[o-> Routes : GET userStoryStatus
+Routes -> cntrl : GET userStoryStatus
+
+cntrl -> appService : get User Story Status
+activate appService
+
+appService -> repos : get all User Stories in Project
+activate repos
+repos -> jpaRepo : get all User Stories in Project
+activate jpaRepo
+repos <- jpaRepo : persisted user stories in Project
+deactivate jpaRepo
+
+
+repos -> DM : transform to domain
+activate DM
+DM -> domain : create user stories
+activate domain
+DM <- domain : user stories
+deactivate domain
+repos <- DM : user stories
+deactivate DM
+appService <- repos : user stories
+deactivate repos
+
+
+appService -> repos : get running sprint in Project
+activate repos
+repos -> DM : transform to domain
+activate DM
+DM -> domain : create sprint
+activate domain
+DM <- domain : sprint
+deactivate domain
+repos <- DM : sprint
+deactivate DM
+appService <- repos : sprint
+deactivate repos
+
+
+appService -> repos : get all Sprints in Project
+activate repos
+repos -> DM : transform to domain
+activate DM
+DM -> domain : create sprints
+activate domain
+DM <- domain : sprints
+deactivate domain
+repos <- DM : sprints
+deactivate DM
+
+appService <- repos : sprints
+deactivate repos
+
+
+
+alt there is running sprint
+
+        appService -> domain :  get user story infos from all sprints (including running sprint)
+        activate domain
+        domain -> appService : userStory and status
+
+        deactivate domain
+
+
+
+else no running sprint
+       appService -> domain :  get user story infos from all sprints (no running sprint)
+       activate domain
+
+       domain -> appService : userStory and status
+       deactivate domain
+
+
+end
+
+loop for each user story and status from domain
+
+appService -> DTO : transform to DTO
+activate DTO
+appService <- DTO : return dto
+
+deactivate DTO
+
+appService -> appService : add to list of DTO's
+
+end
+cntrl <-- appService : list of user stories with status
+deactivate appService
+Routes <-- cntrl : ResponseEntity
+
+
+
+
+
+@enduml

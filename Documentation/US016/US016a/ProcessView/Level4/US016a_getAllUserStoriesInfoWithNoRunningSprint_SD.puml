@@ -1,0 +1,82 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant domainService as domainService
+
+participant UserStory as us
+
+
+
+[o-> domainService : getAllUserStoriesInfoWithNoRunningSprint( List<Sprint> allSprints, List<UserStory> listUS)
+activate domainService
+
+
+domainService -> domainService : TreeMap<UserStory, String> listB =  getAllUSFromPreviousSprints(usListFromAppService, previousSprints )
+
+group list B
+
+domainService -> Sprint : List<SprintBacklogItem> oldSprintBacklogs =  getSprintBacklogItem()
+
+loop for each SprintBacklogItem from nonRunningSprints
+
+domainService -> SprintBacklogItem : usID = getUsID()
+domainService -> us : us = getUsByUsID(List<UserStories> listUS, USID usID)
+domainService -> SprintBacklogItem :  String usStatus = getCategory()
+activate SprintBacklogItem
+SprintBacklogItem -> SprintBacklogItem : String status = category.toString()
+domainService <-- SprintBacklogItem : return status
+deactivate SprintBacklogItem
+
+domainService -> domainService : TreeMap<UserStory, String> listB = getUSStatusFromNonRunningSprints(List<Sprint> allSprints, Sprint runningSprint)
+
+end
+
+end
+
+domainService -> domainService : TreeMap<UserStory, String> listC =  getDecomposedUSStatus(List<UserStory> listUS)
+
+group listC
+loop for each us in listUS
+domainService -> us : us.isDecomposed()
+activate us
+domainService <-- us : true
+deactivate us
+domainService -> us : us.getID()
+activate us
+domainService <-- us : usID
+deactivate us
+domainService -> domainService :  TreeMap<UserStory, String> listC = listC.put(us, "decomposed")
+
+end
+end
+domainService -> domainService : TreeMap<UserStory, String> listD = getNonAllocatedUSInAnySprint(List<Sprint> allSprints, Sprint runningSprint, List<UserStory> listUS)
+
+group list D
+loop for each us in listUS
+
+alt not in previous sprints && not in running sprint
+domainService -> domainService :  TreeMap<UserStory, String> listD = listD.put(us, "Not Yet Allocated in Any Sprint")
+
+end
+end
+
+domainService -> domainService : finalList.putAll(listB)
+domainService -> domainService : finalList.putAll(listC)
+domainService -> domainService : finalList.putAll(listD)
+
+
+
+[<- domainService : TreeMap<UserStory, String> returnList
+deactivate domainService
+
+
+
+
+
+
+
+
+
+@enduml

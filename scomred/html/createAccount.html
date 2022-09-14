@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create an account with TeamSix project tracking software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="../css/geral.css?v=1" />
+    <script src="../js/createAccount.js"></script>
+</head>
+
+
+<body>
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexOuter.html">Return to Entrance</a>
+</div>
+<div class="container">
+    <div style="text-align:center">
+        <h2>Account</h2>
+        <h3>Create Your Account</h3>
+        <p>Please enter your data</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="/media/BobTheMinion.jpg" alt="Bob the heterochromia iridis minion.jpg" style="width:70%">
+        </div>
+        <div class="column">
+            <form id="form">
+                <div class="required">
+                    <label for="name">Name</label>
+                </div>
+                <input type="text" id="name" name="name" placeholder="Your name...">
+                <div class="required">
+                    <label for="emailData">E-mail</label>
+                </div>
+                <input type="text" id="emailData" name="emailData" placeholder="Your e-mail...">
+                <div class="required">
+                    <label for="passwordData">Password</label>
+                </div>
+                    <input type="password" id="passwordData" name="passwordData" placeholder="Your password...">
+                <div class="required">
+                    <label for="confirmationpassword">Confirmation Password</label>
+                </div>
+                <input type="password" id="confirmationpassword" name="confirmationpassword" placeholder="Your password..." onchange="confirmPassword()">
+                    <div class="required">
+                <label for="functionData">Function</label>
+                    </div>
+                <select id="functionData" name="functionData">
+                    <option value="function1">Management</option>
+                    <option value="function2">Quality Assurance</option>
+                    <option value="function3">Software Engineer</option>
+                </select>
+                <p></p>
+                <p></p>
+                <p></p>
+                <input type="button" value="Create Account" onclick="verifyIfAccountExists()">
+            </form>
+        </div>
+    </div>
+</div>
+<div id="result" ></div>
+<div id="result2" ></div>
+</body>
+</html>

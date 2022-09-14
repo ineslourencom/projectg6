@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Administrator as Admin
+participant System as Sys
+autonumber
+
+Admin -> Sys: View all accounts and their status
+Sys --> Admin: Show all accounts and their status
+
+@enduml

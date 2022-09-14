@@ -1,0 +1,5 @@
+PROFILE_TYPE_DATA;DESCRIPTION_DATA;
+User;Account type with the standard permissions level.;
+Administrator;It's responsible for managing user accounts and association to available profiles. Manages resources and general configurations. Account type must be created when the system is installed.;
+Director;It's an employee with special management functions and consequently special permissions in the project administration sphere.;
+Visitor;Profile that is automaticaly created when you create an account.The only permission is to ask for other profile.;

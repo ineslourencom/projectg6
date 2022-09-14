@@ -1,0 +1,171 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+
+actor "Project Manager" as PM
+
+boundary "EditProjectUI" as UI
+control ": ViewProjectsController" as VCTL
+control ": EditProjectController" as CTL
+participant "e : Email" as e
+participant "r : Role" as r
+
+participant "pid: ProjectID" as pid
+participant "pid: ProjectID" as pid2
+participant ": ApplicationServiceGetListAllocatedProjects" as PRservice
+participant "listProjDTO : ArrayList" as listProjDTO
+participant ": ApplicationServiceProject" as PService
+
+participant ": ResourceRepository" as ResRepo
+participant "res : Resource" as resource
+participant ": ProjectRepository" as PrRepo
+participant "proj : Project" as proj
+participant "ProjectMapper" as Mapper
+participant "projDTO\n: ProjectDTO" as projDTO
+participant "details\n: ProjectInfoDTO" as details
+participant "newDetails\n: ProjectInfoDomainDTO" as newDetails
+participant "editedDetails\n : ProjectInfoDTO" as editedDetails
+
+
+
+PM-> UI :  Initiate process
+activate UI
+note left #Fbbbbb
+As Project Manager,
+I want to edit some
+project information.
+end note
+
+UI -> VCTL : getListOfProjectsByRole(String userID, String role)
+activate VCTL
+
+
+create e
+VCTL -> e : create(email)
+create r
+VCTL -> r : create(role)
+VCTL -> PRservice : getListOfAllocatedProjects(e, r)
+activate PRservice
+PRservice -> ResRepo : findAllActiveResourcesByEmailAndRole(e, r) : List<Resource>
+activate ResRepo
+ResRepo --> PRservice : resList
+deactivate ResRepo
+
+create listProjDTO
+PRservice -> listProjDTO
+loop for each Resource in resList
+
+PRservice -> resource : id = getProjectID()
+activate resource
+deactivate resource
+PRservice -> PrRepo : proj = findById(id)
+
+activate PrRepo
+deactivate PrRepo
+PRservice -> Mapper : toDTO(proj)
+activate Mapper
+create projDTO
+Mapper -> projDTO
+Mapper --> PRservice : projDTO
+
+deactivate Mapper
+PRservice -> listProjDTO : add(projDTO)
+
+end
+
+PRservice --> VCTL : listProjDTO
+deactivate PRservice
+
+VCTL ->UI : listProjDTO
+deactivate VCTL
+
+UI -> PM : Display projects managed by Actor
+deactivate UI
+'Next system interaction'
+PM -> UI : Select one of the projects
+activate UI
+UI -> CTL : getProjectDetails(int id)
+activate CTL
+create pid
+CTL -> pid : create(id)
+CTL -> PService : getProjectDetails(pid)
+activate PService
+PService -> PrRepo : proj = findById(pid)
+activate PrRepo
+deactivate PrRepo
+PService -> Mapper : getDetailsDTO(proj)
+activate Mapper
+create details
+Mapper -> details
+Mapper --> PService : details
+deactivate Mapper
+PService --> CTL : details
+deactivate PService
+CTL ->UI : details
+deactivate CTL
+
+'Another project service, or the same?'
+
+UI -> PM : Display more information about the project
+deactivate UI
+PM -> UI : Start edition of project
+activate UI
+UI -> PM : Display edition fields
+deactivate UI
+PM -> UI : Edit information
+activate UI
+PM -> UI : Save information
+UI -> PM : Request confirmation
+deactivate UI
+
+PM ->UI : Confirm
+activate UI
+UI-> CTL : editProject(ProjectInfoDTO editedDetails)
+activate CTL
+create pid2
+CTL -> pid2
+CTL -> Mapper : toDomain(editedDetails)
+activate Mapper
+create newDetails
+Mapper -> newDetails
+Mapper --> CTL : newDetails
+deactivate Mapper
+
+
+CTL -> PService : editProject(pid, newDetails)
+activate PService
+PService -> PrRepo : proj = findById(id)
+activate PrRepo
+deactivate PrRepo
+PService -> proj : edit(newDetails)
+
+activate proj
+
+
+
+deactivate proj
+PService -> PrRepo : save(proj)
+activate PrRepo
+PrRepo --> PService : proj
+deactivate PrRepo
+PService -> Mapper : getDetailsDTO(proj)
+activate Mapper
+create editedDetails
+Mapper -> editedDetails
+Mapper --> PService : editedDetails
+deactivate Mapper
+
+
+PService -->CTL : editedDetails
+deactivate PService
+CTL --> UI : editedDetails
+deactivate CTL
+
+
+
+UI -> PM : Inform operation success or insuccess
+deactivate UI
+@enduml

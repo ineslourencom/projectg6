@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Class NewDateSprintUI #white;line:black;line.dotted;text:black
+Class NewSprintDateController #white;line:black;line.dotted;text:black
+Class iTCompany #white;line:black;line.dotted;text:black
+Class ProjectStore #white;line:black;line.dotted;text:black
+Class Project #white;line:black;line.dotted;text:black
+Class Sprint #white;line:black;line.dotted;text:black
+
+
+skinparam class {
+BackgroundColor #white
+ArrowColor #black
+BorderColor #black
+}
+
+NewDateSprintUI .right.>  NewSprintDateController
+NewSprintDateController  ..> "iTCompany " iTCompany
+iTCompany " 1 " --> "allProjectStore 1 " ProjectStore
+
+
+ProjectStore "1 " o-down-"projects 0..* " Project
+Project "1 " --> "listOfSprints 0..* " Sprint
+
+Class  ProjectStore #white;line:black;line.dotted;text:black
+
+Class  Project #white;line:black;line.dotted;text:black {
+startDate : LocalDate
+endDate : LocalDate
+code : int
+sprintDuration :int
+..
++ getProjectList() : ProjectStore
++ setNewStartDateSprint (LocalDate newStartDate, number) : boolean
+}
+
+Class Sprint #white;line:black;line.dotted;text:black {
+number : int
+startDate : LocalDate
+endDate : LocalDate
+..
++ getSprintNumber () : int
++ isNewStartDateAfterPreviousEndDate (startDate, endDate) : boolean
++ isNewEnDateBeforeThanNewStartDate (startDate) : boolean
++ saveNewStartDate (newStartDate)
+}
+
+Class ProjectStore #white;line:black;line.dotted;text:black {
+..
++ findProjectByCode (int code) : Project
+}
+
+Class iTCompany <<(S,pink)Singleton>> #white;line:black;line.dotted;text:black {
+..
++ getProjectStore ()
+}
+
+Class NewSprintDateController #white;line:black;line.dotted;text:black {
+..
++ getProjectList () : ListProjDTO
++ setNewStartDateSprint (LocalDate newStartDate, int number) : boolean
+}
+@enduml

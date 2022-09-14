@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor Director as dir
+participant Frontend
+participant Backend
+participant SGBD
+
+dir -> Frontend : asks all resources
+activate dir
+activate Frontend
+
+Frontend --> dir : requests project ID
+deactivate Frontend
+dir -> Frontend : inputs project ID
+activate Frontend
+Frontend -> Backend : get all resources
+activate Backend
+Backend -> SGBD : get all resources
+activate SGBD
+SGBD --> Backend : returns all resources
+deactivate SGBD
+Backend --> Frontend : returns all resources
+deactivate Backend
+
+Frontend --> dir : receives list of resources
+@enduml

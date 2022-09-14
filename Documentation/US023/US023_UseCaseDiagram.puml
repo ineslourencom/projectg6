@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor TeamMember
+
+usecase (US023 - As Team Member, I want to add a user story in the product backlog to the sprintbacklog.)
+
+:TeamMember: -- (US023 - As Team Member, I want to add a user story in the product backlog to the sprintbacklog.)
+@enduml

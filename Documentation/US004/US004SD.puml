@@ -1,0 +1,102 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant "Routes" as server
+participant ":AccountSearchController" as control
+participant ":AppServiceGetAccount" as ASAccount
+participant "e:Email " as VOEmail<<ValueObject>>
+participant ":mapperAccount" as MapAccount
+participant "accountDTO:AccountDTO" as DTOAc
+participant ":AccountRepositoryImpl" as RepAccount
+participant ":AccountJPARepository" as RepoJPA
+participant "accountJPA:AccountJPA" as JPA
+participant "accountDomainDataAssembler:AccountDomainDataAssembler" as Assembler
+participant "account:Account" as Account
+
+
+
+
+
+[o--> server :GET/accounts/{email}?type=long
+activate server
+server -> control :findAccountInfo(String email, String type)
+note left
+ As Administrator, I want to
+search for accounts.
+end note
+activate control
+control -> ASAccount :getAccountInfo(email)
+
+
+activate ASAccount
+ASAccount -->VOEmail** : Email.of(String email)
+
+ASAccount -> RepAccount : findAccountByEmail(email)
+
+activate RepAccount
+
+RepAccount->RepoJPA : findById(accountID)
+activate RepoJPA
+RepoJPA -->JPA**
+RepoJPA --> RepAccount : accountJPA
+deactivate RepoJPA
+RepAccount -> Assembler : toDomain(accountJPA)
+activate Assembler
+Assembler --> RepAccount : account
+deactivate Assembler
+
+RepAccount --> ASAccount :account
+
+deactivate Account
+deactivate RepAccount
+ASAccount -> MapAccount : toDTO(account)
+activate MapAccount
+
+MapAccount -> DTOAc**
+
+MapAccount -> Account : accountDTO.accountID = getAccountID()
+
+activate Account
+
+
+deactivate Account
+MapAccount -> Account : accountDTO.email = getEmail()
+activate Account
+deactivate Account
+MapAccount -> Account : accountDTO.name = getName()
+activate Account
+
+deactivate Account
+MapAccount -> Account : accountDTO.function = getFunction()
+activate Account
+
+deactivate Account
+MapAccount -> Account : accountDTO.photo = getPhoto()
+activate Account
+
+deactivate Account
+MapAccount -> Account : accountDTO.profileID = getActiveProfileID()
+activate Account
+
+deactivate Account
+
+MapAccount --> ASAccount : accountDTO
+deactivate MapAccount
+
+ASAccount --> control : accountDTO
+
+deactivate ASAccount
+control --> server : accountDTO
+deactivate control
+
+[<--server : ResponseEntity(result,HttpStatus.OK)
+deactivate server
+deactivate Account
+deactivate RepAccount
+deactivate ASAccount
+deactivate MapAccount
+
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Non-Registered User" as user
+participant "System" as system
+
+
+user -> system : Create new account
+system --> user : Request data (email, name, function, photo, password)
+user -> system : Insert data (email, name, function, photo, password)
+system --> user : Account created
+
+
+@enduml

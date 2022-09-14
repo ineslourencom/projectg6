@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1158px" preserveAspectRatio="none" style="width:2265px;height:1158px;background:#FFFFFF;" version="1.1" viewBox="0 0 2265 1158" width="2265px" zoomAndPan="magnify"><defs/><g><!--MD5=[77349be1bd27b81b697a0f9b3aded3c8]
+cluster infrastructure--><g id="cluster_infrastructure"><path d="M1250.5,6 L1348.5,6 A3.75,3.75 0 0 1 1351,8.5 L1358,29.6094 L1677.5,29.6094 A2.5,2.5 0 0 1 1680,32.1094 L1680,257.5 A2.5,2.5 0 0 1 1677.5,260 L1250.5,260 A2.5,2.5 0 0 1 1248,257.5 L1248,8.5 A2.5,2.5 0 0 1 1250.5,6 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1248" x2="1358" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="1252" y="22.5332">Infrastructure</text></g><!--MD5=[0334151241c2df87d13997940bbf650c]
+cluster persistence--><g id="cluster_persistence"><path d="M1274.5,50 L1359.5,50 A3.75,3.75 0 0 1 1362,52.5 L1369,73.6094 L1653.5,73.6094 A2.5,2.5 0 0 1 1656,76.1094 L1656,233.5 A2.5,2.5 0 0 1 1653.5,236 L1274.5,236 A2.5,2.5 0 0 1 1272,233.5 L1272,52.5 A2.5,2.5 0 0 1 1274.5,50 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1272" x2="1369" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="84" x="1276" y="66.5332">Persistence</text></g><!--MD5=[4a54ade28916d8d6c306c7d3e7d665ac]
+cluster IJPARepo--><g id="cluster_IJPARepo"><path d="M1298.5,94 L1419.5,94 A3.75,3.75 0 0 1 1422,96.5 L1429,117.6094 L1629.5,117.6094 A2.5,2.5 0 0 1 1632,120.1094 L1632,209.5 A2.5,2.5 0 0 1 1629.5,212 L1298.5,212 A2.5,2.5 0 0 1 1296,209.5 L1296,96.5 A2.5,2.5 0 0 1 1298.5,94 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1296" x2="1429" y1="117.6094" y2="117.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="120" x="1300" y="110.5332">iJPARepositories</text></g><!--MD5=[90092f0f228c2e0685fe851a711fbc98]
+cluster DataModel--><g id="cluster_DataModel"><path d="M1768.5,103 L1844.5,103 A3.75,3.75 0 0 1 1847,105.5 L1854,126.6094 L2255.5,126.6094 A2.5,2.5 0 0 1 2258,129.1094 L2258,460.5 A2.5,2.5 0 0 1 2255.5,463 L1768.5,463 A2.5,2.5 0 0 1 1766,460.5 L1766,105.5 A2.5,2.5 0 0 1 1768.5,103 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1766" x2="1854" y1="126.6094" y2="126.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="75" x="1770" y="119.5332">DataModel</text></g><!--MD5=[fc96b7229b26b3ac4ea5bdc9a627e26b]
+cluster folderinter--><g id="cluster_folderinter"><path d="M724.5,284 L855.5,284 A3.75,3.75 0 0 1 858,286.5 L865,307.6094 L1739.5,307.6094 A2.5,2.5 0 0 1 1742,310.1094 L1742,484.5 A2.5,2.5 0 0 1 1739.5,487 L724.5,487 A2.5,2.5 0 0 1 722,484.5 L722,286.5 A2.5,2.5 0 0 1 724.5,284 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="722" x2="865" y1="307.6094" y2="307.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130" x="726" y="300.5332">Interface Adapters</text></g><!--MD5=[9bdef6ba970f735873d6ed5c9ac79112]
+cluster packrepoImpl--><g id="cluster_packrepoImpl"><path d="M1088.5,328 L1179.5,328 A3.75,3.75 0 0 1 1182,330.5 L1189,351.6094 L1715.5,351.6094 A2.5,2.5 0 0 1 1718,354.1094 L1718,460.5 A2.5,2.5 0 0 1 1715.5,463 L1088.5,463 A2.5,2.5 0 0 1 1086,460.5 L1086,330.5 A2.5,2.5 0 0 1 1088.5,328 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1086" x2="1189" y1="351.6094" y2="351.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="90" x="1090" y="344.5332">Repositories</text></g><!--MD5=[d381aecd4ea6dc803d4d2e3b84969cfa]
+cluster packcontrol--><g id="cluster_packcontrol"><path d="M748.5,336.5 L857.5,336.5 A3.75,3.75 0 0 1 860,339 L867,360.1094 L1059.5,360.1094 A2.5,2.5 0 0 1 1062,362.6094 L1062,452 A2.5,2.5 0 0 1 1059.5,454.5 L748.5,454.5 A2.5,2.5 0 0 1 746,452 L746,339 A2.5,2.5 0 0 1 748.5,336.5 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="746" x2="867" y1="360.1094" y2="360.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="108" x="750" y="353.0332">implControllers</text></g><!--MD5=[7b8bc9ee8bb84b99fb3a3f9477c19238]
+cluster DTO--><g id="cluster_DTO"><path d="M1596.5,511 L1626.5,511 A3.75,3.75 0 0 1 1629,513.5 L1636,534.6094 L2215.5,534.6094 A2.5,2.5 0 0 1 2218,537.1094 L2218,958.5 A2.5,2.5 0 0 1 2215.5,961 L1596.5,961 A2.5,2.5 0 0 1 1594,958.5 L1594,513.5 A2.5,2.5 0 0 1 1596.5,511 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1594" x2="1636" y1="534.6094" y2="534.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="29" x="1598" y="527.5332">DTO</text></g><!--MD5=[1969eb49accf14e28bce7c74db8cc840]
+cluster mapper--><g id="cluster_mapper"><path d="M1620.5,555 L1674.5,555 A3.75,3.75 0 0 1 1677,557.5 L1684,578.6094 L2191.5,578.6094 A2.5,2.5 0 0 1 2194,581.1094 L2194,687.5 A2.5,2.5 0 0 1 2191.5,690 L1620.5,690 A2.5,2.5 0 0 1 1618,687.5 L1618,557.5 A2.5,2.5 0 0 1 1620.5,555 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1618" x2="1684" y1="578.6094" y2="578.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="1622" y="571.5332">mapper</text></g><!--MD5=[d13fcb855108a23cf11211063221295a]
+cluster Application Services--><g id="cluster_Application Services"><path d="M592.5,511 L737.5,511 A3.75,3.75 0 0 1 740,513.5 L747,534.6094 L1567.5,534.6094 A2.5,2.5 0 0 1 1570,537.1094 L1570,711.5 A2.5,2.5 0 0 1 1567.5,714 L592.5,714 A2.5,2.5 0 0 1 590,711.5 L590,513.5 A2.5,2.5 0 0 1 592.5,511 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="590" x2="747" y1="534.6094" y2="534.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="144" x="594" y="527.5332">Application Services</text></g><!--MD5=[aecf8044dfddb7d20151bf0fcd25f270]
+cluster packAppService--><g id="cluster_packAppService"><path d="M616.5,563.5 L735.5,563.5 A3.75,3.75 0 0 1 738,566 L745,587.1094 L1211.5,587.1094 A2.5,2.5 0 0 1 1214,589.6094 L1214,679 A2.5,2.5 0 0 1 1211.5,681.5 L616.5,681.5 A2.5,2.5 0 0 1 614,679 L614,566 A2.5,2.5 0 0 1 616.5,563.5 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="614" x2="745" y1="587.1094" y2="587.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="118" x="618" y="580.0332">implAppServices</text></g><!--MD5=[5850865a129e18cd152c0f82d3987a85]
+cluster iRepositories--><g id="cluster_iRepositories"><path d="M1240.5,555 L1335.5,555 A3.75,3.75 0 0 1 1338,557.5 L1345,578.6094 L1543.5,578.6094 A2.5,2.5 0 0 1 1546,581.1094 L1546,687.5 A2.5,2.5 0 0 1 1543.5,690 L1240.5,690 A2.5,2.5 0 0 1 1238,687.5 L1238,557.5 A2.5,2.5 0 0 1 1240.5,555 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1238" x2="1345" y1="578.6094" y2="578.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="94" x="1242" y="571.5332">iRepositories</text></g><!--MD5=[27f772719433d509ddbc20ff768eba08]
+cluster domain--><g id="cluster_domain"><path d="M8.5,738 L118.5,738 A3.75,3.75 0 0 1 121,740.5 L128,761.6094 L1109.5,761.6094 A2.5,2.5 0 0 1 1112,764.1094 L1112,1148.5 A2.5,2.5 0 0 1 1109.5,1151 L8.5,1151 A2.5,2.5 0 0 1 6,1148.5 L6,740.5 A2.5,2.5 0 0 1 8.5,738 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="6" x2="128" y1="761.6094" y2="761.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109" x="10" y="754.5332">Domain/Entities</text></g><!--MD5=[c684817be5cb24f22715f17135028f47]
+cluster packVO--><g id="cluster_packVO"><path d="M463.5,1009 L561.5,1009 A3.75,3.75 0 0 1 564,1011.5 L571,1032.6094 L1085.5,1032.6094 A2.5,2.5 0 0 1 1088,1035.1094 L1088,1124.5 A2.5,2.5 0 0 1 1085.5,1127 L463.5,1127 A2.5,2.5 0 0 1 461,1124.5 L461,1011.5 A2.5,2.5 0 0 1 463.5,1009 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="461" x2="571" y1="1032.6094" y2="1032.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="465" y="1025.5332">Value Objects</text></g><!--MD5=[2a53bf55b807f27adccc2831e547688e]
+cluster aggregates--><g id="cluster_aggregates"><path d="M32.5,782 L114.5,782 A3.75,3.75 0 0 1 117,784.5 L124,805.6094 L1085.5,805.6094 A2.5,2.5 0 0 1 1088,808.1094 L1088,982.5 A2.5,2.5 0 0 1 1085.5,985 L32.5,985 A2.5,2.5 0 0 1 30,982.5 L30,784.5 A2.5,2.5 0 0 1 32.5,782 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="30" x2="124" y1="805.6094" y2="805.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81" x="34" y="798.5332">Aggregates</text></g><!--MD5=[91dd1e2d141d3908752779281935dd7b]
+cluster packEntity--><g id="cluster_packEntity"><path d="M56.5,826 L169.5,826 A3.75,3.75 0 0 1 172,828.5 L179,849.6094 L1061.5,849.6094 A2.5,2.5 0 0 1 1064,852.1094 L1064,958.5 A2.5,2.5 0 0 1 1061.5,961 L56.5,961 A2.5,2.5 0 0 1 54,958.5 L54,828.5 A2.5,2.5 0 0 1 56.5,826 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="54" x2="179" y1="849.6094" y2="849.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="112" x="58" y="842.5332">ProjectTypology</text></g><!--MD5=[d1384441b9e6867ddfe7f74e3f964846]
+class IProjectTypologyJPARepo--><g id="elem_IProjectTypologyJPARepo"><rect codeLine="8" fill="#F1F1F1" height="65.6094" id="IProjectTypologyJPARepo" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="304" x="1312" y="130"/><ellipse cx="1327" cy="146" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1329,142.5 Q1329.2031,142 1329.4375,141.75 Q1329.6719,141.5 1329.9375,141.5 Q1330.4063,141.5 1330.7031,141.7813 Q1331,142.0625 1331,142.7188 L1331,144.2813 Q1331,144.9375 1330.7188,145.2188 Q1330.4375,145.5 1330,145.5 Q1329.6094,145.5 1329.3594,145.3281 Q1329.1094,145.1563 1329,144.7031 Q1328.9531,144.3906 1328.7813,144.2188 Q1328.4688,143.8906 1327.9063,143.7031 Q1327.3438,143.5 1326.7813,143.5 Q1326.0781,143.5 1325.4844,143.7813 Q1324.9063,144.0625 1324.4531,144.6875 Q1324,145.3125 1324,146.1719 L1324,147.0938 Q1324,148.125 1324.8438,148.8125 Q1325.6875,149.5 1327.1875,149.5 Q1328.0781,149.5 1328.7031,149.2969 Q1329.0625,149.1875 1329.4688,148.8281 Q1329.7344,148.625 1329.875,148.5625 Q1330.0156,148.5 1330.1875,148.5 Q1330.5156,148.5 1330.75,148.7656 Q1331,149.0156 1331,149.375 Q1331,149.7188 1330.6563,150.125 Q1330.1563,150.7188 1329.3594,151.0469 Q1328.3125,151.5 1327.0313,151.5 Q1325.5313,151.5 1324.3281,150.9063 Q1323.3594,150.4375 1322.6719,149.4219 Q1322,148.4063 1322,147.2031 L1322,146.1094 Q1322,144.8594 1322.5938,143.7656 Q1323.2031,142.6719 1324.25,142.0938 Q1325.3125,141.5 1326.5,141.5 Q1327.2188,141.5 1327.8438,141.75 Q1328.4688,142 1329,142.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="272" x="1341" y="151.7285">&lt;interface&gt; IProjectTypologyJPARepository</text><line style="stroke:#181818;stroke-width:0.5;" x1="1313" x2="1615" y1="162" y2="162"/><line style="stroke:#181818;stroke-width:0.5;" x1="1313" x2="1615" y1="170" y2="170"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="232" x="1318" y="188.5332">+findAll() : List&lt;ProjectTypologyJPA&gt;</text></g><!--MD5=[fa50286af20d4905e9e6cd403724dcc1]
+class ProjectJPA--><g id="elem_ProjectJPA"><rect codeLine="16" fill="#F1F1F1" height="48" id="ProjectJPA" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="158" x="1857" y="139"/><ellipse cx="1872" cy="155" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1874,151.5 Q1874.2031,151 1874.4375,150.75 Q1874.6719,150.5 1874.9375,150.5 Q1875.4063,150.5 1875.7031,150.7813 Q1876,151.0625 1876,151.7188 L1876,153.2813 Q1876,153.9375 1875.7188,154.2188 Q1875.4375,154.5 1875,154.5 Q1874.6094,154.5 1874.3594,154.3281 Q1874.1094,154.1563 1874,153.7031 Q1873.9531,153.3906 1873.7813,153.2188 Q1873.4688,152.8906 1872.9063,152.7031 Q1872.3438,152.5 1871.7813,152.5 Q1871.0781,152.5 1870.4844,152.7813 Q1869.9063,153.0625 1869.4531,153.6875 Q1869,154.3125 1869,155.1719 L1869,156.0938 Q1869,157.125 1869.8438,157.8125 Q1870.6875,158.5 1872.1875,158.5 Q1873.0781,158.5 1873.7031,158.2969 Q1874.0625,158.1875 1874.4688,157.8281 Q1874.7344,157.625 1874.875,157.5625 Q1875.0156,157.5 1875.1875,157.5 Q1875.5156,157.5 1875.75,157.7656 Q1876,158.0156 1876,158.375 Q1876,158.7188 1875.6563,159.125 Q1875.1563,159.7188 1874.3594,160.0469 Q1873.3125,160.5 1872.0313,160.5 Q1870.5313,160.5 1869.3281,159.9063 Q1868.3594,159.4375 1867.6719,158.4219 Q1867,157.4063 1867,156.2031 L1867,155.1094 Q1867,153.8594 1867.5938,152.7656 Q1868.2031,151.6719 1869.25,151.0938 Q1870.3125,150.5 1871.5,150.5 Q1872.2188,150.5 1872.8438,150.75 Q1873.4688,151 1874,151.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="1886" y="160.7285">ProjectTypologyJPA</text><line style="stroke:#181818;stroke-width:0.5;" x1="1858" x2="2014" y1="171" y2="171"/><line style="stroke:#181818;stroke-width:0.5;" x1="1858" x2="2014" y1="179" y2="179"/></g><!--MD5=[8dc6034e790ba69fc5a3b510dfe7603e]
+class ProjectTypologyDomainDataAssembler--><g id="elem_ProjectTypologyDomainDataAssembler"><rect codeLine="18" fill="#F1F1F1" height="83.2188" id="ProjectTypologyDomainDataAssembler" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="459" x="1782.5" y="364"/><ellipse cx="1884.75" cy="380" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1886.75,376.5 Q1886.9531,376 1887.1875,375.75 Q1887.4219,375.5 1887.6875,375.5 Q1888.1563,375.5 1888.4531,375.7813 Q1888.75,376.0625 1888.75,376.7188 L1888.75,378.2813 Q1888.75,378.9375 1888.4688,379.2188 Q1888.1875,379.5 1887.75,379.5 Q1887.3594,379.5 1887.1094,379.3281 Q1886.8594,379.1563 1886.75,378.7031 Q1886.7031,378.3906 1886.5313,378.2188 Q1886.2188,377.8906 1885.6563,377.7031 Q1885.0938,377.5 1884.5313,377.5 Q1883.8281,377.5 1883.2344,377.7813 Q1882.6563,378.0625 1882.2031,378.6875 Q1881.75,379.3125 1881.75,380.1719 L1881.75,381.0938 Q1881.75,382.125 1882.5938,382.8125 Q1883.4375,383.5 1884.9375,383.5 Q1885.8281,383.5 1886.4531,383.2969 Q1886.8125,383.1875 1887.2188,382.8281 Q1887.4844,382.625 1887.625,382.5625 Q1887.7656,382.5 1887.9375,382.5 Q1888.2656,382.5 1888.5,382.7656 Q1888.75,383.0156 1888.75,383.375 Q1888.75,383.7188 1888.4063,384.125 Q1887.9063,384.7188 1887.1094,385.0469 Q1886.0625,385.5 1884.7813,385.5 Q1883.2813,385.5 1882.0781,384.9063 Q1881.1094,384.4375 1880.4219,383.4219 Q1879.75,382.4063 1879.75,381.2031 L1879.75,380.1094 Q1879.75,378.8594 1880.3438,377.7656 Q1880.9531,376.6719 1882,376.0938 Q1883.0625,375.5 1884.25,375.5 Q1884.9688,375.5 1885.5938,375.75 Q1886.2188,376 1886.75,376.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="246" x="1905.25" y="385.7285">ProjectTypologyDomainDataAssembler</text><line style="stroke:#181818;stroke-width:0.5;" x1="1783.5" x2="2240.5" y1="396" y2="396"/><line style="stroke:#181818;stroke-width:0.5;" x1="1783.5" x2="2240.5" y1="404" y2="404"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="447" x="1788.5" y="422.5332">+toDomain(ProjectTypologyJPA projectTypologyJPA) : ProjectTypology</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="405" x="1788.5" y="440.1426">+toData(ProjectTypology projectTypology) : ProjectTypologyJPA</text></g><!--MD5=[40e1163e683c157568d9e831d582aef2]
+class classrepo--><g id="elem_classrepo"><rect codeLine="26" fill="#F1F1F1" height="83.2188" id="classrepo" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="600" x="1102" y="364"/><ellipse cx="1312.75" cy="380" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1314.75,376.5 Q1314.9531,376 1315.1875,375.75 Q1315.4219,375.5 1315.6875,375.5 Q1316.1563,375.5 1316.4531,375.7813 Q1316.75,376.0625 1316.75,376.7188 L1316.75,378.2813 Q1316.75,378.9375 1316.4688,379.2188 Q1316.1875,379.5 1315.75,379.5 Q1315.3594,379.5 1315.1094,379.3281 Q1314.8594,379.1563 1314.75,378.7031 Q1314.7031,378.3906 1314.5313,378.2188 Q1314.2188,377.8906 1313.6563,377.7031 Q1313.0938,377.5 1312.5313,377.5 Q1311.8281,377.5 1311.2344,377.7813 Q1310.6563,378.0625 1310.2031,378.6875 Q1309.75,379.3125 1309.75,380.1719 L1309.75,381.0938 Q1309.75,382.125 1310.5938,382.8125 Q1311.4375,383.5 1312.9375,383.5 Q1313.8281,383.5 1314.4531,383.2969 Q1314.8125,383.1875 1315.2188,382.8281 Q1315.4844,382.625 1315.625,382.5625 Q1315.7656,382.5 1315.9375,382.5 Q1316.2656,382.5 1316.5,382.7656 Q1316.75,383.0156 1316.75,383.375 Q1316.75,383.7188 1316.4063,384.125 Q1315.9063,384.7188 1315.1094,385.0469 Q1314.0625,385.5 1312.7813,385.5 Q1311.2813,385.5 1310.0781,384.9063 Q1309.1094,384.4375 1308.4219,383.4219 Q1307.75,382.4063 1307.75,381.2031 L1307.75,380.1094 Q1307.75,378.8594 1308.3438,377.7656 Q1308.9531,376.6719 1310,376.0938 Q1311.0625,375.5 1312.25,375.5 Q1312.9688,375.5 1313.5938,375.75 Q1314.2188,376 1314.75,376.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170" x="1333.25" y="385.7285">ProjectTypologyRepository</text><line style="stroke:#181818;stroke-width:0.5;" x1="1103" x2="1701" y1="396" y2="396"/><line style="stroke:#181818;stroke-width:0.5;" x1="1103" x2="1701" y1="404" y2="404"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="588" x="1108" y="422.5332">+findProjectTypologyByID(ProjectTypologyID projectTypologyID) : Optional&lt;ProjectTypology&gt;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="471" x="1108" y="440.1426">+saveProjectTypology(ProjectTypology projectTypology) : ProjectTypology</text></g><!--MD5=[0d8b0c26e9e466b32189db84028e2298]
+class classcontroller--><g id="elem_classcontroller"><rect codeLine="32" fill="#F1F1F1" height="65.6094" id="classcontroller" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="283" x="762.5" y="372.5"/><ellipse cx="797.3" cy="388.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M799.3,385 Q799.5031,384.5 799.7375,384.25 Q799.9719,384 800.2375,384 Q800.7063,384 801.0031,384.2813 Q801.3,384.5625 801.3,385.2188 L801.3,386.7813 Q801.3,387.4375 801.0188,387.7188 Q800.7375,388 800.3,388 Q799.9094,388 799.6594,387.8281 Q799.4094,387.6563 799.3,387.2031 Q799.2531,386.8906 799.0813,386.7188 Q798.7688,386.3906 798.2063,386.2031 Q797.6438,386 797.0813,386 Q796.3781,386 795.7844,386.2813 Q795.2063,386.5625 794.7531,387.1875 Q794.3,387.8125 794.3,388.6719 L794.3,389.5938 Q794.3,390.625 795.1438,391.3125 Q795.9875,392 797.4875,392 Q798.3781,392 799.0031,391.7969 Q799.3625,391.6875 799.7688,391.3281 Q800.0344,391.125 800.175,391.0625 Q800.3156,391 800.4875,391 Q800.8156,391 801.05,391.2656 Q801.3,391.5156 801.3,391.875 Q801.3,392.2188 800.9563,392.625 Q800.4563,393.2188 799.6594,393.5469 Q798.6125,394 797.3313,394 Q795.8313,394 794.6281,393.4063 Q793.6594,392.9375 792.9719,391.9219 Q792.3,390.9063 792.3,389.7031 L792.3,388.6094 Q792.3,387.3594 792.8938,386.2656 Q793.5031,385.1719 794.55,384.5938 Q795.6125,384 796.8,384 Q797.5188,384 798.1438,384.25 Q798.7688,384.5 799.3,385 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="207" x="815.7" y="394.2285">CreateProjectTypologyController</text><line style="stroke:#181818;stroke-width:0.5;" x1="763.5" x2="1044.5" y1="404.5" y2="404.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="763.5" x2="1044.5" y1="412.5" y2="412.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="271" x="768.5" y="431.0332">+createProjectTypology() : ResponseEntity</text></g><!--MD5=[7a3f677e62d08ccf691684bafc193c34]
+class dto--><g id="elem_dto"><rect codeLine="46" fill="#F1F1F1" height="83.2188" id="dto" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="164" x="1824" y="862"/><ellipse cx="1839" cy="878" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1841,874.5 Q1841.2031,874 1841.4375,873.75 Q1841.6719,873.5 1841.9375,873.5 Q1842.4063,873.5 1842.7031,873.7813 Q1843,874.0625 1843,874.7188 L1843,876.2813 Q1843,876.9375 1842.7188,877.2188 Q1842.4375,877.5 1842,877.5 Q1841.6094,877.5 1841.3594,877.3281 Q1841.1094,877.1563 1841,876.7031 Q1840.9531,876.3906 1840.7813,876.2188 Q1840.4688,875.8906 1839.9063,875.7031 Q1839.3438,875.5 1838.7813,875.5 Q1838.0781,875.5 1837.4844,875.7813 Q1836.9063,876.0625 1836.4531,876.6875 Q1836,877.3125 1836,878.1719 L1836,879.0938 Q1836,880.125 1836.8438,880.8125 Q1837.6875,881.5 1839.1875,881.5 Q1840.0781,881.5 1840.7031,881.2969 Q1841.0625,881.1875 1841.4688,880.8281 Q1841.7344,880.625 1841.875,880.5625 Q1842.0156,880.5 1842.1875,880.5 Q1842.5156,880.5 1842.75,880.7656 Q1843,881.0156 1843,881.375 Q1843,881.7188 1842.6563,882.125 Q1842.1563,882.7188 1841.3594,883.0469 Q1840.3125,883.5 1839.0313,883.5 Q1837.5313,883.5 1836.3281,882.9063 Q1835.3594,882.4375 1834.6719,881.4219 Q1834,880.4063 1834,879.2031 L1834,878.1094 Q1834,876.8594 1834.5938,875.7656 Q1835.2031,874.6719 1836.25,874.0938 Q1837.3125,873.5 1838.5,873.5 Q1839.2188,873.5 1839.8438,873.75 Q1840.4688,874 1841,874.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="1853" y="883.7285">ProjectTypologyDTO</text><line style="stroke:#181818;stroke-width:0.5;" x1="1825" x2="1987" y1="894" y2="894"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="1830" y="912.5332">+name : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="1830" y="930.1426">+description : String</text><line style="stroke:#181818;stroke-width:0.5;" x1="1825" x2="1987" y1="937.2188" y2="937.2188"/></g><!--MD5=[83e441f0107b0a765dfc3c4914c42eed]
+class ProjectTypologyMapper--><g id="elem_ProjectTypologyMapper"><rect codeLine="41" fill="#F1F1F1" height="83.2188" id="ProjectTypologyMapper" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="543" x="1634.5" y="591"/><ellipse cx="1826.75" cy="607" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1828.75,603.5 Q1828.9531,603 1829.1875,602.75 Q1829.4219,602.5 1829.6875,602.5 Q1830.1563,602.5 1830.4531,602.7813 Q1830.75,603.0625 1830.75,603.7188 L1830.75,605.2813 Q1830.75,605.9375 1830.4688,606.2188 Q1830.1875,606.5 1829.75,606.5 Q1829.3594,606.5 1829.1094,606.3281 Q1828.8594,606.1563 1828.75,605.7031 Q1828.7031,605.3906 1828.5313,605.2188 Q1828.2188,604.8906 1827.6563,604.7031 Q1827.0938,604.5 1826.5313,604.5 Q1825.8281,604.5 1825.2344,604.7813 Q1824.6563,605.0625 1824.2031,605.6875 Q1823.75,606.3125 1823.75,607.1719 L1823.75,608.0938 Q1823.75,609.125 1824.5938,609.8125 Q1825.4375,610.5 1826.9375,610.5 Q1827.8281,610.5 1828.4531,610.2969 Q1828.8125,610.1875 1829.2188,609.8281 Q1829.4844,609.625 1829.625,609.5625 Q1829.7656,609.5 1829.9375,609.5 Q1830.2656,609.5 1830.5,609.7656 Q1830.75,610.0156 1830.75,610.375 Q1830.75,610.7188 1830.4063,611.125 Q1829.9063,611.7188 1829.1094,612.0469 Q1828.0625,612.5 1826.7813,612.5 Q1825.2813,612.5 1824.0781,611.9063 Q1823.1094,611.4375 1822.4219,610.4219 Q1821.75,609.4063 1821.75,608.2031 L1821.75,607.1094 Q1821.75,605.8594 1822.3438,604.7656 Q1822.9531,603.6719 1824,603.0938 Q1825.0625,602.5 1826.25,602.5 Q1826.9688,602.5 1827.5938,602.75 Q1828.2188,603 1828.75,603.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="1847.25" y="612.7285">ProjectTypologyMapper</text><line style="stroke:#181818;stroke-width:0.5;" x1="1635.5" x2="2176.5" y1="623" y2="623"/><line style="stroke:#181818;stroke-width:0.5;" x1="1635.5" x2="2176.5" y1="631" y2="631"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="515" x="1640.5" y="649.5332">+toDomain(toSingleDTO(ProjectTypology projectTypology) : ProjectTypologyDTO</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="531" x="1640.5" y="667.1426">+toDTO(List&lt;ProjectTypology&gt; listOfProjectTypologies) : List&lt;ProjectTypologyDTO&gt;</text></g><!--MD5=[667fb94da4bca85f6fcdaf236a591920]
+class classService--><g id="elem_classService"><rect codeLine="54" fill="#F1F1F1" height="65.6094" id="classService" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="567" x="630.5" y="599.5"/><ellipse cx="779.25" cy="615.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M781.25,612 Q781.4531,611.5 781.6875,611.25 Q781.9219,611 782.1875,611 Q782.6563,611 782.9531,611.2813 Q783.25,611.5625 783.25,612.2188 L783.25,613.7813 Q783.25,614.4375 782.9688,614.7188 Q782.6875,615 782.25,615 Q781.8594,615 781.6094,614.8281 Q781.3594,614.6563 781.25,614.2031 Q781.2031,613.8906 781.0313,613.7188 Q780.7188,613.3906 780.1563,613.2031 Q779.5938,613 779.0313,613 Q778.3281,613 777.7344,613.2813 Q777.1563,613.5625 776.7031,614.1875 Q776.25,614.8125 776.25,615.6719 L776.25,616.5938 Q776.25,617.625 777.0938,618.3125 Q777.9375,619 779.4375,619 Q780.3281,619 780.9531,618.7969 Q781.3125,618.6875 781.7188,618.3281 Q781.9844,618.125 782.125,618.0625 Q782.2656,618 782.4375,618 Q782.7656,618 783,618.2656 Q783.25,618.5156 783.25,618.875 Q783.25,619.2188 782.9063,619.625 Q782.4063,620.2188 781.6094,620.5469 Q780.5625,621 779.2813,621 Q777.7813,621 776.5781,620.4063 Q775.6094,619.9375 774.9219,618.9219 Q774.25,617.9063 774.25,616.7031 L774.25,615.6094 Q774.25,614.3594 774.8438,613.2656 Q775.4531,612.1719 776.5,611.5938 Q777.5625,611 778.75,611 Q779.4688,611 780.0938,611.25 Q780.7188,611.5 781.25,612 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="261" x="799.75" y="621.2285">ApplicationServiceCreateProjectTypology</text><line style="stroke:#181818;stroke-width:0.5;" x1="631.5" x2="1196.5" y1="631.5" y2="631.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="631.5" x2="1196.5" y1="639.5" y2="639.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="555" x="636.5" y="658.0332">+createAndSaveProjectTypology(String name, String description) : ProjectTypologyDTO</text></g><!--MD5=[edd1fcc4e71e7fe8cc94051158285e5a]
+class IProjectTypologyRepo--><g id="elem_IProjectTypologyRepo"><rect codeLine="59" fill="#F1F1F1" height="83.2188" id="IProjectTypologyRepo" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="276" x="1254" y="591"/><ellipse cx="1269" cy="607" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1271,603.5 Q1271.2031,603 1271.4375,602.75 Q1271.6719,602.5 1271.9375,602.5 Q1272.4063,602.5 1272.7031,602.7813 Q1273,603.0625 1273,603.7188 L1273,605.2813 Q1273,605.9375 1272.7188,606.2188 Q1272.4375,606.5 1272,606.5 Q1271.6094,606.5 1271.3594,606.3281 Q1271.1094,606.1563 1271,605.7031 Q1270.9531,605.3906 1270.7813,605.2188 Q1270.4688,604.8906 1269.9063,604.7031 Q1269.3438,604.5 1268.7813,604.5 Q1268.0781,604.5 1267.4844,604.7813 Q1266.9063,605.0625 1266.4531,605.6875 Q1266,606.3125 1266,607.1719 L1266,608.0938 Q1266,609.125 1266.8438,609.8125 Q1267.6875,610.5 1269.1875,610.5 Q1270.0781,610.5 1270.7031,610.2969 Q1271.0625,610.1875 1271.4688,609.8281 Q1271.7344,609.625 1271.875,609.5625 Q1272.0156,609.5 1272.1875,609.5 Q1272.5156,609.5 1272.75,609.7656 Q1273,610.0156 1273,610.375 Q1273,610.7188 1272.6563,611.125 Q1272.1563,611.7188 1271.3594,612.0469 Q1270.3125,612.5 1269.0313,612.5 Q1267.5313,612.5 1266.3281,611.9063 Q1265.3594,611.4375 1264.6719,610.4219 Q1264,609.4063 1264,608.2031 L1264,607.1094 Q1264,605.8594 1264.5938,604.7656 Q1265.2031,603.6719 1266.25,603.0938 Q1267.3125,602.5 1268.5,602.5 Q1269.2188,602.5 1269.8438,602.75 Q1270.4688,603 1271,603.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="244" x="1283" y="612.7285">&lt;interface&gt;IProjectTypologyRepository</text><line style="stroke:#181818;stroke-width:0.5;" x1="1255" x2="1529" y1="623" y2="623"/><line style="stroke:#181818;stroke-width:0.5;" x1="1255" x2="1529" y1="631" y2="631"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="182" x="1260" y="649.5332">+findById(projectTypologyID)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="1260" y="667.1426">+save(projectTypology)</text></g><!--MD5=[9ac46467b36b77ce5198ff8016947491]
+class classProjTypID--><g id="elem_classProjTypID"><rect codeLine="68" fill="#F1F1F1" height="65.6094" id="classProjTypID" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="422" x="650" y="1045"/><ellipse cx="797.25" cy="1061" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M799.25,1057.5 Q799.4531,1057 799.6875,1056.75 Q799.9219,1056.5 800.1875,1056.5 Q800.6563,1056.5 800.9531,1056.7813 Q801.25,1057.0625 801.25,1057.7188 L801.25,1059.2813 Q801.25,1059.9375 800.9688,1060.2188 Q800.6875,1060.5 800.25,1060.5 Q799.8594,1060.5 799.6094,1060.3281 Q799.3594,1060.1563 799.25,1059.7031 Q799.2031,1059.3906 799.0313,1059.2188 Q798.7188,1058.8906 798.1563,1058.7031 Q797.5938,1058.5 797.0313,1058.5 Q796.3281,1058.5 795.7344,1058.7813 Q795.1563,1059.0625 794.7031,1059.6875 Q794.25,1060.3125 794.25,1061.1719 L794.25,1062.0938 Q794.25,1063.125 795.0938,1063.8125 Q795.9375,1064.5 797.4375,1064.5 Q798.3281,1064.5 798.9531,1064.2969 Q799.3125,1064.1875 799.7188,1063.8281 Q799.9844,1063.625 800.125,1063.5625 Q800.2656,1063.5 800.4375,1063.5 Q800.7656,1063.5 801,1063.7656 Q801.25,1064.0156 801.25,1064.375 Q801.25,1064.7188 800.9063,1065.125 Q800.4063,1065.7188 799.6094,1066.0469 Q798.5625,1066.5 797.2813,1066.5 Q795.7813,1066.5 794.5781,1065.9063 Q793.6094,1065.4375 792.9219,1064.4219 Q792.25,1063.4063 792.25,1062.2031 L792.25,1061.1094 Q792.25,1059.8594 792.8438,1058.7656 Q793.4531,1057.6719 794.5,1057.0938 Q795.5625,1056.5 796.75,1056.5 Q797.4688,1056.5 798.0938,1056.75 Q798.7188,1057 799.25,1057.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="817.75" y="1066.7285">ProjectTypologyID</text><line style="stroke:#181818;stroke-width:0.5;" x1="651" x2="1071" y1="1077" y2="1077"/><line style="stroke:#181818;stroke-width:0.5;" x1="651" x2="1071" y1="1085" y2="1085"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="410" x="656" y="1103.5332">-of(NoNumberNoSymbolString name) : NoNumberNoSymbolString</text></g><!--MD5=[36e9d473dbf59c99b1783bb3a0317889]
+class classDescription--><g id="elem_classDescription"><rect codeLine="72" fill="#F1F1F1" height="65.6094" id="classDescription" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="137" x="477.5" y="1045"/><ellipse cx="506" cy="1061" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M508,1057.5 Q508.2031,1057 508.4375,1056.75 Q508.6719,1056.5 508.9375,1056.5 Q509.4063,1056.5 509.7031,1056.7813 Q510,1057.0625 510,1057.7188 L510,1059.2813 Q510,1059.9375 509.7188,1060.2188 Q509.4375,1060.5 509,1060.5 Q508.6094,1060.5 508.3594,1060.3281 Q508.1094,1060.1563 508,1059.7031 Q507.9531,1059.3906 507.7813,1059.2188 Q507.4688,1058.8906 506.9063,1058.7031 Q506.3438,1058.5 505.7813,1058.5 Q505.0781,1058.5 504.4844,1058.7813 Q503.9063,1059.0625 503.4531,1059.6875 Q503,1060.3125 503,1061.1719 L503,1062.0938 Q503,1063.125 503.8438,1063.8125 Q504.6875,1064.5 506.1875,1064.5 Q507.0781,1064.5 507.7031,1064.2969 Q508.0625,1064.1875 508.4688,1063.8281 Q508.7344,1063.625 508.875,1063.5625 Q509.0156,1063.5 509.1875,1063.5 Q509.5156,1063.5 509.75,1063.7656 Q510,1064.0156 510,1064.375 Q510,1064.7188 509.6563,1065.125 Q509.1563,1065.7188 508.3594,1066.0469 Q507.3125,1066.5 506.0313,1066.5 Q504.5313,1066.5 503.3281,1065.9063 Q502.3594,1065.4375 501.6719,1064.4219 Q501,1063.4063 501,1062.2031 L501,1061.1094 Q501,1059.8594 501.5938,1058.7656 Q502.2031,1057.6719 503.25,1057.0938 Q504.3125,1056.5 505.5,1056.5 Q506.2188,1056.5 506.8438,1056.75 Q507.4688,1057 508,1057.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="523" y="1066.7285">Description</text><line style="stroke:#181818;stroke-width:0.5;" x1="478.5" x2="613.5" y1="1077" y2="1077"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="483.5" y="1095.5332">-Description : String</text><line style="stroke:#181818;stroke-width:0.5;" x1="478.5" x2="613.5" y1="1102.6094" y2="1102.6094"/></g><!--MD5=[05eabf3705c92cd5aa81e6fb676921f2]
+class classProjectTypology--><g id="elem_classProjectTypology"><rect codeLine="80" fill="#F1F1F1" height="83.2188" id="classProjectTypology" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="267" x="780.5" y="862"/><ellipse cx="858.75" cy="878" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M860.75,874.5 Q860.9531,874 861.1875,873.75 Q861.4219,873.5 861.6875,873.5 Q862.1563,873.5 862.4531,873.7813 Q862.75,874.0625 862.75,874.7188 L862.75,876.2813 Q862.75,876.9375 862.4688,877.2188 Q862.1875,877.5 861.75,877.5 Q861.3594,877.5 861.1094,877.3281 Q860.8594,877.1563 860.75,876.7031 Q860.7031,876.3906 860.5313,876.2188 Q860.2188,875.8906 859.6563,875.7031 Q859.0938,875.5 858.5313,875.5 Q857.8281,875.5 857.2344,875.7813 Q856.6563,876.0625 856.2031,876.6875 Q855.75,877.3125 855.75,878.1719 L855.75,879.0938 Q855.75,880.125 856.5938,880.8125 Q857.4375,881.5 858.9375,881.5 Q859.8281,881.5 860.4531,881.2969 Q860.8125,881.1875 861.2188,880.8281 Q861.4844,880.625 861.625,880.5625 Q861.7656,880.5 861.9375,880.5 Q862.2656,880.5 862.5,880.7656 Q862.75,881.0156 862.75,881.375 Q862.75,881.7188 862.4063,882.125 Q861.9063,882.7188 861.1094,883.0469 Q860.0625,883.5 858.7813,883.5 Q857.2813,883.5 856.0781,882.9063 Q855.1094,882.4375 854.4219,881.4219 Q853.75,880.4063 853.75,879.2031 L853.75,878.1094 Q853.75,876.8594 854.3438,875.7656 Q854.9531,874.6719 856,874.0938 Q857.0625,873.5 858.25,873.5 Q858.9688,873.5 859.5938,873.75 Q860.2188,874 860.75,874.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="879.25" y="883.7285">ProjectTypology</text><line style="stroke:#181818;stroke-width:0.5;" x1="781.5" x2="1046.5" y1="894" y2="894"/><line style="stroke:#181818;stroke-width:0.5;" x1="781.5" x2="1046.5" y1="902" y2="902"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="255" x="786.5" y="920.5332">+getProjectTypologyIDAsString() : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="211" x="786.5" y="938.1426">+getDescriptionAsString() : String</text></g><!--MD5=[4ff43964c430846c98e016b63ddfc361]
+class factory--><g id="elem_factory"><rect codeLine="84" fill="#F1F1F1" height="65.6094" id="factory" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="675" x="70.5" y="870.5"/><ellipse cx="328.75" cy="886.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M330.75,883 Q330.9531,882.5 331.1875,882.25 Q331.4219,882 331.6875,882 Q332.1563,882 332.4531,882.2813 Q332.75,882.5625 332.75,883.2188 L332.75,884.7813 Q332.75,885.4375 332.4688,885.7188 Q332.1875,886 331.75,886 Q331.3594,886 331.1094,885.8281 Q330.8594,885.6563 330.75,885.2031 Q330.7031,884.8906 330.5313,884.7188 Q330.2188,884.3906 329.6563,884.2031 Q329.0938,884 328.5313,884 Q327.8281,884 327.2344,884.2813 Q326.6563,884.5625 326.2031,885.1875 Q325.75,885.8125 325.75,886.6719 L325.75,887.5938 Q325.75,888.625 326.5938,889.3125 Q327.4375,890 328.9375,890 Q329.8281,890 330.4531,889.7969 Q330.8125,889.6875 331.2188,889.3281 Q331.4844,889.125 331.625,889.0625 Q331.7656,889 331.9375,889 Q332.2656,889 332.5,889.2656 Q332.75,889.5156 332.75,889.875 Q332.75,890.2188 332.4063,890.625 Q331.9063,891.2188 331.1094,891.5469 Q330.0625,892 328.7813,892 Q327.2813,892 326.0781,891.4063 Q325.1094,890.9375 324.4219,889.9219 Q323.75,888.9063 323.75,887.7031 L323.75,886.6094 Q323.75,885.3594 324.3438,884.2656 Q324.9531,883.1719 326,882.5938 Q327.0625,882 328.25,882 Q328.9688,882 329.5938,882.25 Q330.2188,882.5 330.75,883 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="349.25" y="892.2285">ProjectTypologyFactory</text><line style="stroke:#181818;stroke-width:0.5;" x1="71.5" x2="744.5" y1="902.5" y2="902.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="71.5" x2="744.5" y1="910.5" y2="910.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="663" x="76.5" y="929.0332">+createProjectTypology(ProjectTypologyID projectTypologyID, Describable description) : ProjectTypology</text></g><!--MD5=[7055e647601c4b893aefb6b6fc2c8630]
+link classcontroller to classService--><g id="link_classcontroller_classService"><path codeLine="92" d="M905.43,438.74 C907.26,479.84 910.41,550.76 912.34,594.17 " fill="none" id="classcontroller-to-classService" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="912.57,599.32,916.1548,590.1467,912.3417,594.3252,908.1632,590.5121,912.57,599.32" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b6fbba13a601a81ef141c22457f46381]
+link classService to classProjectTypology--><g id="link_classService_classProjectTypology"><path codeLine="93" d="M914,665.68 C914,713.23 914,802.49 914,856.81 " fill="none" id="classService-to-classProjectTypology" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="914,861.95,918,852.95,914,856.95,910,852.95,914,861.95" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9806864d74fa8fa9e2f0f757b5825f7d]
+link classService to ProjectTypologyMapper--><g id="link_classService_ProjectTypologyMapper"><path codeLine="94" d="M971.12,599.47 C1037.06,563.94 1150.02,510.9 1255.5,499 C1285.64,495.6 1498.36,495.6 1528.5,499 C1536.43,499.89 1538.34,500.76 1546,503 C1630.97,527.89 1725.06,561.98 1795.73,588.93 " fill="none" id="classService-to-ProjectTypologyMapper" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1800.78,590.85,1793.8086,583.893,1796.1114,589.0599,1790.9445,591.3627,1800.78,590.85" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fa577f080b459218afb9546afd5f291e]
+link ProjectTypologyMapper to dto--><g id="link_ProjectTypologyMapper_dto"><path codeLine="95" d="M1906,674.06 C1906,723.02 1906,805.14 1906,856.43 " fill="none" id="ProjectTypologyMapper-to-dto" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1906,861.61,1910,852.61,1906,856.61,1902,852.61,1906,861.61" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[920ee75ba07f8703082d944f6e9eb7c7]
+link classService to IProjectTypologyRepo--><g id="link_classService_IProjectTypologyRepo"><path codeLine="96" d="M1197.81,632.5 C1214.77,632.5 1231.73,632.5 1248.68,632.5 " fill="none" id="classService-to-IProjectTypologyRepo" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1253.94,632.5,1244.94,628.5,1248.94,632.5,1244.94,636.5,1253.94,632.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4573808ba6df680f1ecba632ab675e78]
+link classrepo to IProjectTypologyRepo--><g id="link_classrepo_IProjectTypologyRepo"><path codeLine="97" d="M1400.19,447.25 C1398.46,486.15 1395.86,544.7 1394.05,585.32 " fill="none" id="classrepo-to-IProjectTypologyRepo" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1393.81,590.68,1398.218,581.8726,1394.039,585.6852,1390.2264,581.5063,1393.81,590.68" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[88ee425d8d6326b82d9699eeffa1300e]
+reverse link IProjectTypologyJPARepo to classrepo--><g id="link_IProjectTypologyJPARepo_classrepo"><path codeLine="98" d="M1454.36,201.39 C1443.01,245.43 1424.22,318.32 1412.5,363.76 " fill="none" id="IProjectTypologyJPARepo-backto-classrepo" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1455.64,196.43,1449.5228,204.1488,1454.3936,201.2722,1457.2703,206.143,1455.64,196.43" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8c0ea8bfdee141fa88ffff3b6a85d793]
+reverse link ProjectJPA to ProjectTypologyDomainDataAssembler--><g id="link_ProjectJPA_ProjectTypologyDomainDataAssembler"><path codeLine="99" d="M1944.86,192.03 C1958.22,234.33 1983.63,314.72 1999.07,363.58 " fill="none" id="ProjectJPA-backto-ProjectTypologyDomainDataAssembler" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1943.29,187.06,1942.2083,196.8493,1944.8066,191.8244,1949.8314,194.4227,1943.29,187.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[21ca047226d82b03fbb43ccc3d69cc75]
+link IProjectTypologyJPARepo to ProjectJPA--><g id="link_IProjectTypologyJPARepo_ProjectJPA"><path codeLine="100" d="M1616.11,163 C1694.67,163 1773.23,163 1851.79,163 " fill="none" id="IProjectTypologyJPARepo-to-ProjectJPA" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1856.96,163,1847.96,159,1851.96,163,1847.96,167,1856.96,163" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a5fac290750653a7635385e2624acd0b]
+link classrepo to ProjectTypologyDomainDataAssembler--><g id="link_classrepo_ProjectTypologyDomainDataAssembler"><path codeLine="101" d="M1702.23,405.5 C1727.29,405.5 1752.34,405.5 1777.39,405.5 " fill="none" id="classrepo-to-ProjectTypologyDomainDataAssembler" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1782.4,405.5,1773.4,401.5,1777.4,405.5,1773.4,409.5,1782.4,405.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a6162bbded5562dc722e0dd0381955ae]
+link factory to classProjectTypology--><g id="link_factory_classProjectTypology"><path codeLine="102" d="M745.99,903.5 C755.77,903.5 765.55,903.5 775.33,903.5 " fill="none" id="factory-to-classProjectTypology" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="780.45,903.5,771.45,899.5,775.45,903.5,771.45,907.5,780.45,903.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a7caaddb82c6fb1529fa2469e08c3493]
+link classProjectTypology to classProjTypID--><g id="link_classProjectTypology_classProjTypID"><path codeLine="104" d="M901.44,945.38 C892.65,973.99 881,1011.9 872.46,1039.69 " fill="none" id="classProjectTypology-to-classProjTypID" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="870.91,1044.75,877.3783,1037.323,872.3794,1039.9708,869.7316,1034.9719,870.91,1044.75" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="745.4423" y="1034.1971">ProjectTypologyID 1</text></g><!--MD5=[343d409c2042490bdaed6430db903255]
+link classProjectTypology to classDescription--><g id="link_classProjectTypology_classDescription"><path codeLine="105" d="M859.22,945.05 C831.77,963.1 797.16,982.6 763,993 C735.1,1001.5 658.95,989.85 632,1001 C610.95,1009.71 591.56,1025.79 576.53,1040.93 " fill="none" id="classProjectTypology-to-classDescription" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="572.81,1044.75,581.9515,1041.0848,576.2952,1041.1648,576.2152,1035.5085,572.81,1044.75" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="494.607" y="1034.1971">Description 1</text></g><!--MD5=[a31c012d95ff4edd51d1cb3be163dd18]
+@startuml
+'https://plantuml.com/class-diagramheader IMPLEMENTATION VIEW
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infrastructure" as infrastructure{
+package "Persistence" as persistence {
+package "iJPARepositories" as IJPARepo {
+class "<interface> IProjectTypologyJPARepository" as IProjectTypologyJPARepo {
++findAll() : List<ProjectTypologyJPA>
+}
+}
+}
+}
+
+folder "DataModel" as DataModel{
+class "ProjectTypologyJPA" as ProjectJPA{
+}
+class "ProjectTypologyDomainDataAssembler" as ProjectTypologyDomainDataAssembler {
++toDomain(ProjectTypologyJPA projectTypologyJPA) : ProjectTypology
++toData(ProjectTypology projectTypology) : ProjectTypologyJPA
+}
+}
+
+folder "Interface Adapters" as folderinter{
+ package "Repositories" as packrepoImpl{
+    class "ProjectTypologyRepository" as classrepo{
+         +findProjectTypologyByID(ProjectTypologyID projectTypologyID) : Optional<ProjectTypology>
+         +saveProjectTypology(ProjectTypology projectTypology) : ProjectTypology
+    }
+    }
+ package "implControllers" as packcontrol {
+    class "CreateProjectTypologyController" as classcontroller{
+    +createProjectTypology() : ResponseEntity
+    }
+ }
+}
+
+
+folder "DTO"{
+package "mapper" as mapper{
+class "ProjectTypologyMapper" as ProjectTypologyMapper{
++toDomain(toSingleDTO(ProjectTypology projectTypology) : ProjectTypologyDTO
++toDTO(List<ProjectTypology> listOfProjectTypologies) : List<ProjectTypologyDTO>
+}
+}
+class "ProjectTypologyDTO" as dto {
++ name : String
++ description : String
+}
+}
+
+folder "Application Services"{
+package implAppServices as packAppService{
+ class "ApplicationServiceCreateProjectTypology" as classService{
+  +createAndSaveProjectTypology(String name, String description) : ProjectTypologyDTO
+}
+}
+package iRepositories as iRepositories{
+class "<interface>IProjectTypologyRepository" as IProjectTypologyRepo{
++findById(projectTypologyID)
++save(projectTypology)
+}
+}
+}
+
+folder "Domain/Entities" as domain{
+package "Value Objects" as packVO{
+  class "ProjectTypologyID " as classProjTypID{
+  -{static}of(NoNumberNoSymbolString name) : NoNumberNoSymbolString
+  }
+
+  class "Description " as classDescription {
+  - Description : String
+  }
+
+  }
+
+folder "Aggregates" as aggregates{
+package ProjectTypology as packEntity{
+class "ProjectTypology" as classProjectTypology{
++getProjectTypologyIDAsString() : String
++getDescriptionAsString() : String
+}
+class "ProjectTypologyFactory" as factory{
++createProjectTypology(ProjectTypologyID projectTypologyID, Describable description) : ProjectTypology
+}
+}
+}
+}
+
+
+classcontroller..>classService
+classService..>classProjectTypology
+classService..right> ProjectTypologyMapper
+ProjectTypologyMapper- ->dto
+classService..right>IProjectTypologyRepo
+classrepo..down>IProjectTypologyRepo
+classrepo..up>IProjectTypologyJPARepo
+ProjectTypologyDomainDataAssembler- -up>ProjectJPA
+IProjectTypologyJPARepo- -right>ProjectJPA
+classrepo..r>ProjectTypologyDomainDataAssembler
+factory..right>classProjectTypology
+
+classProjectTypology- ->"ProjectTypologyID 1"classProjTypID
+classProjectTypology- ->"Description 1"classDescription
+
+@enduml
+
+@startuml
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infrastructure" as infrastructure{
+package "Persistence" as persistence {
+package "iJPARepositories" as IJPARepo {
+class "<interface> IProjectTypologyJPARepository" as IProjectTypologyJPARepo {
++findAll() : List<ProjectTypologyJPA>
+}
+}
+}
+}
+
+folder "DataModel" as DataModel{
+class "ProjectTypologyJPA" as ProjectJPA{
+}
+class "ProjectTypologyDomainDataAssembler" as ProjectTypologyDomainDataAssembler {
++toDomain(ProjectTypologyJPA projectTypologyJPA) : ProjectTypology
++toData(ProjectTypology projectTypology) : ProjectTypologyJPA
+}
+}
+
+folder "Interface Adapters" as folderinter{
+ package "Repositories" as packrepoImpl{
+    class "ProjectTypologyRepository" as classrepo{
+         +findProjectTypologyByID(ProjectTypologyID projectTypologyID) : Optional<ProjectTypology>
+         +saveProjectTypology(ProjectTypology projectTypology) : ProjectTypology
+    }
+    }
+ package "implControllers" as packcontrol {
+    class "CreateProjectTypologyController" as classcontroller{
+    +createProjectTypology() : ResponseEntity
+    }
+ }
+}
+
+
+folder "DTO"{
+package "mapper" as mapper{
+class "ProjectTypologyMapper" as ProjectTypologyMapper{
++toDomain(toSingleDTO(ProjectTypology projectTypology) : ProjectTypologyDTO
++toDTO(List<ProjectTypology> listOfProjectTypologies) : List<ProjectTypologyDTO>
+}
+}
+class "ProjectTypologyDTO" as dto {
++ name : String
++ description : String
+}
+}
+
+folder "Application Services"{
+package implAppServices as packAppService{
+ class "ApplicationServiceCreateProjectTypology" as classService{
+  +createAndSaveProjectTypology(String name, String description) : ProjectTypologyDTO
+}
+}
+package iRepositories as iRepositories{
+class "<interface>IProjectTypologyRepository" as IProjectTypologyRepo{
++findById(projectTypologyID)
++save(projectTypology)
+}
+}
+}
+
+folder "Domain/Entities" as domain{
+package "Value Objects" as packVO{
+  class "ProjectTypologyID " as classProjTypID{
+  -{static}of(NoNumberNoSymbolString name) : NoNumberNoSymbolString
+  }
+
+  class "Description " as classDescription {
+  - Description : String
+  }
+
+  }
+
+folder "Aggregates" as aggregates{
+package ProjectTypology as packEntity{
+class "ProjectTypology" as classProjectTypology{
++getProjectTypologyIDAsString() : String
++getDescriptionAsString() : String
+}
+class "ProjectTypologyFactory" as factory{
++createProjectTypology(ProjectTypologyID projectTypologyID, Describable description) : ProjectTypology
+}
+}
+}
+}
+
+
+classcontroller..>classService
+classService..>classProjectTypology
+classService..right> ProjectTypologyMapper
+ProjectTypologyMapper- ->dto
+classService..right>IProjectTypologyRepo
+classrepo..down>IProjectTypologyRepo
+classrepo..up>IProjectTypologyJPARepo
+ProjectTypologyDomainDataAssembler- -up>ProjectJPA
+IProjectTypologyJPARepo- -right>ProjectJPA
+classrepo..r>ProjectTypologyDomainDataAssembler
+factory..right>classProjectTypology
+
+classProjectTypology- ->"ProjectTypologyID 1"classProjTypID
+classProjectTypology- ->"Description 1"classDescription
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

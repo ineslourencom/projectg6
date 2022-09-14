@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor TeamMember as dir
+participant Frontend as ui
+participant Backend as bck
+participant "SGBD" as db
+
+dir-> ui : Initiates process
+ui-> bck : HTTP GET http://localhost:8080/projects
+bck -> db : get projects
+db --> bck : projects
+bck--> ui : projects
+ui -> dir : Displays all projects
+dir -> ui : Selects a project
+ui-> dir : Displays possible actions
+dir -> ui : Selects ScrumBoard
+ui-> bck : HTTP GET http://localhost:8080/projects/{pid}/scrumBoard
+bck -> db : get ScrumBoard
+db --> bck : ScrumBoard
+bck--> ui : ScrumBoard
+ui-> dir : Retrieves ScrumBoard content
+@enduml

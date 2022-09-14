@@ -1,0 +1,62 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant " Routes" as routes
+
+participant "Controllers" as ctl
+
+participant "ApplicationServices" as appService
+participant "Repositories" as repos
+participant "DataModel" as datamodel
+participant "JPARepositories" as jparepos
+participant "Domain" as domain
+participant Mapper as mapper
+
+
+[o--> routes : GET https://localhost:8080/profiles
+activate routes
+routes -> ctl : getProfilesDTO()
+activate ctl
+ctl -> appService : getProfilesDTO()
+activate appService
+activate repos
+appService -> repos : findAll()
+repos --> appService : List<Profiles>
+deactivate repos
+activate mapper
+appService -> mapper :createProfileListDTO(profiles)
+mapper --> appService : profileDTOlist
+deactivate mapper
+appService --> ctl : profileDTOlist
+deactivate appService
+ctl --> routes : ResponseEntity
+deactivate ctl
+deactivate routes
+
+
+[o--> routes : PATCH https://localhost:8080/accounts/{id}/profiles
+activate routes
+routes -> ctl : updateProfile(ProfileDTO profileDTO, string id)
+activate ctl
+ctl -> appService : updateProfile(Email email, ProfileID pf)
+activate appService
+appService -> repos : findByEmail(email)
+activate repos
+repos --> appService : account
+deactivate repos
+appService -> repos : updateAccount(account, profileID)
+activate repos
+repos --> appService : account
+deactivate repos
+appService -> mapper : accountDTO
+activate mapper
+mapper --> appService : accountDTO
+deactivate mapper
+appService --> ctl : accountDTO
+deactivate appService
+ctl -->routes : ResponseEntity
+deactivate ctl
+
+@enduml

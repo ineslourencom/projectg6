@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant " Routes" as routes
+
+participant "Controllers" as ctl
+
+participant "ApplicationServices" as appService
+participant "Repositories" as repos
+participant "DataModel" as datamodel
+participant "JPARepositories" as jparepos
+participant "Domain" as domain
+participant "DTO" as mapper
+
+[o--> routes : GET https://localhost:8080/accountsInfo
+activate routes
+routes -> ctl : getListOfAllAccountsAndStatus
+activate ctl
+ctl -> appService : getAllAccountsAndStatus
+activate appService
+appService -> repos : findAll
+activate repos
+repos -> jparepos : findAll
+activate jparepos
+jparepos --> repos : accountsJPA
+deactivate jparepos
+repos -> datamodel : toDomain(accountJPA)
+activate datamodel
+datamodel -> domain : createAccount
+activate domain
+domain --> datamodel : account
+deactivate domain
+datamodel --> repos : account
+deactivate datamodel
+repos --> appService : account
+deactivate repos
+appService -> mapper : accountAndStatusDTO
+activate mapper
+mapper --> appService : accountAndStatusDTO
+deactivate mapper
+appService --> ctl : accountAndStatusDTO
+deactivate appService
+
+ctl --> routes : new ResponseEntity(accountAndStatusDTO, HTTPStatus.OK)
+deactivate ctl
+deactivate routes
+
+
+
+
+@enduml

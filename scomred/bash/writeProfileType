@@ -1,0 +1,54 @@
+#!/bin/bash
+##CRIAR UMA CONTA
+#Variável onde se vai armazenar a informação
+REQUEST_STORE=/var/www/data/requests
+#Variável com o local onde vai ser guardado o conteudo do pedido
+###M_CONTENT_FILE=/tmp/.writeProfileType.$$.tmp
+
+#Funtion of error
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+rm -f $M_CONTENT_FILE
+exit
+}
+
+#Verifica se o request tem conteudo.
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "No body"; fi
+cat > $M_CONTENT_FILE
+
+#Verifica se o tipo de request È POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+#Verifica que a query string est· vazia
+if [  ! -z "$QUERY_STRING" ]; then error_response "Empty query string"; fi
+
+CONTENT="$(cat $M_CONTENT_FILE)"
+
+#Guardar a primeira variável
+PROFILETYPE=$(echo $CONTENT | cut -d "_" -f 1 )
+PROFILETYPE=${PROFILETYPE#profileType=}
+PROFILETYPE=$(echo $PROFILETYPE | xargs)
+if [ -z "$PROFILETYPE" ]; then error_response "empty profile"; fi
+
+#Guardar a primeira variável
+DESCRIPTION=$(echo $CONTENT | cut -d "_" -f 2 )
+DESCRIPTION=${DESCRIPTION#description=}
+DESCRIPTION=$(echo $DESCRIPTION | xargs)
+if [ -z "$DESCRIPTION" ]; then error_response "empty description"; fi
+
+FILENAME="$(date +'%Y%m%d_%H%M')"
+
+echo '<?xml version="1.0"?>' > "$REQUEST_STORE/$FILENAME.txt"
+echo "<holder>" >> "$REQUEST_STORE/$FILENAME.txt"
+echo "<profileType>"$PROFILETYPE"</profileType>" >> "$REQUEST_STORE/$FILENAME.txt"
+echo "<description>"$DESCRIPTION"</description>" >> "$REQUEST_STORE/$FILENAME.txt"
+echo "</holder>" >> "$REQUEST_STORE/$FILENAME.txt"
+
+
+rm -f $M_CONTENT_FILE
+echo "Content-type: text/plain"
+echo ""
+echo "Changes saved"

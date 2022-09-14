@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="193px" preserveAspectRatio="none" style="width:470px;height:193px;background:#FFFFFF;" version="1.1" viewBox="0 0 470 193" width="470px" zoomAndPan="magnify"><defs><filter height="300%" id="fzpynf5ilnh75" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[6b13f1b330d33795af281e5c1dfe1e98]
+class Resource--><rect codeLine="4" fill="#FEFECE" filter="url(#fzpynf5ilnh75)" height="144.8516" id="Resource" style="stroke:#A80036;stroke-width:1.5;" width="208" x="7" y="21"/><ellipse cx="79.75" cy="37" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M81.75,33.5 Q81.9531,33 82.1875,32.75 Q82.4219,32.5 82.6875,32.5 Q83.1563,32.5 83.4531,32.7813 Q83.75,33.0625 83.75,33.7188 L83.75,35.2813 Q83.75,35.9375 83.4688,36.2188 Q83.1875,36.5 82.75,36.5 Q82.3594,36.5 82.1094,36.3281 Q81.8594,36.1563 81.75,35.7031 Q81.7031,35.3906 81.5313,35.2188 Q81.2188,34.8906 80.6563,34.7031 Q80.0938,34.5 79.5313,34.5 Q78.8281,34.5 78.2344,34.7813 Q77.6563,35.0625 77.2031,35.6875 Q76.75,36.3125 76.75,37.1719 L76.75,38.0938 Q76.75,39.125 77.5938,39.8125 Q78.4375,40.5 79.9375,40.5 Q80.8281,40.5 81.4531,40.2969 Q81.8125,40.1875 82.2188,39.8281 Q82.4844,39.625 82.625,39.5625 Q82.7656,39.5 82.9375,39.5 Q83.2656,39.5 83.5,39.7656 Q83.75,40.0156 83.75,40.375 Q83.75,40.7188 83.4063,41.125 Q82.9063,41.7188 82.1094,42.0469 Q81.0625,42.5 79.7813,42.5 Q78.2813,42.5 77.0781,41.9063 Q76.1094,41.4375 75.4219,40.4219 Q74.75,39.4063 74.75,38.2031 L74.75,37.1094 Q74.75,35.8594 75.3438,34.7656 Q75.9531,33.6719 77,33.0938 Q78.0625,32.5 79.25,32.5 Q79.9688,32.5 80.5938,32.75 Q81.2188,33 81.75,33.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="54" x="100.25" y="41.9102">Resource</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="214" y1="53" y2="53"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="13" y="68.4189">-LocalDate startDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="153" x="13" y="82.2549">-double percentageOfAllocation</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="13" y="96.0908">-double costPerHour</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="13" y="109.9268">-LocalDate endDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="13" y="123.7627">-Account associatedAccount</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="196" x="13" y="137.5986">-ResourceRole associatedResourceRole</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="13" y="151.4346">-Project associatedProject</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="214" y1="157.8516" y2="157.8516"/><!--MD5=[79d378210367c0c6ec62ef762ddfbd1b]
+class Project--><rect codeLine="15" fill="#FEFECE" filter="url(#fzpynf5ilnh75)" height="172.5234" id="Project" style="stroke:#A80036;stroke-width:1.5;" width="111" x="345.5" y="7"/><ellipse cx="378.95" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M380.95,19.5 Q381.1531,19 381.3875,18.75 Q381.6219,18.5 381.8875,18.5 Q382.3563,18.5 382.6531,18.7813 Q382.95,19.0625 382.95,19.7188 L382.95,21.2813 Q382.95,21.9375 382.6688,22.2188 Q382.3875,22.5 381.95,22.5 Q381.5594,22.5 381.3094,22.3281 Q381.0594,22.1563 380.95,21.7031 Q380.9031,21.3906 380.7313,21.2188 Q380.4188,20.8906 379.8563,20.7031 Q379.2938,20.5 378.7313,20.5 Q378.0281,20.5 377.4344,20.7813 Q376.8563,21.0625 376.4031,21.6875 Q375.95,22.3125 375.95,23.1719 L375.95,24.0938 Q375.95,25.125 376.7938,25.8125 Q377.6375,26.5 379.1375,26.5 Q380.0281,26.5 380.6531,26.2969 Q381.0125,26.1875 381.4188,25.8281 Q381.6844,25.625 381.825,25.5625 Q381.9656,25.5 382.1375,25.5 Q382.4656,25.5 382.7,25.7656 Q382.95,26.0156 382.95,26.375 Q382.95,26.7188 382.6063,27.125 Q382.1063,27.7188 381.3094,28.0469 Q380.2625,28.5 378.9813,28.5 Q377.4813,28.5 376.2781,27.9063 Q375.3094,27.4375 374.6219,26.4219 Q373.95,25.4063 373.95,24.2031 L373.95,23.1094 Q373.95,21.8594 374.5438,20.7656 Q375.1531,19.6719 376.2,19.0938 Q377.2625,18.5 378.45,18.5 Q379.1688,18.5 379.7938,18.75 Q380.4188,19 380.95,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="397.05" y="27.9102">Project</text><line style="stroke:#A80036;stroke-width:1.5;" x1="346.5" x2="455.5" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="351.5" y="54.4189">-int code</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="351.5" y="68.2549">-String name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="351.5" y="82.0908">-String description</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="351.5" y="95.9268">-LocalDate startDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="351.5" y="109.7627">-int sprintDuration</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="351.5" y="123.5986">-int plannedSprints</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="351.5" y="137.4346">-LocalDate endDate</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="351.5" y="151.2705">-String projectStatus</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="72" x="351.5" y="165.1064">-double budget</text><line style="stroke:#A80036;stroke-width:1.5;" x1="346.5" x2="455.5" y1="171.5234" y2="171.5234"/><!--MD5=[33139458742fb076e198bd97c7dd97f8]
+link Resource to Project--><path codeLine="28" d="M215.29,93.5 C259.13,93.5 308.38,93.5 345.14,93.5 " fill="none" id="Resource-Project" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="242.25,81.6758,233.2049,78.7369,233.2049,84.6147,242.25,81.6758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="246.25" y="86.9951">is allocated to</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="16" x="222.8345" y="90.4744">0.*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="330.5345" y="90.0232">1</text><!--MD5=[9c1acdf84ad9a2b89340a4fc7b4fb781]
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+
+class Resource{
+    -LocalDate startDate
+    -double percentageOfAllocation
+    -double costPerHour
+    -LocalDate endDate
+    -Account associatedAccount
+    -ResourceRole associatedResourceRole
+    -Project associatedProject
+
+}
+
+class Project{
+
+    -int code
+    -String name
+    -String description
+    -LocalDate startDate
+    -int sprintDuration
+    -int plannedSprints
+    -LocalDate endDate
+    -String projectStatus
+    -double budget
+
+}
+Project "1"-left-"0.*" Resource :  < is allocated to
+
+@enduml
+
+@startuml
+skinparam classAttributeIconSize 0
+
+class Resource{
+    -LocalDate startDate
+    -double percentageOfAllocation
+    -double costPerHour
+    -LocalDate endDate
+    -Account associatedAccount
+    -ResourceRole associatedResourceRole
+    -Project associatedProject
+
+}
+
+class Project{
+
+    -int code
+    -String name
+    -String description
+    -LocalDate startDate
+    -int sprintDuration
+    -int plannedSprints
+    -LocalDate endDate
+    -String projectStatus
+    -double budget
+
+}
+Project "1"-left-"0.*" Resource :  < is allocated to
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

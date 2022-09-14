@@ -1,0 +1,110 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package Sprint{
+class Sprint << Aggregate Root >>
+class SprintBacklogItem << Entity >>
+class SprintID << Value Object ID >>
+}
+
+
+package Project{
+class Project << Aggregate Root >>
+class ProjectID << Value Object ID >>
+
+}
+package BusinessSector{
+class CAE << Value Object >>
+class BusinessSectorID << Value Object >>
+class BusinessSector << Aggregate Root >>
+}
+package Customer{
+class Customer << AggregateRoot >>
+class CustomerID << Value Object >>
+class NIF << Value Object >>
+}
+
+
+package UserStory{
+class UserStory << Aggregate Root >>
+class UserStoryID << Value Object ID >>
+}
+
+package ProjectTypology{
+class ProjectTypology << Aggregate Root >>
+class ProjectTypologyID << Value Object ID >>
+}
+
+
+package Resource{
+class Resource<< Aggregate Root >>
+class ResourceID << Value Object ID >>
+class Role << Value Object >>
+
+}
+
+
+package Task{
+class Task << Aggregate Root >>
+class EffortUpdate << Value Object >>
+class TaskID << Value Object ID >>
+}
+
+
+package Account{
+class Account << Aggregate Root >>
+class Password << Value Object >>
+class Email << Value Object >>
+class Photo << Value Object >>
+class AccountID << Value Object ID >>
+}
+
+
+package Profile{
+class Profile << Aggregate Root >>
+class ProfileID << Value Object ID >>
+class ProfileType << Value Object >>
+}
+
+package ProfileRequest{
+class ProfileRequest << Aggregate Root >>
+class ProfileRequestID << Value Object >>
+
+}
+
+Sprint --> "belongs to 1" ProjectID
+ProjectID <-- "identified by 1" Project
+Sprint --> "has *" SprintBacklogItem
+SprintID <-- "identified by 1" Sprint
+SprintBacklogItem --> "represents 1" UserStoryID
+UserStoryID <-- "identified by 1" UserStory
+Project --> "has 1" ProjectTypologyID
+ProjectTypologyID <-- "identified by 1" ProjectTypology
+Project --> "belongs to 1" BusinessSectorID
+Resource --> "is allocated to 1" ProjectID
+ResourceID <-- "identified by 1" Resource
+Resource --> "has 1" Role
+EffortUpdate --> "is submitted by 1" ResourceID
+Resource --> "belongs to 1" AccountID
+AccountID <-- "identified by 1" Account
+Account --> "possesses 1" Email
+Account --> "possesses 1" Password
+Account --> "possesses 1" Photo
+Account --> "has 1" ProfileID
+ProfileID <-- "identified by 1" Profile
+Profile --> "possesses 1" ProfileType
+TaskID "identifies 1" <-- Task
+Task --> "is updated by 0..*" EffortUpdate
+Task --> "has a responsible 1" ResourceID
+UserStory --> "belongs to pB 1" ProjectID
+ProfileID "requests 1" <-- ProfileRequest
+ProfileRequest --> "is requested by 1" AccountID
+ProfileRequest -->  "identified by 1" ProfileRequestID
+Project --> "is designed for 1" CustomerID
+BusinessSector --> "is identified by 1" BusinessSectorID
+BusinessSectorID --> "has 1" CAE
+Customer --> "is identified by 1" CustomerID
+CustomerID --> "has 1" NIF
+Task --> "is identified by 1" SprintID
+Task --> "is identified by 1" UserStoryID
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/state-diagram
+[*] --> Planned:Us is added to Sprint Backlog
+Planned --> InProgress:US starts being worked on
+InProgress --> CodeReview:US is reviewed
+CodeReview --> InProgress: Us needs further dev
+CodeReview -->Done:US is completed
+Done --> [*] : ends lifecycle
+@enduml

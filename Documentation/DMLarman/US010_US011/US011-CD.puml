@@ -1,0 +1,68 @@
+@startuml
+
+
+class ResetPasswordController{
+
++isNotVisitorProfile(email : String) : boolean
++changePassword(email : String, oldPassword : String,
+ newPassword : String) : boolean
+}
+
+
+class AccountStore{
++findAccountByEmail(email : String) : Account
+
+}
+interface phc as "PasswordHashCreatable"{
++ createPasswordHash(stringToHash : String) : PasswordHash
+}
+
+class phf as "PasswordHashFactory" << (S,#FF7700) Singleton >>{
++ {static}getInstance() : PasswordHashFactory
++ createPasswordHash(stringToHash : String) : PasswordHash
+}
+
+class ITCompany << (S,#FF7700) Singleton >>{
+-{static}iTCompany : ITCompany
++{static}getITCompany() : ITCompany
++ getAccountStore() : AccountStore
+}
+class PasswordHash{
+-hash : String
+-algorithm : String
++isMatchPassword(passwordData : String) : boolean
+
+}
+class Account{
+-email : String
+-name : String
+-function : String
+-photo : String
+-isActive : boolean
++Account : isAccountEqualTo(email : String)
++ isNotVisitorProfile() : boolean
++ resetPassword(oldPassword : String, newPassword : String,\n   pHCreatable : PasswordHashCreatable) : boolean
+
+}
+
+class Profile{
+-profileType : String
+-description : String
++checkIfVisitor() : boolean
+}
+
+phf -up[dashed]-|> phc
+ResetPasswordUI .> ResetPasswordController
+ResetPasswordController .> ITCompany
+ITCompany "1"-->"accountStore 1" AccountStore
+AccountStore o--"0..* arrayListAccount" Account
+Account "0..*"-up->"accountProfiles 1..* " Profile
+Account "1"-down->"passwordHash 1" PasswordHash
+Account .right.> phc
+phc -[dashed]> PasswordHash
+
+
+
+
+
+@enduml

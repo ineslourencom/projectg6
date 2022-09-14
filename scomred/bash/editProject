@@ -1,0 +1,83 @@
+#!/bin/bash
+
+PROJECTS_STORE=/var/www/data/projects
+
+#FunÃ§Ã£o de erro
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+rm -f $M_CONTENT_FILE
+exit
+}
+
+#Verifica se o request tem conteÃºdo
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+
+#Verifica se o tipo de request Ã© POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+#Verifica se a query-string nÃ£o estÃ¡ vazia, pois queremos que esteja
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Criar content
+CONTENT=$(cat $M_CONTENT_FILE);
+
+#Guardar a primeira variÃ¡vel
+SPRINTDURATION=$(echo $CONTENT | cut -d "_" -f 1 )
+SPRINTDURATION=${SPRINTDURATION#sprintduration=}
+SPRINTDURATION=$(echo $SPRINTDURATION | xargs)
+
+STARTDATE=$(echo $CONTENT | cut -d "_" -f 2 )
+STARTDATE=${STARTDATE#startdate=}
+STARTDATE=$(echo $STARTDATE | xargs)
+
+ENDDATE=$(echo $CONTENT | cut -d "_" -f 3 )
+ENDDATE=${ENDDATE#enddate=}
+ENDDATE=$(echo $ENDDATE | xargs)
+
+PLANNEDSPRINTS=$(echo $CONTENT | cut -d "_" -f 4 )
+PLANNEDSPRINTS=${PLANNEDSPRINTS#plannedsprints=}
+PLANNEDSPRINTS=$(echo $PLANNEDSPRINTS | xargs)
+
+STATUS=$(echo $CONTENT | cut -d "_" -f 5 )
+STATUS=${STATUS#status=}
+STATUS=$(echo $STATUS | xargs)
+if [ -z "$STATUS" ]; then error_response "empty status"; fi
+
+ID=$(echo $CONTENT | cut -d "_" -f 6 )
+ID=${ID#id=}
+ID=$(echo $ID | xargs)
+if [ -z "$ID" ]; then error_response "empty id"; fi
+
+#Editar ficheiro account
+    FILE="/var/www/data/projects/$ID.txt"
+    NAME=$(grep -o '<name>.*</name>' $FILE | sed 's/\(<name>\|<\/name>\)//g')
+    DESCRIPTION=$(grep -o '<description>.*</description>' $FILE | sed 's/\(<description>\|<\/description>\)//g')
+    CLIENT=$(grep -o '<client>.*</client>' $FILE | sed 's/\(<client>\|<\/client>\)//g')
+    BUSINESSSECTOR=$(grep -o '<businessector>.*</businessector>' $FILE | sed 's/\(<businessector>\|<\/businessector>\)//g')
+    BUDGET=$(grep -o '<budget>.*</budget>' $FILE | sed 's/\(<budget>\|<\/budget>\)//g')
+    TYPOLOGY=$(grep -o '<typology>.*</typology>' $FILE | sed 's/\(<typology>\|<\/typology>\)//g')
+
+    echo '<?xml version="1.0"?>' > $FILE
+    echo "<project>"$ID"</project>">> $FILE
+    echo "<name>"$NAME"</name>" >> $FILE
+    echo "<description>"$DESCRIPTION"</description>" >> $FILE
+    echo "<client>"$CLIENT"</client>" >> $FILE
+    echo "<businessector>"$BUSINESSSECTOR"</businessector>" >> $FILE
+    echo "<budget>"$BUDGET"</budget>" >> $FILE
+    echo "<typology>"$TYPOLOGY"</typology>" >> $FILE
+    echo "<sprintduration>"$SPRINTDURATION"</sprintduration>" >> $FILE
+    echo "<startdate>"$STARTDATE"</startdate>" >> $FILE
+    echo "<enddate>$ENDDATE</enddate>" >> $FILE
+    echo "<plannedsprints>$PLANNEDSPRINTS</plannedsprints>" >> $FILE
+    echo "<status>"$STATUS"</status>" >> $FILE
+
+#Enviar resposta http
+
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""
+echo "Saved changes"

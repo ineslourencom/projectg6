@@ -1,0 +1,13 @@
+@startuml
+actor "SM / Team Member" as user
+participant "System" as system
+autonumber
+[o-> user : Output from US016
+user -> system : Selects task and chooses\n add work done option
+activate system
+system --> user : show AddWorkDoneUI
+user -> system : input hours spent and comment
+
+system --> user : operation (un)successful
+deactivate system
+@enduml

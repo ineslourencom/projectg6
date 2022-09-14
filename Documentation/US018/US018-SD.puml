@@ -1,0 +1,169 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+participant ": ShowProductBacklogUI" as UI
+participant "Routes" as routes
+participant ": ShowProductBacklogController" as controller
+participant ": ApplicationServiceViewProductBacklog" as appService
+participant ": ProjectRepository" as projRepo <<Interface>>
+participant "pid : ProjectID" as pID
+participant "e : Email" as email
+participant "aid : AccountID" as accountID
+participant ": ResourceRepository" as resRepo <<Interface>>
+participant ": UserStoryRepository" as usRepo <<Interface>>
+participant ": AccountRepository" as accRepo <<Interface>>
+participant ": SprintRepository" as sprRepo <<Interface>>
+participant ": ServiceFindUS" as findUsDomServ
+
+
+participant "UserStoryMapper" as usMapper
+
+participant "dto : USDTO" as dto
+participant "p : Project" as proj
+participant ": Sprint" as sprint
+participant ": Account" as account
+participant ": SprintBackLogItem" as sprintBLI
+participant ": User Story" as userStory
+
+
+autonumber
+[o-> UI : Selected project and choosen\n option to view product backlog
+activate UI
+UI -> routes : GET https://localhost:8080/projects/{id : String}?email=(email : String)
+activate routes
+routes -> controller : getProductBacklog(int id, String email)
+activate controller
+controller -> appService : getProductBacklog(int id, String email)
+activate appService
+
+appService --> pID** : pid = new ProjectID(id : String)
+appService --> email** : e = Email.of (email : String)
+appService --> accountID** : aid = AccountID.of (e : Email)
+
+appService -> projRepo : (existsProject : boolean)  = existsById(pid)
+activate projRepo
+projRepo --> appService : (true)
+deactivate projRepo
+appService -> resRepo : (isActiveInProject : boolean)  = existsByAssociatedAccountAndStartDateBeforeAndEndDateAfterAndProjectID(pid)
+activate resRepo
+resRepo --> appService : (true)
+deactivate resRepo
+appService -> accRepo : findByAccountID(aid)
+activate accRepo
+accRepo --> appService : (accountOpt : Optional<Account>)
+deactivate accRepo
+
+appService -> account : (isDirector : boolean) = existsProfile(ProfileID.ofProfileType("Director"))
+activate account
+account --> appService : (true)
+deactivate account
+
+appService -> account : (isAdministrator : boolean) = existsProfile(ProfileID.ofProfileType("Administrator"))
+activate account
+account --> appService : (true)
+deactivate account
+
+
+note over appService : Happy path: \n\n       existsProject = (true)\n &&\n       existsAccount = (true)\n &&\n       isActiveInProject = (true)   ||   isDirector = (true)   ||   isAdministrator = (true)\n
+
+
+appService -> usRepo : (List<UserStory>) findAllByProjectIDNotDecomposed(projectID)
+activate usRepo
+usRepo --> appService : (usnd : List<UserStory>)
+deactivate usRepo
+
+appService -> sprRepo : (Optional<Sprint>) findRunningSprintByProjectID(projectID)
+activate sprRepo
+sprRepo --> appService : (rsprint : Optional<Sprint>)
+deactivate sprRepo
+
+appService -> findUsDomServ : (List<UserStoryID>) findUSIDinSprint(rsprint)
+activate findUsDomServ
+findUsDomServ -> sprRepo : (Optional<Sprint>) findRunningSprintByProjectID(projectID)
+activate sprRepo
+sprRepo --> findUsDomServ : (rsprint : Optional<Sprint>)
+deactivate sprRepo
+findUsDomServ -> sprint : (sbli : SprintBacklogItem) = getSprintBacklogItems()
+activate sprint
+deactivate sprint
+loop for each sbli in rsprint
+    findUsDomServ -> sprintBLI : (usid : UserStoryID) = getUsID()
+    activate sprintBLI
+    deactivate sprintBLI
+    findUsDomServ -> findUsDomServ : usidspr.add(usid)
+end
+findUsDomServ --> appService : (usidspr : List<UserStoryID>)
+deactivate findUsDomServ
+
+loop for each usid in usidspr)
+    appService -> usRepo : (us : UserStory) = findByID(usid)
+    activate usRepo
+    deactivate usRepo
+    appService -> appService : usspr.add(us)
+end
+
+appService -> sprRepo : (List<Sprint>) findAllSprintsByProjectID(projectID)
+activate sprRepo
+sprRepo --> appService : (allsprint : List<Sprint>)
+deactivate sprRepo
+
+appService -> findUsDomServ : (List<UserStoryID>) findDoneUSIDinSprint(allsprint)
+activate findUsDomServ
+loop for each sprint in allsprint
+findUsDomServ -> sprint : (sbli : SprintBacklogItem) = getSprintBacklogItems()
+activate sprint
+deactivate sprint
+loop for each sbli in rsprint
+    findUsDomServ -> sprintBLI : (usid : UserStoryID) = getUsID()
+    activate sprintBLI
+    deactivate sprintBLI
+    findUsDomServ -> findUsDomServ : usiddone.add(usid)
+end
+end
+
+findUsDomServ --> appService : (usiddone : List<UserStoryID>)
+deactivate findUsDomServ
+
+loop for each usid in usiddone)
+    appService -> usRepo : (us : UserStory) = findByID(usid)
+    activate usRepo
+    deactivate usRepo
+    appService -> appService : usdone.add(us)
+end
+
+
+appService -> findUsDomServ : compileProductBacklog(usnd, ussspr, usdone)
+activate findUsDomServ
+findUsDomServ -> findUsDomServ :  usnd - ussspr - usdone (i.e. subtracting list ussspr and usdone from usnd)
+findUsDomServ --> appService : (productBL : List<UserStory>)
+deactivate findUsDomServ
+
+appService -> findUsDomServ : (productBL : List<UserStory>) = orderListOfUSByPriority(productBL)
+activate findUsDomServ
+deactivate findUsDomServ
+
+
+loop sequentially for each us in productBL
+    appService -> usMapper : (dto : USDTO)  = UserStoryMapper.toShortDTO(us)
+    activate usMapper
+    usMapper -> dto** : new
+    activate dto
+    deactivate usMapper
+    appService -> dto : (loopIndex)
+    dto -> dto : dto.priority = loopIndex
+    appService -> appService : link = LinkTo (dto - user story self rel)
+    deactivate dto
+    appService -> appService : dto.add (link)
+    appService -> appService : result = userStoryDTOS.add(dto)
+end
+
+appService --> controller : (List<USDTO>) result
+deactivate appService
+
+controller --> routes : (List<USDTO>) result
+deactivate controller
+routes --> UI : (List<US>) JSONString
+deactivate routes
+
+UI --> UI : show product backlog
+
+@enduml

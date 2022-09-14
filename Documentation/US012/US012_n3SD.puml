@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant " Routes" as routes
+
+participant "Controllers" as ctl
+participant "ApplicationServices" as appService
+participant "Repositories" as repos
+participant "DataModel" as datamodel
+participant "JPARepositories" as jparepos
+participant "Domain" as domain
+participant "DTO" as mapper
+
+
+[o--> routes : POST https://localhost:8080/projectTypologies
+activate routes
+routes -> ctl : createAndSaveProjectTypology(String name, String description)
+activate ctl
+ctl -> appService : createAndSaveProjectTypology (name, description)
+activate appService
+note right
+dto native types are converted to value objects
+end note
+appService -> repos : find Project Typology By ID
+activate repos
+repos -> jparepos : find project typology  by id
+activate jparepos
+jparepos --> repos : project Typology JPA
+deactivate jparepos
+repos -> datamodel : toDomain(projectTypologyJPA)
+activate datamodel
+datamodel -> domain : create and save project typology
+activate domain
+domain --> datamodel : project typology
+deactivate domain
+datamodel --> repos : project typology
+deactivate datamodel
+repos --> appService : project typology
+deactivate repos
+appService -> mapper : projectTypologyDTO
+activate mapper
+mapper --> appService : projectTypologyDTO
+deactivate mapper
+appService --> ctl : projectTypologyDTO
+deactivate appService
+
+
+
+ctl --> routes : new ResponseEntity(projectTypologyDTO, HTTPStatus.OK)
+deactivate ctl
+deactivate routes
+
+@enduml

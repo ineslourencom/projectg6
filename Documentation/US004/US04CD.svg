@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1159px" preserveAspectRatio="none" style="width:1946px;height:1159px;background:#FFFFFF;" version="1.1" viewBox="0 0 1946 1159" width="1946px" zoomAndPan="magnify"><defs/><g><!--MD5=[6f6f5906c3f0abdde3e2ba3a032537dc]
+cluster Infraestruture--><g id="cluster_Infraestruture"><path d="M401.5,6 L500.5,6 A3.75,3.75 0 0 1 503,8.5 L510,29.6094 L510.5,29.6094 A2.5,2.5 0 0 1 513,32.1094 L513,110.5 A2.5,2.5 0 0 1 510.5,113 L401.5,113 A2.5,2.5 0 0 1 399,110.5 L399,8.5 A2.5,2.5 0 0 1 401.5,6 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="399" x2="510" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="98" x="403" y="22.5332">Infraestruture</text></g><!--MD5=[fc96b7229b26b3ac4ea5bdc9a627e26b]
+cluster folderinter--><g id="cluster_folderinter"><path d="M418.5,137 L549.5,137 A3.75,3.75 0 0 1 552,139.5 L559,160.6094 L856.5,160.6094 A2.5,2.5 0 0 1 859,163.1094 L859,352.5 A2.5,2.5 0 0 1 856.5,355 L418.5,355 A2.5,2.5 0 0 1 416,352.5 L416,139.5 A2.5,2.5 0 0 1 418.5,137 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="416" x2="559" y1="160.6094" y2="160.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130" x="420" y="153.5332">Interface Adapters</text></g><!--MD5=[d381aecd4ea6dc803d4d2e3b84969cfa]
+cluster packcontrol--><g id="cluster_packcontrol"><path d="M450.5,189 L559.5,189 A3.75,3.75 0 0 1 562,191.5 L569,212.6094 L824.5,212.6094 A2.5,2.5 0 0 1 827,215.1094 L827,320.5 A2.5,2.5 0 0 1 824.5,323 L450.5,323 A2.5,2.5 0 0 1 448,320.5 L448,191.5 A2.5,2.5 0 0 1 450.5,189 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="448" x2="569" y1="212.6094" y2="212.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="108" x="452" y="205.5332">implControllers</text></g><!--MD5=[d13fcb855108a23cf11211063221295a]
+cluster Application Services--><g id="cluster_Application Services"><path d="M92.5,379 L237.5,379 A3.75,3.75 0 0 1 240,381.5 L247,402.6094 L1369.5,402.6094 A2.5,2.5 0 0 1 1372,405.1094 L1372,611.5 A2.5,2.5 0 0 1 1369.5,614 L92.5,614 A2.5,2.5 0 0 1 90,611.5 L90,381.5 A2.5,2.5 0 0 1 92.5,379 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="90" x2="247" y1="402.6094" y2="402.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="144" x="94" y="395.5332">Application Services</text></g><!--MD5=[48925ed3763b96e51a45d6fa6aff87b0]
+cluster packrepo--><g id="cluster_packrepo"><path d="M917.5,431 L1004.5,431 A3.75,3.75 0 0 1 1007,433.5 L1014,454.6094 L1337.5,454.6094 A2.5,2.5 0 0 1 1340,457.1094 L1340,579.5 A2.5,2.5 0 0 1 1337.5,582 L917.5,582 A2.5,2.5 0 0 1 915,579.5 L915,433.5 A2.5,2.5 0 0 1 917.5,431 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="915" x2="1014" y1="454.6094" y2="454.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="86" x="919" y="447.5332">repositories</text></g><!--MD5=[fbcc7b24403b3c6c94b836151843dc44]
+cluster packMapper--><g id="cluster_packMapper"><path d="M116.5,447.5 L178.5,447.5 A3.75,3.75 0 0 1 181,450 L188,471.1094 L413.5,471.1094 A2.5,2.5 0 0 1 416,473.6094 L416,563 A2.5,2.5 0 0 1 413.5,565.5 L116.5,565.5 A2.5,2.5 0 0 1 114,563 L114,450 A2.5,2.5 0 0 1 116.5,447.5 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="114" x2="188" y1="471.1094" y2="471.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="61" x="118" y="464.0332">mappers</text></g><!--MD5=[aecf8044dfddb7d20151bf0fcd25f270]
+cluster packAppService--><g id="cluster_packAppService"><path d="M450.5,439.5 L569.5,439.5 A3.75,3.75 0 0 1 572,442 L579,463.1094 L872.5,463.1094 A2.5,2.5 0 0 1 875,465.6094 L875,571 A2.5,2.5 0 0 1 872.5,573.5 L450.5,573.5 A2.5,2.5 0 0 1 448,571 L448,442 A2.5,2.5 0 0 1 450.5,439.5 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="448" x2="579" y1="463.1094" y2="463.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="118" x="452" y="456.0332">implAppServices</text></g><!--MD5=[27f772719433d509ddbc20ff768eba08]
+cluster domain--><g id="cluster_domain"><path d="M8.5,638 L118.5,638 A3.75,3.75 0 0 1 121,640.5 L128,661.6094 L1936.5,661.6094 A2.5,2.5 0 0 1 1939,664.1094 L1939,1149.5 A2.5,2.5 0 0 1 1936.5,1152 L8.5,1152 A2.5,2.5 0 0 1 6,1149.5 L6,640.5 A2.5,2.5 0 0 1 8.5,638 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="6" x2="128" y1="661.6094" y2="661.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109" x="10" y="654.5332">Domain/Entities</text></g><!--MD5=[c684817be5cb24f22715f17135028f47]
+cluster packVO--><g id="cluster_packVO"><path d="M40.5,969 L138.5,969 A3.75,3.75 0 0 1 141,971.5 L148,992.6094 L1904.5,992.6094 A2.5,2.5 0 0 1 1907,995.1094 L1907,1117.5 A2.5,2.5 0 0 1 1904.5,1120 L40.5,1120 A2.5,2.5 0 0 1 38,1117.5 L38,971.5 A2.5,2.5 0 0 1 40.5,969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="38" x2="148" y1="992.6094" y2="992.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="42" y="985.5332">Value Objects</text></g><!--MD5=[91dd1e2d141d3908752779281935dd7b]
+cluster packEntity--><g id="cluster_packEntity"><path d="M750.5,690 L790.5,690 A3.75,3.75 0 0 1 793,692.5 L800,713.6094 L1096.5,713.6094 A2.5,2.5 0 0 1 1099,716.1094 L1099,926.5 A2.5,2.5 0 0 1 1096.5,929 L750.5,929 A2.5,2.5 0 0 1 748,926.5 L748,692.5 A2.5,2.5 0 0 1 750.5,690 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="748" x2="800" y1="713.6094" y2="713.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="39" x="752" y="706.5332">Entity</text></g><path d="M428.5,42 L469.5,42 A3.75,3.75 0 0 1 472,44.5 L479,65.6094 L483.5,65.6094 A2.5,2.5 0 0 1 486,68.1094 L486,94.7188 A2.5,2.5 0 0 1 483.5,97.2188 L428.5,97.2188 A2.5,2.5 0 0 1 426,94.7188 L426,44.5 A2.5,2.5 0 0 1 428.5,42 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="426" x2="479" y1="65.6094" y2="65.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="430" y="58.5332">routes</text><!--MD5=[0d8b0c26e9e466b32189db84028e2298]
+class classcontroller--><g id="elem_classcontroller"><rect codeLine="13" fill="#F1F1F1" height="65.6094" id="classcontroller" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="312" x="491" y="233"/><ellipse cx="563.75" cy="249" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M565.75,245.5 Q565.9531,245 566.1875,244.75 Q566.4219,244.5 566.6875,244.5 Q567.1563,244.5 567.4531,244.7813 Q567.75,245.0625 567.75,245.7188 L567.75,247.2813 Q567.75,247.9375 567.4688,248.2188 Q567.1875,248.5 566.75,248.5 Q566.3594,248.5 566.1094,248.3281 Q565.8594,248.1563 565.75,247.7031 Q565.7031,247.3906 565.5313,247.2188 Q565.2188,246.8906 564.6563,246.7031 Q564.0938,246.5 563.5313,246.5 Q562.8281,246.5 562.2344,246.7813 Q561.6563,247.0625 561.2031,247.6875 Q560.75,248.3125 560.75,249.1719 L560.75,250.0938 Q560.75,251.125 561.5938,251.8125 Q562.4375,252.5 563.9375,252.5 Q564.8281,252.5 565.4531,252.2969 Q565.8125,252.1875 566.2188,251.8281 Q566.4844,251.625 566.625,251.5625 Q566.7656,251.5 566.9375,251.5 Q567.2656,251.5 567.5,251.7656 Q567.75,252.0156 567.75,252.375 Q567.75,252.7188 567.4063,253.125 Q566.9063,253.7188 566.1094,254.0469 Q565.0625,254.5 563.7813,254.5 Q562.2813,254.5 561.0781,253.9063 Q560.1094,253.4375 559.4219,252.4219 Q558.75,251.4063 558.75,250.2031 L558.75,249.1094 Q558.75,247.8594 559.3438,246.7656 Q559.9531,245.6719 561,245.0938 Q562.0625,244.5 563.25,244.5 Q563.9688,244.5 564.5938,244.75 Q565.2188,245 565.75,245.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158" x="584.25" y="254.7285">AccountSearchController</text><line style="stroke:#181818;stroke-width:0.5;" x1="492" x2="802" y1="265" y2="265"/><line style="stroke:#181818;stroke-width:0.5;" x1="492" x2="802" y1="273" y2="273"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="300" x="497" y="291.5332">+findAccountInfo(String email) : ResponseEntity</text></g><!--MD5=[40e1163e683c157568d9e831d582aef2]
+class classrepo--><g id="elem_classrepo"><rect codeLine="32" fill="#F1F1F1" height="83.2188" id="classrepo" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="357" x="958.5" y="475"/><ellipse cx="1067.75" cy="491" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1069.75,487.5 Q1069.9531,487 1070.1875,486.75 Q1070.4219,486.5 1070.6875,486.5 Q1071.1563,486.5 1071.4531,486.7813 Q1071.75,487.0625 1071.75,487.7188 L1071.75,489.2813 Q1071.75,489.9375 1071.4688,490.2188 Q1071.1875,490.5 1070.75,490.5 Q1070.3594,490.5 1070.1094,490.3281 Q1069.8594,490.1563 1069.75,489.7031 Q1069.7031,489.3906 1069.5313,489.2188 Q1069.2188,488.8906 1068.6563,488.7031 Q1068.0938,488.5 1067.5313,488.5 Q1066.8281,488.5 1066.2344,488.7813 Q1065.6563,489.0625 1065.2031,489.6875 Q1064.75,490.3125 1064.75,491.1719 L1064.75,492.0938 Q1064.75,493.125 1065.5938,493.8125 Q1066.4375,494.5 1067.9375,494.5 Q1068.8281,494.5 1069.4531,494.2969 Q1069.8125,494.1875 1070.2188,493.8281 Q1070.4844,493.625 1070.625,493.5625 Q1070.7656,493.5 1070.9375,493.5 Q1071.2656,493.5 1071.5,493.7656 Q1071.75,494.0156 1071.75,494.375 Q1071.75,494.7188 1071.4063,495.125 Q1070.9063,495.7188 1070.1094,496.0469 Q1069.0625,496.5 1067.7813,496.5 Q1066.2813,496.5 1065.0781,495.9063 Q1064.1094,495.4375 1063.4219,494.4219 Q1062.75,493.4063 1062.75,492.2031 L1062.75,491.1094 Q1062.75,489.8594 1063.3438,488.7656 Q1063.9531,487.6719 1065,487.0938 Q1066.0625,486.5 1067.25,486.5 Q1067.9688,486.5 1068.5938,486.75 Q1069.2188,487 1069.75,487.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="1088.25" y="496.7285">AccountRepositories</text><line style="stroke:#181818;stroke-width:0.5;" x1="959.5" x2="1314.5" y1="507" y2="507"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155" x="964.5" y="525.5332">-List&lt;Account&gt; accounts</text><line style="stroke:#181818;stroke-width:0.5;" x1="959.5" x2="1314.5" y1="532.6094" y2="532.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="345" x="964.5" y="551.1426">+findAccountByEmail(Email email) : Optional«Account»</text></g><!--MD5=[820c2e2779a22a2878f9d7e65e2b03a5]
+class mapper--><g id="elem_mapper"><rect codeLine="38" fill="#F1F1F1" height="65.6094" id="mapper" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="270" x="130" y="483.5"/><ellipse cx="211.25" cy="499.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M213.25,496 Q213.4531,495.5 213.6875,495.25 Q213.9219,495 214.1875,495 Q214.6563,495 214.9531,495.2813 Q215.25,495.5625 215.25,496.2188 L215.25,497.7813 Q215.25,498.4375 214.9688,498.7188 Q214.6875,499 214.25,499 Q213.8594,499 213.6094,498.8281 Q213.3594,498.6563 213.25,498.2031 Q213.2031,497.8906 213.0313,497.7188 Q212.7188,497.3906 212.1563,497.2031 Q211.5938,497 211.0313,497 Q210.3281,497 209.7344,497.2813 Q209.1563,497.5625 208.7031,498.1875 Q208.25,498.8125 208.25,499.6719 L208.25,500.5938 Q208.25,501.625 209.0938,502.3125 Q209.9375,503 211.4375,503 Q212.3281,503 212.9531,502.7969 Q213.3125,502.6875 213.7188,502.3281 Q213.9844,502.125 214.125,502.0625 Q214.2656,502 214.4375,502 Q214.7656,502 215,502.2656 Q215.25,502.5156 215.25,502.875 Q215.25,503.2188 214.9063,503.625 Q214.4063,504.2188 213.6094,504.5469 Q212.5625,505 211.2813,505 Q209.7813,505 208.5781,504.4063 Q207.6094,503.9375 206.9219,502.9219 Q206.25,501.9063 206.25,500.7031 L206.25,499.6094 Q206.25,498.3594 206.8438,497.2656 Q207.4531,496.1719 208.5,495.5938 Q209.5625,495 210.75,495 Q211.4688,495 212.0938,495.25 Q212.7188,495.5 213.25,496 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="231.75" y="505.2285">AccountMapper</text><line style="stroke:#181818;stroke-width:0.5;" x1="131" x2="399" y1="515.5" y2="515.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="131" x2="399" y1="523.5" y2="523.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="258" x="136" y="542.0332">+toDTO(Account account) : AccountDTO</text></g><!--MD5=[667fb94da4bca85f6fcdaf236a591920]
+class classService--><g id="elem_classService"><rect codeLine="44" fill="#F1F1F1" height="65.6094" id="classService" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="360" x="491" y="483.5"/><ellipse cx="571.75" cy="499.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M573.75,496 Q573.9531,495.5 574.1875,495.25 Q574.4219,495 574.6875,495 Q575.1563,495 575.4531,495.2813 Q575.75,495.5625 575.75,496.2188 L575.75,497.7813 Q575.75,498.4375 575.4688,498.7188 Q575.1875,499 574.75,499 Q574.3594,499 574.1094,498.8281 Q573.8594,498.6563 573.75,498.2031 Q573.7031,497.8906 573.5313,497.7188 Q573.2188,497.3906 572.6563,497.2031 Q572.0938,497 571.5313,497 Q570.8281,497 570.2344,497.2813 Q569.6563,497.5625 569.2031,498.1875 Q568.75,498.8125 568.75,499.6719 L568.75,500.5938 Q568.75,501.625 569.5938,502.3125 Q570.4375,503 571.9375,503 Q572.8281,503 573.4531,502.7969 Q573.8125,502.6875 574.2188,502.3281 Q574.4844,502.125 574.625,502.0625 Q574.7656,502 574.9375,502 Q575.2656,502 575.5,502.2656 Q575.75,502.5156 575.75,502.875 Q575.75,503.2188 575.4063,503.625 Q574.9063,504.2188 574.1094,504.5469 Q573.0625,505 571.7813,505 Q570.2813,505 569.0781,504.4063 Q568.1094,503.9375 567.4219,502.9219 Q566.75,501.9063 566.75,500.7031 L566.75,499.6094 Q566.75,498.3594 567.3438,497.2656 Q567.9531,496.1719 569,495.5938 Q570.0625,495 571.25,495 Q571.9688,495 572.5938,495.25 Q573.2188,495.5 573.75,496 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="592.25" y="505.2285">ApplicationServiceGetAccount</text><line style="stroke:#181818;stroke-width:0.5;" x1="492" x2="850" y1="515.5" y2="515.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="492" x2="850" y1="523.5" y2="523.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="348" x="497" y="542.0332">+getAccountInfo(String email) : Optional&lt;AccountDTO&gt;</text></g><!--MD5=[297dbaf47d6d4d7d866ea0f75e0ff9ce]
+class classACCID--><g id="elem_classACCID"><rect codeLine="53" fill="#F1F1F1" height="83.2188" id="classACCID" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="217" x="1665.5" y="1013"/><ellipse cx="1680.5" cy="1029" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1682.5,1025.5 Q1682.7031,1025 1682.9375,1024.75 Q1683.1719,1024.5 1683.4375,1024.5 Q1683.9063,1024.5 1684.2031,1024.7813 Q1684.5,1025.0625 1684.5,1025.7188 L1684.5,1027.2813 Q1684.5,1027.9375 1684.2188,1028.2188 Q1683.9375,1028.5 1683.5,1028.5 Q1683.1094,1028.5 1682.8594,1028.3281 Q1682.6094,1028.1563 1682.5,1027.7031 Q1682.4531,1027.3906 1682.2813,1027.2188 Q1681.9688,1026.8906 1681.4063,1026.7031 Q1680.8438,1026.5 1680.2813,1026.5 Q1679.5781,1026.5 1678.9844,1026.7813 Q1678.4063,1027.0625 1677.9531,1027.6875 Q1677.5,1028.3125 1677.5,1029.1719 L1677.5,1030.0938 Q1677.5,1031.125 1678.3438,1031.8125 Q1679.1875,1032.5 1680.6875,1032.5 Q1681.5781,1032.5 1682.2031,1032.2969 Q1682.5625,1032.1875 1682.9688,1031.8281 Q1683.2344,1031.625 1683.375,1031.5625 Q1683.5156,1031.5 1683.6875,1031.5 Q1684.0156,1031.5 1684.25,1031.7656 Q1684.5,1032.0156 1684.5,1032.375 Q1684.5,1032.7188 1684.1563,1033.125 Q1683.6563,1033.7188 1682.8594,1034.0469 Q1681.8125,1034.5 1680.5313,1034.5 Q1679.0313,1034.5 1677.8281,1033.9063 Q1676.8594,1033.4375 1676.1719,1032.4219 Q1675.5,1031.4063 1675.5,1030.2031 L1675.5,1029.1094 Q1675.5,1027.8594 1676.0938,1026.7656 Q1676.7031,1025.6719 1677.75,1025.0938 Q1678.8125,1024.5 1680,1024.5 Q1680.7188,1024.5 1681.3438,1024.75 Q1681.9688,1025 1682.5,1025.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185" x="1694.5" y="1034.7285">AccountID  &lt;&lt;Value Object&gt;&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="1666.5" x2="1881.5" y1="1045" y2="1045"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="1671.5" y="1063.5332">-Email id</text><line style="stroke:#181818;stroke-width:0.5;" x1="1666.5" x2="1881.5" y1="1070.6094" y2="1070.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="155" x="1671.5" y="1089.1426">+of(Email id) : AccountID</text></g><!--MD5=[8d809e23e28927e8d52de1a3cb6b9c85]
+class classEmail--><g id="elem_classEmail"><rect codeLine="57" fill="#F1F1F1" height="83.2188" id="classEmail" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="192" x="1438" y="1013"/><ellipse cx="1457.05" cy="1029" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1459.05,1025.5 Q1459.2531,1025 1459.4875,1024.75 Q1459.7219,1024.5 1459.9875,1024.5 Q1460.4563,1024.5 1460.7531,1024.7813 Q1461.05,1025.0625 1461.05,1025.7188 L1461.05,1027.2813 Q1461.05,1027.9375 1460.7688,1028.2188 Q1460.4875,1028.5 1460.05,1028.5 Q1459.6594,1028.5 1459.4094,1028.3281 Q1459.1594,1028.1563 1459.05,1027.7031 Q1459.0031,1027.3906 1458.8313,1027.2188 Q1458.5188,1026.8906 1457.9563,1026.7031 Q1457.3938,1026.5 1456.8313,1026.5 Q1456.1281,1026.5 1455.5344,1026.7813 Q1454.9563,1027.0625 1454.5031,1027.6875 Q1454.05,1028.3125 1454.05,1029.1719 L1454.05,1030.0938 Q1454.05,1031.125 1454.8938,1031.8125 Q1455.7375,1032.5 1457.2375,1032.5 Q1458.1281,1032.5 1458.7531,1032.2969 Q1459.1125,1032.1875 1459.5188,1031.8281 Q1459.7844,1031.625 1459.925,1031.5625 Q1460.0656,1031.5 1460.2375,1031.5 Q1460.5656,1031.5 1460.8,1031.7656 Q1461.05,1032.0156 1461.05,1032.375 Q1461.05,1032.7188 1460.7063,1033.125 Q1460.2063,1033.7188 1459.4094,1034.0469 Q1458.3625,1034.5 1457.0813,1034.5 Q1455.5813,1034.5 1454.3781,1033.9063 Q1453.4094,1033.4375 1452.7219,1032.4219 Q1452.05,1031.4063 1452.05,1030.2031 L1452.05,1029.1094 Q1452.05,1027.8594 1452.6438,1026.7656 Q1453.2531,1025.6719 1454.3,1025.0938 Q1455.3625,1024.5 1456.55,1024.5 Q1457.2688,1024.5 1457.8938,1024.75 Q1458.5188,1025 1459.05,1025.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="1471.95" y="1034.7285">Email &lt;&lt;Value Object&gt;&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="1439" x2="1629" y1="1045" y2="1045"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="1444" y="1063.5332">-String emailData</text><line style="stroke:#181818;stroke-width:0.5;" x1="1439" x2="1629" y1="1070.6094" y2="1070.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="180" x="1444" y="1089.1426">+of(String emailData) : Email</text></g><!--MD5=[4e0e7e5b473fe8b0f3aa7aee8f5d9b4a]
+class classNameFunction--><g id="elem_classNameFunction"><rect codeLine="61" fill="#F1F1F1" height="83.2188" id="classNameFunction" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="332" x="1071" y="1013"/><ellipse cx="1093.65" cy="1029" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1095.65,1025.5 Q1095.8531,1025 1096.0875,1024.75 Q1096.3219,1024.5 1096.5875,1024.5 Q1097.0563,1024.5 1097.3531,1024.7813 Q1097.65,1025.0625 1097.65,1025.7188 L1097.65,1027.2813 Q1097.65,1027.9375 1097.3688,1028.2188 Q1097.0875,1028.5 1096.65,1028.5 Q1096.2594,1028.5 1096.0094,1028.3281 Q1095.7594,1028.1563 1095.65,1027.7031 Q1095.6031,1027.3906 1095.4313,1027.2188 Q1095.1188,1026.8906 1094.5563,1026.7031 Q1093.9938,1026.5 1093.4313,1026.5 Q1092.7281,1026.5 1092.1344,1026.7813 Q1091.5563,1027.0625 1091.1031,1027.6875 Q1090.65,1028.3125 1090.65,1029.1719 L1090.65,1030.0938 Q1090.65,1031.125 1091.4938,1031.8125 Q1092.3375,1032.5 1093.8375,1032.5 Q1094.7281,1032.5 1095.3531,1032.2969 Q1095.7125,1032.1875 1096.1188,1031.8281 Q1096.3844,1031.625 1096.525,1031.5625 Q1096.6656,1031.5 1096.8375,1031.5 Q1097.1656,1031.5 1097.4,1031.7656 Q1097.65,1032.0156 1097.65,1032.375 Q1097.65,1032.7188 1097.3063,1033.125 Q1096.8063,1033.7188 1096.0094,1034.0469 Q1094.9625,1034.5 1093.6813,1034.5 Q1092.1813,1034.5 1090.9781,1033.9063 Q1090.0094,1033.4375 1089.3219,1032.4219 Q1088.65,1031.4063 1088.65,1030.2031 L1088.65,1029.1094 Q1088.65,1027.8594 1089.2438,1026.7656 Q1089.8531,1025.6719 1090.9,1025.0938 Q1091.9625,1024.5 1093.15,1024.5 Q1093.8688,1024.5 1094.4938,1024.75 Q1095.1188,1025 1095.65,1025.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="1109.35" y="1034.7285">NoNumberNoSymbolString &lt;&lt;Value Object&gt;&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="1072" x2="1402" y1="1045" y2="1045"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="1077" y="1063.5332">-String valueString</text><line style="stroke:#181818;stroke-width:0.5;" x1="1072" x2="1402" y1="1070.6094" y2="1070.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="320" x="1077" y="1089.1426">+of(String valueString) : NoNumberNoSymbolString</text></g><!--MD5=[461059017cbe2911fed9c9a5ef8262df]
+class classPhoto--><g id="elem_classPhoto"><rect codeLine="65" fill="#F1F1F1" height="83.2188" id="classPhoto" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="205" x="830.5" y="1013"/><ellipse cx="854.05" cy="1029" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M856.05,1025.5 Q856.2531,1025 856.4875,1024.75 Q856.7219,1024.5 856.9875,1024.5 Q857.4563,1024.5 857.7531,1024.7813 Q858.05,1025.0625 858.05,1025.7188 L858.05,1027.2813 Q858.05,1027.9375 857.7688,1028.2188 Q857.4875,1028.5 857.05,1028.5 Q856.6594,1028.5 856.4094,1028.3281 Q856.1594,1028.1563 856.05,1027.7031 Q856.0031,1027.3906 855.8313,1027.2188 Q855.5188,1026.8906 854.9563,1026.7031 Q854.3938,1026.5 853.8313,1026.5 Q853.1281,1026.5 852.5344,1026.7813 Q851.9563,1027.0625 851.5031,1027.6875 Q851.05,1028.3125 851.05,1029.1719 L851.05,1030.0938 Q851.05,1031.125 851.8938,1031.8125 Q852.7375,1032.5 854.2375,1032.5 Q855.1281,1032.5 855.7531,1032.2969 Q856.1125,1032.1875 856.5188,1031.8281 Q856.7844,1031.625 856.925,1031.5625 Q857.0656,1031.5 857.2375,1031.5 Q857.5656,1031.5 857.8,1031.7656 Q858.05,1032.0156 858.05,1032.375 Q858.05,1032.7188 857.7063,1033.125 Q857.2063,1033.7188 856.4094,1034.0469 Q855.3625,1034.5 854.0813,1034.5 Q852.5813,1034.5 851.3781,1033.9063 Q850.4094,1033.4375 849.7219,1032.4219 Q849.05,1031.4063 849.05,1030.2031 L849.05,1029.1094 Q849.05,1027.8594 849.6438,1026.7656 Q850.2531,1025.6719 851.3,1025.0938 Q852.3625,1024.5 853.55,1024.5 Q854.2688,1024.5 854.8938,1024.75 Q855.5188,1025 856.05,1025.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="869.95" y="1034.7285">Photo &lt;&lt;Value Object&gt;&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="831.5" x2="1034.5" y1="1045" y2="1045"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="836.5" y="1063.5332">-String photoString</text><line style="stroke:#181818;stroke-width:0.5;" x1="831.5" x2="1034.5" y1="1070.6094" y2="1070.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="193" x="836.5" y="1089.1426">+of(String photoString) : Photo</text></g><!--MD5=[e5c72ccfb72a0fb4e7ba6a0797eac582]
+class classProfileID--><g id="elem_classProfileID"><rect codeLine="69" fill="#F1F1F1" height="83.2188" id="classProfileID" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="227" x="568.5" y="1013"/><ellipse cx="594.75" cy="1029" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M596.75,1025.5 Q596.9531,1025 597.1875,1024.75 Q597.4219,1024.5 597.6875,1024.5 Q598.1563,1024.5 598.4531,1024.7813 Q598.75,1025.0625 598.75,1025.7188 L598.75,1027.2813 Q598.75,1027.9375 598.4688,1028.2188 Q598.1875,1028.5 597.75,1028.5 Q597.3594,1028.5 597.1094,1028.3281 Q596.8594,1028.1563 596.75,1027.7031 Q596.7031,1027.3906 596.5313,1027.2188 Q596.2188,1026.8906 595.6563,1026.7031 Q595.0938,1026.5 594.5313,1026.5 Q593.8281,1026.5 593.2344,1026.7813 Q592.6563,1027.0625 592.2031,1027.6875 Q591.75,1028.3125 591.75,1029.1719 L591.75,1030.0938 Q591.75,1031.125 592.5938,1031.8125 Q593.4375,1032.5 594.9375,1032.5 Q595.8281,1032.5 596.4531,1032.2969 Q596.8125,1032.1875 597.2188,1031.8281 Q597.4844,1031.625 597.625,1031.5625 Q597.7656,1031.5 597.9375,1031.5 Q598.2656,1031.5 598.5,1031.7656 Q598.75,1032.0156 598.75,1032.375 Q598.75,1032.7188 598.4063,1033.125 Q597.9063,1033.7188 597.1094,1034.0469 Q596.0625,1034.5 594.7813,1034.5 Q593.2813,1034.5 592.0781,1033.9063 Q591.1094,1033.4375 590.4219,1032.4219 Q589.75,1031.4063 589.75,1030.2031 L589.75,1029.1094 Q589.75,1027.8594 590.3438,1026.7656 Q590.9531,1025.6719 592,1025.0938 Q593.0625,1024.5 594.25,1024.5 Q594.9688,1024.5 595.5938,1024.75 Q596.2188,1025 596.75,1025.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170" x="611.25" y="1034.7285">ProfileID &lt;&lt;Value Object&gt;&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="569.5" x2="794.5" y1="1045" y2="1045"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="574.5" y="1063.5332">-ProfileType profileIDdata</text><line style="stroke:#181818;stroke-width:0.5;" x1="569.5" x2="794.5" y1="1070.6094" y2="1070.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="215" x="574.5" y="1089.1426">+ofProfileType(String id) :ProfileID</text></g><!--MD5=[eb3dfaa7d13a40d99ddbaa4a40f0debc]
+class classPassword--><g id="elem_classPassword"><rect codeLine="73" fill="#F1F1F1" height="83.2188" id="classPassword" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="452" x="81" y="1013"/><ellipse cx="213.75" cy="1029" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M215.75,1025.5 Q215.9531,1025 216.1875,1024.75 Q216.4219,1024.5 216.6875,1024.5 Q217.1563,1024.5 217.4531,1024.7813 Q217.75,1025.0625 217.75,1025.7188 L217.75,1027.2813 Q217.75,1027.9375 217.4688,1028.2188 Q217.1875,1028.5 216.75,1028.5 Q216.3594,1028.5 216.1094,1028.3281 Q215.8594,1028.1563 215.75,1027.7031 Q215.7031,1027.3906 215.5313,1027.2188 Q215.2188,1026.8906 214.6563,1026.7031 Q214.0938,1026.5 213.5313,1026.5 Q212.8281,1026.5 212.2344,1026.7813 Q211.6563,1027.0625 211.2031,1027.6875 Q210.75,1028.3125 210.75,1029.1719 L210.75,1030.0938 Q210.75,1031.125 211.5938,1031.8125 Q212.4375,1032.5 213.9375,1032.5 Q214.8281,1032.5 215.4531,1032.2969 Q215.8125,1032.1875 216.2188,1031.8281 Q216.4844,1031.625 216.625,1031.5625 Q216.7656,1031.5 216.9375,1031.5 Q217.2656,1031.5 217.5,1031.7656 Q217.75,1032.0156 217.75,1032.375 Q217.75,1032.7188 217.4063,1033.125 Q216.9063,1033.7188 216.1094,1034.0469 Q215.0625,1034.5 213.7813,1034.5 Q212.2813,1034.5 211.0781,1033.9063 Q210.1094,1033.4375 209.4219,1032.4219 Q208.75,1031.4063 208.75,1030.2031 L208.75,1029.1094 Q208.75,1027.8594 209.3438,1026.7656 Q209.9531,1025.6719 211,1025.0938 Q212.0625,1024.5 213.25,1024.5 Q213.9688,1024.5 214.5938,1024.75 Q215.2188,1025 215.75,1025.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="234.25" y="1034.7285">Password &lt;&lt;Value Object&gt;&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="82" x2="532" y1="1045" y2="1045"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="87" y="1063.5332">-String passwordString</text><line style="stroke:#181818;stroke-width:0.5;" x1="82" x2="532" y1="1070.6094" y2="1070.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="440" x="87" y="1089.1426">+of(String passwordData, int passwordComplexityStandard) : Pasword</text></g><!--MD5=[fc050e0d144802bdd05af1e137e159b3]
+class classAccount--><g id="elem_classAccount"><rect codeLine="80" fill="#F1F1F1" height="171.2656" id="classAccount" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="283" x="791.5" y="734"/><ellipse cx="831.7" cy="750" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M833.7,746.5 Q833.9031,746 834.1375,745.75 Q834.3719,745.5 834.6375,745.5 Q835.1063,745.5 835.4031,745.7813 Q835.7,746.0625 835.7,746.7188 L835.7,748.2813 Q835.7,748.9375 835.4188,749.2188 Q835.1375,749.5 834.7,749.5 Q834.3094,749.5 834.0594,749.3281 Q833.8094,749.1563 833.7,748.7031 Q833.6531,748.3906 833.4813,748.2188 Q833.1688,747.8906 832.6063,747.7031 Q832.0438,747.5 831.4813,747.5 Q830.7781,747.5 830.1844,747.7813 Q829.6063,748.0625 829.1531,748.6875 Q828.7,749.3125 828.7,750.1719 L828.7,751.0938 Q828.7,752.125 829.5438,752.8125 Q830.3875,753.5 831.8875,753.5 Q832.7781,753.5 833.4031,753.2969 Q833.7625,753.1875 834.1688,752.8281 Q834.4344,752.625 834.575,752.5625 Q834.7156,752.5 834.8875,752.5 Q835.2156,752.5 835.45,752.7656 Q835.7,753.0156 835.7,753.375 Q835.7,753.7188 835.3563,754.125 Q834.8563,754.7188 834.0594,755.0469 Q833.0125,755.5 831.7313,755.5 Q830.2313,755.5 829.0281,754.9063 Q828.0594,754.4375 827.3719,753.4219 Q826.7,752.4063 826.7,751.2031 L826.7,750.1094 Q826.7,748.8594 827.2938,747.7656 Q827.9031,746.6719 828.95,746.0938 Q830.0125,745.5 831.2,745.5 Q831.9188,745.5 832.5438,745.75 Q833.1688,746 833.7,746.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="851.3" y="755.7285">Account &lt;&lt; Aggregate Root &gt;&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="792.5" x2="1073.5" y1="766" y2="766"/><line style="stroke:#181818;stroke-width:0.5;" x1="792.5" x2="1073.5" y1="774" y2="774"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="222" x="797.5" y="792.5332">+EmailExists(Email email) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="797.5" y="810.1426">+getAccountID() : AccountID</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="797.5" y="827.752">+getEmail() : Email</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="252" x="797.5" y="845.3613">+getName() : NoNumberNoSymbolString</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="271" x="797.5" y="862.9707">+getFunction() : NoNumberNoSymbolString</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="797.5" y="880.5801">+getPhoto() : Photo</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="194" x="797.5" y="898.1895">+getActiveProfileID() : ProfileID</text></g><!--MD5=[7a3f677e62d08ccf691684bafc193c34]
+class dto--><g id="elem_dto"><rect codeLine="19" fill="#F1F1F1" height="153.6563" id="dto" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="124" x="203" y="189"/><ellipse cx="222.95" cy="205" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M224.95,201.5 Q225.1531,201 225.3875,200.75 Q225.6219,200.5 225.8875,200.5 Q226.3563,200.5 226.6531,200.7813 Q226.95,201.0625 226.95,201.7188 L226.95,203.2813 Q226.95,203.9375 226.6688,204.2188 Q226.3875,204.5 225.95,204.5 Q225.5594,204.5 225.3094,204.3281 Q225.0594,204.1563 224.95,203.7031 Q224.9031,203.3906 224.7313,203.2188 Q224.4188,202.8906 223.8563,202.7031 Q223.2938,202.5 222.7313,202.5 Q222.0281,202.5 221.4344,202.7813 Q220.8563,203.0625 220.4031,203.6875 Q219.95,204.3125 219.95,205.1719 L219.95,206.0938 Q219.95,207.125 220.7938,207.8125 Q221.6375,208.5 223.1375,208.5 Q224.0281,208.5 224.6531,208.2969 Q225.0125,208.1875 225.4188,207.8281 Q225.6844,207.625 225.825,207.5625 Q225.9656,207.5 226.1375,207.5 Q226.4656,207.5 226.7,207.7656 Q226.95,208.0156 226.95,208.375 Q226.95,208.7188 226.6063,209.125 Q226.1063,209.7188 225.3094,210.0469 Q224.2625,210.5 222.9813,210.5 Q221.4813,210.5 220.2781,209.9063 Q219.3094,209.4375 218.6219,208.4219 Q217.95,207.4063 217.95,206.2031 L217.95,205.1094 Q217.95,203.8594 218.5438,202.7656 Q219.1531,201.6719 220.2,201.0938 Q221.2625,200.5 222.45,200.5 Q223.1688,200.5 223.7938,200.75 Q224.4188,201 224.95,201.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="238.05" y="210.7285">AccountDTO</text><line style="stroke:#181818;stroke-width:0.5;" x1="204" x2="326" y1="221" y2="221"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="209" y="239.5332">+String accountID</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="209" y="257.1426">+String email</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="209" y="274.752">+String name</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="209" y="292.3613">+String function</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="209" y="309.9707">+String photo</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="209" y="327.5801">+String profileID</text><line style="stroke:#181818;stroke-width:0.5;" x1="204" x2="326" y1="334.6563" y2="334.6563"/></g><!--MD5=[e12525dc6932bfd7bc230ef42495e04a]
+link packRoutes to packcontrol--><g id="link_packRoutes_packcontrol"><path d="M456,97.14 C456,110.2475 456,127.0694 456,144.9838 C456,153.9409 456,163.1713 456,172.347 C456,176.9348 456,181.509 456,186.0286 C456,186.5935 456,187.1576 456,187.7208 C456,188.0024 456,188.2837 456,188.5648 " fill="none" id="packRoutes-to-packcontrol" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="456,188.5648,460,179.5648,456,183.5648,452,179.5648,456,188.5648" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e84fbca38602fc0d6b780f2c3fe18438]
+link packcontrol to packAppService--><g id="link_packcontrol_packAppService"><path d="M456,323.125 C456,323.9393 456,324.7593 456,325.5847 C456,332.1878 456,339.1381 456,346.32 C456,360.6836 456,375.9731 456,391.2625 C456,406.5519 456,421.8411 456,436.2041 C456,437.1018 456,437.9959 456,438.8861 " fill="none" id="packcontrol-to-packAppService" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="456,438.8861,460,429.8861,456,433.8861,452,429.8861,456,438.8861" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9c677a225d7234f0209934c4b87dbdeb]
+reverse link dto to mapper--><g id="link_dto_mapper"><path codeLine="95" d="M265,348.52 C265,394.44 265,449.23 265,483.2 " fill="none" id="dto-backto-mapper" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="265,343.25,261,352.25,265,348.25,269,352.25,265,343.25" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a8657b8e6b74fbd978ae1d3cee2edc39]
+link packAppService to packrepo--><g id="link_packAppService_packrepo"><path d="M449.6311,439.1609 C449.6696,438.6816 449.7098,438.2019 449.752,437.7219 C449.8362,436.7618 449.928,435.8006 450.0276,434.8387 C450.8246,427.143 452.1224,419.4009 454.0795,411.8595 C457.9938,396.7769 464.545,382.4975 475,371 C480.37,365.1 484.57,367.89 492.5,367 C531.92,362.55 810.08,362.55 849.5,367 C857.43,367.89 860.97,365.77 867,371 C891.955,392.625 905.8425,426.6825 913.5438,456.4125 C914.0251,458.2706 914.4822,460.1118 914.9164,461.9321 " fill="none" id="packAppService-to-packrepo" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="914.9164,461.9321,916.719,452.2496,913.7563,457.0685,908.9374,454.1058,914.9164,461.9321" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9370fa3482223a5106eab874b8648354]
+link packAppService to packEntity--><g id="link_packAppService_packEntity"><path d="M458.1703,573.8736 C458.1992,574.0511 458.2285,574.2286 458.258,574.4063 C458.3761,575.117 458.4985,575.8293 458.6254,576.5428 C458.8792,577.9699 459.1509,579.402 459.4417,580.8367 C460.0232,583.7059 460.681,586.585 461.4239,589.453 C464.3956,600.925 468.73,612.22 475,622 C515.49,685.14 584.195,733.7275 643.5325,766.7925 C673.2013,783.325 700.5281,795.9769 720.8153,804.6269 C730.9589,808.9519 739.3426,812.2764 745.3791,814.5853 C746.1337,814.8739 746.8516,815.1467 747.5316,815.4035 " fill="none" id="packAppService-to-packEntity" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="747.5316,815.4035,740.5254,808.4817,742.8541,813.6369,737.6988,815.9657,747.5316,815.4035" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8b6807c39c62fd19070d893d7a383f6a]
+link packAppService to packVO--><g id="link_packAppService_packVO"><path d="M447.9582,549.0702 C447.9123,549.2241 447.8663,549.3784 447.8201,549.533 C447.6351,550.1515 447.4469,550.7756 447.2554,551.4051 C446.8725,552.6641 446.4766,553.9445 446.0675,555.2438 C439.5225,576.0325 429.62,601.665 416,622 C296.68,800.16 167.95,764.91 65,953 C62.315,957.9063 60.0031,963.1267 58.0132,968.5098 " fill="none" id="packAppService-to-packVO" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="58.0132,968.5098,64.8856,961.455,59.7469,963.82,57.3819,958.6812,58.0132,968.5098" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[556a9f7f90c1e68c4f8aec0020748112]
+link packAppService to mapper--><g id="link_packAppService_mapper"><path codeLine="99" d="M447.8956,516.5 C447.8301,516.5 447.7646,516.5 447.6991,516.5 C447.175,516.5 446.6509,516.5 446.1269,516.5 C445.0787,516.5 444.0306,516.5 442.9825,516.5 C438.79,516.5 434.5975,516.5 430.405,516.5 C422.02,516.5 413.635,516.5 405.25,516.5 " fill="none" id="packAppService-to-mapper" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="400.04,516.5,409.04,520.5,405.04,516.5,409.04,512.5,400.04,516.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2d8d2c5b6ba85cc359d0796d0b49a820]
+link classAccount to classProfileID--><g id="link_classAccount_classProfileID"><path codeLine="101" d="M841.67,905.28 C803.69,940.54 761.18,979.99 729.58,1009.33 " fill="none" id="classAccount-to-classProfileID" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="725.79,1012.85,735.105,1009.6515,729.4519,1009.4456,729.6579,1003.7924,725.79,1012.85" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="659.4115" y="1002.1328">ProfileID 1.*</text></g><!--MD5=[706da717a55b97a4c9ab69d515e92f09]
+link classAccount to classACCID--><g id="link_classAccount_classACCID"><path codeLine="102" d="M1074.78,826.52 C1223.59,837.38 1461.38,867.8 1648,953 C1678.08,966.73 1707.23,989.2 1729.91,1009.41 " fill="none" id="classAccount-to-classACCID" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1733.78,1012.89,1729.7853,1003.8876,1730.0706,1009.5373,1724.421,1009.8226,1733.78,1012.89" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71" x="1650.2389" y="1002.1795">AccountID 1</text></g><!--MD5=[c4a03f508a32300788e21c6cc5208788]
+link classAccount to classEmail--><g id="link_classAccount_classEmail"><path codeLine="103" d="M1074.59,841.13 C1175.64,860 1312.33,894.19 1421,953 C1447.63,967.41 1473.19,989.23 1493.25,1008.86 " fill="none" id="classAccount-to-classEmail" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1497.19,1012.75,1493.5988,1003.5792,1493.6331,1009.236,1487.9764,1009.2702,1497.19,1012.75" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="1443.4496" y="1002.0163">Email 1</text></g><!--MD5=[1c49ef0ed6957802ec57656bc5c04c5a]
+link classAccount to classPhoto--><g id="link_classAccount_classPhoto"><path codeLine="104" d="M933,905.28 C933,939.82 933,978.39 933,1007.53 " fill="none" id="classAccount-to-classPhoto" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="933,1012.85,937,1003.85,933,1007.85,929,1003.85,933,1012.85" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="56" x="872.3625" y="1002.1328">Photo 0.1</text></g><!--MD5=[79dfd2c9ef50588d4e0e585de4cb71b1]
+link classAccount to classNameFunction--><g id="link_classAccount_classNameFunction"><path codeLine="105" d="M1043.61,905.28 C1089.8,940.68 1141.51,980.31 1179.83,1009.69 " fill="none" id="classAccount-to-classNameFunction" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1183.97,1012.85,1179.239,1004.2118,1179.9942,1009.8181,1174.3879,1010.5732,1183.97,1012.85" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="166" x="995.44" y="1002.1328">NoNumberNoSymbolString 1</text></g><!--MD5=[e502697c55deb98ae6401ac54639bedb]
+link classAccount to classPassword--><g id="link_classAccount_classPassword"><path codeLine="106" d="M853.6,905.02 C833.82,921.15 811.5,935.84 788,945 C763.45,954.57 576.76,947.45 551,953 C495.25,965.01 436.03,989.1 389.89,1010.69 " fill="none" id="classAccount-to-classPassword" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="385.19,1012.9,395.0367,1012.6916,389.7151,1010.7731,391.6336,1005.4515,385.19,1012.9" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="324.509" y="1002.1911">Password 1</text></g><!--MD5=[b784a6617474c7b5552be3797c34f9dc]
+@startuml
+'https://plantuml.com/class-diagramheader IMPLEMENTATION VIEW
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infraestruture"{
+package "routes" as packRoutes{
+
+}
+}
+
+folder "Interface Adapters" as folderinter{
+package "implControllers" as packcontrol {
+class "AccountSearchController" as classcontroller{
++findAccountInfo(String email) : ResponseEntity
+}
+    }
+}
+
+class "AccountDTO" as dto {
++String accountID
++String email
++String name
++String function
++String photo
++String profileID
+}
+
+folder "Application Services"{
+
+
+package "repositories" as packrepo{
+class "AccountRepositories" as classrepo{
+ -List<Account> accounts
+ +findAccountByEmail(Email email) : Optional<<Account>>
+}
+}
+package "mappers" as packMapper{
+class "AccountMapper" as mapper{
++{static}toDTO(Account account) : AccountDTO
+}
+}
+
+package implAppServices as packAppService{
+ class "ApplicationServiceGetAccount" as classService{
+ +getAccountInfo(String email) : Optional<AccountDTO>
+ }
+  }
+}
+
+folder "Domain/Entities" as domain{
+
+package "Value Objects" as packVO{
+  class "AccountID  <<Value Object>>" as classACCID{
+  -Email id
+  +{static}of(Email id) : AccountID
+  }
+  class "Email <<Value Object>>" as classEmail {
+  -String emailData
+  +{static}of(String emailData) : Email
+  }
+  class "NoNumberNoSymbolString <<Value Object>>" as classNameFunction {
+  -String valueString
+  +{static}of(String valueString) : NoNumberNoSymbolString
+  }
+  class "Photo <<Value Object>>" as classPhoto{
+  -String photoString
+  +{static}of(String photoString) : Photo
+  }
+  class "ProfileID <<Value Object>>" as classProfileID{
+  -ProfileType profileIDdata
+  +{static}ofProfileType(String id) :ProfileID
+  }
+  class "Password <<Value Object>>" as classPassword{
+  -String passwordString
+  +{static}of(String passwordData, int passwordComplexityStandard) : Pasword
+  }
+    }
+
+package Entity as packEntity{
+class "Account << Aggregate Root >>" as classAccount{
+
+  +EmailExists(Email email) : boolean
+  +getAccountID() : AccountID
+  +getEmail() : Email
+  +getName() : NoNumberNoSymbolString
+  +getFunction() : NoNumberNoSymbolString
+  +getPhoto() : Photo
+  +getActiveProfileID() : ProfileID
+}
+    }
+}
+
+packRoutes..>packcontrol
+packcontrol..>packAppService
+mapper..up>dto
+packAppService..left>packrepo
+packAppService..>packEntity
+packAppService ..>packVO
+packAppService..right> mapper
+
+classAccount- ->"ProfileID 1.*"classProfileID
+classAccount- ->"AccountID 1"classACCID
+classAccount- ->"Email 1" classEmail
+classAccount- ->"Photo 0.1"classPhoto
+classAccount- ->"NoNumberNoSymbolString 1"classNameFunction
+classAccount- ->"Password 1"classPassword
+
+@enduml
+
+@startuml
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infraestruture"{
+package "routes" as packRoutes{
+
+}
+}
+
+folder "Interface Adapters" as folderinter{
+package "implControllers" as packcontrol {
+class "AccountSearchController" as classcontroller{
++findAccountInfo(String email) : ResponseEntity
+}
+    }
+}
+
+class "AccountDTO" as dto {
++String accountID
++String email
++String name
++String function
++String photo
++String profileID
+}
+
+folder "Application Services"{
+
+
+package "repositories" as packrepo{
+class "AccountRepositories" as classrepo{
+ -List<Account> accounts
+ +findAccountByEmail(Email email) : Optional<<Account>>
+}
+}
+package "mappers" as packMapper{
+class "AccountMapper" as mapper{
++{static}toDTO(Account account) : AccountDTO
+}
+}
+
+package implAppServices as packAppService{
+ class "ApplicationServiceGetAccount" as classService{
+ +getAccountInfo(String email) : Optional<AccountDTO>
+ }
+  }
+}
+
+folder "Domain/Entities" as domain{
+
+package "Value Objects" as packVO{
+  class "AccountID  <<Value Object>>" as classACCID{
+  -Email id
+  +{static}of(Email id) : AccountID
+  }
+  class "Email <<Value Object>>" as classEmail {
+  -String emailData
+  +{static}of(String emailData) : Email
+  }
+  class "NoNumberNoSymbolString <<Value Object>>" as classNameFunction {
+  -String valueString
+  +{static}of(String valueString) : NoNumberNoSymbolString
+  }
+  class "Photo <<Value Object>>" as classPhoto{
+  -String photoString
+  +{static}of(String photoString) : Photo
+  }
+  class "ProfileID <<Value Object>>" as classProfileID{
+  -ProfileType profileIDdata
+  +{static}ofProfileType(String id) :ProfileID
+  }
+  class "Password <<Value Object>>" as classPassword{
+  -String passwordString
+  +{static}of(String passwordData, int passwordComplexityStandard) : Pasword
+  }
+    }
+
+package Entity as packEntity{
+class "Account << Aggregate Root >>" as classAccount{
+
+  +EmailExists(Email email) : boolean
+  +getAccountID() : AccountID
+  +getEmail() : Email
+  +getName() : NoNumberNoSymbolString
+  +getFunction() : NoNumberNoSymbolString
+  +getPhoto() : Photo
+  +getActiveProfileID() : ProfileID
+}
+    }
+}
+
+packRoutes..>packcontrol
+packcontrol..>packAppService
+mapper..up>dto
+packAppService..left>packrepo
+packAppService..>packEntity
+packAppService ..>packVO
+packAppService..right> mapper
+
+classAccount- ->"ProfileID 1.*"classProfileID
+classAccount- ->"AccountID 1"classACCID
+classAccount- ->"Email 1" classEmail
+classAccount- ->"Photo 0.1"classPhoto
+classAccount- ->"NoNumberNoSymbolString 1"classNameFunction
+classAccount- ->"Password 1"classPassword
+
+@enduml
+
+PlantUML version 1.2022.4(Sat Apr 09 14:29:17 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

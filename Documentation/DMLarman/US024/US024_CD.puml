@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface "ListAccountUI" as ui
+class "ListAccountController" as ctrl {
+consultListAccounts() : ListAccountDTO
+}
+
+class "ITCompany" as itc << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getAccountStore() : AccountStore
+}
+
+
+
+class "Account" as Account{
+getEmail : String
+getIsActive : boolean
+}
+
+class "AccountStore" as AccountStore{
+getArrayListOfAccounts () : AccountStore
+
+}
+
+class "AccountDTO" as AccountDTO {
+AccountDTO(email, IsActive) : AccountDTO
+}
+
+
+
+
+
+ui "1" -[dashed]-> "1" ctrl
+ctrl "1" -[dashed]-> "1" itc
+ctrl "1" -[dashed]-> "0..*" AccountDTO
+itc "1" -down-> "allAccountStore 1" AccountStore
+Account "0..* arrayListAccount " --o "1" AccountStore
+ctrl "1" -[dashed]-> "1" AccountStore
+ctrl "1" -[dashed]-> "0..*" Account
+
+@enduml

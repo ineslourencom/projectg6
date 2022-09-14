@@ -1,0 +1,169 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant ": Routes" as routes
+
+participant ": ResourceController" as ctl
+participant "response\n : ResponseEntity<Object>" as response
+participant ": ApplicationServiceCreateResource" as appService
+participant ": ProjectRepository" as projrepo
+participant "opProject\n : Optional<Project>" as opProj
+participant "proj : Project" as proj
+participant ": AccountRepository" as accrepo
+participant "AccountJPARepository" as accjparepo <<Interface>>
+participant ": ResourceRepository" as resrepo
+participant "opResource\n : Optional<Resource>" as opRes
+participant "po : Resource" as po
+participant ": ServiceValidateResource" as service
+participant ":ResourceFactory" as factory
+participant "newPO : Resource" as newPO
+participant ":  ResourceMapper" as mapper
+participant "resourceDTO\n : ResourceDTO" as resdto
+[o-> routes : PUT /projects/{projectID}/resources/productOwner
+activate routes
+routes -> ctl : defineProductOwner(NewProductOwnerDTO dto,  int projectID)
+activate ctl
+ctl -> appService : defineProductOwner(dto, projectID)
+activate appService
+ref over appService
+
+Convert_To_Value_Objects
+
+end ref
+appService -> projrepo : findById(pID)
+ref over projrepo
+
+findProject
+
+end ref
+activate projrepo
+
+projrepo --> appService : proj
+deactivate projrepo
+
+appService -> accrepo : true =existsByAccountID(accountID) : boolean
+activate accrepo
+deactivate accrepo
+
+
+appService -> proj : true = containsPeriod(period) : boolean
+activate proj
+deactivate proj
+
+appService -> resrepo : resourcesOfAccount = findAllByAccountID(email) :List<Resource>
+activate resrepo
+ref over resrepo
+
+Find_All_resources_By_AccountID
+
+end ref
+resrepo -[hidden]>
+deactivate resrepo
+
+appService -> service : true = validatePercentageOfAllocation(resourcesOfAccount, period, percentage)
+ref over service
+
+isAllocationValid
+
+end ref
+activate service
+service-[hidden]>
+deactivate service
+appService -> resrepo :  resourcesOfProject = findAllByProjectID(pID) : List<Resource>
+activate resrepo
+ref over resrepo
+
+Find_All_resources_By_ProjectID
+
+end ref
+resrepo-[hidden]>
+deactivate resrepo
+
+appService -> service : true = validateResourceIsNotRepeated(resourcesOfProject, period, email) : boolean
+activate service
+ref over service
+
+isResourceNotRepeated
+
+end ref
+service -[hidden]>
+
+deactivate service
+appService -> resrepo : deleteResources(role, pID, period)
+
+activate resrepo
+ref over resrepo
+
+Delete_Resources
+
+end ref
+
+resrepo -[hidden]>
+deactivate resrepo
+appService -> service : isUnique = validateRoleIsUniqueInPeriod(resourcesOfProject, period, role)
+activate service
+ref over service
+
+isRoleUnique
+
+end ref
+service -[hidden]>
+deactivate service
+opt !isUnique
+appService -> resrepo : findActiveResource( role, pID, dto.startDate) : Optional<Resource>
+activate resrepo
+ref over resrepo
+
+findResource
+
+end ref
+resrepo --> appService : po
+deactivate resrepo
+deactivate opRes
+appService -> po : changeEndDate(dto.startDate.minusDays(1))
+activate po
+deactivate po
+appService ->resrepo : save(po)
+activate resrepo
+ref over resrepo
+
+Save_Resource
+
+end ref
+resrepo -[hidden]>
+deactivate resrepo
+end opt
+appService -> factory : createResource(accountID, resourceID, role, period, percentage, pID, cost)
+activate factory
+create newPO
+factory-> newPO : new(accountID, resourceID, role,\n period, percentage, pID, cost)
+factory --> appService : newPO
+deactivate factory
+appService -> resrepo : savedPO = save(newPO)
+activate resrepo
+ref over resrepo
+
+Save_Resource
+
+end ref
+resrepo -[hidden]>
+deactivate resrepo
+deactivate resrepo
+appService -> mapper : toDTO(savedPO)
+activate mapper
+create resdto
+mapper -> resdto
+mapper --> appService : resourceDTO
+deactivate mapper
+appService --> ctl : resourceDTO
+deactivate appService
+create response
+ctl -> response : new(resourceDTO, HTTPStatus.CREATED)
+
+ctl --> routes : response
+deactivate ctl
+deactivate routes
+
+@enduml

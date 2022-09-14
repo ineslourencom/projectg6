@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor ProductOwner as po
+participant System as sys
+
+po-> sys : Initiates process
+sys -> po : Displays all projects
+po -> sys : Selects a project
+sys-> po : Displays possible actions for that project
+po -> sys : Selects the option ProductBacklog
+sys-> po : Displays possible actions for the ProductBacklog
+po -> sys : Clicks on CreateUserStory
+sys-> po : Requests necessary information\nto create User Story
+po -> sys : Inserts user story detail and statement
+sys -> po : Informs about operation result\nand returns success or failure message
+@enduml

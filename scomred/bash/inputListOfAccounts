@@ -1,0 +1,52 @@
+#!/bin/bash
+
+ACCOUNTS_ADDRESS="/var/www/data/accounts"
+
+TEMP_ACCOUNTS="/tmp/accountstwo.tmp"
+
+#Função erro
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $TEMP_ACCOUNTS
+exit
+}
+
+### Garante método GET
+if [ "$REQUEST_METHOD" != "GET" ]; then error_response "Invalid method. The only supported method is GET."; fi
+
+### Garante que não tem body
+###if [ -n "$CONTENT_LENGTH" ]; then error_response "Too much body!"; fi
+
+### Verifica se a string está vazia
+###if [ -z "$QUERY_STRING" ]; then error_response "No query-string"; fi
+
+### Lista de contas dentro da pasta projects
+
+for FILE in /var/www/data/accounts/*; do
+  EMAILDATA=$(grep -o '<email>.*</email>' $FILE | sed 's/\(<email>\|<\/email>\)//g')
+  NAME=$(grep -o '<name>.*</name>' $FILE | sed 's/\(<name>\|<\/name>\)//g')
+  STATUSDATA=$(grep -o '<isactive>.*</isactive>' $FILE | sed 's/\(<isactive>\|<\/isactive>\)//g')
+  ID=$(echo "$FILE" | cut -d "/" -f 6)
+  JSON_STRING="$( jq -n \
+                    --arg id "$ID" \
+                    --arg name "$NAME" \
+                    --arg status "$STATUSDATA" \
+                    --arg emaildata "$EMAILDATA" \
+                    '{username: $id, account: $name, status: $status, emaildata: $emaildata}' )"
+  echo "$JSON_STRING," >> $TEMP_ACCOUNTS
+done
+
+TEMP_PROJECTSFINAL=$( cat $TEMP_ACCOUNTS)
+TEMP_PROJECTSFINALTWO=${TEMP_PROJECTSFINAL%,}
+echo $TEMP_PROJECTSFINALTWO > $TEMP_ACCOUNTS
+
+var="[$(<$TEMP_ACCOUNTS)]"
+echo $var > $TEMP_ACCOUNTS
+
+echo "Content-type: JSON"
+echo ""
+cat $TEMP_ACCOUNTS
+rm -f $TEMP_ACCOUNTS

@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "period : Period" as period
+participant "role : Role" as role
+participant "repo\n: ResourceRepository" as resrepo
+participant "ResourceJPARepository" as resjparepo <<Interface>>
+
+-> resrepo : deleteResources( role, ProjectID projectID, Period period) : boolean
+activate resrepo
+resrepo -> period : startDate = getStartingDate() : LocalDate
+activate period
+deactivate period
+resrepo -> period : endDate = getEndingDate() : LocalDate
+activate period
+deactivate period
+resrepo -> role : sRole = role.getRoleAsString()
+activate role
+deactivate role
+
+resrepo -> resjparepo : exists = existsByRoleAndProjectIDAndStartDateGreaterThanEqualAndStartDateLessThanEqual\n(sRole, projectID, startDate, endDate) : boolean
+activate resjparepo
+deactivate resjparepo
+alt exists
+resrepo -> resjparepo : deleteByRoleAndProjectIDAndStartDateGreaterThanEqualAndStartDateLessThanEqual\n(sRole, projectID, startDate, endDate)
+activate resjparepo
+deactivate resjparepo
+<-- resrepo : true
+else ! exists
+<-- resrepo : false
+deactivate resrepo
+end alt
+
+
+@enduml

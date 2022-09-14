@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+actor Director
+
+usecase (US027 - As Director, I want to define the PO of a project.)
+
+:Director: -- (US027 - As Director, I want to define the PO of a project.)
+
+@enduml

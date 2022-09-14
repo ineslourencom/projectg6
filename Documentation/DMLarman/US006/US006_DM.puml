@@ -1,0 +1,20 @@
+@startuml
+
+class Account{
+-email : String
+-name : String
+-function : String
+-photo : String
+-isActive : boolean
+-password : String
+-workingCapacityHoursPerWeek : integer
+}
+
+class Profile{
+-profileType : String
+-description : String
+}
+
+Profile "1..*"-- "0..*" Account
+
+@enduml

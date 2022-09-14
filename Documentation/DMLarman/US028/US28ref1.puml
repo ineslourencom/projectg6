@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Participant ":ListResourceInProjectController" as Controller
+Participant ":ITCompany" as IT
+Participant ":ProjectStore" as Store
+mainframe This is a **ref one**
+Controller -> IT : getProjectList()
+activate IT
+activate Controller
+Controller <-- IT : projectStore()
+deactivate IT
+Controller ->Store : getProjectList()
+activate Store
+Store -> Store :getProjectList()
+Controller <-- Store : projectList
+deactivate Store
+deactivate Controller
+@enduml

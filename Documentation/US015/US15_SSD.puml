@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Director as Dir
+participant System as Sys1
+autonumber
+
+Dir -> Sys1: Get list of all system projects
+Sys1 --> Dir: Display all projects of system
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+actor Administrator as adm
+participant "frontend" as UI
+participant "Backend" as Back
+participant "SGBD" as db
+
+
+autonumber
+
+adm -> UI : asks to search for a account
+note left
+ As Administrator, I want to
+search for accounts.
+end note
+activate adm
+activate UI
+UI -> adm : request data(valid email)
+deactivate UI
+adm -> UI : Enter account email
+activate UI
+UI-> Back : asks to see the account
+activate Back
+Back -> db : searchs the account
+activate db
+db --> Back : finds the account
+deactivate db
+Back --> UI : returns the account information
+deactivate Back
+UI -> adm : Receives account information
+deactivate adm
+deactivate UI
+@enduml

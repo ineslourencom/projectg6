@@ -1,0 +1,43 @@
+@startuml
+class UpdateUSStatusOnScrumBorderControler
+
+class ITCompany{
+getProjects() : ProjectStore
+getProductBacklog() : Project
+}
+
+class ProjectStore{
+findProjectByCode(projectCode : int) : Project
+}
+
+class Sprint{
+updateUSStatusInScrumBoard(us,newStatus) : boolean
+}
+
+class Project{
+determineRunningSprint() : Sprint
++getProductBacklog() : ProductBacklog
+}
+
+class SprintBacklog{
+changeStatusInScrumBoard(newStatus) : boolean
+}
+
+class UserStory{
+}
+
+class ProductBacklog{
+findUSByNumber(storyNumber : int) : UserStory
+}
+
+
+UpdateUSStatusOnScrumBorderControler--ITCompany
+ITCompany--|> "1" ProjectStore
+ProjectStore o-- "many" Project
+Project "1"--|> "0 or many" Sprint
+Sprint "1" --|> "1" SprintBacklog
+SprintBacklog "0 or many" --|> "0 or many" UserStory
+UserStory "1" --|> "0 or many" UserStory
+Project "1" --|> "1" ProductBacklog
+ProductBacklog "0 or 1"--|> "0 or many" UserStory
+@enduml

@@ -1,0 +1,38 @@
+@startuml
+autonumber
+participant ScrumBoardDTOMapper
+participant "sb: SprintBacklog"
+participant UserStoryDTOMapper
+[-> ScrumBoardDTOMapper : viewScrumBoard(SprintBacklog sb)
+ScrumBoardDTOMapper -> "sb: SprintBacklog" : toDo = getToDoList()
+"sb: SprintBacklog" --> ScrumBoardDTOMapper : toDo
+ScrumBoardDTOMapper -> UserStoryDTOMapper : createUserStoryDTO(toDo)
+ref over UserStoryDTOMapper
+ref US30_SD_usListToDTO
+end ref
+UserStoryDTOMapper --> ScrumBoardDTOMapper : toDoListDTO
+ScrumBoardDTOMapper -> "sb: SprintBacklog" : inProg = getInProgList()
+"sb: SprintBacklog" --> ScrumBoardDTOMapper : inProg
+ScrumBoardDTOMapper -> UserStoryDTOMapper : createUserStoryDTO(inProg)
+ref over UserStoryDTOMapper
+ref US30_SD_usListToDTO
+end ref
+UserStoryDTOMapper --> ScrumBoardDTOMapper : inProgListDTO
+ScrumBoardDTOMapper -> "sb: SprintBacklog" : codeRev = getCodeReviewList()
+"sb: SprintBacklog" --> ScrumBoardDTOMapper : codeRev
+ScrumBoardDTOMapper -> UserStoryDTOMapper : createUserStoryDTO(codeRev)
+ref over UserStoryDTOMapper
+ref US30_SD_usListToDTO
+end ref
+UserStoryDTOMapper --> ScrumBoardDTOMapper : codeRevListDTO
+ScrumBoardDTOMapper -> "sb: SprintBacklog" : done = getDoneList()
+"sb: SprintBacklog" --> ScrumBoardDTOMapper : done
+ScrumBoardDTOMapper -> UserStoryDTOMapper : createUserStoryDTO(done)
+ref over UserStoryDTOMapper
+ref US30_SD_usListToDTO
+end ref
+UserStoryDTOMapper --> ScrumBoardDTOMapper : doneListDTO
+create participant "scrumBoardDTO: ScrumBoardDTO"
+ScrumBoardDTOMapper -> "scrumBoardDTO: ScrumBoardDTO" : create(toDoListDTO, inProgListDTO, codeReviewListDTO, doneListDTO)
+
+@enduml

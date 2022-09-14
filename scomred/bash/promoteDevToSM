@@ -1,0 +1,79 @@
+#!/bin/bash
+
+RESOURCE_STORE=/var/www/data/resources
+
+#FunÃ§Ã£o de erro
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+rm -f $M_CONTENT_FILE
+exit
+}
+
+#Verifica se o request tem conteÃºdo
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+
+#Verifica se o tipo de request Ã© POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+#Verifica se a query-string nÃ£o estÃ¡ vazia, pois queremos que esteja
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Criar content
+CONTENT=$(cat $M_CONTENT_FILE);
+
+#Guardar a primeira variÃ¡vel
+ACCOUNT=$(echo $CONTENT | cut -d "&" -f 1 )
+ACCOUNT=${ACCOUNT#account=}
+ACCOUNT=$(echo $ACCOUNT | xargs)
+if [ -z "$ACCOUNT" ]; then error_response "empty email"; fi
+
+#Guardar a segunda variÃ¡vel
+PROJECT=$(echo $CONTENT | cut -d "&" -f 2 )
+PROJECT=${PROJECT#project=}
+PROJECT=$(echo $PROJECT | xargs)
+if [ -z "$PROJECT" ]; then error_response "empty project"; fi
+
+
+#Editar ficheiro account
+ISSMFOUND="false"
+for FILE in /var/www/data/resources/*; do
+  PROJECTTEST=$(grep -o '<project>.*</project>' $FILE | sed 's/\(<project>\|<\/project>\)//g')
+  ROLETEST=$(grep -o '<role>.*</role>' $FILE | sed 's/\(<role>\|<\/role>\)//g')
+  if [ "$ROLETEST" == "Scrum Master" ] && [ "$PROJECT" == "$PROJECTTEST" ]; then
+    error_response "The project already has a SM"
+    ISSMFOUND="true"
+  fi
+done
+
+if [ "$ISSMFOUND" == "false" ]; then
+  for FILERES in /var/www/data/resources/*; do
+    PROJECTTEST=$(grep -o '<project>.*</project>' $FILERES | sed 's/\(<project>\|<\/project>\)//g')
+    ACCOUNTTEST=$(grep -o '<account>.*</account>' $FILERES | sed 's/\(<account>\|<\/account>\)//g')
+    if [ "$ACCOUNTTEST" == "$ACCOUNT" ] && [ "$PROJECT" == "$PROJECTTEST" ]; then
+          PERCALLOC=$(grep -o '<percalloc>.*</percalloc>' $FILERES | sed 's/\(<percalloc>\|<\/percalloc>\)//g')
+          COSTHOUR=$(grep -o '<costhour>.*</costhour>' $FILERES | sed 's/\(<costhour>\|<\/costhour>\)//g')
+
+          echo '<?xml version="1.0"?>' > "$RESOURCE_STORE/$ACCOUNT.$PROJECT.txt"
+          echo "<holder>" >> "$RESOURCE_STORE/$ACCOUNT.$PROJECT.txt"
+          echo "<account>"$ACCOUNT"</account>" >> "$RESOURCE_STORE/$ACCOUNT.$PROJECT.txt"
+          echo "<project>"$PROJECT"</project>" >> "$RESOURCE_STORE/$ACCOUNT.$PROJECT.txt"
+          echo "<role>Scrum Master</role>" >> "$RESOURCE_STORE/$ACCOUNT.$PROJECT.txt"
+          echo "<percalloc>"$PERCALLOC"</percalloc>" >> "$RESOURCE_STORE/$ACCOUNT.$PROJECT.txt"
+          echo "<costhour>"$COSTHOUR"</costhour>" >> "$RESOURCE_STORE/$ACCOUNT.$PROJECT.txt"
+          echo "</holder>" >> "$RESOURCE_STORE/$ACCOUNT.$PROJECT.txt"
+    fi
+  done
+fi
+
+
+
+#Enviar resposta http
+
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""
+echo "Saved changes"

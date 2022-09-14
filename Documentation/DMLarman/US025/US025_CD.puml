@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface "InactivateAccountUI" as UI
+class "InactivateAccountController" as Controller {
+inactivateAccount(email : String) : boolean
+}
+
+class "IT Company" as IT << (S,#FF7700) Singleton >>{
+getAccountStore() : AccountStore
+}
+
+class "AccountStore" as Store {
+
+findAccountByEmail(email : String) : Account
+}
+class "Account" as Account {
+email : String
+isActive: boolean
+inactivateAccount (email : String) : boolean
+}
+
+
+UI "1"-[dashed]->"1" Controller
+Controller "1"-[dashed]->"1" IT
+Controller "1"-[dashed]->"1" Account
+Controller "1"-[dashed]->"1" Store
+IT "1"-->"allAccountStore 1" Store
+Account "arrayListAccount 0..* "--o "1 " Store
+
+@enduml

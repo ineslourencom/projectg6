@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/geral.css">
+    <script src="../js/editProject.js"></script>
+</head>
+
+<body onload="initData()">
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Homepage</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="column">
+
+<h1>Change Project Information</h1><hr>
+<div>
+  <label
+  >Select Project:
+  <select name="projects" id="projects">
+  </select>
+</label>
+<input type=button value="Show Details" onClick="showDetails()">
+</div>
+
+<hr/>
+            <label for="idProject">Project ID:</label><br>
+            <div id="idProject"></div>
+            <br><br>
+            <label for="projectName">Project name:</label><br>
+            <div id="projectName"></div>
+            <br><br>
+            <label for="description">Description:</label><br>
+            <div id="description"></div>
+            <br><br>
+            <label for="client">Client:</label><br>
+            <div id="client"></div>
+            <br><br>
+            <label for="sector">Sector:<br>
+            <div id="sector"></div>
+            <br><br>
+                <label for="budget">Budget:<br>
+            <div id="budget"></div>
+            <br><br>
+                    <label for="typology">Typology:<br>
+
+                        <div id="typology"></div>
+            <br><br>
+                        <label for="sprintDuration">Sprint duration:<br>
+                            <input id="sprintDuration" type="number" onchange="validateDuration()"></input>
+            <br><br>
+                            <label for="startDate">Start Date:<br>
+                                <input id="startDate" type="date" onchange="validateDates()"></input>
+            <br><br>
+                                <label for="endDate">End Date:<br>
+                                    <input id="endDate" type="date" onchange="validateDates()"></input>
+            <br><br>
+                                    <label for="plannedSprints">Planned Sprints:<br>
+                                        <input id="plannedSprints" type="number" onchange="validateNumber()"></input>
+            <br><br>
+                                        <label for="status">Current status:<br>
+                                            <div id="status"></div>
+                                            <br><br>
+                                            <label for="newstatus">New Status:</label>
+
+                                            <select name="newstatus" id="newstatus">
+                                                <option value="planned">Planned</option>
+                                                <option value="inception">Inception</option>
+                                                <option value="elaboration">Elaboration</option>
+                                                <option value="construction">Construction</option>
+                                                <option value="transition">Transition</option>
+                                                <option value="warranty">Warranty</option>
+                                                <option value="closed" >Closed</option>
+                                            </select>
+            <br><br>
+
+ 
+<br><br>
+<div id="closure">
+</div>
+<div id ="result"></div>
+
+<hr/>
+
+<input type="button" id="submit" name="submit" value="Submit" onclick="saveChanges()">
+
+
+        </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</body>
+
+</html>

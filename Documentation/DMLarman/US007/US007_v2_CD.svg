@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="609px" preserveAspectRatio="none" style="width:887px;height:609px;background:#FFFFFF;" version="1.1" viewBox="0 0 887 609" width="887.5px" zoomAndPan="magnify"><defs><filter height="300%" id="f2fwt3etxfjeb" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="1.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="2.0" dy="2.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[fd9cab17099256c8680aa6ea13cc8fa6]
+class ctrl--><rect codeLine="2" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="30.918" id="ctrl" style="stroke:#A80036;stroke-width:0.75;" width="117.5" x="89.33" y="102.5"/><ellipse cx="109.88" cy="110.5" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M110.88,108.75 Q110.9816,108.5 111.0988,108.375 Q111.2159,108.25 111.3488,108.25 Q111.5831,108.25 111.7316,108.3906 Q111.88,108.5313 111.88,108.8594 L111.88,109.6406 Q111.88,109.9688 111.7394,110.1094 Q111.5988,110.25 111.38,110.25 Q111.1847,110.25 111.0597,110.1641 Q110.9347,110.0781 110.88,109.8516 Q110.8566,109.6953 110.7706,109.6094 Q110.6144,109.4453 110.3331,109.3516 Q110.0519,109.25 109.7706,109.25 Q109.4191,109.25 109.1222,109.3906 Q108.8331,109.5313 108.6066,109.8438 Q108.38,110.1563 108.38,110.5859 L108.38,111.0469 Q108.38,111.5625 108.8019,111.9063 Q109.2238,112.25 109.9738,112.25 Q110.4191,112.25 110.7316,112.1484 Q110.9113,112.0938 111.1144,111.9141 Q111.2472,111.8125 111.3175,111.7813 Q111.3878,111.75 111.4738,111.75 Q111.6378,111.75 111.755,111.8828 Q111.88,112.0078 111.88,112.1875 Q111.88,112.3594 111.7081,112.5625 Q111.4581,112.8594 111.0597,113.0234 Q110.5363,113.25 109.8956,113.25 Q109.1456,113.25 108.5441,112.9531 Q108.0597,112.7188 107.7159,112.2109 Q107.38,111.7031 107.38,111.1016 L107.38,110.5547 Q107.38,109.9297 107.6769,109.3828 Q107.9816,108.8359 108.505,108.5469 Q109.0363,108.25 109.63,108.25 Q109.9894,108.25 110.3019,108.375 Q110.6144,108.5 110.88,108.75 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="72.5" x="119.78" y="112.9551">CreateResourceController</text><line style="stroke:#A80036;stroke-width:0.75;" x1="89.83" x2="206.33" y1="118.5" y2="118.5"/><line style="stroke:#A80036;stroke-width:0.75;" x1="89.83" x2="206.33" y1="122.5" y2="122.5"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="111.5" x="92.33" y="130.2095">definePO(dto : CreateResourceDTO) : boolean</text><!--MD5=[589778a86542334cbbe24d2c132e4f67]
+class ui--><rect codeLine="5" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="24" id="ui" style="stroke:#A80036;stroke-width:0.75;" width="67.5" x="156.83" y="3.5"/><ellipse cx="164.33" cy="11.5" fill="#B4A7E5" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M164.83,10 L164.83,13 L165.83,13 L166.0722,13 L166.33,13.3125 L166.33,13.5 L166.33,13.6875 L166.0722,14 L165.83,14 L162.83,14 L162.5878,14 L162.33,13.6875 L162.33,13.5 L162.33,13.3125 L162.5878,13 L162.83,13 L163.83,13 L163.83,10 L162.83,10 L162.5878,10 L162.33,9.6875 L162.33,9.5 L162.33,9.3125 L162.5878,9 L162.83,9 L165.83,9 L166.0722,9 L166.33,9.3125 L166.33,9.5 L166.33,9.6875 L166.0722,10 L165.83,10 L164.83,10 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" font-style="italic" lengthAdjust="spacing" textLength="51.5" x="171.33" y="13.9551">CreateResourceUI</text><line style="stroke:#A80036;stroke-width:0.75;" x1="157.33" x2="223.83" y1="19.5" y2="19.5"/><line style="stroke:#A80036;stroke-width:0.75;" x1="157.33" x2="223.83" y1="23.5" y2="23.5"/><!--MD5=[5f41f85de07f10ee5ddaf804b5546503]
+class itc--><rect codeLine="8" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="55.7656" id="itc" style="stroke:#A80036;stroke-width:0.75;" width="116" x="764.58" y="90"/><ellipse cx="804.705" cy="100.0469" fill="#FF7700" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M803.955,102.0469 Q803.8144,102.3672 803.7206,102.4609 Q803.6347,102.5469 803.5097,102.5469 Q803.2597,102.5469 803.1034,102.4375 Q802.955,102.3203 802.955,102.0469 L802.955,101.5469 Q802.955,101.2734 803.08,101.1641 Q803.205,101.0469 803.4081,101.0469 Q803.5644,101.0469 803.6738,101.0859 Q803.7831,101.125 803.8378,101.2188 Q803.8925,101.3125 803.955,101.3438 Q804.0331,101.4141 804.2363,101.4844 Q804.4394,101.5469 804.6816,101.5469 Q805.0566,101.5469 805.2988,101.3203 Q805.455,101.1875 805.455,100.9922 Q805.455,100.8594 805.3769,100.7422 Q805.2988,100.625 805.1269,100.5469 Q805.0175,100.4922 804.6269,100.4063 Q803.9003,100.2969 803.6425,100.125 Q803.3925,99.9531 803.1738,99.6484 Q802.955,99.3359 802.955,98.9766 Q802.955,98.4063 803.3847,97.9766 Q803.8222,97.5469 804.5097,97.5469 Q804.7909,97.5469 804.9316,97.6719 Q805.0722,97.7969 805.455,98.0469 Q805.6738,97.5469 805.8925,97.5469 Q806.1425,97.5469 806.2988,97.6563 Q806.455,97.7656 806.455,98.0234 L806.455,98.5625 Q806.455,98.8281 806.33,98.9375 Q806.205,99.0469 806.0097,99.0469 Q805.8456,99.0469 805.7206,99 Q805.6269,98.9688 805.58,98.8672 Q805.5331,98.7656 805.455,98.7266 Q805.3613,98.6484 805.1738,98.6016 Q804.9863,98.5469 804.7363,98.5469 Q804.3769,98.5469 804.1659,98.7266 Q803.955,98.9063 803.955,99.1016 Q803.955,99.2344 804.0253,99.3594 Q804.1034,99.4766 804.2519,99.5469 Q804.3456,99.5938 804.8847,99.7031 Q805.4238,99.8125 805.6972,99.9609 Q805.9706,100.1016 806.2128,100.4063 Q806.455,100.7109 806.455,101.1406 Q806.455,101.7266 806.1191,102.0781 Q805.6659,102.5469 804.9706,102.5469 Q804.705,102.5469 804.4472,102.4219 Q804.1972,102.2969 803.955,102.0469 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" font-style="italic" lengthAdjust="spacing" textLength="33" x="814.205" y="98.7285">«Singleton»</text><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="31.5" x="814.955" y="106.2754">ITCompany</text><line style="stroke:#A80036;stroke-width:0.75;" x1="765.08" x2="880.08" y1="110.0938" y2="110.0938"/><line style="stroke:#A80036;stroke-width:0.75;" x1="765.08" x2="880.08" y1="114.0938" y2="114.0938"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="69" x="767.58" y="121.8032">getITCompany() : ITCompany</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="75" x="767.58" y="128.7212">getProjectStore() : ProjectStore</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="83" x="767.58" y="135.6392">getAccountStore() : AccountStore</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="110" x="767.58" y="142.5571">getResourceRoleStore() : ResourceRoleStore</text><!--MD5=[7a3f677e62d08ccf691684bafc193c34]
+class dto--><rect codeLine="14" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="127.7695" id="dto" style="stroke:#A80036;stroke-width:0.75;" width="147.5" x="177.33" y="345.5"/><ellipse cx="215.705" cy="353.5" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M216.705,351.75 Q216.8066,351.5 216.9238,351.375 Q217.0409,351.25 217.1738,351.25 Q217.4081,351.25 217.5566,351.3906 Q217.705,351.5313 217.705,351.8594 L217.705,352.6406 Q217.705,352.9688 217.5644,353.1094 Q217.4238,353.25 217.205,353.25 Q217.0097,353.25 216.8847,353.1641 Q216.7597,353.0781 216.705,352.8516 Q216.6816,352.6953 216.5956,352.6094 Q216.4394,352.4453 216.1581,352.3516 Q215.8769,352.25 215.5956,352.25 Q215.2441,352.25 214.9472,352.3906 Q214.6581,352.5313 214.4316,352.8438 Q214.205,353.1563 214.205,353.5859 L214.205,354.0469 Q214.205,354.5625 214.6269,354.9063 Q215.0488,355.25 215.7988,355.25 Q216.2441,355.25 216.5566,355.1484 Q216.7363,355.0938 216.9394,354.9141 Q217.0722,354.8125 217.1425,354.7813 Q217.2128,354.75 217.2988,354.75 Q217.4628,354.75 217.58,354.8828 Q217.705,355.0078 217.705,355.1875 Q217.705,355.3594 217.5331,355.5625 Q217.2831,355.8594 216.8847,356.0234 Q216.3613,356.25 215.7206,356.25 Q214.9706,356.25 214.3691,355.9531 Q213.8847,355.7188 213.5409,355.2109 Q213.205,354.7031 213.205,354.1016 L213.205,353.5547 Q213.205,352.9297 213.5019,352.3828 Q213.8066,351.8359 214.33,351.5469 Q214.8613,351.25 215.455,351.25 Q215.8144,351.25 216.1269,351.375 Q216.4394,351.5 216.705,351.75 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="66.5" x="225.955" y="355.9551">AssociateResourceDTO</text><line style="stroke:#A80036;stroke-width:0.75;" x1="177.83" x2="324.33" y1="361.5" y2="361.5"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="132.5" x="180.33" y="369.2095">startDate : LocalDate, percentageOfAllocation : double,</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="39" x="180.33" y="376.1274">projectCode : int</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="30.5" x="180.33" y="383.0454">email : String</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="50.5" x="180.33" y="389.9634">startDate : LocalDate</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="77.5" x="180.33" y="396.8813">percentageOfAllocation : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="50.5" x="180.33" y="403.7993">costPerHour : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="27.5" x="180.33" y="410.7173">role : String</text><line style="stroke:#A80036;stroke-width:0.75;" x1="177.83" x2="324.33" y1="413.9258" y2="413.9258"/><ellipse cx="182.83" cy="419.4258" fill="#84BE84" rx="1.5" ry="1.5" style="stroke:#038048;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="134.5" x="187.33" y="421.6353">AssociateResourceDTO(projectCode : int, email : String,</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="110" x="187.33" y="428.5532">percentageOfAllocation : double, role : String)</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="50.5" x="187.33" y="435.4712">getProjectCode() : int</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="42" x="187.33" y="442.3892">getEmail() : String</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="61" x="187.33" y="449.3071">getStartDate(): LocalDate</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="89" x="187.33" y="456.2251">getPercentageOfAllocation() : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="62.5" x="187.33" y="463.1431">getCostPerHour() : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="40.5" x="187.33" y="470.061">getRole() : String</text><!--MD5=[7287b2dbe158aa32fb86af4f2aecd912]
+class accstr--><rect codeLine="34" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="30.918" id="accstr" style="stroke:#A80036;stroke-width:0.75;" width="113.5" x="359.33" y="571.5"/><ellipse cx="395.955" cy="579.5" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M396.955,577.75 Q397.0566,577.5 397.1738,577.375 Q397.2909,577.25 397.4238,577.25 Q397.6581,577.25 397.8066,577.3906 Q397.955,577.5313 397.955,577.8594 L397.955,578.6406 Q397.955,578.9688 397.8144,579.1094 Q397.6738,579.25 397.455,579.25 Q397.2597,579.25 397.1347,579.1641 Q397.0097,579.0781 396.955,578.8516 Q396.9316,578.6953 396.8456,578.6094 Q396.6894,578.4453 396.4081,578.3516 Q396.1269,578.25 395.8456,578.25 Q395.4941,578.25 395.1972,578.3906 Q394.9081,578.5313 394.6816,578.8438 Q394.455,579.1563 394.455,579.5859 L394.455,580.0469 Q394.455,580.5625 394.8769,580.9063 Q395.2988,581.25 396.0488,581.25 Q396.4941,581.25 396.8066,581.1484 Q396.9863,581.0938 397.1894,580.9141 Q397.3222,580.8125 397.3925,580.7813 Q397.4628,580.75 397.5488,580.75 Q397.7128,580.75 397.83,580.8828 Q397.955,581.0078 397.955,581.1875 Q397.955,581.3594 397.7831,581.5625 Q397.5331,581.8594 397.1347,582.0234 Q396.6113,582.25 395.9706,582.25 Q395.2206,582.25 394.6191,581.9531 Q394.1347,581.7188 393.7909,581.2109 Q393.455,580.7031 393.455,580.1016 L393.455,579.5547 Q393.455,578.9297 393.7519,578.3828 Q394.0566,577.8359 394.58,577.5469 Q395.1113,577.25 395.705,577.25 Q396.0644,577.25 396.3769,577.375 Q396.6894,577.5 396.955,577.75 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="36" x="406.205" y="581.9551">AccountStore</text><line style="stroke:#A80036;stroke-width:0.75;" x1="359.83" x2="472.33" y1="587.5" y2="587.5"/><line style="stroke:#A80036;stroke-width:0.75;" x1="359.83" x2="472.33" y1="591.5" y2="591.5"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="107.5" x="362.33" y="599.2095">findAccountByEmail(email : String) : Account</text><!--MD5=[8be9a1d45a27ed621c0e415c9d857dd4]
+class acc--><rect codeLine="38" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="37.8359" id="acc" style="stroke:#A80036;stroke-width:0.75;" width="107.5" x="362.33" y="503.5"/><ellipse cx="403.205" cy="511.5" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M404.205,509.75 Q404.3066,509.5 404.4238,509.375 Q404.5409,509.25 404.6738,509.25 Q404.9081,509.25 405.0566,509.3906 Q405.205,509.5313 405.205,509.8594 L405.205,510.6406 Q405.205,510.9688 405.0644,511.1094 Q404.9238,511.25 404.705,511.25 Q404.5097,511.25 404.3847,511.1641 Q404.2597,511.0781 404.205,510.8516 Q404.1816,510.6953 404.0956,510.6094 Q403.9394,510.4453 403.6581,510.3516 Q403.3769,510.25 403.0956,510.25 Q402.7441,510.25 402.4472,510.3906 Q402.1581,510.5313 401.9316,510.8438 Q401.705,511.1563 401.705,511.5859 L401.705,512.0469 Q401.705,512.5625 402.1269,512.9063 Q402.5488,513.25 403.2988,513.25 Q403.7441,513.25 404.0566,513.1484 Q404.2363,513.0938 404.4394,512.9141 Q404.5722,512.8125 404.6425,512.7813 Q404.7128,512.75 404.7988,512.75 Q404.9628,512.75 405.08,512.8828 Q405.205,513.0078 405.205,513.1875 Q405.205,513.3594 405.0331,513.5625 Q404.7831,513.8594 404.3847,514.0234 Q403.8613,514.25 403.2206,514.25 Q402.4706,514.25 401.8691,513.9531 Q401.3847,513.7188 401.0409,513.2109 Q400.705,512.7031 400.705,512.1016 L400.705,511.5547 Q400.705,510.9297 401.0019,510.3828 Q401.3066,509.8359 401.83,509.5469 Q402.3613,509.25 402.955,509.25 Q403.3144,509.25 403.6269,509.375 Q403.9394,509.5 404.205,509.75 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="21.5" x="413.455" y="513.9551">Account</text><line style="stroke:#A80036;stroke-width:0.75;" x1="362.83" x2="469.33" y1="519.5" y2="519.5"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="30.5" x="365.33" y="527.2095">email : String</text><line style="stroke:#A80036;stroke-width:0.75;" x1="362.83" x2="469.33" y1="530.418" y2="530.418"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="101.5" x="365.33" y="538.1274">isAccountEqualTo(email : String) : boolean</text><!--MD5=[5847615bfb9b38060c05943e781311d2]
+class rstore--><rect codeLine="43" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="30.918" id="rstore" style="stroke:#A80036;stroke-width:0.75;" width="136" x="491.08" y="507"/><ellipse cx="529.705" cy="515" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M530.705,513.25 Q530.8066,513 530.9237,512.875 Q531.0409,512.75 531.1737,512.75 Q531.4081,512.75 531.5566,512.8906 Q531.705,513.0313 531.705,513.3594 L531.705,514.1406 Q531.705,514.4688 531.5644,514.6094 Q531.4237,514.75 531.205,514.75 Q531.0097,514.75 530.8847,514.6641 Q530.7597,514.5781 530.705,514.3516 Q530.6816,514.1953 530.5956,514.1094 Q530.4394,513.9453 530.1581,513.8516 Q529.8769,513.75 529.5956,513.75 Q529.2441,513.75 528.9472,513.8906 Q528.6581,514.0313 528.4316,514.3438 Q528.205,514.6563 528.205,515.0859 L528.205,515.5469 Q528.205,516.0625 528.6269,516.4063 Q529.0487,516.75 529.7987,516.75 Q530.2441,516.75 530.5566,516.6484 Q530.7362,516.5938 530.9394,516.4141 Q531.0722,516.3125 531.1425,516.2813 Q531.2128,516.25 531.2987,516.25 Q531.4628,516.25 531.58,516.3828 Q531.705,516.5078 531.705,516.6875 Q531.705,516.8594 531.5331,517.0625 Q531.2831,517.3594 530.8847,517.5234 Q530.3612,517.75 529.7206,517.75 Q528.9706,517.75 528.3691,517.4531 Q527.8847,517.2188 527.5409,516.7109 Q527.205,516.2031 527.205,515.6016 L527.205,515.0547 Q527.205,514.4297 527.5019,513.8828 Q527.8066,513.3359 528.33,513.0469 Q528.8612,512.75 529.455,512.75 Q529.8144,512.75 530.1269,512.875 Q530.4394,513 530.705,513.25 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="54.5" x="539.955" y="517.4551">ResourceRoleStore</text><line style="stroke:#A80036;stroke-width:0.75;" x1="491.58" x2="626.58" y1="523" y2="523"/><line style="stroke:#A80036;stroke-width:0.75;" x1="491.58" x2="626.58" y1="527" y2="527"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="130" x="494.08" y="534.7095">findResourceRoleByRole(role : String) : ResourceRole</text><!--MD5=[230c8b93044a8b32754c79e4598c3632]
+class role--><rect codeLine="48" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="51.6719" id="role" style="stroke:#A80036;stroke-width:0.75;" width="72.5" x="522.83" y="383.75"/><ellipse cx="537.755" cy="391.75" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M538.755,390 Q538.8566,389.75 538.9738,389.625 Q539.0909,389.5 539.2238,389.5 Q539.4581,389.5 539.6066,389.6406 Q539.755,389.7813 539.755,390.1094 L539.755,390.8906 Q539.755,391.2188 539.6144,391.3594 Q539.4738,391.5 539.255,391.5 Q539.0597,391.5 538.9347,391.4141 Q538.8097,391.3281 538.755,391.1016 Q538.7316,390.9453 538.6456,390.8594 Q538.4894,390.6953 538.2081,390.6016 Q537.9269,390.5 537.6456,390.5 Q537.2941,390.5 536.9972,390.6406 Q536.7081,390.7813 536.4816,391.0938 Q536.255,391.4063 536.255,391.8359 L536.255,392.2969 Q536.255,392.8125 536.6769,393.1563 Q537.0988,393.5 537.8488,393.5 Q538.2941,393.5 538.6066,393.3984 Q538.7863,393.3438 538.9894,393.1641 Q539.1222,393.0625 539.1925,393.0313 Q539.2628,393 539.3488,393 Q539.5128,393 539.63,393.1328 Q539.755,393.2578 539.755,393.4375 Q539.755,393.6094 539.5831,393.8125 Q539.3331,394.1094 538.9347,394.2734 Q538.4113,394.5 537.7706,394.5 Q537.0206,394.5 536.4191,394.2031 Q535.9347,393.9688 535.5909,393.4609 Q535.255,392.9531 535.255,392.3516 L535.255,391.8047 Q535.255,391.1797 535.5519,390.6328 Q535.8566,390.0859 536.38,389.7969 Q536.9113,389.5 537.505,389.5 Q537.8644,389.5 538.1769,389.625 Q538.4894,389.75 538.755,390 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="40" x="546.405" y="394.2051">ResourceRole</text><line style="stroke:#A80036;stroke-width:0.75;" x1="523.33" x2="594.83" y1="399.75" y2="399.75"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="27.5" x="525.83" y="407.4595">role : String</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="45" x="525.83" y="414.3774">description : String</text><line style="stroke:#A80036;stroke-width:0.75;" x1="523.33" x2="594.83" y1="417.5859" y2="417.5859"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="66.5" x="525.83" y="425.2954">isRoleDeveloper() : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="66.5" x="525.83" y="432.2134">equals(o : Object) : boolean</text><!--MD5=[9502fb1dc0c1e00802a3178771ee9222]
+class pstr--><rect codeLine="54" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="51.6719" id="pstr" style="stroke:#A80036;stroke-width:0.75;" width="241" x="295.58" y="236.25"/><ellipse cx="397.205" cy="244.25" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M398.205,242.5 Q398.3066,242.25 398.4238,242.125 Q398.5409,242 398.6738,242 Q398.9081,242 399.0566,242.1406 Q399.205,242.2813 399.205,242.6094 L399.205,243.3906 Q399.205,243.7188 399.0644,243.8594 Q398.9238,244 398.705,244 Q398.5097,244 398.3847,243.9141 Q398.2597,243.8281 398.205,243.6016 Q398.1816,243.4453 398.0956,243.3594 Q397.9394,243.1953 397.6581,243.1016 Q397.3769,243 397.0956,243 Q396.7441,243 396.4472,243.1406 Q396.1581,243.2813 395.9316,243.5938 Q395.705,243.9063 395.705,244.3359 L395.705,244.7969 Q395.705,245.3125 396.1269,245.6563 Q396.5488,246 397.2988,246 Q397.7441,246 398.0566,245.8984 Q398.2363,245.8438 398.4394,245.6641 Q398.5722,245.5625 398.6425,245.5313 Q398.7128,245.5 398.7988,245.5 Q398.9628,245.5 399.08,245.6328 Q399.205,245.7578 399.205,245.9375 Q399.205,246.1094 399.0331,246.3125 Q398.7831,246.6094 398.3847,246.7734 Q397.8613,247 397.2206,247 Q396.4706,247 395.8691,246.7031 Q395.3847,246.4688 395.0409,245.9609 Q394.705,245.4531 394.705,244.8516 L394.705,244.3047 Q394.705,243.6797 395.0019,243.1328 Q395.3066,242.5859 395.83,242.2969 Q396.3613,242 396.955,242 Q397.3144,242 397.6269,242.125 Q397.9394,242.25 398.205,242.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="33.5" x="407.455" y="246.7051">ProjectStore</text><line style="stroke:#A80036;stroke-width:0.75;" x1="296.08" x2="536.08" y1="252.25" y2="252.25"/><line style="stroke:#A80036;stroke-width:0.75;" x1="296.08" x2="536.08" y1="256.25" y2="256.25"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="91.5" x="298.58" y="263.9595">findProjectByCode(code : int) : Project</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="184.5" x="298.58" y="270.8774">allocationIsValid(email : String, allocation : double, date : LocalDate) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="128" x="298.58" y="277.7954">getAllocation(email : String, date : LocalDate) : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="235" x="298.58" y="284.7134">createResource(dto : AssociateResourceDTO, account : Account, role : ResourceRole) : boolean</text><!--MD5=[75cb009b437a8fc1a5a21ac147dee502]
+class proj--><rect codeLine="61" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="120.8516" id="proj" style="stroke:#A80036;stroke-width:0.75;" width="226" x="450.08" y="57.5"/><ellipse cx="551.455" cy="65.5" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M552.455,63.75 Q552.5566,63.5 552.6737,63.375 Q552.7909,63.25 552.9237,63.25 Q553.1581,63.25 553.3066,63.3906 Q553.455,63.5313 553.455,63.8594 L553.455,64.6406 Q553.455,64.9688 553.3144,65.1094 Q553.1737,65.25 552.955,65.25 Q552.7597,65.25 552.6347,65.1641 Q552.5097,65.0781 552.455,64.8516 Q552.4316,64.6953 552.3456,64.6094 Q552.1894,64.4453 551.9081,64.3516 Q551.6269,64.25 551.3456,64.25 Q550.9941,64.25 550.6972,64.3906 Q550.4081,64.5313 550.1816,64.8438 Q549.955,65.1563 549.955,65.5859 L549.955,66.0469 Q549.955,66.5625 550.3769,66.9063 Q550.7987,67.25 551.5487,67.25 Q551.9941,67.25 552.3066,67.1484 Q552.4862,67.0938 552.6894,66.9141 Q552.8222,66.8125 552.8925,66.7813 Q552.9628,66.75 553.0487,66.75 Q553.2128,66.75 553.33,66.8828 Q553.455,67.0078 553.455,67.1875 Q553.455,67.3594 553.2831,67.5625 Q553.0331,67.8594 552.6347,68.0234 Q552.1112,68.25 551.4706,68.25 Q550.7206,68.25 550.1191,67.9531 Q549.6347,67.7188 549.2909,67.2109 Q548.955,66.7031 548.955,66.1016 L548.955,65.5547 Q548.955,64.9297 549.2519,64.3828 Q549.5566,63.8359 550.08,63.5469 Q550.6112,63.25 551.205,63.25 Q551.5644,63.25 551.8769,63.375 Q552.1894,63.5 552.455,63.75 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="19" x="561.705" y="67.9551">Project</text><line style="stroke:#A80036;stroke-width:0.75;" x1="450.58" x2="675.58" y1="73.5" y2="73.5"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="22" x="453.08" y="81.2095">code : int</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="50.5" x="453.08" y="88.1274">startDate : LocalDate</text><line style="stroke:#A80036;stroke-width:0.75;" x1="450.58" x2="675.58" y1="91.3359" y2="91.3359"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="220" x="453.08" y="99.0454">createTeamMember(dto : AssociateResourceDTO, account : Account, role : ResourceRole)</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="128" x="453.08" y="105.9634">getAllocation(email : String, date : LocalDate) : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="202.5" x="453.08" y="112.8813">meetsConditionsForResourceCreation(startDate : LocalDate, email : String) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="64.5" x="453.08" y="119.7993">isProjectClosed() : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="147.5" x="453.08" y="126.7173">isOwnProjectInDate(email : String, date : LocalDate) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="90.5" x="453.08" y="133.6353">isOwnProject(email : String) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="113" x="453.08" y="140.5532">hasActivePOInDate(date : LocalDate) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="89" x="453.08" y="147.4712">isOwnProject(email : String) :boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="154" x="453.08" y="154.3892">isDateNotBeforeTheProjectStartDate(date : LocalDate) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="177.5" x="453.08" y="161.3071">hasActiveResourceWithRoleInDate(date : LocalDate, role : ResourceRole)</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="145.5" x="453.08" y="168.2251">addResourceToProjectTeam(resource : Resource) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="145.5" x="453.08" y="175.1431">isResourceToBeAddedValid(resource : Resource) : boolean</text><!--MD5=[1f97ed6d0871a418d2bf222ec08b8079]
+class rsrc--><rect codeLine="79" fill="#FEFECE" filter="url(#f2fwt3etxfjeb)" height="107.0156" id="rsrc" style="stroke:#A80036;stroke-width:0.75;" width="171" x="589.58" y="208.5"/><ellipse cx="659.455" cy="216.5" fill="#ADD1B2" rx="5.5" ry="5.5" style="stroke:#A80036;stroke-width:0.5;"/><path d="M660.455,214.75 Q660.5566,214.5 660.6738,214.375 Q660.7909,214.25 660.9238,214.25 Q661.1581,214.25 661.3066,214.3906 Q661.455,214.5313 661.455,214.8594 L661.455,215.6406 Q661.455,215.9688 661.3144,216.1094 Q661.1738,216.25 660.955,216.25 Q660.7597,216.25 660.6347,216.1641 Q660.5097,216.0781 660.455,215.8516 Q660.4316,215.6953 660.3456,215.6094 Q660.1894,215.4453 659.9081,215.3516 Q659.6269,215.25 659.3456,215.25 Q658.9941,215.25 658.6972,215.3906 Q658.4081,215.5313 658.1816,215.8438 Q657.955,216.1563 657.955,216.5859 L657.955,217.0469 Q657.955,217.5625 658.3769,217.9063 Q658.7988,218.25 659.5488,218.25 Q659.9941,218.25 660.3066,218.1484 Q660.4863,218.0938 660.6894,217.9141 Q660.8222,217.8125 660.8925,217.7813 Q660.9628,217.75 661.0488,217.75 Q661.2128,217.75 661.33,217.8828 Q661.455,218.0078 661.455,218.1875 Q661.455,218.3594 661.2831,218.5625 Q661.0331,218.8594 660.6347,219.0234 Q660.1113,219.25 659.4706,219.25 Q658.7206,219.25 658.1191,218.9531 Q657.6347,218.7188 657.2909,218.2109 Q656.955,217.7031 656.955,217.1016 L656.955,216.5547 Q656.955,215.9297 657.2519,215.3828 Q657.5566,214.8359 658.08,214.5469 Q658.6113,214.25 659.205,214.25 Q659.5644,214.25 659.8769,214.375 Q660.1894,214.5 660.455,214.75 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="6" lengthAdjust="spacing" textLength="27" x="669.705" y="218.9551">Resource</text><line style="stroke:#A80036;stroke-width:0.75;" x1="590.08" x2="760.08" y1="224.5" y2="224.5"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="50.5" x="592.58" y="232.2095">startDate : LocalDate</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="77.5" x="592.58" y="239.1274">percentageOfAllocation : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="50.5" x="592.58" y="246.0454">costPerHour : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="48.5" x="592.58" y="252.9634">endDate : LocalDate</text><line style="stroke:#A80036;stroke-width:0.75;" x1="590.08" x2="760.08" y1="256.1719" y2="256.1719"/><ellipse cx="595.08" cy="261.6719" fill="#84BE84" rx="1.5" ry="1.5" style="stroke:#038048;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="158" x="599.58" y="263.8813">Resource(startDate : LocalDate, percentageOfAllocation : double,</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="127" x="599.58" y="270.7993">costPerHour : double, associatedAccount : Account,</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="101" x="599.58" y="277.7173">associatedResourceRole : ResourceRole)</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="79" x="599.58" y="284.6353">hasEmail(email : String) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="103" x="599.58" y="291.5532">isActiveInDate(date : LocalDate)) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="55.5" x="599.58" y="298.4712">getAllocation() : double</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="108.5" x="599.58" y="305.3892">isRoleEqualTo(role : ResourceRole) : boolean</text><text fill="#000000" font-family="sans-serif" font-size="5.5" lengthAdjust="spacing" textLength="66.5" x="599.58" y="312.3071">equals(o : Object) : boolean</text><!--MD5=[65605f4b9fcf838a026dcfadc852f609]
+link ui to ctrl--><path codeLine="94" d="M185.705,27.645 C178.27,45.395 164.06,79.335 155.39,100.045 " fill="none" id="ui-to-ctrl" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="154.41,102.375,157.9995,99.0038,155.3801,100.0709,154.313,97.4515,154.41,102.375" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="180.673" y="38.1464">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="151.8546" y="97.1015">1</text><!--MD5=[afd3ac7b37f605d072b12d234b4812f4]
+link itc to pstr--><path codeLine="95" d="M764.545,145.83 C740.28,156.73 711.6,168.935 685.08,178.5 C639.825,194.82 627.095,194.475 581.08,208.5 C553.14,217.015 522.665,226.69 495.595,235.425 " fill="none" id="itc-to-pstr" style="stroke:#A80036;stroke-width:0.5;"/><polygon fill="#A80036" points="493.155,236.215,498.0525,236.7292,495.5331,235.4437,496.8185,232.9243,493.155,236.215" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="757.0282" y="146.1924">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="48" x="452.6187" y="230.7743">1 allProjectStore</text><!--MD5=[f60f046717041743104a677a9ac88d3f]
+link itc to accstr--><path codeLine="96" d="M825.19,146.15 C829.785,211.515 831.97,377.28 748.58,473.5 C679.225,553.525 550.92,576.975 475.585,583.785 " fill="none" id="itc-to-accstr" style="stroke:#A80036;stroke-width:0.5;"/><polygon fill="#A80036" points="472.925,584.02,477.5847,585.6128,475.4151,583.7982,477.2298,581.6286,472.925,584.02" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="821.7841" y="156.4364">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="51.5" x="476.7129" y="582.4571">1 allAccountStore</text><!--MD5=[d962763ab6214cf4ed9bb334bc29cad7]
+link itc to rstore--><path codeLine="97" d="M821.515,146.14 C819.26,185.075 812.26,257.76 790.58,315.5 C761.485,392.97 756.345,421.37 692.08,473.5 C673.845,488.29 650.705,498.795 628.85,506.155 " fill="none" id="itc-to-rstore" style="stroke:#A80036;stroke-width:0.5;"/><polygon fill="#A80036" points="626.47,506.945,631.372,507.4149,628.841,506.1523,630.1036,503.6213,626.47,506.945" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="817.7071" y="156.4253">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="59" x="573.0786" y="501.6859">1 resourceRoleStore</text><!--MD5=[479145bea483fe36c6486ad5b2793e6f]
+link role to rstore--><path codeLine="98" d="M559.08,435.275 C559.08,454.84 559.08,481.655 559.08,500.265 " fill="none" id="role-to-rstore" style="stroke:#A80036;stroke-width:0.5;"/><polygon fill="#FFFFFF" points="559.08,506.965,561.08,503.965,559.08,500.965,557.08,503.965,559.08,506.965" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="53.5" x="501.8183" y="446.2099">resourceRoles 0..*</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="555.1972" y="501.4675">1</text><!--MD5=[365d743a42d0c4744f7b8799d63b5389]
+link proj to pstr--><path codeLine="99" d="M501.375,178.525 C482.58,196.81 462.725,216.125 446.905,231.515 " fill="none" id="proj-to-pstr" style="stroke:#A80036;stroke-width:0.5;"/><polygon fill="#FFFFFF" points="442.13,236.16,445.6746,235.4997,446.4283,231.9738,442.8837,232.6341,442.13,236.16" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="35" x="461.796" y="189.0123">projects 0..*</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="441.8953" y="230.8981">1</text><!--MD5=[ca359b33592056fd9f58276c3ce75088]
+reverse link proj to rsrc--><path codeLine="100" d="M614.12,183.67 C620.615,191.965 627.205,200.375 633.525,208.45 " fill="none" id="proj-backto-rsrc" style="stroke:#A80036;stroke-width:0.5;"/><polygon fill="#FFFFFF" points="610.09,178.525,610.3635,182.1202,613.7873,183.2504,613.5138,179.6553,610.09,178.525" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="609.2066" y="189.0123">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="47.5" x="579.3629" y="203.1567">projectTeam 0..*</text><!--MD5=[7cf133d406f02cd8f1d5f9049e2369fd]
+link rsrc to role--><path codeLine="101" d="M633.035,315.595 C615.33,337.955 595.475,363.03 580.8,381.565 " fill="none" id="rsrc-to-role" style="stroke:#A80036;stroke-width:0.5;"/><polygon fill="#A80036" points="579.215,383.565,583.5726,381.2713,580.7636,381.6024,580.4325,378.7935,579.215,383.565" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="10" x="619.8742" y="326.2176">0..*</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="77.5" x="587.1277" y="378.2903">associatedResourceRole 1</text><!--MD5=[8605fc4ecbb6d477c7689f36eb651dd1]
+link pstr to acc--><path codeLine="102" d="M416.08,287.855 C416.08,338.92 416.08,453.33 416.08,500.765 " fill="none" id="pstr-to-acc" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="416.08,503.385,418.08,498.885,416.08,500.885,414.08,498.885,416.08,503.385" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="412.3448" y="298.6146">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="412.2683" y="498.0455">1</text><!--MD5=[a5424b0fa2897174ea87f74307070040]
+link pstr to role--><path codeLine="103" d="M440.825,287.85 C466.43,314.085 506.28,354.91 532.53,381.8 " fill="none" id="pstr-to-role" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="534.395,383.715,532.6832,379.0977,532.6488,381.9259,529.8206,381.8915,534.395,383.715" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="440.415" y="298.6089">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="527.1776" y="378.2743">1</text><!--MD5=[bd6044320e6fd62441eebbdf3110b923]
+link proj to acc--><path codeLine="104" d="M676.2,141.735 C712.225,155.055 748.23,175.91 769.58,208.5 C795.635,248.28 788.285,271.78 769.58,315.5 C729.575,408.995 693.22,424.555 604.08,473.5 C555.325,500.27 536.375,489.38 482.58,503.5 C479.3,504.36 475.935,505.255 472.54,506.17 " fill="none" id="proj-to-acc" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="469.94,506.875,474.8052,507.6364,472.354,506.2251,473.7653,503.7739,469.94,506.875" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="679.9692" y="141.1354">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="473.8501" y="504.2546">1</text><!--MD5=[13cbc6f38254df2254ff017e93596f08]
+link proj to role--><path codeLine="105" d="M562.25,178.515 C561.4,240.56 560.1,334.71 559.46,381.13 " fill="none" id="proj-to-role" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="559.425,383.71,561.4891,379.239,559.4607,381.2103,557.4895,379.1819,559.425,383.71" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="558.6008" y="189.0017">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="555.7274" y="378.2686">1</text><!--MD5=[59392e3c1452782a1987dc74484ecd4f]
+link ui to dto--><path codeLine="107" d="M199.525,27.655 C205.135,35.615 211.965,46.645 215.58,57.5 C224.345,83.825 238.45,248.515 245.97,342.84 " fill="none" id="ui-to-dto" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="246.18,345.47,247.8137,340.8245,245.9801,342.978,243.8265,341.1444,246.18,345.47" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="197.6888" y="38.1587">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="242.2748" y="340.0844">1</text><!--MD5=[32555a79456f9e6809fe1582e12aeb5d]
+link ctrl to dto--><path codeLine="108" d="M148.73,133.58 C150.65,167.425 158,251.48 185.08,315.5 C189.04,324.865 194.05,334.22 199.54,343.195 " fill="none" id="ctrl-to-dto" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="200.945,345.47,200.2826,340.5903,199.6316,343.3428,196.8791,342.6918,200.945,345.47" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="145.0134" y="144.2077">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="194.2833" y="340.0844">1</text><!--MD5=[756360581a876c4543cd230cfb06b86f]
+link ctrl to accstr--><path codeLine="109" d="M130.465,133.65 C112.835,150.05 86.78,177.985 75.58,208.5 C34.985,319.075 3,378.095 72.08,473.5 C105.865,520.16 267.6,557.93 356.76,575.62 " fill="none" id="ctrl-to-accstr" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="359.245,576.115,355.2198,573.2781,356.7927,575.6288,354.442,577.2017,359.245,576.115" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="123.2735" y="144.1679">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="351.8088" y="573.8711">1</text><!--MD5=[20c4ba1e5086aab974cf5b6d62984da9]
+link ctrl to acc--><path codeLine="110" d="M139.885,133.585 C111.955,187.27 26.935,371.245 114.08,473.5 C145,509.785 281.105,519.03 359.64,521.315 " fill="none" id="ctrl-to-acc" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="362.175,521.385,357.734,519.2573,359.676,521.3136,357.6197,523.2557,362.175,521.385" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="134.4271" y="144.2137">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="354.7618" y="519.7849">1</text><!--MD5=[d6318eee9e7d1a336a36412e20ff17d1]
+link ctrl to pstr--><path codeLine="111" d="M176.25,133.535 C221.32,157.58 310.235,205.025 366.23,234.9 " fill="none" id="ctrl-to-pstr" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="368.535,236.135,365.5075,232.2511,366.3297,234.9574,363.6234,235.7796,368.535,236.135" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="177.9514" y="144.1539">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="358.411" y="230.8697">1</text><!--MD5=[c56078ea1a51d0a1b833615f5875f6a5]
+link ctrl to rstore--><path codeLine="112" d="M142.935,133.555 C125.28,188.315 73.315,378.655 168.58,473.5 C217.625,522.33 410.265,492.395 478.58,503.5 C483.92,504.37 489.43,505.38 494.95,506.48 " fill="none" id="ctrl-to-rstore" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="497.49,506.99,493.4728,504.1418,495.0391,506.497,492.6839,508.0633,497.49,506.99" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="141.2193" y="144.1778">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="483.4993" y="502.5276">1</text><!--MD5=[c342f401273b1a60b51737095c825e1d]
+link ctrl to role--><path codeLine="113" d="M154.62,133.505 C171.3,170.045 218.945,264.375 287.08,315.5 C358.905,369.39 464.035,393.71 520.24,403.405 " fill="none" id="ctrl-to-role" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="522.715,403.83,518.6165,401.1001,520.2508,403.4086,517.9423,405.0428,522.715,403.83" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="152.063" y="144.118">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="515.2844" y="401.5805">1</text><!--MD5=[cb8243a33269652d6a745e14bedbf2b4]
+link proj to dto--><path codeLine="114" d="M449.97,128.285 C393.1,139.155 327.795,161.755 287.08,208.5 C255.305,244.975 247.21,299.705 246.555,342.775 " fill="none" id="proj-to-dto" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="246.525,345.335,248.5763,340.8581,246.5536,342.8352,244.5766,340.8124,246.525,345.335" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="442.7012" y="127.2441">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="246.3628" y="340.1535">1</text><!--MD5=[354614631d3bd83f83571a23513a7db4]
+link acc to accstr--><path codeLine="115" d="M416.08,541.54 C416.08,548.825 416.08,557.24 416.08,564.81 " fill="none" id="acc-to-accstr" style="stroke:#A80036;stroke-width:0.5;"/><polygon fill="#FFFFFF" points="416.08,571.465,418.08,568.465,416.08,565.465,414.08,568.465,416.08,571.465" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="61" x="350.0284" y="552.1317">arrayListAccount 0..*</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="412.1972" y="565.9675">1</text><!--MD5=[395ff746ef0e9ad62e55043281a49b05]
+link pstr to dto--><path codeLine="116" d="M387.525,287.85 C370.075,303.345 346.895,323.93 324.595,343.725 " fill="none" id="pstr-to-dto" style="stroke:#A80036;stroke-width:0.5;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="322.715,345.395,327.4067,343.8991,324.5831,343.7336,324.7486,340.9101,322.715,345.395" style="stroke:#A80036;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="379.9528" y="298.6089">1</text><text fill="#000000" font-family="sans-serif" font-size="6.5" lengthAdjust="spacing" textLength="3.5" x="323.4736" y="340.0048">1</text><!--MD5=[fce3345e84bf9d28d3f6c6457c52cffd]
+@startuml
+'https://plantuml.com/class-diagram
+class "CreateResourceController" as ctrl {
+definePO(dto : CreateResourceDTO) : boolean
+}
+interface "CreateResourceUI" as ui
+
+
+class itc as "ITCompany" << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getProjectStore() : ProjectStore
+getAccountStore() : AccountStore
+getResourceRoleStore() : ResourceRoleStore
+}
+class "AssociateResourceDTO" as dto{
++AssociateResourceDTO(projectCode : int, email : String,
+startDate : LocalDate, percentageOfAllocation : double,
+percentageOfAllocation : double, role : String)
+projectCode : int
+email : String
+startDate : LocalDate
+percentageOfAllocation : double
+costPerHour : double
+role : String
+
+getProjectCode() : int
+getEmail() : String
+getStartDate(): LocalDate
+getPercentageOfAllocation() : double
+getCostPerHour() : double
+getRole() : String
+
+}
+
+class "AccountStore" as accstr{
+findAccountByEmail(email : String) : Account
+}
+
+class "Account" as acc{
+email : String
+
+isAccountEqualTo(email : String) : boolean
+}
+class "ResourceRoleStore" as rstore{
+
+findResourceRoleByRole(role : String) : ResourceRole
+
+}
+class "ResourceRole" as role{
+role : String
+description : String
+isRoleDeveloper() : boolean
+equals(o : Object) : boolean
+}
+class "ProjectStore" as pstr{
+findProjectByCode(code : int) : Project
+allocationIsValid(email : String, allocation : double, date : LocalDate) : boolean
+getAllocation(email : String, date : LocalDate) : double
+createResource(dto : AssociateResourceDTO, account : Account, role : ResourceRole) : boolean
+
+}
+class "Project" as proj{
+ code : int
+ startDate : LocalDate
+
+createTeamMember(dto : AssociateResourceDTO, account : Account, role : ResourceRole)
+getAllocation(email : String, date : LocalDate) : double
+meetsConditionsForResourceCreation(startDate : LocalDate, email : String) : boolean
+isProjectClosed() : boolean
+isOwnProjectInDate(email : String, date : LocalDate) : boolean
+isUserActiveInProject(email : String) : boolean
+hasActivePOInDate(date : LocalDate) : boolean
+isUserActiveInProject(email : String) :boolean
+isDateNotBeforeTheProjectStartDate(date : LocalDate) : boolean
+hasActiveResourceWithRoleInDate(date : LocalDate, role : ResourceRole)
+addResourceToProjectTeam(resource : Resource) : boolean
+isResourceToBeAddedValid(resource : Resource) : boolean
+
+}
+class "Resource" as rsrc{
+ startDate : LocalDate
+ percentageOfAllocation : double
+ costPerHour : double
+endDate : LocalDate
++ Resource(startDate : LocalDate, percentageOfAllocation : double,
+costPerHour : double, associatedAccount : Account, \nassociatedResourceRole : ResourceRole)
+hasEmail(email : String) : boolean
+isActiveInDate(date : LocalDate)) : boolean
+getAllocation() : double
+isRoleEqualTo(role : ResourceRole) : boolean
+equals(o : Object) : boolean
+}
+'class associations
+
+ui "1"-[dashed]->"1" ctrl
+itc "1"- ->"1 allProjectStore" pstr
+itc "1"- ->"1 allAccountStore " accstr
+itc "1"- ->"1 resourceRoleStore " rstore
+role "resourceRoles 0..*"- -o "1" rstore
+proj "projects 0..*"- -o "1" pstr
+proj "1" o- - "projectTeam 0..* " rsrc
+rsrc "0..*"- ->"associatedResourceRole 1" role
+pstr "1"-[dashed]- ->"1" acc
+pstr "1"-[dashed]->"1" role
+proj "1"-[dashed]- ->"1" acc
+proj "1"-[dashed]- ->"1" role
+
+ui "1"-[dashed]->"1" dto
+ctrl "1"-[dashed]->"1" dto
+ctrl "1"-[dashed]->"1" accstr
+ctrl "1"-[dashed]->"1" acc
+ctrl "1"-[dashed]->"1" pstr
+ctrl "1"- -[dashed]->"1" rstore
+ctrl "1"-[dashed]->"1" role
+proj "1"- -[dashed]>"1" dto
+acc "arrayListAccount 0..*" - -o "1" accstr
+pstr "1"-[dashed]->"1" dto
+
+
+
+
+
+@enduml
+
+@startuml
+class "CreateResourceController" as ctrl {
+definePO(dto : CreateResourceDTO) : boolean
+}
+interface "CreateResourceUI" as ui
+
+
+class itc as "ITCompany" << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getProjectStore() : ProjectStore
+getAccountStore() : AccountStore
+getResourceRoleStore() : ResourceRoleStore
+}
+class "AssociateResourceDTO" as dto{
++AssociateResourceDTO(projectCode : int, email : String,
+startDate : LocalDate, percentageOfAllocation : double,
+percentageOfAllocation : double, role : String)
+projectCode : int
+email : String
+startDate : LocalDate
+percentageOfAllocation : double
+costPerHour : double
+role : String
+
+getProjectCode() : int
+getEmail() : String
+getStartDate(): LocalDate
+getPercentageOfAllocation() : double
+getCostPerHour() : double
+getRole() : String
+
+}
+
+class "AccountStore" as accstr{
+findAccountByEmail(email : String) : Account
+}
+
+class "Account" as acc{
+email : String
+
+isAccountEqualTo(email : String) : boolean
+}
+class "ResourceRoleStore" as rstore{
+
+findResourceRoleByRole(role : String) : ResourceRole
+
+}
+class "ResourceRole" as role{
+role : String
+description : String
+isRoleDeveloper() : boolean
+equals(o : Object) : boolean
+}
+class "ProjectStore" as pstr{
+findProjectByCode(code : int) : Project
+allocationIsValid(email : String, allocation : double, date : LocalDate) : boolean
+getAllocation(email : String, date : LocalDate) : double
+createResource(dto : AssociateResourceDTO, account : Account, role : ResourceRole) : boolean
+
+}
+class "Project" as proj{
+ code : int
+ startDate : LocalDate
+
+createTeamMember(dto : AssociateResourceDTO, account : Account, role : ResourceRole)
+getAllocation(email : String, date : LocalDate) : double
+meetsConditionsForResourceCreation(startDate : LocalDate, email : String) : boolean
+isProjectClosed() : boolean
+isOwnProjectInDate(email : String, date : LocalDate) : boolean
+isUserActiveInProject(email : String) : boolean
+hasActivePOInDate(date : LocalDate) : boolean
+isUserActiveInProject(email : String) :boolean
+isDateNotBeforeTheProjectStartDate(date : LocalDate) : boolean
+hasActiveResourceWithRoleInDate(date : LocalDate, role : ResourceRole)
+addResourceToProjectTeam(resource : Resource) : boolean
+isResourceToBeAddedValid(resource : Resource) : boolean
+
+}
+class "Resource" as rsrc{
+ startDate : LocalDate
+ percentageOfAllocation : double
+ costPerHour : double
+endDate : LocalDate
++ Resource(startDate : LocalDate, percentageOfAllocation : double,
+costPerHour : double, associatedAccount : Account, \nassociatedResourceRole : ResourceRole)
+hasEmail(email : String) : boolean
+isActiveInDate(date : LocalDate)) : boolean
+getAllocation() : double
+isRoleEqualTo(role : ResourceRole) : boolean
+equals(o : Object) : boolean
+}
+
+ui "1"-[dashed]->"1" ctrl
+itc "1"- ->"1 allProjectStore" pstr
+itc "1"- ->"1 allAccountStore " accstr
+itc "1"- ->"1 resourceRoleStore " rstore
+role "resourceRoles 0..*"- -o "1" rstore
+proj "projects 0..*"- -o "1" pstr
+proj "1" o- - "projectTeam 0..* " rsrc
+rsrc "0..*"- ->"associatedResourceRole 1" role
+pstr "1"-[dashed]- ->"1" acc
+pstr "1"-[dashed]->"1" role
+proj "1"-[dashed]- ->"1" acc
+proj "1"-[dashed]- ->"1" role
+
+ui "1"-[dashed]->"1" dto
+ctrl "1"-[dashed]->"1" dto
+ctrl "1"-[dashed]->"1" accstr
+ctrl "1"-[dashed]->"1" acc
+ctrl "1"-[dashed]->"1" pstr
+ctrl "1"- -[dashed]->"1" rstore
+ctrl "1"-[dashed]->"1" role
+proj "1"- -[dashed]>"1" dto
+acc "arrayListAccount 0..*" - -o "1" accstr
+pstr "1"-[dashed]->"1" dto
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

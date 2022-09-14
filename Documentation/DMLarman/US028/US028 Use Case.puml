@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor Director
+
+usecase (US028 - As Director, I want to get the a list of all human resources in a project.)
+
+:Director: -right- (US028 - As Director, I want to get the a list of all human resources in a project.)
+@enduml

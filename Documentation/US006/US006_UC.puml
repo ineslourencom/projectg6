@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+actor Adminisrator
+
+usecase (US006 - As Adminisrator , I want to update profiles assigned to a user account.)
+
+:Adminisrator: --(US006 - As Adminisrator , I want to update profiles assigned to a user account.)
+@enduml

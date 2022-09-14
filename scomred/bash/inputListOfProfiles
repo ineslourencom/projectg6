@@ -1,0 +1,53 @@
+#!/bin/bash
+#Este ficheiro servirá para obter as listagens necessárias para que o utilizador selecione uma opção
+#teremos de ter um ficheiro destes para cada listagem, no caso do resource: um para
+#project store e outro para account store
+
+
+#Vai buscar a pasta onde estão guardados os projectos
+PROFILES_ADDRESS="/var/www/data/profiles"
+
+#Variável para guardar a lista de projectos
+TEMP_PROFILES="/tmp/profiles.tmp"
+
+#Função erro
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $TEMP_PROFILES
+exit
+}
+
+### Garante método GET
+if [ "$REQUEST_METHOD" != "GET" ]; then error_response "Invalid method. The only supported method is GET."; fi
+
+### Garante que não tem body
+###if [ -n "$CONTENT_LENGTH" ]; then error_response "Too much body!"; fi
+
+### Verifica se a string está vazia
+###if [ -z "$QUERY_STRING" ]; then error_response "No query-string"; fi
+
+### Lista de contas dentro da pasta projects
+
+for FILE in /var/www/data/profiles/*; do
+  NAME=$(grep -o '<profileType>.*</profileType>' $FILE | sed 's/\(<profileType>\|<\/profileType>\)//g')
+
+  JSON_STRING="$( jq -n \
+                    --arg name "$NAME" \
+                    '{profilename: $name}' )"
+  echo "$JSON_STRING," >> $TEMP_PROFILES
+done
+
+TEMP_PROFILESFINAL=$( cat $TEMP_PROFILES)
+TEMP_PROFILESFINALTWO=${TEMP_PROFILESFINAL%,}
+echo $TEMP_PROFILESFINALTWO > $TEMP_PROFILES
+
+var="[$(<$TEMP_PROFILES)]"
+echo $var > $TEMP_PROFILES
+
+echo "Content-type: JSON"
+echo ""
+cat $TEMP_PROFILES
+rm -f $TEMP_PROFILES

@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor SMTeamMember
+
+usecase (US032 - As SM/Team Member, I want to create task outside the scope of a user story)
+
+:SMTeamMember: -- (US032 - As SM/Team Member, I want to create task outside the scope of a user story)
+@enduml

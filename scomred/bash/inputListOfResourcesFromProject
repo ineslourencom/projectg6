@@ -1,0 +1,59 @@
+#!/bin/bash
+
+TEMP_RESOURCES="/tmp/resources.tmp"
+
+#Função erro
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $TEMP_ACCOUNTS
+exit
+}
+
+### Garante método GET
+if [ "$REQUEST_METHOD" != "GET" ]; then error_response "Invalid method. The only supported method is GET."; fi
+
+### Verifica se a string está vazia
+if [ -z "$QUERY_STRING" ]; then error_response "No query-string"; fi
+
+### Guardar PROJECT
+PROJECT=${QUERY_STRING#*project=};
+
+### Verifica se PROJECT == QUERY (para estar correto é suposto estas variáveis serem diferentes)
+if [ "$PROJECT" == "$QUERY_STRING" ]; then error_response "Bad query-string: $QUERY_STRING"; fi
+### Verifica se project está vazio
+if [ -z "$PROJECT" ]; then error_response "Empty input"; fi
+
+### Lista de contas dentro da pasta projects
+
+for FILE in /var/www/data/resources/*; do
+  PROJECTTEST=$(grep -o '<project>.*</project>' $FILE | sed 's/\(<project>\|<\/project>\)//g')
+  if [ "$PROJECT" == "$PROJECTTEST" ]; then
+  ACCOUNT=$(grep -o '<account>.*</account>' $FILE | sed 's/\(<account>\|<\/account>\)//g')
+  ROLE=$(grep -o '<role>.*</role>' $FILE | sed 's/\(<role>\|<\/role>\)//g')
+  PERCALLOC=$(grep -o '<percalloc>.*</percalloc>' $FILE | sed 's/\(<percalloc>\|<\/percalloc>\)//g')
+  COSTHOUR=$(grep -o '<costhour>.*</costhour>' $FILE | sed 's/\(<costhour>\|<\/costhour>\)//g')
+    JSON_STRING="$( jq -n \
+                        --arg accountid "$ACCOUNT" \
+                        --arg projectid "$PROJECT" \
+                        --arg role "$ROLE" \
+                        --arg percalloc "$PERCALLOC" \
+                        --arg costhour "$COSTHOUR" \
+                                '{project: $projectid, accountid: $accountid, role: $role, percalloc: $percalloc, costhour: $costhour}' )"
+    echo "$JSON_STRING," >> $TEMP_RESOURCES
+  fi
+done
+
+TEMP_PROJECTSFINAL=$( cat $TEMP_RESOURCES)
+TEMP_PROJECTSFINALTWO=${TEMP_PROJECTSFINAL%,}
+echo $TEMP_PROJECTSFINALTWO > $TEMP_RESOURCES
+
+var="[$(<$TEMP_RESOURCES)]"
+echo $var > $TEMP_RESOURCES
+
+echo "Content-type: JSON"
+echo ""
+cat $TEMP_RESOURCES
+rm -f $TEMP_RESOURCES

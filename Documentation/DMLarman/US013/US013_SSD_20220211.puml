@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Administrator -> System: Activates the Profile creation
+System --> Administrator: System response with fields
+
+Administrator -> System: Inserts input data (profileType, description)
+Administrator <-- System: System returns the operation (in)success
+
+
+@enduml

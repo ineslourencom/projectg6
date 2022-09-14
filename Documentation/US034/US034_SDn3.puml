@@ -1,0 +1,72 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant " Routes" as routes
+
+participant "Controllers" as ctl
+
+participant "ApplicationServices" as appService
+participant "Repositories" as repos
+participant "DataModel" as datamodel
+participant "JPARepositories" as jparepos
+participant "Domain" as domain
+
+
+
+[o--> routes : PATCH https://localhost:8080/Project/{id}/ScrumBoard/UserStory/{id}
+activate routes
+routes -> ctl : updateStatusOfUsOnScrumBoard(int projectID, double usID, ChangeUsCategoryDTO categoryDTO)
+activate ctl
+ctl -> appService : updateStatusOfUsOnScrumBoard(int projectID, double usID, ChangeUsCategoryDTO categoryDTO)
+activate appService
+appService -> repos : findRunningSprintByProjectID
+activate repos
+repos -> jparepos :findByProjectID
+activate jparepos
+jparepos --> repos : listSprintJPA
+deactivate jparepos
+repos -> datamodel : toDomain(sprintJPA)
+activate datamodel
+
+
+datamodel -> domain : createSprint
+activate domain
+domain --> datamodel : sprint
+deactivate domain
+datamodel -> domain : createListSprintBacklogItem
+activate domain
+deactivate domain
+
+
+datamodel -> jparepos : get SprintbacklogItemJPAList
+activate jparepos
+deactivate jparepos
+
+
+
+datamodel --> repos : sprint
+deactivate datamodel
+repos --> appService : runningSprint
+deactivate
+
+appService -> domain : doesUsExistOnRunningSprintAndUpdateNewStatus
+activate domain
+domain --> appService : sprint
+deactivate domain
+
+appService -> repos : saveSprint
+activate repos
+repos --> appService : sprint
+deactivate repos
+appService --> ctl : true
+deactivate
+ctl --> routes : new ResponseEntity(HTTPStatus.OK)
+deactivate ctl
+deactivate routes
+
+
+
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+autonumber
+participant UserStoryDTOMapper
+participant ": UserStory"
+[-> UserStoryDTOMapper : createUserStoryDTO(List<UserStory> list)
+create participant "usListDTO: List<usDTO>"
+UserStoryDTOMapper -> "usListDTO: List<usDTO>" : create()
+
+loop for each US in list
+	UserStoryDTOMapper -> ": UserStory" : getNumber()
+	": UserStory" --> UserStoryDTOMapper : number
+	UserStoryDTOMapper -> ": UserStory" : getStatement()
+	": UserStory" --> UserStoryDTOMapper : statement
+	create participant "usDTO: UserStoryDTO"
+	UserStoryDTOMapper -> "usDTO: UserStoryDTO" : usDTO = createUSDTO(number, statement)
+	"usDTO: UserStoryDTO" --> UserStoryDTOMapper : usDTO
+	UserStoryDTOMapper -> "usListDTO: List<usDTO>" : add(usDTO)
+end
+
+@enduml

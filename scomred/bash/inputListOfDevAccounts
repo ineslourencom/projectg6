@@ -1,0 +1,64 @@
+#!/bin/bash
+
+TEMP_ACCOUNTS="/tmp/accountsthree.tmp"
+
+#Função erro
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $TEMP_ACCOUNTS
+exit
+}
+
+### Garante método GET
+if [ "$REQUEST_METHOD" != "GET" ]; then error_response "Invalid method. The only supported method is GET."; fi
+
+### Verifica se a string está vazia
+if [ -z "$QUERY_STRING" ]; then error_response "No query-string"; fi
+
+### Guardar PROJECT
+PROJECT=${QUERY_STRING#*project=};
+
+### Verifica se PROJECT == QUERY (para estar correto é suposto estas variáveis serem diferentes)
+if [ "$PROJECT" == "$QUERY_STRING" ]; then error_response "Bad query-string: $QUERY_STRING"; fi
+### Verifica se project está vazio
+if [ -z "$PROJECT" ]; then error_response "Empty input"; fi
+
+### Lista de contas dentro da pasta projects
+
+for FILE in /var/www/data/resources/*; do
+  ROLE=$(grep -o '<role>.*</role>' $FILE | sed 's/\(<role>\|<\/role>\)//g')
+  PROJECTTEST=$(grep -o '<project>.*</project>' $FILE | sed 's/\(<project>\|<\/project>\)//g')
+
+  if [ "$ROLE" == "Developer" ] && [ "$PROJECT" == "$PROJECTTEST" ]; then
+          ACCOUNT=$(grep -o '<account>.*</account>' $FILE | sed 's/\(<account>\|<\/account>\)//g')
+          for FILEACCOUNT in /var/www/data/accounts/*; do
+                ACCOUNTTEST=$(echo "$FILEACCOUNT" | cut -d "/" -f 6 | cut -d "." -f 1)
+                if [ "$ACCOUNT" == "$ACCOUNTTEST" ]; then
+                  NAME=$(grep -o '<name>.*</name>' $FILEACCOUNT | sed 's/\(<name>\|<\/name>\)//g')
+                  STATUSDATA=$(grep -o '<isactive>.*</isactive>' $FILEACCOUNT | sed 's/\(<isactive>\|<\/isactive>\)//g')
+                  ID=$(echo "$FILEACCOUNT" | cut -d "/" -f 6 | cut -d "." -f 1)
+                  JSON_STRING="$( jq -n \
+                                            --arg id "$ID" \
+                                            --arg name "$NAME" \
+                                            --arg status "$STATUSDATA" \
+                                            '{username: $id, account: $name, status: $status}' )"
+                  echo "$JSON_STRING," >> $TEMP_ACCOUNTS
+                fi
+            done
+  fi
+done
+
+TEMP_PROJECTSFINAL=$( cat $TEMP_ACCOUNTS)
+TEMP_PROJECTSFINALTWO=${TEMP_PROJECTSFINAL%,}
+echo $TEMP_PROJECTSFINALTWO > $TEMP_ACCOUNTS
+
+var="[$(<$TEMP_ACCOUNTS)]"
+echo $var > $TEMP_ACCOUNTS
+
+echo "Content-type: JSON"
+echo ""
+cat $TEMP_ACCOUNTS
+rm -f $TEMP_ACCOUNTS

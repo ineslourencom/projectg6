@@ -1,0 +1,78 @@
+Hello DDD
+=====================
+1. Apresentar metricas atuais do nosso projeto
+2. Apresentar o modelo de domínio (Larman)
+3. Modelo de domínio (DDD)
+4. Valores de tipo primitivo passam a value objects.
+5. Na primeira versão os atributos são, quase todos, tipo primitivos ou classes nativas.
+6. As próprias classes têm a responsabilidade de validar os seus atributos aquando da instanciação 
+ou aquando da alteração do valor
+7. No novo dsign que pretendemos implementar, criamos classes para esses objetos
+que garantem a conformidade dos valores com as regras de negócio implícitas ou explícitas.
+8. O negócio passa a lidar com objectos que representam informação coerente e válida, 
+e as classes de negócio tornam-se mais coesas, pos perdem a responabilidade de validar os seus atributos,  
+de acordo com os princípios SOLID.
+
+
+    A model is a selectively simplified and
+    consciously structured form of knowledge. An appropriate model makes sense of information
+     and focuses it on a problem.
+        Evans, Eric
+
+9. Começámos por modelar um agregado com uma granularidade muito grande.
+10. Percebemos que isso comporta problemas.
+11. Passámos para uma granularidade mais fina.
+
+12. Uma das vantagens de uma abordagem DDD é a implemantação de boas práticas
+que facilitam a manutençao do software e promovem a possibilidade do software 
+escalar de forma sustentável, impedindo que, a longo prazo, se transforme numa grande bola de lama.
+
+13. As classes passam a relacionar-se por identificadores, que são eles mesmos value objects
+14. A diferença é que o sentido da navegação se inverte, nos casos em que a associação é de um para muitos
+15. Nos casos em que a associação é de muitos para muitos, isso implica a fabricação de novas classes de software
+16. Entendemos que, de acordo com a nova abordagem, 
+nem todos os conceitos de negócio têm de se materializar em classes de sofware.
+17. Por outro lado, fabricamos classes de software para servir o próprio software, 
+mas sempre com o foco e o propósito de cumprir os requisitos.
+18. Os repositórios e stores passam a ser organizados de forma diferente.
+19. O design deve fundamentar-se num entendimento sólido do negócio, mas pensar em termos de engenharia
+20. Acoplamento?
+21. modularização
+22. linguagem ubíqua
+23. cada agregado tem um repositório
+24. testabilidade
+25. Um value object é substituído
+26. Um agregado grande tem a vantagem de fomentar o baixo acoplamento, 
+mas baixa a coesão porque o root passa a ter muitas responsabilidades.
+27. Na formulação do nosso design, tivémos em conta os casos de uso e a sua frequência.
+28. É preciso considerar a experiência do utilizador.
+29. Agregados grndes podem resultar no empobrecimento da experiência do utilizador
+30. Concorrência
+31. 
+32. Entidades têm ciclo de vida
+33. Corrigir diagrama para incluir relação recursiva em us e task
+34. Ainda não conhecemos os serviços
+35. information hiding
+36. Com o agragado grandde, um projeto não pode ser manipulado por mais do que um utilizador ao mesmo tempo.
+37. as transacções podem falhar
+38. os agrdegados sao carregados em conjunto da base de dados. o que pode ser pesado para a memoria
+39. We would likely need to load
+    thousands and thousands of objects into memory all at
+    once, just to carry out what should be a relatively basic operation. That's just for a single team member of a single
+    tenant on a single product.
+40. Smaller aggregates not only perform and scale better, they
+    are also biased toward transactional success, meaning that
+    conflicts preventing a commit are rare. This makes a system
+    more usable. 
+41. Trying to keep multiple aggregate
+    instances consistent may be telling you that your team has
+    missed an invariant. You may end up folding the multiple
+    aggregates into one new concept with a new name in order
+    to address the newly recognized business rule.
+42. baixo acoplament: o relacionarem-se atravéds do id, as classes sprint e projeto deixam de estar tão fortemente 
+acopladas uma a outra
+43. Impacto na arquitectura:
+44. para cada agregavo existirá uma store
+45. Haverá a implementação de serviços, este tema ainda não foi explorado nas aulas
+46. Mencionar consistencia transaccional
+47. 

@@ -1,0 +1,54 @@
+#!/bin/bash
+#Este ficheiro servirá para obter as listagens necessárias para que o utilizador selecione uma opção
+#teremos de ter um ficheiro destes para cada listagem, no caso do resource: um para
+#project store e outro para account store
+
+
+#Vai buscar a pasta onde estão guardados os projectos
+PROJECTS_ADDRESS="/var/www/data/projects"
+
+#Variável para guardar a lista de projectos
+TEMP_PROJECTS="/tmp/projects.tmp"
+
+#Função erro
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $TEMP_PROJECTS
+exit
+}
+
+### Garante método GET
+if [ "$REQUEST_METHOD" != "GET" ]; then error_response "Invalid method. The only supported method is GET."; fi
+
+### Garante que não tem body
+###if [ -n "$CONTENT_LENGTH" ]; then error_response "Too much body!"; fi
+
+### Verifica se a string está vazia
+###if [ -z "$QUERY_STRING" ]; then error_response "No query-string"; fi
+
+### Lista de contas dentro da pasta projects
+
+for FILE in /var/www/data/projects/*; do
+  NAME=$(grep -o '<name>.*</name>' $FILE | sed 's/\(<name>\|<\/name>\)//g')
+  ID=$(echo "$FILE" | cut -d "/" -f 6 | cut -d "." -f 1)
+  JSON_STRING="$( jq -n \
+                    --arg name "$NAME" \
+                    --arg id "$ID" \
+                    '{id: $id, projectname: $name}' )"
+  echo "$JSON_STRING," >> $TEMP_PROJECTS
+done
+
+TEMP_PROJECTSFINAL=$( cat $TEMP_PROJECTS)
+TEMP_PROJECTSFINALTWO=${TEMP_PROJECTSFINAL%,}
+echo $TEMP_PROJECTSFINALTWO > $TEMP_PROJECTS
+
+var="[$(<$TEMP_PROJECTS)]"
+echo $var > $TEMP_PROJECTS
+
+echo "Content-type: JSON"
+echo ""
+cat $TEMP_PROJECTS
+rm -f $TEMP_PROJECTS

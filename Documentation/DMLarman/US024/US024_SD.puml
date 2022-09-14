@@ -1,0 +1,67 @@
+@startuml
+actor " Administrator" as Admin
+participant ": ListAccountUI " as UI
+participant ": ListAccountController" as Controller
+participant ": ITCompany" as IT
+participant ": AccountStore" as store
+participant ": List<AccountDTO>" as accountsDTOS
+participant ": Account" as account
+participant ":AccountDTO" as accountDTO
+
+
+
+
+autonumber
+Admin -> UI : list of accounts request
+activate UI
+UI -> Controller : consultListAccounts()
+deactivate UI
+activate Controller
+
+Controller -> IT : getAccountStore() : AccountStore
+IT --> Controller : AccountStore
+deactivate IT
+
+
+
+Controller -> store : getArraylListOfAccounts ()
+
+activate store
+store --> Controller : arrayListOfAccounts
+deactivate store
+
+
+Controller -> accountsDTOS ** : createListAccountsDTOS
+
+activate accountsDTOS
+
+loop
+Controller -> account : getEmail
+activate account
+account -> Controller :email
+deactivate account
+Controller -> account : getIsActive
+activate account
+account-> Controller : isActive
+deactivate account
+Controller -> accountDTO ** : accountDTO(email, isActive)
+activate accountDTO
+accountDTO-> Controller : accountDTO
+deactivate accountDTO
+Controller -> accountsDTOS : add(accountDTO)
+end
+
+
+accountsDTOS -> Controller : listAccountsDTOS
+deactivate accountsDTOS
+Controller -> UI : listAccountsDTOS
+deactivate Controller
+activate UI
+
+
+UI -> Admin : show list of accounts and their status
+deactivate UI
+
+
+
+@enduml

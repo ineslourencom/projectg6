@@ -1,0 +1,36 @@
+#!/bin/bash
+
+PROJECTS_STORE=/var/www/data/
+
+#FunÁ„o de erro
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+exit
+}
+
+
+#Verifica se o tipo de request È GET
+if [ "$REQUEST_METHOD" != "GET" ]; then error_response "Invalid method. The only supported method is GET."; fi
+
+
+#Verifica se a query-string n„o est· vazia
+
+if [ -z "$QUERY_STRING" ]; then error_response "No query string"; fi
+
+PROJECT_NUMBER="${QUERY_STRING#projectNo=}"
+
+PROJECT_PATH="${PROJECTS_STORE}${PROJECT_NUMBER}"
+
+PROJECT_CONTENT="$(cat $PROJECT_PATH)"
+
+
+#Enviar resposta http
+
+echo "Content-type: text/plain"
+echo ""
+echo "Hello world"
+echo $PROJECT_CONTENT
+

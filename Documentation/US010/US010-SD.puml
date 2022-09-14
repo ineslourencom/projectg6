@@ -1,0 +1,122 @@
+@startuml
+autonumber
+participant ": UpdateAccount UI" as ui
+participant "Routes" as routes
+participant ": AccountSearchController" as ctrlFind
+participant ": AccountUpdateController" as ctrlUpd
+participant ": ApplicationServiceGetAccount" as appserviceFind
+participant ": ApplicationServiceUpdateAccount" as appserviceUpd
+participant "e : Email" as email
+participant "ei : Email" as emailI
+participant ": ServiceAccountPermissions" as permissions
+participant ": ServiceAccountLinks" as links
+participant "jt : NoNumberNoSymbolString" as jobTitle
+participant "pht : Photo" as photo
+participant " <<Interface>> accountRepo : AccountRepository" as repoAccount
+participant "a : Account" as account
+participant "ai : Account" as accountI
+participant "AccountMapper" as accMapper
+
+
+[o-> ui : Open 'Update Account' (email : String)
+activate ui
+ui -> routes : GET https://localhost:8080/accounts/{email}?type=short
+activate routes
+routes -> ctrlFind : findAccountInfo(String email, String type)
+activate ctrlFind
+ctrlFind -> appserviceFind : getAccountShortInfo(email : String)
+activate appserviceFind
+appserviceFind --> email** : e = Email.of (email : String)
+group ref US010-SD_findAccountByEmail
+appserviceFind -> repoAccount : a = findAccountByEmail(e)
+activate repoAccount
+repoAccount --> account** : a = findAccountByEmail(e)
+deactivate repoAccount
+end
+
+appserviceFind -> accMapper : asDTO = toShortDTO(a)
+group ref
+activate accMapper
+accMapper -> accMapper : US010-SD_AccountMapper_toShortDTO
+end
+deactivate accMapper
+
+
+appserviceFind --> permissions : isDirector(a) : boolean
+activate permissions
+alt "isDirector = true"
+    deactivate permissions
+    appserviceFind --> links : appendDirectorLinkCollection(a, asDTO)
+    activate links
+    links -> links : links  = LinkTo (multiple link generation)
+    links -> links : asDTO.add (links)
+    links -> appserviceFind
+
+deactivate links
+
+else "isDirector = false"
+    appserviceFind --> links : appendNotDirectorLinkCollection(a, asDTO)
+    activate links
+    links -> links : link = LinkTo (projects resource link)
+    links -> links : asDTO.add (link)
+    links -> appserviceFind
+    deactivate links
+end
+
+
+appserviceFind --> ctrlFind : asDTO
+
+deactivate appserviceFind
+ctrlFind --> routes : asDTO
+routes --> ui : asDTO
+deactivate ctrlFind
+deactivate routes
+
+ui --> ui : Show user account data (email, name, jobTitle, photo) \n [only jobTitle and photo are modifiable]
+deactivate ui
+
+
+[o-> ui : Input new data (email : String, jobTitle : String, photo : String)
+activate ui
+ui -> routes : PUT https://localhost:8080/accounts/{email}?type=short <body>newDetailsDTO
+activate routes
+routes -> ctrlUpd : updateAccount(String email, AccountShortDomainDTO newDetailsDTO, String type)
+activate ctrlUpd
+
+ctrlUpd --> appserviceUpd: updateAccount (email : String, newDetailsDTO : AccountShortDomainDTO)
+activate appserviceUpd
+appserviceUpd --> emailI** : ei = Email.of (newDetailsDTO.email : String)
+appserviceUpd --> jobTitle** : jt = NoNumberNoSymbolString.of (newDetailsDTO.jobTitle : String)
+appserviceUpd --> photo** : pht = Photo.of (newDetailsDTO.photo : String)
+
+appserviceUpd --> accountI** : ai = findAccountByEmail(ei)
+appserviceUpd -> accountI : ai = setJobTitle(jt)
+appserviceUpd -> accountI : ai = setPhoto(pht)
+
+appserviceUpd -> repoAccount : ai = updateAccount (ei, jt, pht)
+activate repoAccount
+repoAccount -> repoAccount : saveUpdateAccount(ai)
+
+repoAccount --> appserviceUpd : true
+deactivate repoAccount
+
+appserviceUpd -> accMapper : asDTOi = toShortDTO(ai)
+group ref
+activate accMapper
+accMapper -> accMapper : US010-SD_AccountMapper_toShortDTO
+end
+deactivate accMapper
+
+appserviceUpd -> appserviceUpd : link = LinkTo (self rel link)
+appserviceUpd -> appserviceUpd : asDTOi.add (link)
+
+appserviceUpd --> ctrlUpd : asDTOi
+deactivate appserviceUpd
+
+ctrlUpd --> routes : asDTOi
+routes --> ui : asDTOi
+deactivate ctrlUpd
+deactivate routes
+ui --> ui : Show successfully updated user account data \n (email, name, jobTitle, photo) \n [only jobTitle and photo are modifiable]
+
+@enduml

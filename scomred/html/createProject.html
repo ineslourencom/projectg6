@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/geral.css">
+    <script src="../js/createProject.js"></script>
+   
+</head>
+
+<body onload="initData()">
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Homepage</a>
+</div>
+<div class="container">
+    <div style="text-align:left">
+        <h2>New Project</h2>
+        <p>Please fill in the project data</p>
+    </div>
+    <form class="row">
+        <form class="column">
+            <form action="/action_page.php">
+                <label for="name">Name:</label>
+                <input id="name" type=text placeholder="Enter your Name...">
+                <br>
+                <br>
+                <label for="description">Description:</label>
+                <br>
+                <textarea id="description" placeholder="Enter a Description..." rows=4 cols=40></textarea>
+                <br>
+                <br>
+                <label for="client">Client:</label>
+                <input id="client" type=text placeholder="Enter your Name...">
+                <br>
+                <br>
+                <label for="businessSector">Business Sector:</label>
+                <input id="businessSector" type=text placeholder="Enter your Business Sector..." >
+                <br>
+                <br>
+                <label for="budget">Budget:</label>
+                <input id="budget" type="number" placeholder="Enter your Budget..." onchange="validateNumber()">
+                <br>
+                <br>
+
+                <label for="typologies">Typologies</label>
+                <select id="typologies" name="typologies">
+                </select>
+
+
+                <br><br>
+                <label for="sprintDuration">Sprint Duration (weeks):</label>
+                <input id="sprintDuration" type="number" min="1" max="50" onchange ="validateSprintDuration()">
+
+                <br><br>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" onchange = "validateDate()">
+                <br><br>
+
+                <input type="button" id="submit" name="submit" value="Submit" onclick="createProject()">
+
+                <hr/>
+
+
+
+            </form></form></form>
+        </div>
+    </div>
+</div>
+</div>
+<div id ="result"></div>
+</body>
+
+</html>

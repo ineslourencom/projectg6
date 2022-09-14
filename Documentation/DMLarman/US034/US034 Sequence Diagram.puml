@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Actor
+boundary UpdateUSStatusOnScrumBorderUI
+entity UpdateUSStatusOnScrumBorderControler
+entity ITCompany
+entity ProjectStore
+entity Project
+entity ProductBacklog
+entity Sprint
+entity SprintBacklog
+Actor-> UpdateUSStatusOnScrumBorderUI: Update US Status On Scrum Border
+UpdateUSStatusOnScrumBorderUI --> Actor:asks for US, Project and Status
+Actor-> UpdateUSStatusOnScrumBorderUI:Selects Project and US and enters new status
+UpdateUSStatusOnScrumBorderUI->UpdateUSStatusOnScrumBorderControler:updateUSStatusInScrumBoard(projectCode,storyNumber, newStatus)
+UpdateUSStatusOnScrumBorderControler -> ITCompany: getProjects()
+ITCompany->ProjectStore:findProjectByCode(projectCode)
+ProjectStore-->UpdateUSStatusOnScrumBorderControler:proj
+UpdateUSStatusOnScrumBorderControler->Project:getProductBacklog()
+Project->ProductBacklog:findUSByNumber(storyNumber)
+ProductBacklog-->UpdateUSStatusOnScrumBorderControler:us
+UpdateUSStatusOnScrumBorderControler->Project:determineRunningSprint()
+Project->Sprint:updateUSStatusInScrumBoard(us, newStatus)
+Sprint->SprintBacklog:updateUSStatusInScrumBoard(us, newStatus)
+SprintBacklog->SprintBacklog:changeStatusInScrumBoard(newStatus)
+SprintBacklog-->Sprint:True
+Sprint-->UpdateUSStatusOnScrumBorderControler:True
+UpdateUSStatusOnScrumBorderControler-->UpdateUSStatusOnScrumBorderUI:Confirms Success
+UpdateUSStatusOnScrumBorderUI-->Actor:Confirms Success
+@enduml

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="515px" preserveAspectRatio="none" style="width:1192px;height:515px;background:#FFFFFF;" version="1.1" viewBox="0 0 1192 515" width="1192px" zoomAndPan="magnify"><defs><filter height="300%" id="f1r9yicslvonw9" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="273.1641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="258.5" y="138.3125"/><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="212.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="542.5" y="168.6641"/><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="778.5" y="199.0156"/><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="937" y="259.7188"/><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1112" y="320.4219"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="53" x2="53" y1="89.6094" y2="429.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="263" x2="263" y1="89.6094" y2="429.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="547" x2="547" y1="89.6094" y2="429.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="783.5" x2="783.5" y1="89.6094" y2="429.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="941.5" x2="941.5" y1="89.6094" y2="429.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1116.5" x2="1116.5" y1="89.6094" y2="429.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="5" y="86.5332">: Administrator</text><ellipse cx="53.5" cy="15" fill="#FEFECE" filter="url(#f1r9yicslvonw9)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M53.5,23 L53.5,50 M40.5,31 L66.5,31 M53.5,50 L40.5,65 M53.5,50 L66.5,65 " fill="none" filter="url(#f1r9yicslvonw9)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="5" y="443.0098">: Administrator</text><ellipse cx="53.5" cy="456.0859" fill="#FEFECE" filter="url(#f1r9yicslvonw9)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M53.5,464.0859 L53.5,491.0859 M40.5,472.0859 L66.5,472.0859 M53.5,491.0859 L40.5,506.0859 M53.5,491.0859 L66.5,506.0859 " fill="none" filter="url(#f1r9yicslvonw9)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="145" x="189" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="196" y="74.5332">: InactivateAccountUI</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="145" x="189" y="428.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="196" y="450.0098">: InactivateAccountUI</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="195" x="448" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="455" y="74.5332">: InactivateAccountController</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="195" x="448" y="428.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="455" y="450.0098">: InactivateAccountController</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="94" x="734.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="741.5" y="74.5332">: ITCompany</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="94" x="734.5" y="428.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="741.5" y="450.0098">: ITCompany</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="195" x="842.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="849.5" y="74.5332">accountStore : AccountStore</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="195" x="842.5" y="428.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="849.5" y="450.0098">accountStore : AccountStore</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="127" x="1051.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="1058.5" y="74.5332">account : Account</text><rect fill="#FEFECE" filter="url(#f1r9yicslvonw9)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="127" x="1051.5" y="428.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="1058.5" y="450.0098">account : Account</text><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="273.1641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="258.5" y="138.3125"/><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="212.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="542.5" y="168.6641"/><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="778.5" y="199.0156"/><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="937" y="259.7188"/><rect fill="#FFFFFF" filter="url(#f1r9yicslvonw9)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1112" y="320.4219"/><polygon fill="#A80036" points="246.5,134.3125,256.5,138.3125,246.5,142.3125,250.5,138.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="53.5" x2="252.5" y1="138.3125" y2="138.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="60.5" y="125.2803">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="71.5" y="117.1045">Request to inactivate account</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="75.5" y="133.4561">and indicate email</text><polygon fill="#A80036" points="530.5,164.6641,540.5,168.6641,530.5,172.6641,534.5,168.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="268.5" x2="536.5" y1="168.6641" y2="168.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="275.5" y="163.8076">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="244" x="286.5" y="163.8076">inactivateAccount(email : String) : boolean</text><polygon fill="#A80036" points="766.5,195.0156,776.5,199.0156,766.5,203.0156,770.5,199.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="552.5" x2="772.5" y1="199.0156" y2="199.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="559.5" y="194.1592">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="196" x="570.5" y="194.1592">getAccountStore() : AccountStore</text><polygon fill="#A80036" points="563.5,225.3672,553.5,229.3672,563.5,233.3672,559.5,229.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="557.5" x2="782.5" y1="229.3672" y2="229.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="569.5" y="224.5107">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="580.5" y="224.5107">accountStore</text><polygon fill="#A80036" points="925,255.7188,935,259.7188,925,263.7188,929,259.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="552.5" x2="931" y1="259.7188" y2="259.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="559.5" y="254.8623">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="262" x="570.5" y="254.8623">findAccountByEmail(email : String) : Account</text><polygon fill="#A80036" points="563.5,286.0703,553.5,290.0703,563.5,294.0703,559.5,290.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="557.5" x2="941" y1="290.0703" y2="290.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="569.5" y="285.2139">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="580.5" y="285.2139">account</text><polygon fill="#A80036" points="1100,316.4219,1110,320.4219,1100,324.4219,1104,320.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="552.5" x2="1106" y1="320.4219" y2="320.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="559.5" y="315.5654">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="167" x="570.5" y="315.5654">inactivateAccount() : boolean</text><polygon fill="#A80036" points="563.5,346.7734,553.5,350.7734,563.5,354.7734,559.5,350.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="557.5" x2="1116" y1="350.7734" y2="350.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="569.5" y="345.917">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="580.5" y="345.917">true</text><polygon fill="#A80036" points="279.5,377.125,269.5,381.125,279.5,385.125,275.5,381.125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="273.5" x2="546.5" y1="381.125" y2="381.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="285.5" y="376.2686">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="296.5" y="376.2686">true</text><polygon fill="#A80036" points="64.5,407.4766,54.5,411.4766,64.5,415.4766,60.5,411.4766" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="58.5" x2="262.5" y1="411.4766" y2="411.4766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="70.5" y="406.6201">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="88.5" y="406.6201">Inform operation success</text><!--MD5=[bf95c82db617e193a227f3ac4a160d64]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor ": Administrator" as Admin
+participant ": InactivateAccountUI" as UI
+participant ": InactivateAccountController" as Controller
+participant ": ITCompany" as IT
+participant "accountStore : AccountStore" as store
+participant "account : Account" as account
+
+autonumber
+
+Admin -> UI: Request to inactivate account \n and indicate email
+activate UI
+
+UI -> Controller : inactivateAccount(email : String) : boolean
+activate Controller
+
+Controller -> IT : getAccountStore() : AccountStore
+activate IT
+IT - -> Controller : accountStore
+deactivate IT
+Controller -> store : findAccountByEmail(email : String) : Account
+activate store
+store - -> Controller : account
+deactivate store
+
+
+Controller -> account : inactivateAccount() : boolean
+activate account
+account - -> Controller : true
+deactivate account
+
+Controller - -> UI : true
+deactivate Controller
+UI - -> Admin : Inform operation success
+deactivate UI
+@enduml
+
+@startuml
+
+actor ": Administrator" as Admin
+participant ": InactivateAccountUI" as UI
+participant ": InactivateAccountController" as Controller
+participant ": ITCompany" as IT
+participant "accountStore : AccountStore" as store
+participant "account : Account" as account
+
+autonumber
+
+Admin -> UI: Request to inactivate account \n and indicate email
+activate UI
+
+UI -> Controller : inactivateAccount(email : String) : boolean
+activate Controller
+
+Controller -> IT : getAccountStore() : AccountStore
+activate IT
+IT - -> Controller : accountStore
+deactivate IT
+Controller -> store : findAccountByEmail(email : String) : Account
+activate store
+store - -> Controller : account
+deactivate store
+
+
+Controller -> account : inactivateAccount() : boolean
+activate account
+account - -> Controller : true
+deactivate account
+
+Controller - -> UI : true
+deactivate Controller
+UI - -> Admin : Inform operation success
+deactivate UI
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

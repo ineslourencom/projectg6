@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Administrator as Admin
+participant System as System
+autonumber
+
+Admin -> System : Active Account Request
+System --> Admin: Request Account
+Admin -> System: Indicate Account
+System --> Admin: Inform Operation Success
+@enduml

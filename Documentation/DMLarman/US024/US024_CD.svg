@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="456px" preserveAspectRatio="none" style="width:676px;height:456px;background:#FFFFFF;" version="1.1" viewBox="0 0 676 456" width="676px" zoomAndPan="magnify"><defs><filter height="300%" id="f51uclszwtyl4" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[589778a86542334cbbe24d2c132e4f67]
+class ui--><rect codeLine="3" fill="#FEFECE" filter="url(#f51uclszwtyl4)" height="48" id="ui" style="stroke:#A80036;stroke-width:1.5;" width="108" x="278" y="7"/><ellipse cx="293" cy="23" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M294,20 L294,26 L296,26 L296.4844,26 L297,26.625 L297,27 L297,27.375 L296.4844,28 L296,28 L290,28 L289.5156,28 L289,27.375 L289,27 L289,26.625 L289.5156,26 L290,26 L292,26 L292,20 L290,20 L289.5156,20 L289,19.375 L289,19 L289,18.625 L289.5156,18 L290,18 L296,18 L296.4844,18 L297,18.625 L297,19 L297,19.375 L296.4844,20 L296,20 L294,20 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="307" y="27.9102">ListAccountUI</text><line style="stroke:#A80036;stroke-width:1.5;" x1="279" x2="385" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="279" x2="385" y1="47" y2="47"/><!--MD5=[fd9cab17099256c8680aa6ea13cc8fa6]
+class ctrl--><rect codeLine="4" fill="#FEFECE" filter="url(#f51uclszwtyl4)" height="61.8359" id="ctrl" style="stroke:#A80036;stroke-width:1.5;" width="207" x="228.5" y="115"/><ellipse cx="269.6" cy="131" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M271.6,127.5 Q271.8031,127 272.0375,126.75 Q272.2719,126.5 272.5375,126.5 Q273.0063,126.5 273.3031,126.7813 Q273.6,127.0625 273.6,127.7188 L273.6,129.2813 Q273.6,129.9375 273.3188,130.2188 Q273.0375,130.5 272.6,130.5 Q272.2094,130.5 271.9594,130.3281 Q271.7094,130.1563 271.6,129.7031 Q271.5531,129.3906 271.3813,129.2188 Q271.0688,128.8906 270.5063,128.7031 Q269.9438,128.5 269.3813,128.5 Q268.6781,128.5 268.0844,128.7813 Q267.5063,129.0625 267.0531,129.6875 Q266.6,130.3125 266.6,131.1719 L266.6,132.0938 Q266.6,133.125 267.4438,133.8125 Q268.2875,134.5 269.7875,134.5 Q270.6781,134.5 271.3031,134.2969 Q271.6625,134.1875 272.0688,133.8281 Q272.3344,133.625 272.475,133.5625 Q272.6156,133.5 272.7875,133.5 Q273.1156,133.5 273.35,133.7656 Q273.6,134.0156 273.6,134.375 Q273.6,134.7188 273.2563,135.125 Q272.7563,135.7188 271.9594,136.0469 Q270.9125,136.5 269.6313,136.5 Q268.1313,136.5 266.9281,135.9063 Q265.9594,135.4375 265.2719,134.4219 Q264.6,133.4063 264.6,132.2031 L264.6,131.1094 Q264.6,129.8594 265.1938,128.7656 Q265.8031,127.6719 266.85,127.0938 Q267.9125,126.5 269.1,126.5 Q269.8188,126.5 270.4438,126.75 Q271.0688,127 271.6,127.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="117" x="289.4" y="135.9102">ListAccountController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="229.5" x2="434.5" y1="147" y2="147"/><line style="stroke:#A80036;stroke-width:1.5;" x1="229.5" x2="434.5" y1="155" y2="155"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="195" x="234.5" y="170.4189">consultListAccounts() : ListAccountDTO</text><!--MD5=[5f41f85de07f10ee5ddaf804b5546503]
+class itc--><rect codeLine="8" fill="#FEFECE" filter="url(#f51uclszwtyl4)" height="83.8594" id="itc" style="stroke:#A80036;stroke-width:1.5;" width="178" x="7" y="237"/><ellipse cx="60.25" cy="257.0938" fill="#FF7700" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M58.75,261.0938 Q58.4688,261.7344 58.2813,261.9219 Q58.1094,262.0938 57.8594,262.0938 Q57.3594,262.0938 57.0469,261.875 Q56.75,261.6406 56.75,261.0938 L56.75,260.0938 Q56.75,259.5469 57,259.3281 Q57.25,259.0938 57.6563,259.0938 Q57.9688,259.0938 58.1875,259.1719 Q58.4063,259.25 58.5156,259.4375 Q58.625,259.625 58.75,259.6875 Q58.9063,259.8281 59.3125,259.9688 Q59.7188,260.0938 60.2031,260.0938 Q60.9531,260.0938 61.4375,259.6406 Q61.75,259.375 61.75,258.9844 Q61.75,258.7188 61.5938,258.4844 Q61.4375,258.25 61.0938,258.0938 Q60.875,257.9844 60.0938,257.8125 Q58.6406,257.5938 58.125,257.25 Q57.625,256.9063 57.1875,256.2969 Q56.75,255.6719 56.75,254.9531 Q56.75,253.8125 57.6094,252.9531 Q58.4844,252.0938 59.8594,252.0938 Q60.4219,252.0938 60.7031,252.3438 Q60.9844,252.5938 61.75,253.0938 Q62.1875,252.0938 62.625,252.0938 Q63.125,252.0938 63.4375,252.3125 Q63.75,252.5313 63.75,253.0469 L63.75,254.125 Q63.75,254.6563 63.5,254.875 Q63.25,255.0938 62.8594,255.0938 Q62.5313,255.0938 62.2813,255 Q62.0938,254.9375 62,254.7344 Q61.9063,254.5313 61.75,254.4531 Q61.5625,254.2969 61.1875,254.2031 Q60.8125,254.0938 60.3125,254.0938 Q59.5938,254.0938 59.1719,254.4531 Q58.75,254.8125 58.75,255.2031 Q58.75,255.4688 58.8906,255.7188 Q59.0469,255.9531 59.3438,256.0938 Q59.5313,256.1875 60.6094,256.4063 Q61.6875,256.625 62.2344,256.9219 Q62.7813,257.2031 63.2656,257.8125 Q63.75,258.4219 63.75,259.2813 Q63.75,260.4531 63.0781,261.1563 Q62.1719,262.0938 60.7813,262.0938 Q60.25,262.0938 59.7344,261.8438 Q59.2344,261.5938 58.75,261.0938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="66" x="79.25" y="254.457">«Singleton»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="63" x="80.75" y="269.5508">ITCompany</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="184" y1="277.1875" y2="277.1875"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="184" y1="285.1875" y2="285.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="13" y="300.6064">getITCompany() : ITCompany</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="166" x="13" y="314.4424">getAccountStore() : AccountStore</text><!--MD5=[f9a29335b499db729be669fd1bd54958]
+class Account--><rect codeLine="15" fill="#FEFECE" filter="url(#f51uclszwtyl4)" height="75.6719" id="Account" style="stroke:#A80036;stroke-width:1.5;" width="113" x="220.5" y="241"/><ellipse cx="252.6" cy="257" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M254.6,253.5 Q254.8031,253 255.0375,252.75 Q255.2719,252.5 255.5375,252.5 Q256.0063,252.5 256.3031,252.7813 Q256.6,253.0625 256.6,253.7188 L256.6,255.2813 Q256.6,255.9375 256.3188,256.2188 Q256.0375,256.5 255.6,256.5 Q255.2094,256.5 254.9594,256.3281 Q254.7094,256.1563 254.6,255.7031 Q254.5531,255.3906 254.3813,255.2188 Q254.0688,254.8906 253.5063,254.7031 Q252.9438,254.5 252.3813,254.5 Q251.6781,254.5 251.0844,254.7813 Q250.5063,255.0625 250.0531,255.6875 Q249.6,256.3125 249.6,257.1719 L249.6,258.0938 Q249.6,259.125 250.4438,259.8125 Q251.2875,260.5 252.7875,260.5 Q253.6781,260.5 254.3031,260.2969 Q254.6625,260.1875 255.0688,259.8281 Q255.3344,259.625 255.475,259.5625 Q255.6156,259.5 255.7875,259.5 Q256.1156,259.5 256.35,259.7656 Q256.6,260.0156 256.6,260.375 Q256.6,260.7188 256.2563,261.125 Q255.7563,261.7188 254.9594,262.0469 Q253.9125,262.5 252.6313,262.5 Q251.1313,262.5 249.9281,261.9063 Q248.9594,261.4375 248.2719,260.4219 Q247.6,259.4063 247.6,258.2031 L247.6,257.1094 Q247.6,255.8594 248.1938,254.7656 Q248.8031,253.6719 249.85,253.0938 Q250.9125,252.5 252.1,252.5 Q252.8188,252.5 253.4438,252.75 Q254.0688,253 254.6,253.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="43" x="270.4" y="261.9102">Account</text><line style="stroke:#A80036;stroke-width:1.5;" x1="221.5" x2="332.5" y1="273" y2="273"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="226.5" y="288.4189">getEmail : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="226.5" y="302.2549">getIsActive : boolean</text><line style="stroke:#A80036;stroke-width:1.5;" x1="221.5" x2="332.5" y1="308.6719" y2="308.6719"/><!--MD5=[a4c29dcd49ac565a46dd506593159a71]
+class AccountStore--><rect codeLine="20" fill="#FEFECE" filter="url(#f51uclszwtyl4)" height="61.8359" id="AccountStore" style="stroke:#A80036;stroke-width:1.5;" width="218" x="168" y="381"/><ellipse cx="236.75" cy="397" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M238.75,393.5 Q238.9531,393 239.1875,392.75 Q239.4219,392.5 239.6875,392.5 Q240.1563,392.5 240.4531,392.7813 Q240.75,393.0625 240.75,393.7188 L240.75,395.2813 Q240.75,395.9375 240.4688,396.2188 Q240.1875,396.5 239.75,396.5 Q239.3594,396.5 239.1094,396.3281 Q238.8594,396.1563 238.75,395.7031 Q238.7031,395.3906 238.5313,395.2188 Q238.2188,394.8906 237.6563,394.7031 Q237.0938,394.5 236.5313,394.5 Q235.8281,394.5 235.2344,394.7813 Q234.6563,395.0625 234.2031,395.6875 Q233.75,396.3125 233.75,397.1719 L233.75,398.0938 Q233.75,399.125 234.5938,399.8125 Q235.4375,400.5 236.9375,400.5 Q237.8281,400.5 238.4531,400.2969 Q238.8125,400.1875 239.2188,399.8281 Q239.4844,399.625 239.625,399.5625 Q239.7656,399.5 239.9375,399.5 Q240.2656,399.5 240.5,399.7656 Q240.75,400.0156 240.75,400.375 Q240.75,400.7188 240.4063,401.125 Q239.9063,401.7188 239.1094,402.0469 Q238.0625,402.5 236.7813,402.5 Q235.2813,402.5 234.0781,401.9063 Q233.1094,401.4375 232.4219,400.4219 Q231.75,399.4063 231.75,398.2031 L231.75,397.1094 Q231.75,395.8594 232.3438,394.7656 Q232.9531,393.6719 234,393.0938 Q235.0625,392.5 236.25,392.5 Q236.9688,392.5 237.5938,392.75 Q238.2188,393 238.75,393.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="72" x="257.25" y="401.9102">AccountStore</text><line style="stroke:#A80036;stroke-width:1.5;" x1="169" x2="385" y1="413" y2="413"/><line style="stroke:#A80036;stroke-width:1.5;" x1="169" x2="385" y1="421" y2="421"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="174" y="436.4189">getArrayListOfAccounts () : AccountStore</text><!--MD5=[89a625ab096ac05f97f2fd4036fa306d]
+class AccountDTO--><rect codeLine="25" fill="#FEFECE" filter="url(#f51uclszwtyl4)" height="61.8359" id="AccountDTO" style="stroke:#A80036;stroke-width:1.5;" width="222" x="440" y="248"/><ellipse cx="512.75" cy="264" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M514.75,260.5 Q514.9531,260 515.1875,259.75 Q515.4219,259.5 515.6875,259.5 Q516.1563,259.5 516.4531,259.7813 Q516.75,260.0625 516.75,260.7188 L516.75,262.2813 Q516.75,262.9375 516.4688,263.2188 Q516.1875,263.5 515.75,263.5 Q515.3594,263.5 515.1094,263.3281 Q514.8594,263.1563 514.75,262.7031 Q514.7031,262.3906 514.5313,262.2188 Q514.2188,261.8906 513.6563,261.7031 Q513.0938,261.5 512.5313,261.5 Q511.8281,261.5 511.2344,261.7813 Q510.6563,262.0625 510.2031,262.6875 Q509.75,263.3125 509.75,264.1719 L509.75,265.0938 Q509.75,266.125 510.5938,266.8125 Q511.4375,267.5 512.9375,267.5 Q513.8281,267.5 514.4531,267.2969 Q514.8125,267.1875 515.2188,266.8281 Q515.4844,266.625 515.625,266.5625 Q515.7656,266.5 515.9375,266.5 Q516.2656,266.5 516.5,266.7656 Q516.75,267.0156 516.75,267.375 Q516.75,267.7188 516.4063,268.125 Q515.9063,268.7188 515.1094,269.0469 Q514.0625,269.5 512.7813,269.5 Q511.2813,269.5 510.0781,268.9063 Q509.1094,268.4375 508.4219,267.4219 Q507.75,266.4063 507.75,265.2031 L507.75,264.1094 Q507.75,262.8594 508.3438,261.7656 Q508.9531,260.6719 510,260.0938 Q511.0625,259.5 512.25,259.5 Q512.9688,259.5 513.5938,259.75 Q514.2188,260 514.75,260.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="533.25" y="268.9102">AccountDTO</text><line style="stroke:#A80036;stroke-width:1.5;" x1="441" x2="661" y1="280" y2="280"/><line style="stroke:#A80036;stroke-width:1.5;" x1="441" x2="661" y1="288" y2="288"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="210" x="446" y="303.4189">AccountDTO(email, IsActive) : AccountDTO</text><!--MD5=[65605f4b9fcf838a026dcfadc852f609]
+link ui to ctrl--><path codeLine="33" d="M332,55.14 C332,70.71 332,91.53 332,109.22 " fill="none" id="ui-to-ctrl" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="332,114.6,336,105.6,332,109.6,328,105.6,332,114.6" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="324.1469" y="76.5121">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="324.2781" y="104.022">1</text><!--MD5=[cdd3f63a3a0585ae0dc3ce66893c16da]
+link ctrl to itc--><path codeLine="34" d="M277.86,177.05 C247.25,194.04 208.44,215.58 174.55,234.4 " fill="none" id="ctrl-to-itc" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="170.01,236.92,179.82,236.0458,174.3808,234.4918,175.9348,229.0526,170.01,236.92" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="259.5121" y="198.2838">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="174.6882" y="226.1614">1</text><!--MD5=[61c50e35d42141277faf16320607a1ec]
+link ctrl to AccountDTO--><path codeLine="35" d="M382.24,177.05 C416.2,197.37 461.05,224.19 495.97,245.08 " fill="none" id="ctrl-to-AccountDTO" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="500.61,247.86,494.9505,239.7996,496.3225,245.2875,490.8346,246.6595,500.61,247.86" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="384.4419" y="198.2838">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="468.1546" y="237.3357">0..*</text><!--MD5=[85b06ece033f2cb0e05b6126c15a3121]
+link itc to AccountStore--><path codeLine="36" d="M152.77,321.09 C178.06,339.39 207.44,360.66 231.28,377.91 " fill="none" id="itc-to-AccountStore" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="235.36,380.87,230.4179,372.3509,231.3108,377.9368,225.7248,378.8296,235.36,380.87" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="153.927" y="342.2928">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103" x="113.1499" y="370.3477">allAccountStore 1</text><!--MD5=[940b925c09cd00f897631295f5e1254b]
+link Account to AccountStore--><path codeLine="37" d="M277,317.19 C277,332.91 277,351.32 277,367.65 " fill="none" id="Account-to-AccountStore" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="277,380.78,281,374.78,277,368.78,273,374.78,277,380.78" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="287.0406" y="338.1008">0..* arrayListAccount</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="269.2781" y="370.2392">1</text><!--MD5=[c0fa484e2121739195087f67be3bab6d]
+link ctrl to AccountStore--><path codeLine="38" d="M343.2,177.19 C354.58,212.67 368.27,272.8 351,321 C343.51,341.89 328.86,361.4 314.55,376.88 " fill="none" id="ctrl-to-AccountStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="310.92,380.73,320.0085,376.9355,314.354,377.0957,314.1937,371.4411,310.92,380.73" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="337.7159" y="198.4514">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="310.1941" y="370.1789">1</text><!--MD5=[0645e4af7b5465e3d0e8a05f1e50e26e]
+link ctrl to Account--><path codeLine="39" d="M319.38,177.05 C312.07,194.46 302.76,216.65 294.72,235.79 " fill="none" id="ctrl-to-Account" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="292.71,240.59,299.8891,233.8475,294.6503,235.9818,292.516,230.7431,292.71,240.59" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="309.2064" y="198.2838">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="273.6914" y="230.1668">0..*</text><!--MD5=[82d380e0d5b8b5554df56256cffe071a]
+@startuml
+'https://plantuml.com/class-diagram
+
+interface "ListAccountUI" as ui
+class "ListAccountController" as ctrl {
+consultListAccounts() : ListAccountDTO
+}
+
+class "ITCompany" as itc << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getAccountStore() : AccountStore
+}
+
+
+
+class "Account" as Account{
+getEmail : String
+getIsActive : boolean
+}
+
+class "AccountStore" as AccountStore{
+getArrayListOfAccounts () : AccountStore
+
+}
+
+class "AccountDTO" as AccountDTO {
+AccountDTO(email, IsActive) : AccountDTO
+}
+
+
+
+
+
+ui "1" -[dashed]-> "1" ctrl
+ctrl "1" -[dashed]-> "1" itc
+ctrl "1" -[dashed]-> "0..*" AccountDTO
+itc "1" -down-> "allAccountStore 1" AccountStore
+Account "0..* arrayListAccount " - -o "1" AccountStore
+ctrl "1" -[dashed]-> "1" AccountStore
+ctrl "1" -[dashed]-> "0..*" Account
+
+@enduml
+
+@startuml
+
+interface "ListAccountUI" as ui
+class "ListAccountController" as ctrl {
+consultListAccounts() : ListAccountDTO
+}
+
+class "ITCompany" as itc << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getAccountStore() : AccountStore
+}
+
+
+
+class "Account" as Account{
+getEmail : String
+getIsActive : boolean
+}
+
+class "AccountStore" as AccountStore{
+getArrayListOfAccounts () : AccountStore
+
+}
+
+class "AccountDTO" as AccountDTO {
+AccountDTO(email, IsActive) : AccountDTO
+}
+
+
+
+
+
+ui "1" -[dashed]-> "1" ctrl
+ctrl "1" -[dashed]-> "1" itc
+ctrl "1" -[dashed]-> "0..*" AccountDTO
+itc "1" -down-> "allAccountStore 1" AccountStore
+Account "0..* arrayListAccount " - -o "1" AccountStore
+ctrl "1" -[dashed]-> "1" AccountStore
+ctrl "1" -[dashed]-> "0..*" Account
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

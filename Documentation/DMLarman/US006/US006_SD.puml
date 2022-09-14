@@ -1,0 +1,82 @@
+@startuml
+actor "Administrator" as user
+boundary "UpdateUserProfileUI" as UI
+control "UpdateUserProfileController" as Controller
+entity "ITCompany" as ITCompany
+participant "profs: ProfileStore" as ps
+participant "pf: Profile" as pf
+participant "as : AccountStore" as accstore
+participant "a : Account" as acc
+
+
+autonumber
+user -> UI : Open 'Update User Profile' UI
+activate UI
+UI -> Controller : getProfileListString()
+activate Controller
+Controller -> ITCompany : getProfileStore()
+activate ITCompany
+ITCompany --> Controller : profs : ProfileStore
+deactivate
+
+Controller -> ps :getProfileListString()
+activate ps
+loop for each profile in store
+ps -> pf :  getProfileInformation()
+activate pf
+pf --> ps : profs : String
+end
+ps --> Controller : profs : String
+deactivate
+Controller --> UI : profs : String
+deactivate
+deactivate
+
+UI -> user : Show Profile List
+deactivate
+user -> UI : Select Profile
+activate UI
+
+
+UI -> Controller : updateProfile(email,profile)
+activate Controller
+Controller -> ITCompany :  getAccountStore()
+activate ITCompany
+ITCompany --> Controller : acc : AccuountStore
+deactivate
+Controller -> accstore : findAccountByEmail(email)
+activate accstore
+loop
+accstore -> acc : isAccountEmailEqualTo(emailData)
+
+activate acc
+acc --> accstore : true
+end
+deactivate acc
+accstore --> Controller : a :Account
+deactivate accstore
+
+
+Controller -> ITCompany :getProfileStore
+activate ITCompany
+ITCompany --> Controller :profs: ProfileStore
+deactivate
+Controller -> ps :findProfileByProfileType(profileType)
+activate ps
+ps --> Controller : pf : Profile
+deactivate
+Controller -> acc : updateProfile(profile)
+activate acc
+
+loop
+acc -> acc : validateProfileUpdate(profile)
+end
+acc -> acc : addProfile(profile)
+acc --> Controller : true
+deactivate
+
+
+Controller --> UI : true
+deactivate Controller
+UI --> user : Successful Update
+@enduml

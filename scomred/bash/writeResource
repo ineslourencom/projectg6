@@ -1,0 +1,111 @@
+#!/bin/bash
+
+RESOURCES_STORE=/var/www/data/resources
+
+#Função de erro
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+rm -f $M_CONTENT_FILE
+exit
+}
+
+#Verifica se o request tem conteúdo.
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+
+#Verifica se o tipo de request é POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+#Verifica se a query-string não está vazia, pois queremos que esteja
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Criar content
+CONTENT=$(cat $M_CONTENT_FILE);
+
+#Guardar a primeira variável
+ACCOUNT=$(echo $CONTENT | cut -d "_" -f 1 | cut -d "=" -f 2 | cut -d "." -f 1)
+ACCOUNT=${ACCOUNT#account=}
+ACCOUNT=$(echo $ACCOUNT | xargs)
+if [ -z "$ACCOUNT" ]; then error_response "empty name"; fi
+
+#Guardar a segunda variável
+PROJECT=$(echo $CONTENT | cut -d "_" -f 2 )
+PROJECT=${PROJECT#project=}
+PROJECT=$(echo $PROJECT | xargs)
+if [ -z "$PROJECT" ]; then error_response "empty project"; fi
+
+#Guardar a terceira variável
+ROLE=$(echo $CONTENT | cut -d "_" -f 3 )
+ROLE=${ROLE#role=}
+ROLE=$(echo $ROLE | xargs)
+if [ -z "$ROLE" ]; then error_response "empty role"; fi
+
+#Guardar a quarta variável
+PERCALLOC=$(echo $CONTENT | cut -d "_" -f 4 )
+PERCALLOC=${PERCALLOC#percAlloc=}
+PERCALLOC=$(echo $PERCALLOC | xargs)
+if [ -z "$PERCALLOC" ]; then error_response "empty percentage allocation"; fi
+
+#Guardar a quinta variável
+COSTHOUR=$(echo $CONTENT | cut -d "_" -f 5 )
+COSTHOUR=${COSTHOUR#costhour=}
+COSTHOUR=$(echo $COSTHOUR | xargs)
+if [ -z "$COSTHOUR" ]; then error_response "empty cost per hour"; fi
+
+
+#Criar ficheiro resource
+FILENAME="$RESOURCES_STORE/$ACCOUNT.$PROJECT.txt"
+ISFOUND="false"
+for FILE in /var/www/data/resources/*; do
+  if [ "$FILE" == "$FILENAME" ]; then
+    ISFOUND="true"
+  fi
+done
+
+ISROLEFOUND="false"
+for FILE in /var/www/data/resources/*; do
+  ROLETEST=$(grep -o '<role>.*</role>' $FILE | sed 's/\(<role>\|<\/role>\)//g')
+  PROJECTTEST=$(grep -o '<project>.*</project>' $FILE | sed 's/\(<project>\|<\/project>\)//g')
+  if [ "$ROLE" == "$ROLETEST" -a "$PROJECT" == "$PROJECTTEST" ] ; then
+    if [ "$ROLE" != "Developer" ]; then
+        ISROLEFOUND="true"
+    fi
+  fi
+done
+
+if [ "$ISROLEFOUND" == "true" ]; then error_response "The project already has a $ROLE"; fi
+
+if [ "$ISFOUND" == "true" ]; then error_response "This resource is already allocated to the project"; fi
+
+TOTALACCOUNTPERCALLOC=$PERCALLOC
+for FILE in /var/www/data/resources/*; do
+  FILEACCOUNT=$(grep -o '<account>.*</account>' $FILE | sed 's/\(<account>\|<\/account>\)//g')
+  FILEPERCALLOC=$(grep -o '<percalloc>.*</percalloc>' $FILE | sed 's/\(<percalloc>\|<\/percalloc>\)//g')
+  if [ "$FILEACCOUNT" == "$ACCOUNT" ]; then
+    TOTALACCOUNTPERCALLOC=$((TOTALACCOUNTPERCALLOC+FILEPERCALLOC))
+  fi
+done
+
+if [ $TOTALACCOUNTPERCALLOC -gt 100 ]; then error_response "The resource maximum capacity is surpassed, please lower the percentage of allocation or consider allocating another resource"; fi
+
+
+if [ "$ISFOUND" == "false" -a "$ISROLEFOUND" == "false" -a $TOTALACCOUNTPERCALLOC -lt 100 ]; then
+echo '<?xml version="1.0"?>' > "$FILENAME"
+echo "<holder>" >> "$FILENAME"
+echo "<account>"$ACCOUNT"</account>" >> "$FILENAME"
+echo "<project>"$PROJECT"</project>" >> "$FILENAME"
+echo "<role>"$ROLE"</role>" >> "$FILENAME"
+echo "<percalloc>"$PERCALLOC"</percalloc>" >> "$FILENAME"
+echo "<costhour>"$COSTHOUR"</costhour>" >> "$FILENAME"
+echo "</holder>" >> "$FILENAME"
+fi
+
+
+#Enviar resposta http
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+var secretNumber=50;
+var tries=0;
+
+var bestScore="";
+
+function guessResponse(){
+
+tries= tries + 1;
+var response="";
+
+var guess=parseInt(document.getElementById("try").value); if(isNaN(guess)) guess=0; 
+if (guess>secretNumber) response="<p><b>Your guess: " + guess + " Sorry, too high</b>";
+else if (guess<secretNumber) response= "<p><b>Your guess: " + guess + " Sorry, too low</b>";
+else if (guess==secretNumber){ 
+response="<p><b>Your guess: " + guess + " Congratulations, you have guessed the secret number in " + tries + " tries!</b>"+
+"<br><br><input type=button value=\"Play Again!\" onClick=generateNumber()>";
+
+document.getElementById("guessButton").innerHTML="";
+determineBestScore();
+
+}
+document.getElementById("plays").innerHTML = document.getElementById("plays").innerHTML + response;
+
+}
+function generateNumber(){
+secretNumber=Math.floor((Math.random()*101));
+
+document.getElementById("plays").innerHTML ="<b>RESULTS</b>";
+tries=0;
+document.getElementById("guessButton").innerHTML="<input type=button value=Guess! onClick=guessResponse()>";
+}
+
+function determineBestScore(){
+bestScore=parseInt(bestScore); 
+if(isNaN(bestScore)){ 
+bestScore=tries;
+}
+else if (tries<bestScore) bestScore=tries;
+
+var bstScrMssg= "<hr/><h4>Your best score is " + bestScore + " tries.</h4>"
+document.getElementById("bestScoreDisplay").innerHTML=bstScrMssg;
+
+
+}
+</script>
+
+</head>
+
+
+
+
+<body bgColor="gray" onload="generateNumber()">
+
+<h1>Guess Number Game</h1>
+<h2>I have a number between 0 and 100, inclusive<br>
+Try to guess it!</h2>
+<h3>Enter your guess, please: <input id=try type=text value=0 size=1>
+</h3>
+<div id="guessButton">
+<input type=button value=Guess! onClick="guessResponse()"></div>
+<div id="bestScoreDisplay"></div>
+<hr/>
+<div id="plays"><b>RESULTS</b></div>
+<hr/>
+<div id="bestScoreDisplay"><b></b></div>
+
+</body>
+
+</html>

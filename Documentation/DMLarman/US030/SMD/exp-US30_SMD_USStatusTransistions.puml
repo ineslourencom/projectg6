@@ -1,0 +1,11 @@
+@startuml
+[*] --> Planned
+Planned --> Decomposed
+Decomposed --> [*]
+Planned --> InProgress
+InProgress --> Rejected
+Rejected --> InProgress
+InProgress --> Finished
+Rejected --> [*]
+Finished --> [*]
+@enduml

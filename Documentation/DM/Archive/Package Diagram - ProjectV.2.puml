@@ -1,0 +1,10 @@
+@startuml
+
+package Project{
+class Project << Aggregate Root >>
+class ProjectID << Value Object ID >>
+}
+
+ProjectID <-- "identified by 1" Project
+
+@enduml

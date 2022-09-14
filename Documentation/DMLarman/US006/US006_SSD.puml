@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Actor Administrator as admin
+participant UserInterface as UI
+admin -> UI: Initiate process to update the profile
+UI --> admin: Show the system profile list available
+admin -> UI: Select the profile and the email account
+UI --> admin: Inform operation (in)success
+@enduml

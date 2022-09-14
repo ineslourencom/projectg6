@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor Administrator
+
+usecase (US026 - As Administrator, I want to activate a user account.)
+
+:Administrator: -- (US026 - As Administrator, I want to activate a user account.)
+@enduml

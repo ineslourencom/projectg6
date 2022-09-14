@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+actor TeamMember
+
+usecase (US033 - As SM/TeamMember , I want to register work done on a Task.)
+
+:TeamMember: --(US033 - As SM/TeamMember , I want to register work done on a Task.)
+
+actor SM
+
+usecase (US033 - As SM/TeamMember , I want to register work done on a Task.)
+
+:SM: --(US033 - As SM/TeamMember , I want to register work done on a Task.)
+@enduml

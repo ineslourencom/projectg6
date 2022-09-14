@@ -1,0 +1,112 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+actor "Visitor" as vis
+
+boundary "CreateRequesttUI" as UI
+control ": CreateRequestController" as CTL
+participant ": AppServiceCreateRequestService" as app
+participant ":Profile Mapper" as pmapper
+participant "profileDTO\n: ProfileDTO" as proDTO
+participant "email : Email" as e
+
+participant "<<component>>\n ProfileRepository" as PRepo
+participant "profile: Profile" as prof
+
+participant "<<component>>\n AccountRepository" as accRepo
+participant "account: Account" as acc
+participant ":ProfileRequest Mapper" as mapper
+participant "prfileRequestDTO\n: ProfileRequestDTO" as prDTO
+participant ":ProfileRequestFactory" as fac
+participant "newProfileRequest\n:NewProfileRequest" as new
+participant "<<component>>\n ProfileRequestRepository" as PRRepo
+
+vis-> UI :  Initiate process
+activate UI
+note left #Fbbbbb
+ As Visitor, I want
+ to send a request to
+ the administrator
+ to assign him/her
+ a given profile.
+end note
+
+UI -> CTL : findProfileById(ProfileID profileId)
+activate CTL
+
+CTL -> app: findProfileById(ProfileID profileId)
+activate app
+app -> PRepo : findProfileById(ProfileID pId)
+activate PRepo
+PRepo --> prof **
+PRepo --> app :profileID
+deactivate PRepo
+
+app -> pmapper : toDTO(profile)
+activate pmapper
+pmapper --> proDTO **
+pmapper --> app:profileDTO
+deactivate pmapper
+
+app --> CTL :listProfileDTO
+deactivate app
+
+CTL --> UI :listProfileDTO
+deactivate CTL
+
+UI --> vis :listProfileDTO
+deactivate UI
+
+vis -->UI:chose a profile
+activate UI
+UI -->CTL:createRequest(email,profileType)
+deactivate UI
+activate CTL
+CTL -->app:createRequest(email,profileType)
+deactivate CTL
+
+activate app
+app-->e**
+app->accRepo:findAccountByEmail(email)
+activate accRepo
+accRepo --> acc**
+accRepo -->app :account
+deactivate
+app-->prof**
+
+
+app -> acc : createRequest (accountID, profileID)
+activate acc
+acc -> fac :createRequest (accountID, profileID)
+activate fac
+fac --> new**
+fac --> acc : toDTO (newRequest)
+deactivate
+acc --> app : newRequest DTO
+deactivate
+
+
+app -> PRRepo : save(newRequest)
+activate PRRepo
+PRRepo --> app : save(newRequest)
+deactivate
+app -->CTL: requestDTO
+deactivate app
+
+activate CTL
+CTL -->UI:responseEntity
+deactivate
+
+activate UI
+UI --> vis :confirmation
+deactivate
+
+
+
+
+
+
+@enduml

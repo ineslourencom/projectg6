@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+
+class Resource{
+    -LocalDate startDate
+    -double percentageOfAllocation
+    -double costPerHour
+    -LocalDate endDate
+    -Account associatedAccount
+    -ResourceRole associatedResourceRole
+    -Project associatedProject
+
+}
+
+class Project{
+
+    -int code
+    -String name
+    -String description
+    -LocalDate startDate
+    -int sprintDuration
+    -int plannedSprints
+    -LocalDate endDate
+    -String projectStatus
+    -double budget
+
+}
+Project "1"-left-"0.*" Resource :  < is allocated to
+
+@enduml

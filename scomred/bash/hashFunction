@@ -1,0 +1,25 @@
+#!/bin/bash
+# This script creates a hash from a given string and a given algorithm.
+# Allowed algorithms:
+# MD4|MD5|RIPEMD160|SHA1|SHA224|SHA256|SHA384|SHA512
+#
+# Usage:
+# hashFunction [password string] [algorithm]
+
+error_response(){
+exit
+}
+
+
+hash () {
+case $2 in
+  MD4|MD5|RIPEMD160|SHA1|SHA224|SHA256|SHA384|SHA512);;
+  *) error_response "Invalid hash algorithm: $2";;
+esac
+HASHCODELONG="$(openssl dgst -$2 $1)"
+HASHCODE=$(echo $HASHCODELONG | cut -d "=" -f 2 )
+echo $HASHCODE
+}
+
+
+hash $1 $2

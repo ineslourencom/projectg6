@@ -1,0 +1,74 @@
+@startuml
+class EffortUpdate
+
+AddWorkDoneController : boolean submitWorkDone (email : String, projectCode : int, taskCode : int, spentHours : double, taskComment : String)
+ITCompany : getProjectStore()
+ProjectStore : findProjectByCode(projectCode : int)
+
+EffortUpdate : -dateTime : LocalDate
+EffortUpdate : -hoursSpent : double
+EffortUpdate : -dateTime : LocalDate
+EffortUpdate : EffortUpdate(spentHours : double, taskComment : String, resourceData : Resource)
+
+Project : -code : int
+Project : -name : String
+Project : -description : String
+Project : -startDate : Date
+Project : -sprintDuration : int
+Project : -plannedSprints : int
+Project : -endDate : Date
+Project : -projectStatus : String
+Project : -budget : double
+Project : findActiveResource(email : String)
+Project : determineRunningSprint()
+
+Sprint : -number : int
+Sprint : -startDate : LocalDate
+Sprint : -endDate : LocalDate
+Sprint : isCurrentDateContainedInSprintDuration()
+Sprint : findTaskByCode(taskCode : int)
+
+Task : -name : String
+Task : -description : String
+Task : -startDate : LocalDate
+Task : -endDate : LocalDate
+Task : -effortEstimate : double
+Task : -taskType : String
+Task : -taskStatus : String
+Task : -hoursSpent : double
+Task : -percentageOfExecution : double
+Task : getNumber()
+Task : createEffortUpdate(spentHours : double, taskComment : String, resourceData : Resource)
+Task : addHoursSpentAndUpdatePercentageOfExecution(spentHours : double)
+Task : updatePercentageOfExecution()
+Task : add(newEffort : EffortUpdate)
+
+Resource : -startDate : LocalDate
+Resource : -endDate : LocalDate
+Resource : -percentageOfAllocation : double
+Resource : -costPerHour : double
+Resource : isResourceActive(email : String)
+Resource : isStartDateBefore()
+
+
+Account : -email : String
+Account : -password : String
+Account : -name : String
+Account : -function : String
+Account : -photo : String
+Account : -workingCapacityHoursPerWeek : integer
+Account : -isActive : boolean
+Account : isAccountEqualTo(email : String)
+
+
+AddWorkDoneUI . AddWorkDoneController
+AddWorkDoneController . ITCompany
+ITCompany - ProjectStore
+ProjectStore o-- Project : "is a list of"
+Project "1" -- "0..*" Resource : has allocated >
+Resource "0..*" -- "1" Account : is linked to >
+Project "1" -- "0..*" Sprint : is carried out in >
+Sprint "1" -- "0..*" Task : makes ceremony >
+Task "1" -- "0..*" EffortUpdate : is completed in >
+
+@enduml

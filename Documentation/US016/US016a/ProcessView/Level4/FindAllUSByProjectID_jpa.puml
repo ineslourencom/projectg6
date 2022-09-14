@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+participant " usRepo : UserStoryRepositoryImpl" as usRepo
+participant "IUserStoryJPARepository" as usJPARepo <<interface>>
+participant "UserStoryDomainDataAssembler" as usAssembler
+
+
+
+autonumber
+
+[-> usRepo : findAllUsByProjectID(ProjectID projId)
+activate usRepo
+usRepo -> usJPARepo : findAllUsByProjectID(int projId)
+activate usJPARepo
+usRepo <- usJPARepo : return List<UserStoryJPA> listUSJPA
+deactivate usJPARepo
+
+loop for each UserStoryJPA in listUSJPA
+
+usRepo -> usAssembler : toDomain(usJPA)
+activate usAssembler
+usAssembler-->"userStory : UserStory" ** :
+usAssembler-->usRepo : UserStory userStory
+deactivate usAssembler
+
+usRepo -> usRepo : returnList.add(userStory)
+
+
+end
+
+[<-- usRepo : List<UserStory> returnList
+deactivate usRepo
+
+@enduml

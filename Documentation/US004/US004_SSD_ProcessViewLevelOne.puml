@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+actor Administrator as adm
+participant "System" as Sys
+
+
+autonumber
+
+
+
+adm -> Sys : asks to search for a account
+note left
+ As Administrator, I want to
+search for accounts.
+end note
+activate adm
+activate Sys
+Sys --> adm : request data(valid email)
+deactivate Sys
+adm -> Sys : Enter account email
+activate Sys
+
+
+
+Sys --> adm : Receives account information
+deactivate adm
+deactivate Sys
+@enduml

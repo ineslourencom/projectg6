@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+"Director/PM/PO/SM" -> System: Request List of Projects
+System --> "Director/PM/PO/SM": Show list of projects
+
+"Director/PM/PO/SM" -> System: Select the intended project
+"Director/PM/PO/SM" <-- System: Show list of Tasks with Task Code, Task Name and Task Status
+@enduml

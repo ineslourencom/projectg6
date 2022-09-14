@@ -1,0 +1,121 @@
+@startuml
+'https://plantuml.com/class-diagramheader IMPLEMENTATION VIEW
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infrastructure" as infrastructure{
+package "Persistence" as persistence {
+package "iJPARepositories" as IJPARepo {
+class "<interface> IAccountJPARepository" as IAccountJPARepo {
++findAll() : List<AccountJPA>
+}
+}
+}
+}
+
+folder "DataModel" as DataModel{
+class "AccountJPA" as AccountJPA{
+}
+class "AccountDomainDataAssembler" as AccountDomainDataAssembler {
++toDomain(AccountJPA AccountJPA) : Account
+}
+}
+
+folder "Interface Adapters" as folderinter{
+ package "Repositories" as packrepoImpl{
+    class "AccountRepositoryImpl" as classrepo{
+     +findAll() : List<Account>
+    }
+    }
+ package "implControllers" as packcontrol {
+    class "ViewAllAccountsController" as classcontroller{
+    +getListOfAllAccountsAndStatus() : ResponseEntity
+    }
+ }
+}
+
+
+folder "DTO"{
+package "mapper" as mapper{
+class "AccountMapper" as AccountMapper{
++toDTO(Account account) : AccountAndStatusDTO
+}
+}
+class "AccountAndStatusDTO" as dto {
++ String : email
++ boolean : active
+}
+}
+
+folder "Application Services"{
+package implAppServices as packAppService{
+ class "ApplicationServiceListAccountsAndStatus" as classService{
+ +getAllAccountsAndStatus() : List<AccountAndStatusDTO>
+}
+}
+package iRepositories as iRepositories{
+class "<interface>AcountRepository" as accountRepoApp{
++findAll() : List<Account>
+}
+}
+}
+
+folder "Domain/Entities" as domain{
+package "Value Objects" as packVO{
+
+  class "Email" as Email {
+  -Email : email
+  +{static}of(Email email) : Email
+  }
+  class "AccountID" as AccountID {
+    -Email : id
+    +{static}of(Email id) : AccountID
+    }
+  class "Password" as password {
+    -String : passwordString
+    +{static}of(String stringData) : Password
+    }
+  class "Photo" as photo {
+    -String : fotoString
+    +{static}of(String stringText) : Photo
+    }
+
+
+  }
+
+folder "Aggregates" as aggregates{
+package Account as packEntity{
+class "Account" as classAccount{
+- name : String
+- function : String
+- active : boolean
++getActive() : boolean
++getEmail() : Email
+
+}
+
+}
+}
+}
+
+classcontroller..>classService
+classService..>classAccount
+classService..right> AccountMapper
+AccountMapper..>dto
+classService..right>accountRepoApp
+classrepo..|>accountRepoApp
+classrepo..up>IAccountJPARepo
+AccountDomainDataAssembler..up>AccountJPA
+IAccountJPARepo--right>AccountJPA
+classrepo..r>AccountDomainDataAssembler
+classAccount-->"Email 1"Email
+classAccount-->"AccountID 1"AccountID
+classAccount-->"Password 1"password
+classAccount-->"Photo 1"photo
+
+
+
+
+
+
+@enduml

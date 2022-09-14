@@ -1,0 +1,44 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package Project{
+class Project << Aggregate Root >>
+class ProjectID << Value Object ID >>
+
+}
+
+package Resource{
+class Resource<< Aggregate Root >>
+class ResourceID << Value Object ID >>
+class Role << Value Object >>
+
+}
+
+
+
+package Account{
+class Account << Aggregate Root >>
+class Password << Value Object >>
+class Email << Value Object >>
+class Photo << Value Object >>
+class AccountID << Value Object ID >>
+}
+
+
+ProjectID <-- "identified by 1" Project
+
+
+Resource --> "is allocated to 1" ProjectID
+ResourceID <-- "identified by 1" Resource
+Resource --> "has 1" Role
+
+Resource --> "belongs to 1" AccountID
+AccountID <-- "identified by 1" Account
+Account --> "possesses 1" Email
+Account --> "possesses 1" Password
+Account --> "possesses 1" Photo
+
+
+
+
+@enduml

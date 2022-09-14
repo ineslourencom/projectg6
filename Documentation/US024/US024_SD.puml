@@ -1,0 +1,65 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant "Routes" as server
+participant ": ViewAllAccountsController" as ctrl
+participant ": ApplicationServiceListAccountsAndStatus" as appService
+participant ": AccountRepository" as repo
+participant " accounts : List<Account>" as listAccount
+participant ": AccountDomainDataAssembler" as assembler
+participant ": Account" as account
+participant ": IAccountRepository <Interface>" as IRepo
+participant ": AccountMapper" as mapper
+participant " dto : accountAndStatusDTO" as dto
+participant ": accountsDTOS : List<AccountAndStatusDTO> " as listAccountDTO
+
+[o--> server : GET https://localhost:8080/accountsInfo
+activate server
+server -> ctrl : getListOfAllAccountsAndStatus
+activate ctrl
+ctrl -> appService : getAllAccountsAndStatus
+activate appService
+appService -> repo : findAll
+activate repo
+repo --> listAccount**
+repo -> IRepo : accountsJPA = findAll
+activate IRepo
+deactivate IRepo
+
+
+loop for each accountsJPA in repository
+repo -> assembler : account = toDomain(accountJPA)
+activate assembler
+assembler --> account**
+deactivate assembler
+repo -> listAccount : add(account)
+activate listAccount
+listAccount --> repo : accounts
+deactivate listAccount
+end loop
+
+repo --> appService : accounts
+deactivate repo
+appService --> listAccountDTO**
+
+loop for each account in repository
+appService -> mapper : dto = toDomainAccountAndStatusDTO(account)
+activate mapper
+mapper --> dto**
+deactivate mapper
+appService -> listAccountDTO : add(dto)
+activate listAccountDTO
+listAccountDTO --> appService : accountsDTOS
+deactivate listAccountDTO
+end loop
+
+appService --> ctrl : accountDTOS
+deactivate appService
+
+
+ctrl --> server : ResponseEntity
+deactivate ctrl
+
+
+@enduml

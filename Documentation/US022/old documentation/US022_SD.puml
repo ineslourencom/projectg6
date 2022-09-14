@@ -1,0 +1,167 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Project Manager" as PM
+
+boundary "CreateSprintUI" as UI
+control ": CreateSprintController" as CTL
+participant "e : Email" as e
+participant "pid: ProjectID" as pid
+participant "pid: ProjectID" as pid2
+participant ": AppProjectsOfResourceService" as PRservice
+participant ": CreateSprintService" as CSservice
+participant ": ResourceRepository" as ResRepo
+participant "res : Rresource" as resource
+participant "ProjectRepository" as PrRepo
+participant "proj : Project" as proj
+participant Mapper
+participant "projDTO\n: ProjectDTO" as projDTO
+participant "APPService createSprint" as app
+participant ":SprintMapper" as mape
+participant ":sprintDTO" as sdto
+participant ":service" as ser
+participant "PositiveNumber\n:sprintNumber" as pn
+participant "sprintID\n: SprintID" as sp
+participant "<<component>>\n ProjectRepository" as projR
+participant "p:Project" as p
+participant ":sprintFactory" as fac
+participant "<<component>>\n SprintRepository" as sptR
+participant "newSprint:Sprint" as new
+
+
+PM-> UI :  Initiate process
+activate UI
+note left #Fbbbbb
+As Project Manager,
+I want to create a sprint.
+end note
+
+UI -> CTL : getManagerProjects(String email)
+activate CTL
+
+create e
+CTL -> e : of(email)
+CTL -> PRservice : getManagerProjects(Email e)
+activate PRservice
+PRservice -> ResRepo : findByRoleAndEmailAndDate(Email e, Role Project_manager. LocalDate nowdate) : List<Resource>
+activate ResRepo
+ResRepo --> PRservice : resList
+deactivate ResRepo
+
+loop for each Resource in resList
+
+PRservice -> resource : id = getProjectID()
+activate resource
+deactivate resource
+PRservice -> PrRepo : proj = findById(id)
+
+activate PrRepo
+deactivate PrRepo
+PRservice -> Mapper : toDTO(proj)
+activate Mapper
+create projDTO
+Mapper -> projDTO
+Mapper --> PRservice : projDTO
+
+deactivate Mapper
+PRservice -> PRservice : listProjDTO.add(projDTO)
+
+end
+
+PRservice --> CTL : listProjDTO
+deactivate PRservice
+
+CTL ->UI : listProjDTO
+deactivate CTL
+
+UI -> PM : Display projects managed by Actor
+deactivate UI
+'Next system interaction'
+
+PM -> UI : Start create Sprint Process
+activate UI
+UI -> CTL : createSprint (int pid, NewSprintInfoDTO info)
+deactivate UI
+
+activate CTL
+CTL -> app : createSprint (startDate,ProjectID projID)
+deactivate CTL
+
+activate app
+app -> projR : findById (projectID)
+activate projR
+projR --> p **
+projR --> app :project
+deactivate projR
+
+    app -> p : isSprintContainerInProject (Sprint lastSprint)
+activate p
+p --> app :true
+deactivate p
+
+app -> sptR : findAllSprintByProjectID (projectID)
+activate sptR
+sptR --> app : listSprint
+deactivate
+
+app -> ser : sprintNumber = generateSprintNumber (listSprint)
+activate ser
+ser --> pn **
+ser --> app : sprintNumber
+deactivate ser
+
+app -> ser : startDateAfterLastSprint (List<Sprint> sprintlist, LocalDate startDate)
+activate ser
+ser --> app : true
+deactivate ser
+
+app ->ser : determinateLastSprint (List<Sprint> listSprint)
+activate ser
+ser --> app :true
+deactivate ser
+
+app ->ser : startDateAfterLastSprint(List<Sprint> sprintlist, LocalDate startDate)
+activate ser
+ser --> app :true
+deactivate ser
+app -> ser : generateSprintID (PositiveNumber sprintNumber, ProjectID projID)
+activate ser
+ser --> sp **
+ser --> app :sprintID
+deactivate ser
+
+app -> p : createSprint (SprintID sprintID, LocalDate startDate, PositiveNumber sprintNumber)
+activate p
+p -> fac : createSprint (SprintID sprintID, LocalDate startDate, ProjectID projectID, PositiveNumber sprintNumber, PositiveNumber sprintDuration)
+activate fac
+fac --> new **
+fac --> p : newSprint
+deactivate fac
+p --> app : newSprint
+deactivate p
+
+app -> sptR : saveSprint (Sprint sprint)
+activate sptR
+sptR --> app : saveSprint (Sprint sprint)
+deactivate sptR
+
+app -> mape :toDTO(sprint)
+activate mape
+mape -> sdto **
+mape -> app :sprintDTO
+deactivate
+
+app --> CTL  : SprintDTO
+deactivate app
+
+activate CTL
+CTL --> UI : sprintDTO
+deactivate CTL
+
+activate  UI
+UI --> PM :response
+deactivate UI
+
+@enduml

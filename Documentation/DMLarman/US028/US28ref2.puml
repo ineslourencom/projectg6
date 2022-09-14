@@ -1,0 +1,43 @@
+@startuml
+participant "ResourceMapper" as Mapper
+participant "projecTeam : Resource" as rsrc
+
+autonumber
+
+mainframe This is a **ref two**
+Mapper -> rsrc : getAssociatedAccountName
+activate rsrc
+activate Mapper
+rsrc --> Mapper : associatadAccountName
+deactivate rsrc
+deactivate Mapper
+Mapper -> rsrc : getAssociatedAccountEmail
+activate rsrc
+activate Mapper
+rsrc --> Mapper : AssociatedAccountEmail
+deactivate rsrc
+deactivate Mapper
+Mapper -> rsrc : getAssociatedResourceRole
+activate rsrc
+activate Mapper
+rsrc --> Mapper : associatedResourceRole
+deactivate rsrc
+deactivate Mapper
+Mapper -> rsrc : getStartDate
+activate rsrc
+activate Mapper
+rsrc --> Mapper : startDate
+deactivate rsrc
+deactivate Mapper
+Mapper -> rsrc : getEndDate
+activate rsrc
+activate Mapper
+rsrc --> Mapper : endDate
+
+
+deactivate rsrc
+
+
+deactivate Mapper
+
+@enduml

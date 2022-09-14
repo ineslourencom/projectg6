@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+actor "Team Member" as TM
+participant ": UI"
+participant ": CreateTaskController" as controller
+participant ": ITCompany" as IT
+participant ": ProjectStore"
+participant "project : Project" as project
+participant "SprintMapper" as mapper
+participant ": Sprint" as sprint
+participant "listSprintDTO : List<SprintDTO>" as DTOList
+participant ": SprintDTO"
+autonumber
+TM -> ": UI" : Request list of Projects
+activate ": UI"
+": UI" -> controller : showListOfNotClosedSprints(projCode)
+activate controller
+controller -> IT : getProjectStore()
+activate IT
+controller <-- IT : projectStore : ProjectStore
+deactivate IT
+
+controller -> ": ProjectStore" : findProjectByCode(projCode)
+activate ": ProjectStore"
+controller <-- ": ProjectStore": return project
+deactivate ": ProjectStore"
+controller -> project : getListOfNotClosedSprintsDTO()
+activate project
+project -> project : notClosedSprints = getListOfNotClosedSprints()
+project -> mapper : createListOfProjectDTO(notClosedSprints)
+deactivate project
+group Loop
+activate mapper
+mapper -> DTOList ** : createListOfSprintDTO()
+mapper ->  sprint : sNumber = getNumber()
+activate sprint
+mapper ->  sprint : startDate = getStartDate()
+deactivate sprint
+mapper -> ": SprintDTO" ** : sprintDTO = ProjectDTO(sNumber,startDate)
+
+mapper -> DTOList : add(sprintDTO)
+activate DTOList
+deactivate DTOList
+end
+controller <-- mapper : return listSprintDTO
+deactivate mapper
+": UI" <-- controller : return listSprintDTO
+deactivate controller
+TM <-- ": UI" : return list of availableSprints
+deactivate ": UI"
+
+@enduml

@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Director/PM/PO/SM" as actor
+
+participant UI as ui
+participant Backend as be
+participant SGBD as db
+
+actor -> ui : initiates the process
+activate ui
+actor <- ui : Requests necessary information
+
+actor -> ui : Requests all projects
+ui-> be : get All Project
+activate be
+be -> db: Get All Projects
+activate db
+be <- db : Return All Projects
+deactivate db
+
+ui <- be : Return All Projects
+deactivate be
+
+actor <- ui : Return All Projects
+
+actor -> ui : select project
+ui-> be : get Project By Id
+activate be
+be -> db: Get Project
+activate db
+be <- db: Return Project
+deactivate db
+ui <- be : Return Project
+deactivate be
+
+
+actor -> ui : View User Story Status
+ui-> be : View User Story Status
+activate be
+be -> db: Get All User Stories
+activate db
+be <- db: Return All User Stories
+deactivate db
+be -> db: Get All Sprints
+activate db
+be <- db: Return Sprints
+deactivate db
+
+
+be -> db: Get Running Sprint
+activate db
+be <- db: Return Running Sprints
+deactivate db
+ui <- be : Return User Story Status
+deactivate be
+
+actor <- ui : Display User Story Status
+deactivate ui
+
+
+
+
+
+
+
+
+@enduml

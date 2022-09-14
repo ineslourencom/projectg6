@@ -1,0 +1,109 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant Routes
+control UserStoryController as cntrl
+participant AppServiceGetUsStatus as appService
+participant "projId : ProjectID" as projID
+participant UserStoryRepository as usRepo
+participant SprintRepository as spRepo
+participant domainService as domainService
+
+participant UserStory as us
+
+
+[o-> Routes : JSON Request: GET /projects/{id}/userStories
+Routes -> cntrl : GET /projects/{id}/userStories
+
+cntrl -> appService : viewUSStatusFromProject(int projID)
+activate appService
+
+appService -> projID** : ProjectID(projectID)
+
+appService -> usRepo : findAllUsByProjectID(ProjectID projID)
+activate usRepo
+        group ref: JPA - findAllUsByProjectID
+        usRepo -> usRepo : findAllUsByProjectID
+        end
+appService <-- usRepo : List<UserStory> listUS
+deactivate usRepo
+
+
+
+appService -> spRepo : findRunningSprintByProjectID(ProjectID projID)
+activate spRepo
+        group ref: JPA - findRunningSprintByProjectID
+                spRepo -> spRepo
+        end
+appService <-- spRepo : return Optional<Sprint> runningSprint
+deactivate spRepo
+
+
+
+appService -> spRepo : findAllSprintByProjID(ProjectID projID)
+activate spRepo
+        group ref: JPA - findAllSprintByProjID
+            spRepo -> spRepo
+        end
+appService <-- spRepo : return List<Sprint> allSprints
+deactivate spRepo
+
+alt runningSprint.isPresent()
+
+       group ref:getAllUserStoriesInfo
+        appService -> domainService : getAllUserStoriesInfo(List<Sprint> allSprints, Sprint runningSprint, List<UserStory> listUS )
+        activate domainService
+        appService <-- domainService : TreeMap<UserStory, String> listUSWithRunningSprints
+        deactivate domainService
+       end
+
+else
+       group ref:getAllUserStoriesInfoWithNoRunningSprint
+        appService -> domainService : getAllUserStoriesInfoWithNoRunningSprint(List<Sprint> allSprints, List<UserStory> listUS)
+        activate domainService
+        appService <-- domainService : TreeMap<UserStory, String> listUSWithNoRunningSprints
+        deactivate domainService
+       end
+
+end
+
+
+loop for each hashMap entry
+
+appService -> UserStoryStatusMapper : toDto(UserStory us, String status)
+activate UserStoryStatusMapper
+UserStoryStatusMapper -> "dto : USInfoAndStatusDTO" **
+
+UserStoryStatusMapper -> us : storyNumber = us.getStoryNumber().getNumber()
+UserStoryStatusMapper -> "dto : USInfoAndStatusDTO" : dto.storyNumber = storyNumber
+
+UserStoryStatusMapper -> us : usId = us.getID()
+UserStoryStatusMapper -> "dto : USInfoAndStatusDTO" : dto.usID = usID
+
+UserStoryStatusMapper -> us : detail = us.getDetail().getValue()
+UserStoryStatusMapper -> "dto : USInfoAndStatusDTO" : dto.detail = detail
+
+UserStoryStatusMapper -> us : statement = us.getStatement().getValue()
+UserStoryStatusMapper -> "dto : USInfoAndStatusDTO" : dto.statement = statement
+
+UserStoryStatusMapper -> "dto : USInfoAndStatusDTO" : dto.status = status
+
+
+UserStoryStatusMapper --> appService : return dto
+deactivate UserStoryStatusMapper
+
+appService -> appService : listOfUSStatus.add(USInfoAndStatusDTO dto)
+
+end
+cntrl <-- appService : listOfUSStatus <USInfoAndStatusDTO>
+deactivate appService
+Routes <-- cntrl : ResponseEntity
+
+[<-- Routes : JSON response
+
+
+
+
+@enduml

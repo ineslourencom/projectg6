@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+participant "Resource Repository" as repoResource
+participant "IResourceJPARepository" as resourceJPARepo <<interface>>
+participant "resourceJPA: ResourceJPA" as resourceJPA
+participant "ResourceDomainDataAssembler" as resourceAssembler
+
+
+
+autonumber
+
+[-> repoResource
+activate repoResource
+repoResource -> resourceAssembler : toData(resource)
+activate resourceAssembler
+resourceAssembler --> resourceJPA** : resourceJPA
+
+resourceAssembler--> repoResource : resourceJPA
+deactivate resourceAssembler
+
+repoResource ->resourceJPARepo: save(resourceJPA)
+activate resourceJPARepo
+resourceJPARepo --> repoResource : resourceJPA
+deactivate resourceJPARepo
+repoResource -> resourceAssembler : toDomain(resourceJPA)
+activate resourceAssembler
+resourceAssembler-->resource**
+resourceAssembler-->repoResource : resource
+deactivate resourceAssembler
+[<-- repoResource
+deactivate repoResource
+
+@enduml

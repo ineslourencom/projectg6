@@ -1,0 +1,87 @@
+@startuml
+actor "SM / Team Member" as user
+boundary "AddWorkDoneUI" as UI
+control "AddWorkDoneController" as Controller
+entity "ITCompany" as ITCompany
+participant "ps : ProjectStore" as Pstore
+participant "p : Project" as proj
+participant ": Resource" as resource
+participant ": Account" as account
+participant "s : Sprint" as sprint
+participant "t : Task" as task
+participant "newEffort : EffortUpdate" as effortUpD
+autonumber
+[o-> user : Output from US016
+user -> UI : Selects task and chooses\n add work done option
+activate UI
+UI --> user : show UI
+user -> UI : Input hours spent and comment
+UI --> Controller : submitWorkDone(email, projectCode,\n taskCode, spentHours, taskComment)
+activate Controller
+Controller -> ITCompany : ps = getProjectStore()
+activate ITCompany
+Controller -> Pstore : p = findProjectByCode(code)
+loop
+    activate Pstore
+    Pstore -> proj : hasId(code : int) : boolean
+    deactivate Pstore
+end
+Controller -> proj : r = findActiveResource(email)
+loop
+    activate proj
+    proj -> resource : isResourceActive(email) : boolean
+    activate resource
+
+        alt EndDate==null
+        resource -> account : isAccountEqualTo(email) : boolean
+        activate account
+        resource -> resource : isStartDateBefore() : boolean
+        deactivate account
+
+        else "else"
+        resource -> account : isAccountEqualTo(email) : boolean
+        activate account
+        resource -> resource : isStartDateBefore() : boolean
+        deactivate account
+        resource -> resource : endDate.isAfter(now()) : boolean
+        end
+
+    deactivate resource
+    deactivate proj
+end
+
+Controller -> proj : s = determineRunningSprint()
+loop
+    activate proj
+    proj -> sprint : isCurrentDateContainedInSprintDuration() : boolean
+    activate sprint
+    sprint -> sprint : now()>=startDate &&\n now()<=endDate\n : boolean
+end
+deactivate sprint
+deactivate proj
+Controller -> sprint : t = findTaskByCode(taskCode)
+activate sprint
+
+loop
+    sprint -> task : getNumber()
+    activate task
+end
+deactivate task
+deactivate sprint
+
+Controller -> task : createEffortUpdate(spentHours, taskComment, r) : boolean
+activate task
+task -> task : addHoursSpent(spentHours)
+create effortUpD
+task -> effortUpD : newEffort = EffortUpdate(spentHours, taskComment, r)
+task -> task : add(newEffort)
+task --> Controller : true
+deactivate task
+Controller --> UI : operation successful
+
+deactivate Controller
+deactivate sprint
+UI --> user : operation successful
+deactivate UI
+deactivate ITCompany
+@enduml

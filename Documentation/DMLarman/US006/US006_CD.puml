@@ -1,0 +1,57 @@
+@startuml
+
+
+class UpdateUserProfileController{
+
++updateProfile(email : String,profileType : String) : boolean
++getProfileListString() : String
+}
+
+class AccountStore{
+-List<Account> arrayListAccount
++ findAccountByEmail(email : String) : Account
+
+}
+
+class ITCompany << (S,#FF7700) Singleton >>{
+-{static}iTCompany : ITCompany
++{static}getITCompany() : ITCompany
++ getAccountStore() : AccountStore
++ getProfileStore() : ProfileStore
+}
+
+class Account{
+-email : String
+-name : String
+-function : String
+-photo : String
+-isActive : boolean
++ Account : isAccountEqualTo(email : String)
++ updateProfile((profile : Profile) : boolean
++ validateProfileUpdate(profile : Profile) : boolean
++ addProfile(profileToBeAdded : Profile)
+}
+
+class Profile{
+-profileType : String
+-description : String
++ getProfileInformation() : String
+}
+
+class ProfileStore{
+-List<Profile> profileArrayList
++ getProfilesListString() : String
++ findProfileByProfileType(profile : String) : Account
+
+}
+
+UpdateUserProfileUI .> UpdateUserProfileController
+UpdateUserProfileController .> ITCompany
+ITCompany "1"-->"profileStore 1" ProfileStore
+ProfileStore o--"1..* profileArrayList" Profile
+ITCompany "1"-->"accountStore 1" AccountStore
+AccountStore o--"1..* ArrayListAccount" Account
+Account "0..*"-up->"accountProfiles 1..* " Profile
+
+
+@enduml

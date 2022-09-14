@@ -1,0 +1,52 @@
+#!/bin/bash
+#Este ficheiro servirÃ¡ para obter as listagens necessÃ¡rias para que o utilizador selecione uma opÃ§Ã£o
+#teremos de ter um ficheiro destes para cada listagem, no caso do resource: um para
+#project store e outro para account store
+
+
+#Vai buscar a pasta onde estÃ£o guardados os projectos
+TYPOLOGIES_ADDRESS="/var/www/data/typologies"
+
+#VariÃ¡vel para guardar a lista de projectos
+TEMP_TYPOLOGIES="/tmp/typologies.tmp"
+
+#FunÃ§Ã£o erro
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $TEMP_TYPOLOGIES
+exit
+}
+
+### Garante mÃ©tdo GET
+if [ "$REQUEST_METHOD" != "GET" ]; then error_response "Invalid method. The only supported method is GET."; fi
+
+### Garante que nÃ£o tem body
+###if [ -n "$CONTENT_LENGTH" ]; then error_response "Too much body!"; fi
+
+### Verifica se a string estÃ¡ vazia
+###if [ -z "$QUERY_STRING" ]; then error_response "No query-string"; fi
+
+### Lista de contas dentro da pasta typologies
+
+for FILE in /var/www/data/typologies/*; do
+  NAME=$(grep -o '<name>.*</name>' "$FILE" | sed 's/\(<name>\|<\/name>\)//g')
+  JSON_STRING="$( jq -n \
+                    --arg name "$NAME" \
+                    '{typologyname: $name}' )"
+  echo "$JSON_STRING," >> $TEMP_TYPOLOGIES
+done
+
+TEMP_TYPOLOGIES_FINAL="$(cat $TEMP_TYPOLOGIES)"
+TEMP_TYPOLOGIES_ADDRESSFINALTWO="${TEMP_TYPOLOGIES_FINAL%,}"
+echo "$TEMP_TYPOLOGIES_ADDRESSFINALTWO" > $TEMP_TYPOLOGIES
+
+var="[$(<$TEMP_TYPOLOGIES)]"
+echo "$var" > $TEMP_TYPOLOGIES
+
+echo "Content-type: JSON"
+echo ""
+cat $TEMP_TYPOLOGIES
+rm -f $TEMP_TYPOLOGIES

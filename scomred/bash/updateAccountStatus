@@ -1,0 +1,66 @@
+#!/bin/bash
+
+ACCOUNTS_STORE=/var/www/data/accounts
+
+#FunÃ§Ã£o de erro
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+rm -f $M_CONTENT_FILE
+exit
+}
+
+#Verifica se o request tem conteÃºdo
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+
+#Verifica se o tipo de request Ã© POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+#Verifica se a query-string nÃ£o estÃ¡ vazia, pois queremos que esteja
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Criar content
+CONTENT=$(cat $M_CONTENT_FILE);
+
+#Guardar a primeira variÃ¡vel
+EMAILDATA=$(echo $CONTENT | cut -d "=" -f 3 )
+EMAILDATA=${EMAILDATA#emaildata=}
+EMAILDATA=$(echo $EMAILDATA | xargs)
+if [ -z "$EMAILDATA" ]; then error_response "empty email"; fi
+
+
+#Editar ficheiro account
+for FILE in /var/www/data/accounts/*; do
+  ACCOUNTEMAIL=$(grep -o '<email>.*</email>' $FILE | sed 's/\(<email>\|<\/email>\)//g')
+  if [ "$EMAILDATA" == "$ACCOUNTEMAIL" ]; then
+    FILENAME=$(echo $EMAILDATA | cut -d "@" -f 1 )
+    NAME=$(grep -o '<name>.*</name>' $FILE | sed 's/\(<name>\|<\/name>\)//g')
+    PASSDATA=$(grep -o '<passwordhash>.*</passwordhash>' $FILE | sed 's/\(<passwordhash>\|<\/passwordhash>\)//g')
+    ALG=$(grep -o '<hashalgorithm>.*</hashalgorithm>' $FILE | sed 's/\(<hashalgorithm>\|<\/hashalgorithm>\)//g')
+    FUNCTION=$(grep -o '<function>.*</function>' $FILE | sed 's/\(<function>\|<\/function>\)//g')
+    PHOTO=$(grep -o '<photo>.*</photo>' $FILE | sed 's/\(<photo>\|<\/photo>\)//g')
+    PROFILE=$(grep -o '<profile>.*</profile>' $FILE | sed 's/\(<profile>\|<\/profile>\)//g')
+
+    echo '<?xml version="1.0"?>' > "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<holder>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<email>"$EMAILDATA"</email>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<name>"$NAME"</name>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<passwordhash>"$PASSDATA"</passwordhash>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<hashalgorithm>"$ALG"</hashalgorithm>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<function>"$FUNCTION"</function>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<photo>"$PHOTO"</photo>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<isactive>Yes</isactive>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "<profile>$PROFILE</profile>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+    echo "</holder>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+  fi
+done
+
+#Enviar resposta http
+
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""
+echo "Saved changes"

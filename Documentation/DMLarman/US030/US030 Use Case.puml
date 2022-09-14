@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor TeamMember
+
+usecase (US030 - As TeamMember , I want to view the Scrum Board of current sprint.)
+
+:TeamMember: --  (US030 - As TeamMember , I want to view the Scrum Board of current sprint.)
+@enduml

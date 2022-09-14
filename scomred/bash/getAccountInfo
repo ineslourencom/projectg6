@@ -1,0 +1,60 @@
+#!/bin/bash
+
+#Vai buscar a pasta onde estão guardados os clientes
+ACCOUNTS_ADDRESS="/var/www/data/accounts"
+
+#Variável para guardar a lista de contas
+TEMP_ACCOUNTS="/tmp/accounts.tmp"
+
+#Função erro
+error_response() {
+ echo "Status: 400 Bad Request"
+ echo "Content-type: text/plain"
+ echo ""
+ echo "ERROR: ${1}"
+ rm -f $TEMP_ACCOUNTS
+exit
+}
+
+### Garante método GET
+if [ "$REQUEST_METHOD" != "GET" ]; then error_response "Invalid method. The only supported method is GET."; fi
+
+### Guardar email
+EMAILDATA=${QUERY_STRING#*emaildata=};
+
+### Verifica se EMAILDATA == QUERY (para estar correto é suposto estas variáveis serem diferentes)
+if [ "$EMAILDATA" == "$QUERY_STRING" ]; then error_response "Bad query-string: $QUERY_STRING"; fi
+
+### Verifica se vat está vazio
+if [ -z "$EMAILDATA" ]; then error_response "Empty input"; fi
+
+### Vai à lista de accounts e procura o ficheiro que tem o nome com o email passado no query string
+for FILE in /var/www/data/accounts/*; do
+  ACCOUNTEMAIL=$(grep -o '<email>.*</email>' $FILE | sed 's/\(<email>\|<\/email>\)//g')
+  if [ "$EMAILDATA" == "$ACCOUNTEMAIL" ]; then
+      NAME=$(grep -o '<name>.*</name>' $FILE | sed 's/\(<name>\|<\/name>\)//g')
+      STATUSDATA=$(grep -o '<isactive>.*</isactive>' $FILE | sed 's/\(<isactive>\|<\/isactive>\)//g')
+      ID=$(echo "$FILE" | cut -d "." -f 1 | cut -d "/" -f 6 )
+      PROFILE=$(grep -o '<profile>.*</profile>' $FILE | sed 's/\(<profile>\|<\/profile>\)//g')
+      JSON_STRING="$( jq -n \
+                          --arg id "$ID" \
+                          --arg name "$NAME" \
+                          --arg status "$STATUSDATA" \
+                          --arg emaildata "$EMAILDATA" \
+                          --arg profile "$PROFILE" \
+                          '{Username: $id, Account: $name, Status: $status, Email: $emaildata, Profile: $profile}' )"
+        echo "$JSON_STRING," >> $TEMP_ACCOUNTS
+    fi
+done
+
+TEMP_PROJECTSFINAL=$( cat $TEMP_ACCOUNTS)
+TEMP_PROJECTSFINALTWO=${TEMP_PROJECTSFINAL%,}
+echo $TEMP_PROJECTSFINALTWO > $TEMP_ACCOUNTS
+
+var="[$(<$TEMP_ACCOUNTS)]"
+echo $var > $TEMP_ACCOUNTS
+
+echo "Content-type: JSON"
+echo ""
+cat $TEMP_ACCOUNTS
+rm -f $TEMP_ACCOUNTS

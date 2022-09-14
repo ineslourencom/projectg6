@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+actor "Team Member" as TM
+participant ": UI"
+participant ": CreateTaskController" as controller
+participant ": ITCompany" as IT
+participant ": ProjectStore"
+participant "project : Project" as project
+participant "sprint : Sprint" as sprint
+participant ": SprintBacklog" as spBacklog
+participant "listAvailableUS : List<UserStory>"
+participant "usMapper" as mapper
+participant ": UserStory" as us
+participant "listUSDTO : List<DTO>" as DTOList
+
+autonumber
+TM -> ": UI" : Request list of Projects
+activate ": UI"
+": UI" -> controller : showListOfNotClosedSprints(projCode)
+activate controller
+controller -> IT : getProjectStore()
+activate IT
+controller <-- IT : projectStore : ProjectStore
+deactivate IT
+
+controller -> ": ProjectStore" : findProjectByCode(projCode)
+activate ": ProjectStore"
+controller <-- ": ProjectStore": return project
+deactivate ": ProjectStore"
+controller -> project : findSprintByNumber(sprintNumber)
+activate project
+controller <-- project : return sprint
+deactivate project
+controller -> sprint : getListOfAvailableUSInSprint()
+
+activate sprint
+sprint -> spBacklog : getAvailableSprintBacklog()
+activate spBacklog
+
+spBacklog -> mapper : createUSDTO(listAvailableUS)
+deactivate spBacklog
+deactivate sprint
+deactivate project
+group Loop
+activate mapper
+mapper -> DTOList ** : createListOfUSDTO()
+mapper ->  us : usNumber = getUSNumber()
+activate us
+mapper ->  us : usStatement = getUSStatement()
+deactivate us
+mapper -> "usDTO : UserStoryDTO" ** : usDTO = usDTO(usNumber,usStatement)
+mapper -> DTOList : add(usDTO)
+activate DTOList
+deactivate DTOList
+
+end
+controller <-- mapper : return listUSDTO
+deactivate mapper
+": UI" <-- controller : return listUSDTO
+deactivate controller
+TM <-- ": UI" : return list of available UserStories
+deactivate ": UI"
+
+@enduml

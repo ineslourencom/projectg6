@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor "Administrator" as Admin
+participant ": ActiveAccountUI" as UI
+participant ": ActiveAccountController" as Controller
+participant ": ITCompany" as IT
+participant "accountStore : AccountStore" as store
+participant "account : Account" as account
+
+autonumber
+
+Admin -> UI: active account request
+activate UI
+UI -> Controller : activeAccount(email : String) : boolean
+activate Controller
+Controller -> IT : getAccountStore() : AccountStore
+activate IT
+IT --> Controller : accountStore
+deactivate IT
+Controller -> store : findAccountByEmail(email) : Account
+activate store
+store --> Controller : account
+deactivate store
+
+Controller -> account : activeAccount() : boolean
+activate account
+account --> Controller : true
+deactivate account
+
+Controller --> UI : true
+deactivate Controller
+UI --> Admin : Inform operation success
+deactivate UI
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor TeamMember
+
+usecase (US 31 - As Team Member, I want to create a task in a user story)
+
+:TeamMember: -- (US 31 - As Team Member, I want to create a task in a user story)
+@enduml

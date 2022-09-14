@@ -1,0 +1,13 @@
+@startuml
+class Resource
+
+Account "1" -- "0..*" Resource : < is linked to
+Resource "0..*" -- "1" Project : is allocated to >
+Resource "1" -- "0..*" EffortUpdate : < is submited by
+Resource "1" -- "0..*" Task : < is owned by
+Task "1" -- "0..*" EffortUpdate : is completed in >
+Task "1" -- "0..*" Task : is preceeded by
+Task "1..*" -- "0..1" UserStory : completes >
+Task "1..*" -- "0..1" Sprint : < makes ceremony
+Project "1" -- "0..1" Sprint : is carried out in >
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor ProductOwner as dir
+participant Frontend as ui
+participant Backend as bck
+participant "SGBD" as db
+
+dir-> ui : Initiates process
+ui-> bck : HTTP GET http://localhost:8080/projects
+bck -> db : get projects
+db --> bck : projects
+bck--> ui : projects
+ui -> dir : Displays all projects
+dir -> ui : Selects a project
+ui-> dir : Displays possible actions
+dir -> ui : Selects ProductBacklog
+ui-> bck : HTTP GET http://localhost:8080/projects/{id}/productBacklog
+bck -> db : get ProductBacklog
+db --> bck : ProductBacklog
+bck--> ui : ProductBacklog
+ui-> dir : Shows ProductBacklog and possible actions
+dir -> ui : Clicks on CreateUserStory
+ui-> dir : Requests necessary information\nto Create User Story
+dir -> ui : Inserts detail and statement
+ui -> bck : HTTP POST http://localhost:8080/projects/{pid}/userStories
+bck -> db : project exists?
+db --> bck : yes
+bck -> db : save User Story
+bck --> ui : success and User Story details
+ui -> dir : Informs about operation's success or failure\nand returns User Story details if successful
+@enduml

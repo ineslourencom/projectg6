@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor "Director/PM/PO/SM" as actor
+
+usecase (I want to view status of activities in a project: User Stories Status)
+
+actor -- (I want to view status of activities in a project: User Stories Status)
+@enduml

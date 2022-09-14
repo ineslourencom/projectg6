@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/createNewProfileType_Admin.js"></script>
+    <link rel="stylesheet" href="../css/geral.css">
+
+</head>
+<body>
+
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Homepage</a>
+    <br>
+    <br>
+</div>
+<div class="container">
+    <div style="text-align:center">
+        <h2>Profiles</h2>
+            <h3>Create a New Profile Type</h3>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="profileType">Profile Type</label>
+                <input type="text" id="profileType" name="profileType" placeholder="Insert profile type">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Insert profile type description..."
+                          style ="height:100px"></textarea>
+                <input type="button" value="Submit" onclick="validateIfProfileExists()">
+            </form>
+        </div>
+    </div>
+</div>
+<div id="result" ></div>
+
+</body>
+</html>

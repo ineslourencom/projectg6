@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor ProductOwner
+
+usecase (US009 - As Product Owner, I want to create a user story and add it to the Product Backlog.)
+
+:ProductOwner: -- (US009 - As Product Owner, I want to create a user story and add it to the Product Backlog.)
+@enduml

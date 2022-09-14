@@ -1,0 +1,67 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Director as dir
+participant ": DefinePOUI" as ui
+participant "dto : CreateResourceDTO" as dto
+participant ": DefinePOController" as ctrl
+participant ": ITCompany" as itc
+participant " accStore : AccountStore" as accstr
+participant "pStore : ProjectStore" as prjst
+participant "proj : Project" as prj
+
+
+
+
+dir -> ui: Initiate process to appoint PO
+activate ui
+ui --> dir: Request necessary information to appoint PO
+
+dir -> ui: Indicate project code, \n account email, start date,\npercentage of allocation\nand cost per hour
+create dto
+ui -> dto : dto = new CreateResourceDTO(projectCode : int, email : String,\n startDate : LocalDate, percentageOfAllocation : double,\n costPerHour : double, role : ResourceRole)
+
+ui -> ctrl : definePO(dto : CreateResourceDTO) : boolean
+activate ctrl
+
+ctrl -> itc : pStore = getProjectStore() : ProjectStore
+activate itc
+ctrl -> itc : accStore = getAccountStore() : AccountStore
+deactivate itc
+ctrl -> accstr : newPOAccount = findAccountByEmail(dto.getEmail() : String) : Account
+activate accstr
+deactivate accstr
+ctrl -> prjst : definePO(dto : CreateResourceDTO, newPOAccount : Account) : boolean
+activate prjst
+prjst -> prjst : proj = findProjectByCode(dto.getProjectCode() : int) : Project
+prjst -> prjst : true = allocationIsValid(dto.getEmail() : String, \ndto.getPercentageOfAllocation() : double, dto.getStartDate(): LocalDate) : boolean
+prjst -> prj : definePO(dto : CreateResourceDTO, \nnewPOAccount : Account) : boolean
+activate prj
+prj -> dto : startDate = getStartDate() : LocalDate
+activate dto
+prj -> dto : email = getEmail() : String
+prj -> dto : percentageOfAllocation = getPercentageOfAllocation() : double
+prj -> dto : costPerHour = getCostPerHour() : double
+deactivate dto
+prj -> prj : false = isProjectClosed() : boolean
+prj -> prj : false = isOwnProject(email : String) : boolean
+prj -> prj : true = isDateNotBeforeTheProjectStartDate(startDate : LocalDate) : boolean
+prj -> prj : hasPO = hasActivePOInDate(startDate : LocalDate): boolean
+    alt case hasPO = true
+    prj -> prj : setPOEndDate(startDate : LocalDate,\n startDate.minusDays(1) : LocalDate) : boolean
+    end
+
+create "newPO : Resource" as resource
+prj -> resource : newPO = new Resource(startDate : LocalDate,\n percentageOfAllocation : double, costPerHour : double, \n newPOAccount : Account, dto.getRole() : ResourceRole)
+prj -> prj : addResourceToProjectTeam(newPO : Resource) : boolean
+prj --> prjst : true
+deactivate prj
+prjst --> ctrl : true
+deactivate prjst
+ctrl --> ui : true
+deactivate ctrl
+ui --> dir: Inform operation success
+deactivate ui
+
+@enduml

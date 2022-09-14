@@ -1,0 +1,86 @@
+#!/bin/bash
+
+#Este ficheiro tem de ser guardado na pasta cgi/bin do servidor
+
+#/var/www/data/ ----> Este Ã© o local onde vÃ£o ficar armazenados os ficheiros BASH gerados pelo scprit
+#Antes de mais serÃ¡ necessÃ¡rio criar estas pastas no servidor
+#cada objecto serÃ¡ um ficheiro
+M_CONTENT_FILE="/tmp/content.tmp"
+#Atributos de um objecto serao um path para outro objecto representado por um ficheiro
+ACCOUNTS_STORE=/var/www/data/accounts
+#Algoritmo a ser usado para hash de password ("SHA512" preferencial)
+ALG="SHA512"
+PASSFILENAME="/tmp/file.tmp"
+
+
+#FunÃ§Ã£o de erro
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+rm -f $M_CONTENT_FILE
+exit
+}
+
+#Verifica se o request tem conteÃºdo
+if [ "$CONTENT_LENGTH" == "0" ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+
+#Verifica se o tipo de request Ã© POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+#Verifica se a query-string nÃ£o estÃ¡ vazia, pois queremos que esteja
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+#Criar content
+CONTENT=$(cat $M_CONTENT_FILE);
+
+#Guardar a primeira variÃ¡vel
+EMAILDATA=$(echo $CONTENT | cut -d "-" -f 1 )
+EMAILDATA=${EMAILDATA#emaildata=}
+EMAILDATA=$(echo $EMAILDATA | xargs)
+if [ -z "$EMAILDATA" ]; then error_response "empty email"; fi
+
+#Guardar a segunda variÃ¡vel
+NAME=$(echo $CONTENT | cut -d "-" -f 2 )
+NAME=${NAME#name=}
+NAME=$(echo $NAME | xargs)
+if [ -z "$NAME" ]; then error_response "empty name"; fi
+
+#Guardar a terceira variÃ¡vel
+PASSWORD=$(echo $CONTENT | cut -d "-" -f 3 )
+PASSWORD=${PASSWORD#pass=}
+PASSWORD=$(echo $PASSWORD | xargs)
+if [ -z "$PASSWORD" ]; then error_response "empty password"; fi
+echo $PASSWORD > $PASSFILENAME
+PASSDATA=$(/var/www/cgi-bin/hashFunction $PASSFILENAME $ALG)
+rm -f $PASSFILENAME;
+
+#Guardar a quarta variÃ¡vel
+FUNCTION=$(echo $CONTENT | cut -d "-" -f 4 )
+FUNCTION=${FUNCTION#function=}
+FUNCTION=$(echo $FUNCTION | xargs)
+if [ -z "$FUNCTION" ]; then error_response "empty function"; fi
+
+
+#Criar ficheiro account
+FILENAME=$(echo $EMAILDATA | cut -d "@" -f 1 )
+echo '<?xml version="1.0"?>' > "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<holder>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<email>"$EMAILDATA"</email>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<name>"$NAME"</name>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<passwordhash>"$PASSDATA"</passwordhash>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<hashalgorithm>"$ALG"</hashalgorithm>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<function>"$FUNCTION"</function>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<photo>""</photo>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<isactive>No</isactive>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "<profile>Visitor</profile>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+echo "</holder>" >> "$ACCOUNTS_STORE/$FILENAME.txt"
+
+#Enviar resposta http
+
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""
+echo "Saved changes"

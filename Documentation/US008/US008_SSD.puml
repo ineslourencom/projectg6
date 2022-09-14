@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Project Manager" as PM
+participant "System" as sys
+
+
+
+PM->sys : Initiate process
+note left #Fbbbbb
+As Project Manager,
+I want to edit some
+project information.
+end note
+sys -> PM : Display projects managed by Actor
+PM -> sys : Select one of the projects
+sys -> PM : Display more information about the project
+PM -> sys : Start edition of project
+sys -> PM : Display edition fields
+PM -> sys : Edit information
+PM -> sys : Save information
+sys -> PM : Request confirmation
+PM -> sys : Confirm
+sys -> PM : Inform operation success or insuccess
+@enduml

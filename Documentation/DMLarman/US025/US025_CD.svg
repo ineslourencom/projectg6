@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="462px" preserveAspectRatio="none" style="width:523px;height:462px;background:#FFFFFF;" version="1.1" viewBox="0 0 523 462" width="523px" zoomAndPan="magnify"><defs><filter height="300%" id="f1agbcfssp40qh" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[df76e760f2062188d44f98c21a88999b]
+class UI--><rect codeLine="3" fill="#FEFECE" filter="url(#f1agbcfssp40qh)" height="48" id="UI" style="stroke:#A80036;stroke-width:1.5;" width="142" x="167" y="7"/><ellipse cx="182" cy="23" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M183,20 L183,26 L185,26 L185.4844,26 L186,26.625 L186,27 L186,27.375 L185.4844,28 L185,28 L179,28 L178.5156,28 L178,27.375 L178,27 L178,26.625 L178.5156,26 L179,26 L181,26 L181,20 L179,20 L178.5156,20 L178,19.375 L178,19 L178,18.625 L178.5156,18 L179,18 L185,18 L185.4844,18 L186,18.625 L186,19 L186,19.375 L185.4844,20 L185,20 L183,20 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="110" x="196" y="27.9102">InactivateAccountUI</text><line style="stroke:#A80036;stroke-width:1.5;" x1="168" x2="308" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="168" x2="308" y1="47" y2="47"/><!--MD5=[1d7ba1c7002d54515419844fbd155368]
+class Controller--><rect codeLine="4" fill="#FEFECE" filter="url(#f1agbcfssp40qh)" height="61.8359" id="Controller" style="stroke:#A80036;stroke-width:1.5;" width="215" x="130.5" y="115"/><ellipse cx="161.25" cy="131" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M163.25,127.5 Q163.4531,127 163.6875,126.75 Q163.9219,126.5 164.1875,126.5 Q164.6563,126.5 164.9531,126.7813 Q165.25,127.0625 165.25,127.7188 L165.25,129.2813 Q165.25,129.9375 164.9688,130.2188 Q164.6875,130.5 164.25,130.5 Q163.8594,130.5 163.6094,130.3281 Q163.3594,130.1563 163.25,129.7031 Q163.2031,129.3906 163.0313,129.2188 Q162.7188,128.8906 162.1563,128.7031 Q161.5938,128.5 161.0313,128.5 Q160.3281,128.5 159.7344,128.7813 Q159.1563,129.0625 158.7031,129.6875 Q158.25,130.3125 158.25,131.1719 L158.25,132.0938 Q158.25,133.125 159.0938,133.8125 Q159.9375,134.5 161.4375,134.5 Q162.3281,134.5 162.9531,134.2969 Q163.3125,134.1875 163.7188,133.8281 Q163.9844,133.625 164.125,133.5625 Q164.2656,133.5 164.4375,133.5 Q164.7656,133.5 165,133.7656 Q165.25,134.0156 165.25,134.375 Q165.25,134.7188 164.9063,135.125 Q164.4063,135.7188 163.6094,136.0469 Q162.5625,136.5 161.2813,136.5 Q159.7813,136.5 158.5781,135.9063 Q157.6094,135.4375 156.9219,134.4219 Q156.25,133.4063 156.25,132.2031 L156.25,131.1094 Q156.25,129.8594 156.8438,128.7656 Q157.4531,127.6719 158.5,127.0938 Q159.5625,126.5 160.75,126.5 Q161.4688,126.5 162.0938,126.75 Q162.7188,127 163.25,127.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="148" x="178.75" y="135.9102">InactivateAccountController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="131.5" x2="344.5" y1="147" y2="147"/><line style="stroke:#A80036;stroke-width:1.5;" x1="131.5" x2="344.5" y1="155" y2="155"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="203" x="136.5" y="170.4189">inactivateAccount(email : String) : boolean</text><!--MD5=[95926c325e3137dd2dd3817a1edb1210]
+class IT--><rect codeLine="8" fill="#FEFECE" filter="url(#f1agbcfssp40qh)" height="70.0234" id="IT" style="stroke:#A80036;stroke-width:1.5;" width="178" x="7" y="247"/><ellipse cx="58.75" cy="267.0938" fill="#FF7700" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M57.25,271.0938 Q56.9688,271.7344 56.7813,271.9219 Q56.6094,272.0938 56.3594,272.0938 Q55.8594,272.0938 55.5469,271.875 Q55.25,271.6406 55.25,271.0938 L55.25,270.0938 Q55.25,269.5469 55.5,269.3281 Q55.75,269.0938 56.1563,269.0938 Q56.4688,269.0938 56.6875,269.1719 Q56.9063,269.25 57.0156,269.4375 Q57.125,269.625 57.25,269.6875 Q57.4063,269.8281 57.8125,269.9688 Q58.2188,270.0938 58.7031,270.0938 Q59.4531,270.0938 59.9375,269.6406 Q60.25,269.375 60.25,268.9844 Q60.25,268.7188 60.0938,268.4844 Q59.9375,268.25 59.5938,268.0938 Q59.375,267.9844 58.5938,267.8125 Q57.1406,267.5938 56.625,267.25 Q56.125,266.9063 55.6875,266.2969 Q55.25,265.6719 55.25,264.9531 Q55.25,263.8125 56.1094,262.9531 Q56.9844,262.0938 58.3594,262.0938 Q58.9219,262.0938 59.2031,262.3438 Q59.4844,262.5938 60.25,263.0938 Q60.6875,262.0938 61.125,262.0938 Q61.625,262.0938 61.9375,262.3125 Q62.25,262.5313 62.25,263.0469 L62.25,264.125 Q62.25,264.6563 62,264.875 Q61.75,265.0938 61.3594,265.0938 Q61.0313,265.0938 60.7813,265 Q60.5938,264.9375 60.5,264.7344 Q60.4063,264.5313 60.25,264.4531 Q60.0625,264.2969 59.6875,264.2031 Q59.3125,264.0938 58.8125,264.0938 Q58.0938,264.0938 57.6719,264.4531 Q57.25,264.8125 57.25,265.2031 Q57.25,265.4688 57.3906,265.7188 Q57.5469,265.9531 57.8438,266.0938 Q58.0313,266.1875 59.1094,266.4063 Q60.1875,266.625 60.7344,266.9219 Q61.2813,267.2031 61.7656,267.8125 Q62.25,268.4219 62.25,269.2813 Q62.25,270.4531 61.5781,271.1563 Q60.6719,272.0938 59.2813,272.0938 Q58.75,272.0938 58.2344,271.8438 Q57.7344,271.5938 57.25,271.0938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="66" x="79.25" y="264.457">«Singleton»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="66" x="79.25" y="279.5508">IT Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="184" y1="287.1875" y2="287.1875"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="184" y1="295.1875" y2="295.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="166" x="13" y="310.6064">getAccountStore() : AccountStore</text><!--MD5=[b4d3d50c0abf08df45181fececb9f04d]
+class Store--><rect codeLine="12" fill="#FEFECE" filter="url(#f1agbcfssp40qh)" height="61.8359" id="Store" style="stroke:#A80036;stroke-width:1.5;" width="227" x="124.5" y="387"/><ellipse cx="197.75" cy="403" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M199.75,399.5 Q199.9531,399 200.1875,398.75 Q200.4219,398.5 200.6875,398.5 Q201.1563,398.5 201.4531,398.7813 Q201.75,399.0625 201.75,399.7188 L201.75,401.2813 Q201.75,401.9375 201.4688,402.2188 Q201.1875,402.5 200.75,402.5 Q200.3594,402.5 200.1094,402.3281 Q199.8594,402.1563 199.75,401.7031 Q199.7031,401.3906 199.5313,401.2188 Q199.2188,400.8906 198.6563,400.7031 Q198.0938,400.5 197.5313,400.5 Q196.8281,400.5 196.2344,400.7813 Q195.6563,401.0625 195.2031,401.6875 Q194.75,402.3125 194.75,403.1719 L194.75,404.0938 Q194.75,405.125 195.5938,405.8125 Q196.4375,406.5 197.9375,406.5 Q198.8281,406.5 199.4531,406.2969 Q199.8125,406.1875 200.2188,405.8281 Q200.4844,405.625 200.625,405.5625 Q200.7656,405.5 200.9375,405.5 Q201.2656,405.5 201.5,405.7656 Q201.75,406.0156 201.75,406.375 Q201.75,406.7188 201.4063,407.125 Q200.9063,407.7188 200.1094,408.0469 Q199.0625,408.5 197.7813,408.5 Q196.2813,408.5 195.0781,407.9063 Q194.1094,407.4375 193.4219,406.4219 Q192.75,405.4063 192.75,404.2031 L192.75,403.1094 Q192.75,401.8594 193.3438,400.7656 Q193.9531,399.6719 195,399.0938 Q196.0625,398.5 197.25,398.5 Q197.9688,398.5 198.5938,398.75 Q199.2188,399 199.75,399.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="72" x="218.25" y="407.9102">AccountStore</text><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="350.5" y1="419" y2="419"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="350.5" y1="427" y2="427"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="130.5" y="442.4189">findAccountByEmail(email : String) : Account</text><!--MD5=[f9a29335b499db729be669fd1bd54958]
+class Account--><rect codeLine="16" fill="#FEFECE" filter="url(#f1agbcfssp40qh)" height="89.5078" id="Account" style="stroke:#A80036;stroke-width:1.5;" width="218" x="291" y="237"/><ellipse cx="374.25" cy="253" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M376.25,249.5 Q376.4531,249 376.6875,248.75 Q376.9219,248.5 377.1875,248.5 Q377.6563,248.5 377.9531,248.7813 Q378.25,249.0625 378.25,249.7188 L378.25,251.2813 Q378.25,251.9375 377.9688,252.2188 Q377.6875,252.5 377.25,252.5 Q376.8594,252.5 376.6094,252.3281 Q376.3594,252.1563 376.25,251.7031 Q376.2031,251.3906 376.0313,251.2188 Q375.7188,250.8906 375.1563,250.7031 Q374.5938,250.5 374.0313,250.5 Q373.3281,250.5 372.7344,250.7813 Q372.1563,251.0625 371.7031,251.6875 Q371.25,252.3125 371.25,253.1719 L371.25,254.0938 Q371.25,255.125 372.0938,255.8125 Q372.9375,256.5 374.4375,256.5 Q375.3281,256.5 375.9531,256.2969 Q376.3125,256.1875 376.7188,255.8281 Q376.9844,255.625 377.125,255.5625 Q377.2656,255.5 377.4375,255.5 Q377.7656,255.5 378,255.7656 Q378.25,256.0156 378.25,256.375 Q378.25,256.7188 377.9063,257.125 Q377.4063,257.7188 376.6094,258.0469 Q375.5625,258.5 374.2813,258.5 Q372.7813,258.5 371.5781,257.9063 Q370.6094,257.4375 369.9219,256.4219 Q369.25,255.4063 369.25,254.2031 L369.25,253.1094 Q369.25,251.8594 369.8438,250.7656 Q370.4531,249.6719 371.5,249.0938 Q372.5625,248.5 373.75,248.5 Q374.4688,248.5 375.0938,248.75 Q375.7188,249 376.25,249.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="43" x="394.75" y="257.9102">Account</text><line style="stroke:#A80036;stroke-width:1.5;" x1="292" x2="508" y1="269" y2="269"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="297" y="284.4189">email : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="297" y="298.2549">isActive: boolean</text><line style="stroke:#A80036;stroke-width:1.5;" x1="292" x2="508" y1="304.6719" y2="304.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="297" y="320.0908">inactivateAccount (email : String) : boolean</text><!--MD5=[132c963044dc2a803644bb1c6fd2eeb1]
+link UI to Controller--><path codeLine="23" d="M238,55.14 C238,70.71 238,91.53 238,109.22 " fill="none" id="UI-to-Controller" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="238,114.6,242,105.6,238,109.6,234,105.6,238,114.6" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="230.1469" y="76.5121">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="230.2781" y="104.022">1</text><!--MD5=[85db7fea8e27b7fd3bebe2971cccd062]
+link Controller to IT--><path codeLine="24" d="M206.13,177.07 C185.42,196.62 158.24,222.27 136.06,243.19 " fill="none" id="Controller-to-IT" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="132.27,246.78,141.5653,243.5245,135.911,243.3532,136.0823,237.6989,132.27,246.78" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="192.1665" y="198.3078">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="131.5168" y="236.0676">1</text><!--MD5=[9e29d823e302d68e69011e26e3231f76]
+link Controller to Account--><path codeLine="25" d="M274.36,177.07 C294.46,193.7 319.91,214.75 342.63,233.55 " fill="none" id="Controller-to-Account" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="346.54,236.78,342.148,227.9646,342.6849,233.596,337.0536,234.1328,346.54,236.78" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="273.8293" y="198.3078">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="330.818" y="226.1904">1</text><!--MD5=[4e2a97b261d9cdc7e20673a063a171ca]
+link Controller to Store--><path codeLine="26" d="M238,177.19 C238,227.44 238,328.02 238,381.56 " fill="none" id="Controller-to-Store" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="238,386.59,242,377.59,238,381.59,234,377.59,238,386.59" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="230.3109" y="198.4514">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="230.2781" y="376.01">1</text><!--MD5=[a382817b0e6716d77ea6b64a5257db64]
+link IT to Store--><path codeLine="27" d="M132.2,317.16 C153.64,337.39 180.7,362.93 202.09,383.11 " fill="none" id="IT-to-Store" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="205.74,386.56,201.9465,377.471,202.1061,383.1256,196.4515,383.2852,205.74,386.56" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="131.2291" y="338.643">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103" x="85.4645" y="375.9738">allAccountStore 1</text><!--MD5=[6e6da108d033d6d37ae75dd111eb56ac]
+link Account to Store--><path codeLine="28" d="M346.51,327.25 C326.51,343.79 303.97,362.43 284.64,378.42 " fill="none" id="Account-to-Store" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="274.56,386.76,281.7327,386.017,283.8056,379.1103,276.6329,379.8533,274.56,386.76" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="204.8567" y="347.9573">arrayListAccount 0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="269.9661" y="376.215">1</text><!--MD5=[f7fb15715efaeb30051e450f834780db]
+@startuml
+'https://plantuml.com/class-diagram
+
+interface "InactivateAccountUI" as UI
+class "InactivateAccountController" as Controller {
+inactivateAccount(email : String) : boolean
+}
+
+class "IT Company" as IT << (S,#FF7700) Singleton >>{
+getAccountStore() : AccountStore
+}
+
+class "AccountStore" as Store {
+
+findAccountByEmail(email : String) : Account
+}
+class "Account" as Account {
+email : String
+isActive: boolean
+inactivateAccount (email : String) : boolean
+}
+
+
+UI "1"-[dashed]->"1" Controller
+Controller "1"-[dashed]->"1" IT
+Controller "1"-[dashed]->"1" Account
+Controller "1"-[dashed]->"1" Store
+IT "1"- ->"allAccountStore 1" Store
+Account "arrayListAccount 0..* "- -o "1 " Store
+
+@enduml
+
+@startuml
+
+interface "InactivateAccountUI" as UI
+class "InactivateAccountController" as Controller {
+inactivateAccount(email : String) : boolean
+}
+
+class "IT Company" as IT << (S,#FF7700) Singleton >>{
+getAccountStore() : AccountStore
+}
+
+class "AccountStore" as Store {
+
+findAccountByEmail(email : String) : Account
+}
+class "Account" as Account {
+email : String
+isActive: boolean
+inactivateAccount (email : String) : boolean
+}
+
+
+UI "1"-[dashed]->"1" Controller
+Controller "1"-[dashed]->"1" IT
+Controller "1"-[dashed]->"1" Account
+Controller "1"-[dashed]->"1" Store
+IT "1"- ->"allAccountStore 1" Store
+Account "arrayListAccount 0..* "- -o "1 " Store
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

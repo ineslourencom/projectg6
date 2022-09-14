@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Actor Director as dir
+participant System as sys
+dir -> sys: Initiate process to create resource
+sys --> dir: Request necessary information to create resource
+dir -> sys: Indicate project code, \n account email, start date,\npercentage of allocation,\ncost per hour and role
+sys --> dir: Inform operation (in)success
+@enduml

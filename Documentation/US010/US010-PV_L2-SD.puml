@@ -1,0 +1,39 @@
+@startuml
+actor "Authenticated User" as user
+participant "UI" as ui
+participant "Backend" as be
+participant "DBMS" as dbms
+autonumber
+
+user -> ui : Open 'Update Account' UI
+activate ui
+ui -> be : Get Account information
+activate be
+be -> dbms : Find Account
+activate dbms
+dbms --> be : Return Account
+deactivate dbms
+be -> be : Validate Profile
+be --> ui : Return Account information with UI\n navigation options according to profile
+deactivate be
+ui --> user : Show 'Update Account' UI with\n current function and photo info
+
+
+user -> ui : Input new function and photo
+ui -> be : Update Account
+activate be
+be -> be : Validate function and photo rules
+be -> dbms : Find Account
+activate dbms
+dbms --> be : Return Account
+deactivate dbms
+be -> be : Change function and photo
+be -> dbms : Update Account
+activate dbms
+dbms --> be : Return updated Account
+deactivate dbms
+be --> ui : Return updated Account
+deactivate be
+ui --> user : View updated Account
+deactivate ui
+@enduml

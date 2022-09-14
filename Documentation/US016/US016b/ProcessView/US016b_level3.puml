@@ -1,0 +1,107 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant Routes
+control Controller as cntrl
+participant ApplicationService as appService
+participant Repositories as repos
+participant DataModel as DM
+participant JPARepositories as jpaRepo
+participant Domain as domain
+participant DTO as DTO
+
+[o-> Routes : GET taskStatus
+Routes -> cntrl : GET taskStatus
+
+cntrl -> appService : get Task Status
+activate appService
+
+appService -> repos : get all User Stories in Project
+activate repos
+repos -> jpaRepo : get all User Stories in Project
+activate jpaRepo
+repos <- jpaRepo : persisted user stories in Project
+deactivate jpaRepo
+
+
+repos -> DM : transform to domain
+activate DM
+DM -> domain : create user stories
+activate domain
+DM <- domain : user stories
+deactivate domain
+repos <- DM : user stories
+deactivate DM
+appService <- repos : user stories
+deactivate repos
+
+loop for each user story in list
+
+    appService -> domain : get container ID
+    activate domain
+    domain -> appService : container ID
+    deactivate domain
+
+
+end
+
+
+appService -> repos : get All Sprints in Project
+activate repos
+repos -> DM : transform to domain
+activate DM
+DM -> domain : create sprint
+activate domain
+DM <- domain : sprint
+deactivate domain
+repos <- DM : sprint
+deactivate DM
+appService <- repos : sprint
+deactivate repos
+
+loop for each sprint in list
+
+    appService -> domain : get container ID
+    activate domain
+    domain -> appService : container ID
+    deactivate domain
+end
+
+appService -> repos : get all Tasks By Container ID
+activate repos
+repos -> DM : transform to domain
+activate DM
+DM -> domain : create tasks
+activate domain
+DM <- domain : tasks
+deactivate domain
+repos <- DM : tasks
+deactivate DM
+
+appService <- repos : tasks
+deactivate repos
+
+
+
+loop for each task from domain
+
+appService -> DTO : transform to DTO
+activate DTO
+appService <- DTO : return dto
+
+deactivate DTO
+
+appService -> appService : add to list of DTO's
+
+end
+cntrl <-- appService : list of tasks with status
+deactivate appService
+Routes <-- cntrl : ResponseEntity
+
+
+
+
+
+@enduml

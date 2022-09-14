@@ -1,0 +1,15 @@
+@startuml
+actor "Authenticated User" as user
+participant "System" as system
+autonumber
+user -> system : Open 'Update Account' UI
+activate system
+
+system --> user : Show 'Update Account' UI with\n current function and photo info
+user -> system : Input new function and photo
+system -> system : validate function and photo rules
+system -> system : change function and photo
+
+system --> user : View Updated Account
+deactivate system
+@enduml

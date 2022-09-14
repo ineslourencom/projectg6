@@ -1,0 +1,47 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+actor "Team Member" as TM
+participant ": UI"
+participant ": CreateTaskController" as controller
+participant ": ITCompany" as IT
+participant ": ProjectStore"
+participant "ProjectMapper" as mapper
+participant "project : Project" as project
+participant "listProjectDTO : List<ProjectDTO>" as DTOList
+participant ": ProjectDTO"
+autonumber
+TM -> ": UI" : Request list of Projects
+activate ": UI"
+": UI" -> controller : showListOfProjects()
+activate controller
+controller -> IT : getProjectStore()
+activate IT
+controller <-- IT : projectStore : ProjectStore
+deactivate IT
+controller -> ": ProjectStore" : getListOwnProjectsDTO(email)
+activate ": ProjectStore"
+
+": ProjectStore" -> mapper : createListOfProjectDTO(listOwnProjects)
+deactivate ": ProjectStore"
+
+group Loop
+activate mapper
+mapper -> DTOList ** : listProjectsDTO()
+mapper ->  project : code = getCode()
+activate project
+mapper ->  project : name = getName()
+mapper ->  project : description = getDescription()
+deactivate project
+mapper -> ": ProjectDTO" ** : projectDTO = ProjectDTO(code,name,description)
+mapper -> DTOList : add(projectDTO)
+activate DTOList
+deactivate DTOList
+end
+controller <-- mapper : return listProjectDTO
+deactivate mapper
+": UI" <-- controller : return listProjectDTO
+deactivate controller
+TM <-- ": UI" : return list of Projects
+deactivate ": UI"
+
+@enduml

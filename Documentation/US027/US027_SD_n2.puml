@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Director as dir
+participant UI as ui
+participant backend as bck
+participant "SGBD" as db
+
+dir-> ui : Initiates process
+ui-> bck : get projects
+bck -> db : get projects
+db --> bck : projects
+bck--> ui : projects
+ui -> dir : Displays all projects
+dir -> ui : Selects a project
+ui-> dir : Requests necessary information\nto appoint Product Owner
+
+dir -> ui : Insert percentage of allocation,\n start date, end date, cost per hour value\nand associated account email
+ui -> bck : create product owner
+bck -> db : get project
+db --> bck : project
+bck -> db : account exists?
+db --> bck : yes
+bck -> db : get resources
+db --> bck : resources
+bck -> db : save product owner
+bck -> ui : success/ failure
+
+ui -> dir : Inform operation result and return information\n about the created resource if successfull
+@enduml

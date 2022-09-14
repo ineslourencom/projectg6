@@ -1,0 +1,154 @@
+# US030 - View Scrum Board
+
+##Entry Notes
+Note that each diagram mentioned in sections 3.2, 3.3 and 3.4 is represented both in SVG formats and plantUML. 
+The most complete accurate versions are the latest SVG versions which this document refers to. 
+
+## 1. Requirements Engineering
+### 1.1. User Story Description
+As Team Member, I want to view the Scrum Board of current sprint.
+
+### 1.2. Customer Specifications and Clarifications
+**From the specifications document:**
+The requirements document doesn't mention any details about the Scrum Board besides the statement of US034:
+>US034 - As Project Member, I want to update the status (i.e.: the Scrum Board category) of a
+>user story in the scope of the current sprint backlog.
+
+Considering the above, US30 was designed to support the change of User Stories' (US) categories in the Scrum Board.
+
+**From the client clarifications:** (translated from portuguese)
+> **Question:** Is the Scrum Board a list of the US in the Sprint Backlog organized by their category? (question placed over Teams on 25/01/2022)
+> **Answer:** "Ends up being something like that." (question answered over Teams on 27/01/2022)
+>
+> **Question:** What does the Scrum Board look like? (question placed to the PO on LABPROJI class on 31/01/2022)
+> **Answer:** As an example of what the Scrum Board looks like, the following JIRA snapshot was shown: ![](jira-scrumboard-header.png) (question answered on LABPROJI class on 31/01/2022)
+>
+> **Question:** Can the categories of the Scrum Board change from project to project, i.e, can we have different Scrum Board formats? (question placed to the PO on LABPROJI class on 31/01/2022)
+> **Answer:** Not for now. (question answered on LABPROJI class on 31/01/2022)
+
+
+### 1.3. Acceptance Criteria
+* **AC1:** According to the example mentioned in 1.2, the Scrum Board must have four categories and show the US organized by their category.
+These categories are: To Do, In Progress, Code Review and Done. 
+
+### 1.4. Found out Dependencies
+This US030 depends on two other:
+>US023: As Team Member, I want to add a user story in the product backlog to the sprint backlog.
+
+This US was modified during this 3rd Sprint to make sure when a US is added to the Sprint Backlog, it is automatically added to the "To Do List"
+in the Sprint Backlog. 
+
+>US034: As Project Member, I want to update the status (i.e.: the Scrum Board category) of a
+user story in the scope of the current sprint backlog.
+
+This US features dragging US from one Scrum Board category to another, which is essential for having different
+US in different categories and therefore properly producing consumable information to display in the Scrum Board.
+
+
+### 1.5 Input and Output Data
+**Input Data:**
+* Selected data:
+    * Project (out of a list of projects which the actor is allocated to)
+
+**Output Data:**
+* Scrum Board information:
+  * List of To Do US
+  * List of In Progress US
+  * List of US in Code Review
+  * List of Done US
+  * For each list, its is displayed the number and statement of each User Story in the list
+
+
+## 2. OO Analysis
+### 2.1. Relevant Domain Model Excerpt
+![US030_MD](../DM/Domain Model.svg)
+
+### 2.2 Assumptions
+According to the statement of the US, it is assumed that we only want to visualize the Scrum Board of the ongoing Sprint, therefore
+a method was implemented to determine the running Sprint. 
+It is also assumed that the Scrum Board Category is independent of the US status. This is clearly defined in the State Machine Diagram presented in
+section 3.4.
+
+## 3. Design - User Story Realization
+### 3.1. Rationale
+### Systematization ##
+According to the taken rationale, the conceptual classes promoted to software classes are:
+* Project
+* Sprint
+* SprintBacklog
+* UserStory
+
+Other software classes (i.e. Pure Fabrication) identified:
+* ViewScrumBoardUI
+* ViewScrumBoardController
+* ITCompany
+* ProjectStore
+* ScrumBoardDTOMapper
+* UserStoryDTOMapper
+* UserStoryDTO
+* ScumBoardDTO
+
+###3.1.1 Design decisions (GRASP patterns)
+####Differentiating US status and Scrum Board categories
+As clearly shown in the SMD (see section 3.4) the US status represents the state of a US in the context of the 
+Product Backlog (in other words, the general state of the US in the project). From code point of view, this status
+was implemented as an attribute of the class User Story. 
+Adding to these US status, the concept of Scrum Board implies that we can drill down the US found in the Sprint Backlog
+into four categories/status. 
+For example, a US that added to the Sprint Backlog has its (general) status changed to "In Progress" and its Scrum
+Board category will be "To Do".
+
+####How could the four Scrum Board categories be implemented from software development point of view?
+First of all, it must be considered that a US can be rejected at the end of a Sprint and later be included in 
+another Sprint. Hence, it was considered that having a "Scrum Board Category" attribute in the User Story class 
+would not satisfy the need to know the category of the US for each Sprint where it has been.
+A better solution was found and it is described next. 
+
+####Should the Scrum Board be promoted to a software class?
+Even though it could result in higher cohesion, it was decided not to promote the concept of Scrum Board to a 
+software class. This decision was taken, because that would most likely imply a replication of data and because 
+for now the features required for the Scrum Board do not justify such promotion.
+Considering that the Sprint Backlog already contained a list of US belonging to a certain Sprint, having a Scrum 
+Board class with 4 lists of US belonging to a certain Sprint and organized by category would be redundant. 
+Hence, it was decided to favour the lower coupling and to transform the already existing list of US in the Sprint 
+Backlog into 4 lists: a list of To Do US, a list of In Progress US, a list of US in Code Review and a list of Done US. 
+
+####Retrieving Scrum Board Content to UI
+Keeping in mind that the Scrum Board has a perfectly defined structure of four lists with 
+specific and unchangeable qualitative definitions (To Do, In Progress, Code Review and Done)
+, the Scrum Board DTO was created to serve this structure and to retrieve it to the UI. 
+This option was found as a better alternative rather than retrieving four isolated lists to the UI
+(one for each category). 
+
+####Chasing higher cohesion in ViewScrumBoardController class
+As shown in older versions of the SD (folder /US030/SD) the controller was initially designed to 
+obtain the four lists of US from the Sprint Backlog. 
+Following the Tell Don't Ask principle, the responsibility of getting these lists was delegated 
+from the controller to the Scrum Board Mapper, which in turn became responsible for generating
+the Scrum Board DTO (using those lists). By doing so, we are maintaining the level of coupling
+(4 classes involved: Controller, Scrum Board Mapper, Sprint Backlog and UserStoryDTOMapper)
+while increasing cohesion (delegation).
+We also make sure that the constructor of the Scrum Board DTO is confined to a specific class, 
+which represents a better solution in case the code increases complexity, because we avoid having
+"new" ScrumBoardDTOs spread in other Software classes. 
+
+
+## 3.2. Sequence Diagram (SD)
+**SSD1**
+![US030_SD1](SD/US30_SD1_20220204.svg)
+
+**SSD2 - ScrumBoardDTO**
+![US030_SD2](SD/US30_SD2_ScrumBoardDTO_20220204.svg)
+
+**SSD3 - usListToDTO**
+![US030_SD3](SD/US30_SD3_usListToDTO_20220202.svg)
+
+## 3.3. Class Diagram (CD)
+![US030_CD](CD/US30_CD_20220204.svg)
+Note in this diagram that the SprintBacklog contains four lists of US, one for each category of the Scrum Board. 
+This is the core information for the development of US030.
+
+## 3.4. State Machine Diagram (SMD)
+![US030_SMD](SMD/SMDUS30_34_20220204.svg)
+Note that not all US Status Transitions have been implemented. These are marked as TBD. The ones currently implemented have their US code marked.
+On the other hand, all the defined Scrum Board Transitions have been implemented in US034.

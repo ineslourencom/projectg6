@@ -1,0 +1,108 @@
+@startuml
+'https://plantuml.com/class-diagramheader IMPLEMENTATION VIEW
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infrastructure" as infrastructure{
+package "Persistence" as persistence {
+package "iJPARepositories" as IJPARepo {
+class "<interface> IProjectTypologyJPARepository" as IProjectTypologyJPARepo {
++findAll() : List<ProjectTypologyJPA>
+}
+}
+}
+}
+
+folder "DataModel" as DataModel{
+class "ProjectTypologyJPA" as ProjectJPA{
+}
+class "ProjectTypologyDomainDataAssembler" as ProjectTypologyDomainDataAssembler {
++toDomain(ProjectTypologyJPA projectTypologyJPA) : ProjectTypology
++toData(ProjectTypology projectTypology) : ProjectTypologyJPA
+}
+}
+
+folder "Interface Adapters" as folderinter{
+ package "Repositories" as packrepoImpl{
+    class "ProjectTypologyRepository" as classrepo{
+         +findProjectTypologyByID(ProjectTypologyID projectTypologyID) : Optional<ProjectTypology>
+         +saveProjectTypology(ProjectTypology projectTypology) : ProjectTypology
+    }
+    }
+ package "implControllers" as packcontrol {
+    class "CreateProjectTypologyController" as classcontroller{
+    +createProjectTypology() : ResponseEntity
+    }
+ }
+}
+
+
+folder "DTO"{
+package "mapper" as mapper{
+class "ProjectTypologyMapper" as ProjectTypologyMapper{
++toDomain(toSingleDTO(ProjectTypology projectTypology) : ProjectTypologyDTO
++toDTO(List<ProjectTypology> listOfProjectTypologies) : List<ProjectTypologyDTO>
+}
+}
+class "ProjectTypologyDTO" as dto {
++ name : String
++ description : String
+}
+}
+
+folder "Application Services"{
+package implAppServices as packAppService{
+ class "ApplicationServiceCreateProjectTypology" as classService{
+  +createAndSaveProjectTypology(String name, String description) : ProjectTypologyDTO
+}
+}
+package iRepositories as iRepositories{
+class "<interface>IProjectTypologyRepository" as IProjectTypologyRepo{
++findById(projectTypologyID)
++save(projectTypology)
+}
+}
+}
+
+folder "Domain/Entities" as domain{
+package "Value Objects" as packVO{
+  class "ProjectTypologyID " as classProjTypID{
+  -{static}of(NoNumberNoSymbolString name) : NoNumberNoSymbolString
+  }
+  class "Description" as description {
+  description : String
+  }
+
+  }
+
+folder "Aggregates" as aggregates{
+package ProjectTypology as packEntity{
+class "ProjectTypology" as classProjectTypology{
+-description : String
++getProjectTypologyIDAsString() : String
++getDescriptionAsString() : String
+}
+class "ProjectTypologyFactory" as factory{
++createProjectTypology(ProjectTypologyID projectTypologyID, Describable description) : ProjectTypology
+}
+}
+}
+}
+
+
+classcontroller..>classService
+classService..>factory
+classService..right> ProjectTypologyMapper
+ProjectTypologyMapper..>dto
+classService..right>IProjectTypologyRepo
+classrepo....|>IProjectTypologyRepo
+classrepo..up>IProjectTypologyJPARepo
+ProjectTypologyDomainDataAssembler..up>ProjectJPA
+IProjectTypologyJPARepo--right>ProjectJPA
+classrepo..r>ProjectTypologyDomainDataAssembler
+factory..right>classProjectTypology
+
+classProjectTypology-->"ProjectTypologyID 1"classProjTypID
+classProjectTypology-->"Description 1"description
+
+@enduml

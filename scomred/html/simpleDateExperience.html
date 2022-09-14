@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+    function compare(){
+        var message=""
+var startDate = document.getElementById("startDate").value;
+var endDate = document.getElementById("endDate").value;
+if (startDate=="" || endDate ==""){
+    message="Error: dates must be selected"
+}
+else if (startDate > endDate){
+    message="Error: start date is after end date";
+}
+else if (startDate < endDate){
+    message="Start date is before end date";
+
+}else{
+    message="Error: dates coincide";
+}
+
+document.getElementById("result").innerHTML=message;
+
+
+    }
+</script>
+<style>
+    .content {
+      max-width: 500px;
+      margin: auto;
+    }
+    </style>
+
+</head>
+<body bgcolor=#66CDAA>
+    <div class="content">
+<label for="startDate">Start Date:</label>
+<input type="date" id="startDate" name="startDate" onchange="compare()">
+<br><br/>
+<label for="endDate">End Date:</label>
+<input type="date" id="endDate" name="endDate" onchange="compare()"></input>
+<br></br>
+<div id="result" ></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+autonumber
+actor Director as dir
+participant UI as ui
+participant backend as bck
+participant "SGBD" as db
+
+
+dir-> ui : Initiates process
+ui-> bck : create project typology
+bck -> db : create project typology
+db --> bck : project typology
+bck--> ui : success/failure
+ui --> dir : Inform operation result and return information\n about the created project typology if successfull
+
+
+
+@enduml

@@ -1,0 +1,136 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface "CreateResourceUI" as ui
+
+class "AssociateResourceDTO" as dto{
++AssociateResourceDTO(projectCode : int, email : String,
+startDate : LocalDate, percentageOfAllocation : double,
+percentageOfAllocation : double, role : String)
+projectCode : int
+email : String
+startDate : LocalDate
+percentageOfAllocation : double
+costPerHour : double
+role : String
+
+getProjectCode() : int
+getEmail() : String
+getStartDate(): LocalDate
+getPercentageOfAllocation() : double
+getCostPerHour() : double
+getRole() : String
+
+}
+
+class "CreateResourceController" as ctrl {
+createResource(AssociateResourceDTO dto) : boolean
+}
+
+
+class itc as "ITCompany" << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getProjectStore() : ProjectStore
+getAccountStore() : AccountStore
+getResourceRoleStore() : ResourceRoleStore
+}
+
+
+class "AccountStore" as accountStr{
+findAccountByEmail(email : String) : Account
+}
+
+class "ResourceRoleStore" as rstore{
+findResourceRoleByRole(role : String) : ResourceRole
+}
+
+class "ProjectStore" as pstr{
+findProjectByCode(code : int) : Project
+getAllocation(email : String, date : LocalDate) : double
+createResource(dto : AssociateResourceDTO, account : Account, role : ResourceRole) : boolean
+allocationIsValidInPeriod(email : String, allocation : double, startDate : LocalDate) : boolean
+determineStartOfLastAllocation(String email) : LocalDate
+}
+
+class "Project" as proj{
+code : int
+name : String
+description: String
+startDate : LocalDate
+sprintDuration : int
+plannedSprints : int
+endDate : LocalDate
+projectStatus : String
+budget : double
+
+getStartDateOfUserLastAllocation(email : String) : LocalDate
+getAllocation(email : String, date : LocalDate) : double
+createTeamMember(dto : AssociateResourceDTO, account : Account, role : ResourceRole) : boolean
+meetsConditionsForResourceCreation(startDate : LocalDate, email : String) : boolean
+isProjectClosed() : boolean
+isDateNotBeforeTheProjectStartDate(date : LocalDate) : boolean
+ensureThereIsNotARunningSprint(LocalDate startDate) : boolean
+}
+
+class "Resource" as rsrc{
+startDate : LocalDate
+percentageOfAllocation : double
+costPerHour : double
+endDate : LocalDate
+
+hasEmail(email : String) : boolean
+isActiveInDate(date : LocalDate)) : boolean
+isRoleEqualTo(role : ResourceRole) : boolean
+isActiveInDate(date : LocalDate)) : boolean
++ Resource(startDate : LocalDate, percentageOfAllocation : double,
+costPerHour : double, associatedAccount : Account, \nassociatedResourceRole : ResourceRole)
+getAllocation() : double
+}
+
+class "ResourceRole" as role{
+role : String
+description : String
+isRoleDeveloper() : boolean
+isRolePO() : boolean
+isRoleEqualTo() : boolean
+}
+
+class "ResourceList" as reslist{
+getStartDateOfUserLastAllocation(String : email) : LocalDate
+getAllocation(String : email, LocalDate date) : double
+isOwnProjectInPeriod(email : String, startDate : LocalDate) : boolean
+getLastAllocationStartDate() : LocalDate
+hasActiveResourceWithRoleInPeriod(LocalDate : startDate, String role) : boolean
+hasActiveResourceWithRole(LocalDate : startDate, String role) : boolean
+createResource(LocalDate : resourceStartDate, double : percentageOfAllocation, double costPerHour, Account account, ResourceRole role) : boolean
+checkPercentageOfAllocationRules(double : percentageOfAllocation) : boolean
+checkCostPerHourRules(double : costPerHour) : boolean
+addResourceToProjectTeam(resource : Resource) : boolean
+}
+
+class "Account" as acc{
+email : String
+name : String
+function : String
+photo : String
+isActive : boolean
+}
+
+'class associations
+
+ui .down.> ctrl
+ui ..> dto
+ctrl .right.> dto
+ctrl ..> itc
+itc -right-> accountStr
+itc --> pstr
+accountStr -right->"0..*" acc
+pstr -down-> proj
+itc -left-> rstore
+rstore -left-> role
+proj --> reslist
+reslist --> rsrc
+rsrc -right-> acc
+rsrc -left-> role
+
+@enduml

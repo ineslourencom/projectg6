@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Director/PM/PO/SM" as actor
+participant System as syst
+
+
+actor -> syst : initiates the process
+activate actor
+activate syst
+actor <- syst : Requests information
+deactivate syst
+
+actor -> syst : select project
+activate syst
+actor -> syst : Request User Story Status
+actor <- syst : Display User Story Status
+deactivate syst
+deactivate actor
+
+
+
+@enduml

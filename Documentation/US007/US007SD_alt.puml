@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+ctl -> appserv : resource info
+appserv -> serv : validate
+serv --> appserv : true
+appserv -> proj : create
+proj ->factory :create
+proj --> appserv : resource
+
+appserv -> resourcerepo : add (resource)
+appserv -> mapper : todto(resource)
+mapper --> appserv : dto
+
+
+@enduml

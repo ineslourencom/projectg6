@@ -1,0 +1,53 @@
+@startuml
+
+actor ": Director" as Dir
+participant ": SearchResourcesUI" as UI
+participant ": ListResourceInProjectController" as Controller
+participant ": ITCompany" as IT
+participant "listProj : ProjectStore" as store
+participant "proj : Project" as proj
+participant "projecTeam : ResourceList" as projTeam
+participant "ResourceMapper" as Mapper
+participant "ResourcesInProjectTeam : DTO" as DTO
+
+
+autonumber
+activate UI
+Dir -> UI : Search Resources in a given project
+activate Controller
+UI -> Controller : findProjectResources(int code)
+ref over Controller
+ref one
+end ref
+Controller -> store : findProjectByCode((code)
+loop
+activate store
+store -> proj : hasId(code)
+activate proj
+proj --> store : true/false
+deactivate proj
+end
+store --> Controller : proj
+deactivate store
+activate proj
+Controller -> proj : getProjectTeam()
+proj -> projTeam : getProjectTeam()
+projTeam -> Mapper : createListResourcesInProjectDTO(projecTeam)
+deactivate proj
+activate Mapper
+ref over Mapper
+ref two
+end
+autonumber resume
+Mapper --> DTO ** : createDTO(projectTeam)
+deactivate proj
+deactivate Mapper
+
+
+DTO --> Controller : return DTO
+activate DTO
+deactivate DTO
+
+Controller --> UI : return DTO
+UI --> Dir : shows data
+@enduml

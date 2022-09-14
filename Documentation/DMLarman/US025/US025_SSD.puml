@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Administrator as Admin
+participant System as System
+autonumber
+
+Admin -> System : Inactivate Account Request
+System --> Admin: Request account email
+Admin -> System: Indicate account email
+System --> Admin: Inform Operation (in)success
+@enduml

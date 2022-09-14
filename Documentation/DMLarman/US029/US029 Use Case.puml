@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+actor ProjectManager
+
+usecase (US029 - As ProjectManager , I want to start a sprint.)
+
+:ProjectManager : -- (US029 - As ProjectManager , I want to start a sprint.)
+@enduml

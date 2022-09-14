@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Product Owner" as PO
+participant "System" as sys
+
+PO -> sys : Initiate process
+sys -> PO : Display projects
+PO -> sys : Select project
+sys -> PO : Display product backlog
+PO -> sys : Select user story
+PO -> sys : Decompose user story
+sys -> PO : Ask for confirmation
+PO -> sys : Confirm
+sys -> PO : Inform operation result
+
+@enduml

@@ -1,0 +1,92 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+
+interface "DefinePOUI" as ui
+class "DefinePOController" as ctrl {
+definePO(dto : CreateResourceDTO) : boolean
+}
+class itc as "ITCompany" << (S,#FF7700) Singleton >>{
+getITCompany() : ITCompany
+getProjectStore() : ProjectStore
+getAccountStore() : AccountStore
+}
+class "ProjectStore" as pstr{
+allocationIsValid(email : String, allocation : double) : boolean
+getAllocation(email : String) : double
+definePO(dto : CreateResourceDTO, account : Account) :boolean
+
+}
+class "Project" as proj{
+ code : int
+ startDate : LocalDate
+
+
+isOwnProject(email : String) : boolean
+hasActivePOInDate(date : LocalDate) : boolean
+isOwnProject(email : String) :boolean
+isProjectClosed() : boolean
+isDateNotBeforeTheProjectStartDate(date : LocalDate) : boolean
+addResourceToProjectTeam(resource : Resource) : boolean
+setPOEndDate(LocalDate date, LocalDate endDate) : boolean
+definePO(dto : CreateResourceDTO,  account : Account) : boolean
+}
+class "AccountStore" as accstr{
+findAccountByEmail(email : String) : Account
+}
+class "Account" as acc{
+email : String
+
+isAccountEqualTo(email : String) : boolean
+}
+class "Resource" as rsrc{
+ startDate : LocalDate
+ percentageOfAllocation : double
+ costPerHour : double
+endDate : LocalDate
++ Resource(startDate : LocalDate, percentageOfAllocation : double,
+costPerHour : double, associatedAccount : Account, \nassociatedResourceRole : ResourceRole)
+isResourceActivePOInDate(date : LocalDate) : boolean
+chooseEndDateOfResource(endDate : LocalDate)
+}
+class "ResourceRole" as role{
+role : String
+description : String
+}
+class "CreateResourceDTO" as dto{
++CreateResourceDTO(projectCode : int, email : String,
+startDate : LocalDate, percentageOfAllocation : double,
+percentageOfAllocation : double, role : ResourceRole)
+projectCode : int
+email : String
+startDate : LocalDate
+percentageOfAllocation : double
+costPerHour : double
+
+getProjectCode() : int
+getStartDate(): LocalDate
+getPercentageOfAllocation() : double
+getCostPerHour() : double
+getRole() : ResourceRole
+
+}
+
+ui "1"-[dashed]->"1" ctrl
+ui "1"-[dashed]->"1" role
+ui "1"-[dashed]->"1" dto
+ctrl "1"-[dashed]->"1" dto
+ctrl "1"-[dashed]->"1" accstr
+ctrl "1"-[dashed]->"1" acc
+ctrl "1"-[dashed]->"1" pstr
+proj "1"-[dashed]>"1" dto
+acc "arrayListAccount 0..*" --o "1" accstr
+pstr "1"-[dashed]->"1" dto
+ctrl "1"-[dashed]->"1" itc
+itc "1"-->"1 allProjectStore" pstr
+itc "1"-->"1 allAccountStore " accstr
+proj "projects 0..*"--o "1" pstr
+proj "1" o-- "projectTeam 0..* " rsrc
+rsrc "0..*"-->"associatedResourceRole 1" role
+dto "0..*"-[dashed]->"1" role
+
+@enduml

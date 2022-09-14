@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 0
+skinparam sequenceParticipant underline
+
+skinparam sequence {
+ArrowColor black
+ActorBorderColor #black
+LifeLineBorderColor black
+LifeLineBackgroundColor white
+
+ParticipantBorderColor black
+ParticipantBackgroundColor #blank
+ParticipantFontName Aapex
+ParticipantFontSize 14
+ParticipantFontColor black
+
+ActorBackgroundColor #blank
+ActorFontColor black
+ActorFontSize 14
+ActorFontName Aapex
+}
+
+autonumber
+actor "Project Manager" as PM
+Participant ":NewDateSprintUI" as UI
+
+PM -> UI : starts the definition of a new date sprint
+activate UI
+activate PM
+UI --> PM : shows and request a project
+deactivate UI
+PM -> UI : enters data to start a new sprint
+activate UI
+PM <-- UI : informs operation success
+deactivate UI
+deactivate PM
+
+@enduml

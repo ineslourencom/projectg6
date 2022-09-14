@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package Project{
+
+class Project << Aggregate Root >>
+class ProductBacklog << Value Object >>
+class ResourceList << Value Object >>
+class Resource << Entity >>
+class Sprint << Entity >>
+class ScrumBoard << Entity >>
+class EffortUpdate << Value Object >>
+class SprintBacklog<< Entity >>
+class UserStory << Entity >>
+class Task << Entity >>
+class EffortEstimate << Value Object >>
+}
+
+package Customer{
+class Customer<< Aggregate Root >>
+}
+
+package Account{
+class Account << Aggregate Root >>
+class Password << Value Object >>
+class PasswordHash << Value Object >>
+class Email << Value Object >>
+class ProfileRequest << Entity >>
+}
+
+
+package BusinessSector{
+class BusinessSector << Aggregate Root >>
+}
+
+package ProjectTypology{
+class ProjectTypology << Aggregate Root >>
+}
+
+
+class Role << Value Object >>
+class Profile << Value Object >>
+
+
+Project -up-> "is classified in" BusinessSector
+Project "is classified in" -right->  ProjectTypology
+Project "is developed for" -down->  Customer
+
+Sprint -> "has" SprintBacklog
+SprintBacklog --> "contains" UserStory
+Sprint -down-> "has" ScrumBoard
+
+Project --> ResourceList
+ResourceList --> Resource
+Project --> "has" ProductBacklog
+
+Resource -->Account
+EffortUpdate <-right- Task
+Resource -right->EffortUpdate
+Resource -left-> Role
+Account -right-> Profile
+Account --> "places" ProfileRequest
+Account --> "has" PasswordHash
+Account --> "has" Email
+Account -left-> "uses" Password
+UserStory --> EffortEstimate
+Task --> EffortEstimate
+
+ProductBacklog -up-> "contains" UserStory
+@enduml

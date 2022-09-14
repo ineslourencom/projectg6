@@ -1,0 +1,112 @@
+@startuml
+'https://plantuml.com/class-diagramheader IMPLEMENTATION VIEW
+top to bottom direction
+skinparam classAttributeIconSize 0
+
+folder "Infraestruture"{
+package "routes" as packRoutes{
+
+}
+}
+
+folder "Interface Adapters" as folderinter{
+ package "repositories" as packrepo{
+    class "AccountRepositories" as classrepo{
+     -List<Account> accounts
+     +findAccountByEmail(Email email) : Optional<<Account>>
+    }
+    }
+package "implControllers" as packcontrol {
+class "AccountSearchController" as classcontroller{
++findAccountInfo(String email) : ResponseEntity
+}
+    }
+
+
+}
+
+class "AccountDTO" as dto {
++String accountID
++String email
++String name
++String function
++String photo
++String profileID
+}
+
+folder "Application Services"{
+
+
+
+package "mappers" as packMapper{
+class "AccountMapper" as mapper{
++{static}toDTO(Account account) : AccountDTO
+}
+}
+package implAppServices as packAppService{
+ class "ApplicationServiceGetAccount" as classService{
+ +getAccountInfo(String email) : Optional<AccountDTO>
+ }
+  }
+}
+
+folder "Domain/Entities" as domain{
+
+package "Value Objects" as packVO{
+  class "AccountID  <<Value Object>>" as classACCID{
+  -Email id
+  +{static}of(Email id) : AccountID
+  }
+  class "Email <<Value Object>>" as classEmail {
+  -String emailData
+  +{static}of(String emailData) : Email
+  }
+  class "NoNumberNoSymbolString <<Value Object>>" as classNameFunction {
+  -String valueString
+  +{static}of(String valueString) : NoNumberNoSymbolString
+  }
+  class "Photo <<Value Object>>" as classPhoto{
+  -String photoString
+  +{static}of(String photoString) : Photo
+  }
+  class "ProfileID <<Value Object>>" as classProfileID{
+  -ProfileType profileIDdata
+  +{static}ofProfileType(String id) :ProfileID
+  }
+  class "Password <<Value Object>>" as classPassword{
+  -String passwordString
+  +{static}of(String passwordData, int passwordComplexityStandard) : Pasword
+  }
+    }
+
+package Entity as packEntity{
+class "Account << Aggregate Root >>" as classAccount{
+
+  +EmailExists(Email email) : boolean
+  +getAccountID() : AccountID
+  +getEmail() : Email
+  +getName() : NoNumberNoSymbolString
+  +getFunction() : NoNumberNoSymbolString
+  +getPhoto() : Photo
+  +getActiveProfileID() : ProfileID
+}
+    }
+}
+
+packRoutes..>packcontrol
+packcontrol..>packAppService
+packrepo<..packAppService
+mapper..up>dto
+packAppService..>packEntity
+packAppService ..>packVO
+packAppService..right> mapper
+
+
+classAccount-->"ProfileID 1.*"classProfileID
+classAccount-->"AccountID 1"classACCID
+classAccount-->"Email 1" classEmail
+classAccount-->"Photo 0.1"classPhoto
+classAccount-->"NoNumberNoSymbolString 1"classNameFunction
+classAccount-->"Password 1"classPassword
+
+@enduml

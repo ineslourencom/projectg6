@@ -1,0 +1,90 @@
+# US023
+=======================================
+
+
+# 1. Requirements
+According to the PO, The user story is added to the sprint backlog during the sprint planning, 
+so the system must determine the running sprint and add the US to it.
+>The team has assumed that if no running sprint is found, the system returns an error and asks for a Sprint to be created.
+
+The requirements of the project, also mention that:
+_Each sprint has a “sprint backlog”, i.e. the set of user stories that should be addressed during
+4 the sprint. A user story may include several tasks that have to be done for the user story to be
+5 completed. During the sprint, project team members register work done in these tasks._
+
+In order to determine if a US is already attributed to a Sprint Backlog, i.e., is being worked on, or if it is
+still waiting in the product backlog, we have defined status for the US: planned, in progress, decomposed, finished or rejected. 
+For an US to be added to the sprint backlog, it must not be under the following status:
+“Decomposed” (the childs should be added, not the parent) or ”In Progress” (it is already part of a Sprint Backlog)
+or ”Finished” (it is done).
+
+We have also defined that when a US changes from the product backlog to the sprint backlog, its status must be changed as well as 
+its priority (changed to 0), which causes a reshuffling of the remaining USs in the Product Backlog. 
+
+
+# 2. Design
+For further details on the design of this US, the Sequence Diagram and the Class Diagram must be checked. 
+
+## 2.1. Functionality Realization
+As shown in the SD, the main flux of information occurs in the following order:
+Flow 1: AddUSToSprintBacklog->ITCompany->ProjectStore->Project->ProductBacklog->UserStory
+Flow 2: AddUSToSprintBacklog->ITCompany->ProjectStore->Project->Sprint->SprintBacklog->UserStory
+Flow 3: AddUSToSprintBacklog->ITCompany->ProjectStore->Project->ProductBacklog->UserStory
+![US023_SD](US23_SD_20220209svg.svg)
+
+## 2.2. Class diagram
+The main class involved in this US23 is SprintBacklog. It is this class that will validate a US and add it 
+to its list. 
+Other classes are involved, such as:
+-Project (determines the running Sprint, by checking its list of Sprints)
+-UserStory (there we can find methods to change the effort estimate, the priority and the status as well as some validations)
+-ProductBacklog (reshuffles the US priorities and find a US by its number)
+![US023_CD](US23_CD_20220121.svg)
+
+## 2.3. Patterns applied
+The SprintBacklog is the class that has the responsibility of adding a US to its list, because it is the IE
+(information expert) who knows all US of a certain Sprint and who can do all the needed validations.
+By assigning the Sprint backlog this responsibility we are promoting high cohesion and low coupling. 
+We also have a controller and a class ITCOMPANY which is considered as a pure fabrication class. 
+
+## 2.4. Tests
+####Method: public Sprint determineRunningSprint()
+####Tests
+addPastSprintToProjectAndFindRunningSprint
+addCurrentSprintToProjectAndFindRunningSprint
+addMultipleSprintToProjectAndNotFindRunningSprint
+addMultipleSprintToProjectAndFindRunningSprint
+
+####Method: protected boolean validateUSIsNotRepeated(UserStory newUS)
+####Tests
+addDuplicatedUSToSprintBacklog
+
+####Method: public boolean validateUSStatus ()
+####Tests
+validateUSStatusInProgress
+validateUSStatusDecomposed
+
+####Method: public boolean addUSToSprintBacklog(UserStory newUS, int effortEstimate)
+####Tests
+addUSToSprintBacklog
+addDuplicatedUSToSprintBacklog
+adddUSToSprintBacklogWithEffortNotFibonacci
+addDecomposedUSToSprintBacklog
+
+####Method: public boolean updateEffortEstimate(int effortEstimate)
+####Tests
+testUpdateEffortEstimate_withFibonacciNumber
+testUpdateEffortEstimate_withNotFibonacciNumber
+
+####Method: public String updateUSStatusInProgress ()
+####Tests
+updateUSStatusInProgress
+
+
+# 3. Final notes
+During future sprints, we may consider having a new class "Sprint Team", which
+may allow new functionalities and verifications when adding resources to a 
+team working on a Sprint. 
+We may also have to consider implementing functionalities related with the termination 
+of a Sprint, for instance, setting the US status as finished if not rejected by the 
+PO (which would be another functionality).

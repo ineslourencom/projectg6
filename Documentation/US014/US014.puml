@@ -1,0 +1,77 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+participant "Routes" as route
+participant "DefineSMController" as control
+participant "ApplicationServiceCreateResource" as appService
+participant "id: ProjectID " as VOprojID <<Value Object>>
+participant "Project Repository" as repoProj
+participant "project: Project" as proj
+participant "per: Period " as VOperiod <<Value Object>>
+participant "Resource Repository" as repoResource
+participant "role: Role" as role <<Value Object>>
+participant "resource : Resource" as res
+
+
+
+autonumber
+
+[o->route : Patch/resource
+route -> control : defineScrumMaster(dto)
+activate control
+control -> appService : updateScrumMaster(dto)
+activate appService
+appService -->VOprojID** : create(dto.projectID)
+
+appService ->repoProj : findById(ProjectID id)
+activate repoProj
+repoProj -> proj
+activate proj
+ref over  repoProj, proj : one
+proj--> repoProj
+deactivate proj
+repoProj --> appService : project
+deactivate repoProj
+appService --> VOperiod** : per.of(dto.starDate, dto.endDate)
+appService -> proj : containsPeriod(period)
+activate proj
+proj --> appService : true
+deactivate proj
+appService --> role**
+appService --> repoResource : findActiveResource(role, projectID, per.startingDate)
+activate repoResource
+repoResource-> res :resource
+activate res
+ref over repoResource, res : Two
+res--> repoResource
+deactivate res
+repoResource --> appService
+appService -> res: setEndate(per.startDate-1)
+activate res
+res --> appService : true
+deactivate res
+appService->repoResource: save(resource)
+repoResource-> res
+activate res
+ref over repoResource, res : Three
+res -> repoResource
+deactivate res
+appService-> repoResource : createResource(dtoNewScrumMaster)
+ref over repoResource, res :  US007
+repoResource--> appService :(dto)
+appService-> repoResource : createResource(dtoNewDeveloper)
+ref over repoResource, res :  US007
+repoResource--> appService :(dto)
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml

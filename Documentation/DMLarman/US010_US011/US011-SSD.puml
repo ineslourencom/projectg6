@@ -1,0 +1,21 @@
+@startuml
+actor "Authenticated User" as user
+participant "System" as system
+autonumber
+user -> system : Open 'Reset Password' UI
+activate system
+system -> system : check User is not 'Visitor'
+system --> user : show 'Reset Password' UI\n and ask for old password
+user -> system : input old password
+system --> user : ask for new password
+user -> system : input new password
+system -> system : validate password rules
+system --> user : ask to confirm new password
+user -> system : input new password again
+system -> system : check confirmed password is\n different from new password
+system -> system : validate password rules
+system -> system : change password
+
+system --> user : operation (un)successful
+deactivate system
+@enduml

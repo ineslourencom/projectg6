@@ -1,0 +1,72 @@
+ID;DECOMPOSED;DETAIL;PRIORITY;PROJECTID;STATEMENT;STORY_NUMBER;USIDPARENT
+1.001;FALSE;This is a Detail;101;1;Dummy01;1;0.0
+1.002;FALSE;This is a Detail;102;1;Dummy02;2;0.0
+1.003;FALSE;This is a Detail;103;1;Dummy03;3;0.0
+1.004;FALSE;This is a Detail;104;1;Dummy04;4;0.0
+1.005;FALSE;This is a Detail;105;1;Dummy05;5;0.0
+1.006;FALSE;This is a Detail;106;1;Dummy06;6;0.0
+1.007;TRUE;This is a Detail;107;1;Dummy07;7;0.0
+1.008;FALSE;This is a Detail;108;1;Dummy08;8;0.0
+1.009;FALSE;This is a Detail;109;1;Dummy09;9;0.0
+1.010;TRUE;This is a Detail;110;1;Dummy10;10;0.0
+1.011;FALSE;This is a Detail;111;1;Dummy11;11;0.0
+1.012;FALSE;This is a Detail;112;1;Dummy12;12;0.0
+1.013;FALSE;This is a Detail;113;1;Dummy13;13;0.0
+1.014;FALSE;This is a Detail;114;1;Dummy14;14;0.0
+1.015;FALSE;This is a Detail;115;1;Dummy15;15;0.0
+1.016;FALSE;This is a Detail;116;1;Dummy16;16;0.0
+1.017;FALSE;This is a Detail;117;1;Dummy17;17;0.0
+1.018;FALSE;This is a Detail;118;1;Dummy18;18;0.0
+1.019;FALSE;This is a Detail;119;1;Dummy19;19;0.0
+1.020;FALSE;This is a Detail;120;1;Dummy20;20;0.0
+1.021;FALSE;This is a Detail;121;1;Dummy21;21;0.0
+1.022;FALSE;This is a Detail;122;1;Dummy22;22;0.0
+1.023;FALSE;This is a Detail;123;1;Dummy23;23;0.0
+1.024;FALSE;This is a Detail;124;1;Dummy24;24;0.0
+1.025;FALSE;This is a Detail;125;1;Dummy25;25;0.0
+1.026;FALSE;This is a Detail;126;1;Dummy26;26;0.0
+1.027;FALSE;This is a Detail;127;1;Dummy27;27;0.0
+1.028;FALSE;This is a Detail;128;1;Dummy28;28;0.0
+1.029;FALSE;This is a Detail;129;1;Dummy29;29;0.0
+1.030;FALSE;This is a Detail;130;1;Dummy30;30;0.0
+2.001;FALSE;This is a Detail;1;2;A2 dummy 001;1;0.0
+2.002;FALSE;This is a Detail;2;2;A2 dummy 002;2;0.0
+2.003;FALSE;This is a Detail;3;2;A2 dummy 003;3;0.0
+2.004;FALSE;This is a Detail;4;2;A2 dummy 004;4;0.0
+2.005;FALSE;This is a Detail;5;2;A2 dummy 005;5;0.0
+2.006;FALSE;This is a Detail;6;2;A2 dummy 006;6;0.0
+2.007;FALSE;This is a Detail;7;2;A2 dummy 007;7;0.0
+2.008;FALSE;This is a Detail;8;2;A2 dummy 008;8;0.0
+2.009;FALSE;This is a Detail;9;2;A2 dummy 009;9;0.0
+2.010;FALSE;This is a Detail;10;2;A2 dummy 010;10;0.0
+2.011;FALSE;This is a Detail;11;2;A2 dummy 011;11;0.0
+2.012;FALSE;This is a Detail;12;2;A2 dummy 012;12;0.0
+2.013;FALSE;This is a Detail;13;2;A2 dummy 013;13;0.0
+2.014;FALSE;This is a Detail;14;2;A2 dummy 014;14;0.0
+2.015;FALSE;This is a Detail;15;2;A2 dummy 015;15;0.0
+2.016;FALSE;This is a Detail;16;2;A2 dummy 016;16;0.0
+2.017;FALSE;This is a Detail;17;2;A2 dummy 017;17;0.0
+2.018;FALSE;This is a Detail;18;2;A2 dummy 018;18;0.0
+2.019;FALSE;This is a Detail;19;2;A2 dummy 019;19;0.0
+2.020;FALSE;This is a Detail;20;2;A2 dummy 020;20;0.0
+2.021;FALSE;This is a Detail;21;2;A2 dummy 021;21;0.0
+2.022;FALSE;This is a Detail;22;2;A2 dummy 022;22;0.0
+2.023;TRUE;This is a Detail;23;2;A2 dummy 023;23;0.0
+2.024;FALSE;This is a Detail;24;2;A2 dummy 024;24;0.0
+2.025;FALSE;This is a Detail;25;2;A2 dummy 025;25;0.0
+2.026;FALSE;This is a Detail;26;2;A2 dummy 026;26;0.0
+2.027;FALSE;This is a Detail;27;2;A2 dummy 027;27;0.0
+2.028;FALSE;This is a Detail;28;2;A2 dummy 028;28;0.0
+2.029;FALSE;This is a Detail;29;2;A2 dummy 029;29;0.0
+2.030;FALSE;This is a Detail;30;2;A2 dummy 030;30;0.0
+2.031;FALSE;This is a Detail;31;2;A2 dummy 031;31;0.0
+2.032;FALSE;This is a Detail;32;2;A2 dummy 032;32;0.0
+2.033;FALSE;This is a Detail;33;2;A2 dummy 033;33;0.0
+2.034;FALSE;This is a Detail;34;2;A2 dummy 034;34;0.0
+2.035;TRUE;This is a Detail;35;2;A2 dummy 035;35;0.0
+2.036;FALSE;This is a Detail;36;2;A2 dummy 036;36;0.0
+666.001;FALSE;This is a Detail;1;666;This is a statment;1;0.0
+666.002;FALSE;This is a Detail;2;666;This is a statment;2;0.0
+666.003;FALSE;This is a Detail;3;666;This is a statment;3;0.0
+666.004;FALSE;This is a Detail;4;666;This is a statment;4;0.0
+666.005;FALSE;This is a Detail;5;666;This is a statment;5;0.0

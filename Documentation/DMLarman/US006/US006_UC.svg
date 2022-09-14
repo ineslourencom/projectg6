@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="269px" preserveAspectRatio="none" style="width:595px;height:269px;background:#FFFFFF;" version="1.1" viewBox="0 0 595 269" width="595px" zoomAndPan="magnify"><defs/><g><!--MD5=[9bde38fcd72ce2c7ce1c462414844f97]
+entity Adminisrator--><g id="elem_Adminisrator"><ellipse cx="298" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M298,22 L298,49 M285,30 L311,30 M298,49 L285,64 M298,49 L311,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="251.5" y="78.4951">Adminisrator</text></g><g id="elem_US006 - As Adminisrator , I want to update profiles assigned to a user account."><ellipse cx="297.8874" cy="202.2775" fill="#F1F1F1" rx="291.8874" ry="60.7775" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="560" x="17.8874" y="205.1242">US006 - As Adminisrator , I want to update profiles assigned to a user account.</text></g><!--MD5=[fc4de749904317aafd39dbe31a951fb0]
+link Adminisrator to US006 - As Adminisrator , I want to update profiles assigned to a user account.--><g id="link_Adminisrator_US006 - As Adminisrator , I want to update profiles assigned to a user account."><path d="M298,81.707 C298,99.48 298,121.2 298,141.242 " fill="none" id="Adminisrator-US006 - As Adminisrator , I want to update profiles assigned to a user account." style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ae259bcd993f63060d4721d531085674]
+@startuml
+'https://plantuml.com/use-case-diagram
+actor Adminisrator
+
+usecase (US006 - As Adminisrator , I want to update profiles assigned to a user account.)
+
+:Adminisrator: - -(US006 - As Adminisrator , I want to update profiles assigned to a user account.)
+@enduml
+
+@startuml
+actor Adminisrator
+
+usecase (US006 - As Adminisrator , I want to update profiles assigned to a user account.)
+
+:Adminisrator: - -(US006 - As Adminisrator , I want to update profiles assigned to a user account.)
+@enduml
+
+PlantUML version 1.2022.3(Tue Mar 29 16:10:57 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

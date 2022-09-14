@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update your TeamSix account data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="../css/geral.css?v=1" />
+    <script src="../js/updateAccountData.js"></script>
+</head>
+
+
+<body onload="initData()">
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Entrance</a>
+</div>
+<div class="container">
+    <div style="text-align:center">
+        <h2>Account</h2>
+        <h3>Update Account</h3>
+        <p>Please enter your updated data</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="/media/BobTheMinion.jpg" alt="Bob the heterochromia iridis minion.jpg" style="width:70%">
+        </div>
+        <div class="column">
+            <form id="form">
+                <label for="name">Name</label>
+                <label type="text" id="name"></label>
+                <p></p>
+
+                <label for="emailData">E-mail</label>
+                <input type="text" id="emailData" name="emailData" placeholder="Your e-mail...">
+                <label for="passwordData">Password</label>
+                <input type="password" id="passwordData" name="passwordData" placeholder="Your password...">
+                <label for="functionData">Function</label>
+                <select id="functionData" name="functionData">
+                    <option value="function1">Management</option>
+                    <option value="function2">Quality Assurance</option>
+                    <option value="function3">Software Engineer</option>
+                </select>
+                <label for="submitphoto">Submit Photo</label>
+                <input type="file" id="submitphoto">
+                <p></p>
+                <p></p>
+                <p></p>
+                <input type="button" value="Update Account" onclick="updateAccount()">
+            </form>
+        </div>
+    </div>
+</div>
+<div id="result" ></div>
+<div id="result2" ></div>
+</body>
+</html>

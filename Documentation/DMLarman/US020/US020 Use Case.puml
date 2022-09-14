@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+actor "Product Owner" as po
+
+usecase (US020 - As Product Owner, I want to refine a broad user story \nof the Product Backlog into more focused user stories. ) as us27
+
+:po: -- us27
+
+@enduml

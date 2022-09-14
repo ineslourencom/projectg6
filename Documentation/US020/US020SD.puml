@@ -1,0 +1,163 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Product Owner" as PO
+participant "UI" as ui
+
+participant ": Controller" as ctl
+participant ": AppServiceDecomposeUserStory" as appserv
+participant "newUserStoriesDomain\n : List<UserStoryDomainDTO>" as newUserStoriesDomain
+participant "UserStoryMapper" as Mapper
+participant "parentDTO\n : USDTO" as parentDTO
+participant "childDTO\n : USDTO" as childDTO
+participant "dto\n : UserStoryDomainDTO" as dto
+participant "listUSDTO\n : List<USDTO>" as listBacklogDTO
+participant "usID : UserStoryID" as usID
+participant ": ProjectRepository" as projrepo
+participant ": UserStoryRepository" as usrepo
+participant "backlog : List<UserStory>" as listUS
+participant "parent :UserStory" as us
+participant " : DecomposeUSService" as decUS
+participant " children : List<UserStory>" as children
+participant " : CreateUSService" as usservice
+
+
+participant "project : Project" as proj
+participant "child : UserStory" as us2
+
+
+
+PO -> ui : Initiate process
+ref over ui, ctl
+view projects
+end ref
+ui -> PO : Display projects
+
+
+PO -> ui : Select project
+ref over ui, ctl
+view product backlog
+end ref
+ui -> PO : Display product backlog
+
+PO -> ui : Select user story
+
+PO -> ui : Decompose user story
+ui -> PO : Ask for confirmation
+PO -> ui : Confirm
+activate ui
+ui -> ctl : decomposeUserStory(storyNumber : double, newUserStories : List<ChildUserStoryDTO>)
+activate ctl
+ctl -> appserv : decomposeUserStory(storyNumber : double, newUserStories: List<ChildUserStoryDTO>)
+create newUserStoriesDomain
+appserv -> newUserStoriesDomain
+loop for each dto in newUserStories
+appserv -> Mapper : toDomain(dto)
+activate Mapper
+create dto
+Mapper -> dto
+deactivate Mapper
+appserv -> newUserStoriesDomain : add(dto)
+activate newUserStoriesDomain
+deactivate newUserStoriesDomain
+
+end loop
+activate appserv
+create usID
+appserv -> usID : create(storyNumber)
+appserv -> usrepo : parent = findByID(usID)
+activate usrepo
+deactivate usrepo
+appserv -> us : projectID = getProjectID()
+activate us
+deactivate us
+appserv -> projrepo : project = findByID(projectID)
+activate projrepo
+deactivate projrepo
+appserv -> usrepo : backlog = findAllByProjectID(projectID) : List<UserStory>
+activate usrepo
+create listUS
+usrepo -> listUS
+deactivate usrepo
+appserv -> decUS : children = generateChildren(backlog, newUserStoriesDomain, project, parent)
+activate decUS
+create children
+decUS -> children
+
+loop for each dto in list
+decUS -> usservice : usNumber = generateUSNumber(backlog)
+activate usservice
+deactivate usservice
+decUS -> usservice : priority = determineUSPriority(backlog)
+activate usservice
+deactivate usservice
+decUS -> proj : projID = getID()
+activate proj
+deactivate proj
+decUS -> usservice : generateUSID(usNumber, projID)
+activate usservice
+deactivate usservice
+decUS -> proj : child = createUS(statement, detail, projID, UserStoryID, priority, usNumber)
+activate proj
+create us2
+proj -> us2
+
+deactivate proj
+
+decUS -> us2 : defineParenthood(parent)
+activate us2
+deactivate us2
+decUS -> children : add(child)
+activate children
+deactivate children
+decUS -> listUS : add(child)
+activate listUS
+deactivate listUS
+end loop
+
+decUS --> appserv : children
+deactivate decUS
+appserv -> usrepo : saveAll(children)
+activate usrepo
+deactivate usrepo
+
+appserv -> us : markAsDecomposed()
+activate us
+deactivate us
+appserv -> usrepo : update(parent)
+activate usrepo
+deactivate usrepo
+
+create listBacklogDTO
+appserv -> listBacklogDTO
+appserv -> Mapper : toDTO(parent)
+activate Mapper
+create parentDTO
+Mapper ->parentDTO
+deactivate Mapper
+appserv -> listBacklogDTO : add(parentDTO)
+activate listBacklogDTO
+deactivate listBacklogDTO
+loop for each child US in
+appserv -> Mapper : toDTO(us)
+activate Mapper
+create childDTO
+Mapper -> childDTO
+deactivate Mapper
+appserv -> listBacklogDTO : add(childDTO)
+
+
+activate listBacklogDTO
+deactivate listBacklogDTO
+end loop
+appserv --> ctl : listUSDTO
+
+ctl --> ui : listUSDTO
+deactivate ctl
+
+
+ui -> PO : Inform operation result
+deactivate ui
+
+@enduml

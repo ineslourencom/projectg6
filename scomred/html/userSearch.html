@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/geral.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/userSearch.js"></script>
+    <title>User Search</title>
+</head>
+<body>
+<h2>Project Management System</h2>
+<div style="text-align:right">
+    <a href="../indexInner.html">Return to Entrance</a>
+</div>
+<div class="container">
+    <div style="text-align:left">
+        <h2>Search account details</h2>
+        <p>Enter a valid email</p>
+    </div>
+
+    <form action="/action_page.php">
+    <label for="email">Email: </label>
+    <input type="email" required id="email" name="email" onchange="validateEmail()"><br>
+    <br>
+        <p id="showData"></p>
+        <input type="button" onclick="showTable()" value="Show data" />
+
+
+        </form>
+    </form>
+</div>
+</div>
+</div>
+<div id="result" ></div>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor ProjectMember as pm
+participant System
+
+pm -> System : initiate process to update the status of a user story on a current sprint
+activate pm
+activate System
+System --> pm : request necessary information
+pm ->System : insert inputs
+System --> pm : show US status updated with success
+@enduml

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="619.2px" preserveAspectRatio="none" style="width:1563px;height:619px;background:#FFFFFF;" version="1.1" viewBox="0 0 1563 619" width="1563px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="523.7906" style="stroke:#181818;stroke-width:0.6;" width="6" x="122.4" y="52.5422"/><rect fill="#FFFFFF" height="505.5797" style="stroke:#181818;stroke-width:0.6;" width="6" x="272.4" y="70.7531"/><rect fill="#FFFFFF" height="469.1578" style="stroke:#181818;stroke-width:0.6;" width="6" x="412.2" y="88.9641"/><rect fill="#FFFFFF" height="18" style="stroke:#181818;stroke-width:0.6;" width="6" x="651" y="517.7109"/><rect fill="#FFFFFF" height="253.4297" style="stroke:#181818;stroke-width:0.6;" width="6" x="780.6" y="143.3063"/><rect fill="#FFFFFF" height="88.9875" style="stroke:#181818;stroke-width:0.6;" width="6" x="893.4" y="176.7281"/><rect fill="#FFFFFF" height="18" style="stroke:#181818;stroke-width:0.6;" width="6" x="1017.9" y="220.5047"/><rect fill="#FFFFFF" height="18.2109" style="stroke:#181818;stroke-width:0.6;" width="6" x="1160.7" y="294.3375"/><rect fill="#FFFFFF" height="18" style="stroke:#181818;stroke-width:0.6;" width="6" x="1291.2" y="356.325"/><rect fill="#FFFFFF" height="43.7766" style="stroke:#181818;stroke-width:0.6;" width="6" x="1389.3" y="430.1578"/><rect height="109.2094" style="stroke:#000000;stroke-width:0.8999999999999999;fill:none;" width="367.2" x="726" y="152.3063"/><rect height="109.2094" style="stroke:#000000;stroke-width:0.8999999999999999;fill:none;" width="628.2" x="726" y="269.9156"/><rect height="134.775" style="stroke:#000000;stroke-width:0.8999999999999999;fill:none;" width="1221.6" x="337.8" y="405.7359"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="125.1" x2="125.1" y1="33.1313" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="275.1" x2="275.1" y1="33.1313" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="415.2" x2="415.2" y1="33.1313" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="534" x2="534" y1="117.8297" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="654" x2="654" y1="497.5172" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="783.6" x2="783.6" y1="33.1313" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="896.4" x2="896.4" y1="33.1313" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="1020.6" x2="1020.6" y1="200.3109" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="1163.4" x2="1163.4" y1="33.1313" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="1294.2" x2="1294.2" y1="336.1312" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="1392" x2="1392" y1="33.1313" y2="587.1328"/><line style="stroke:#181818;stroke-width:0.3;fill:none;stroke-dasharray:5.0,5.0;" x1="1494.6" x2="1494.6" y1="453.7406" y2="587.1328"/><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="35.4" x="107.7" y="13.5656"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="27" x="111.9" y="26.4855">Routes</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="35.4" x="107.7" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="27" x="111.9" y="599.4527">Routes</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="84.6" x="233.1" y="13.5656"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="76.2" x="237.3" y="26.4855">:ResourceController</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="84.6" x="233.1" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="76.2" x="237.3" y="599.4527">:ResourceController</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="142.8" x="343.8" y="13.5656"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="134.4" x="348" y="26.4855">:ApplicationServiceCreateResource</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="142.8" x="343.8" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="134.4" x="348" y="599.4527">:ApplicationServiceCreateResource</text><rect fill="#E2E2F0" height="29.5313" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="83.4" x="492.6" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" font-style="italic" lengthAdjust="spacing" textLength="58.2" x="505.2" y="599.4527">«Value Object»</text><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="72.6" x="496.8" y="610.0184">projectID: ProjectID</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="144" x="582" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="135.6" x="586.2" y="599.4527">resourcesDTO:List&lt;ResourceDTO&gt;</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="103.2" x="732" y="13.5656"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="94.8" x="736.2" y="26.4855">:ResourceRepositoryImpl</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="103.2" x="732" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="94.8" x="736.2" y="599.4527">:ResourceRepositoryImpl</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="104.4" x="844.2" y="13.5656"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="96" x="848.4" y="26.4855">:IResourceRepositoryJPA</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="104.4" x="844.2" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="96" x="848.4" y="599.4527">:IResourceRepositoryJPA</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="132.6" x="954.6" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="124.2" x="958.8" y="599.4527">resourceJPA:List&lt;ResourceJPA&gt;</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="141" x="1093.2" y="13.5656"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="132.6" x="1097.4" y="26.4855">:ResourceDomaintoDataAssembler</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="141" x="1093.2" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="132.6" x="1097.4" y="599.4527">:ResourceDomaintoDataAssembler</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="108" x="1240.2" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="99.6" x="1244.4" y="599.4527">resources:List&lt;Resource&gt;</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="76.2" x="1354.2" y="13.5656"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="67.8" x="1358.4" y="26.4855">:ResourceMapper</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="76.2" x="1354.2" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="67.8" x="1358.4" y="599.4527">:ResourceMapper</text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="117" x="1436.4" y="586.5328"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="108.6" x="1440.6" y="599.4527">resourceDTO:ResourceDTO</text><rect fill="#FFFFFF" height="523.7906" style="stroke:#181818;stroke-width:0.6;" width="6" x="122.4" y="52.5422"/><rect fill="#FFFFFF" height="505.5797" style="stroke:#181818;stroke-width:0.6;" width="6" x="272.4" y="70.7531"/><rect fill="#FFFFFF" height="469.1578" style="stroke:#181818;stroke-width:0.6;" width="6" x="412.2" y="88.9641"/><rect fill="#FFFFFF" height="18" style="stroke:#181818;stroke-width:0.6;" width="6" x="651" y="517.7109"/><rect fill="#FFFFFF" height="253.4297" style="stroke:#181818;stroke-width:0.6;" width="6" x="780.6" y="143.3063"/><rect fill="#FFFFFF" height="88.9875" style="stroke:#181818;stroke-width:0.6;" width="6" x="893.4" y="176.7281"/><rect fill="#FFFFFF" height="18" style="stroke:#181818;stroke-width:0.6;" width="6" x="1017.9" y="220.5047"/><rect fill="#FFFFFF" height="18.2109" style="stroke:#181818;stroke-width:0.6;" width="6" x="1160.7" y="294.3375"/><rect fill="#FFFFFF" height="18" style="stroke:#181818;stroke-width:0.6;" width="6" x="1291.2" y="356.325"/><rect fill="#FFFFFF" height="43.7766" style="stroke:#181818;stroke-width:0.6;" width="6" x="1389.3" y="430.1578"/><ellipse cx="4.5" cy="52.0922" fill="none" rx="2.4" ry="2.4" style="stroke:#181818;stroke-width:0.8999999999999999;"/><polygon fill="#181818" points="115.2,50.1422,121.2,52.5422,115.2,54.9422,117.6,52.5422" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="7.2" x2="118.8" y1="52.5422" y2="52.5422"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="9" y="49.6283">1</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="99.6" x="15.6" y="49.6283">GET/projects/{pid}/resources</text><polygon fill="#181818" points="265.2,68.3531,271.2,70.7531,265.2,73.1531,267.6,70.7531" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="128.4" x2="268.8" y1="70.7531" y2="70.7531"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="132.6" y="67.8393">2</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="121.8" x="139.2" y="67.8393">getResourcesByProjectID(pid,type)</text><polygon fill="#181818" points="405,86.5641,411,88.9641,405,91.3641,407.4,88.9641" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="278.4" x2="408.6" y1="88.9641" y2="88.9641"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="282.6" y="86.0502">3</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="115.8" x="289.2" y="86.0502">getAllResourcesByProjectID(pid);</text><polygon fill="#181818" points="485.4,104.775,491.4,107.175,485.4,109.575,487.8,107.175" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="418.2" x2="489" y1="107.175" y2="107.175"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="422.4" y="104.2611">4</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="2.4" x="429" y="104.2611"> </text><rect fill="#E2E2F0" height="29.5313" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="83.4" x="492.6" y="93.7641"/><text fill="#000000" font-family="sans-serif" font-size="8.4" font-style="italic" lengthAdjust="spacing" textLength="58.2" x="505.2" y="106.684">«Value Object»</text><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="72.6" x="496.8" y="117.2496">projectID: ProjectID</text><polygon fill="#181818" points="773.4,140.9063,779.4,143.3063,773.4,145.7062,775.8,143.3063" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="418.2" x2="777" y1="143.3063" y2="143.3063"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="422.4" y="140.3924">5</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="97.8" x="429" y="140.3924">findAllByProjectID(projectID)</text><path d="M726,152.3063 L769.8,152.3063 L769.8,157.3172 L763.8,163.3172 L726,163.3172 L726,152.3063 " fill="#EEEEEE" style="stroke:#000000;stroke-width:0.8999999999999999;"/><rect fill="none" height="109.2094" style="stroke:#000000;stroke-width:0.8999999999999999;" width="367.2" x="726" y="152.3063"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="16.8" x="735" y="161.0033">loop</text><text fill="#000000" font-family="sans-serif" font-size="6.6" font-weight="bold" lengthAdjust="spacing" textLength="81.6" x="778.8" y="160.3576">[all resources in project]</text><polygon fill="#181818" points="886.2,174.3281,892.2,176.7281,886.2,179.1281,888.6,176.7281" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="786.6" x2="889.8" y1="176.7281" y2="176.7281"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="790.8" y="173.8143">6</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="88.8" x="797.4" y="173.8143">findByProjectID(projectID)</text><polygon fill="#181818" points="947.4,192.5391,953.4,194.9391,947.4,197.3391,949.8,194.9391" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="899.4" x2="951" y1="194.9391" y2="194.9391"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="903.6" y="192.0252">7</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="2.4" x="910.2" y="192.0252"> </text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="132.6" x="954.6" y="181.5281"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="124.2" x="958.8" y="194.448">resourceJPA:List&lt;ResourceJPA&gt;</text><polygon fill="#181818" points="1010.7,218.1047,1016.7,220.5047,1010.7,222.9047,1013.1,220.5047" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="899.4" x2="1014.3" y1="220.5047" y2="220.5047"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="903.6" y="217.5908">8</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="64.2" x="910.2" y="217.5908">add(resourceJPA);</text><polygon fill="#181818" points="793.2,254.3156,787.2,256.7156,793.2,259.1156,790.8,256.7156" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="789.6" x2="892.8" y1="256.7156" y2="256.7156"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="796.8" y="253.8018">9</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="57" x="803.4" y="253.8018">addresourceJPA</text><path d="M726,269.9156 L769.8,269.9156 L769.8,274.9266 L763.8,280.9266 L726,280.9266 L726,269.9156 " fill="#EEEEEE" style="stroke:#000000;stroke-width:0.8999999999999999;"/><rect fill="none" height="109.2094" style="stroke:#000000;stroke-width:0.8999999999999999;" width="628.2" x="726" y="269.9156"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="16.8" x="735" y="278.6127">loop</text><text fill="#000000" font-family="sans-serif" font-size="6.6" font-weight="bold" lengthAdjust="spacing" textLength="102" x="778.8" y="277.967">[all the resourceJPA in the list]</text><polygon fill="#181818" points="1153.5,291.9375,1159.5,294.3375,1153.5,296.7375,1155.9,294.3375" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="786.6" x2="1157.1" y1="294.3375" y2="294.3375"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="790.8" y="291.4236">10</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="82.2" x="801.6" y="291.4236">toDomain(resourceJPA)</text><polygon fill="#181818" points="793.2,310.1484,787.2,312.5484,793.2,314.9484,790.8,312.5484" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="789.6" x2="1163.1" y1="312.5484" y2="312.5484"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="796.8" y="309.6346">11</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="30" x="807.6" y="309.6346">resource</text><polygon fill="#181818" points="1233,328.3594,1239,330.7594,1233,333.1594,1235.4,330.7594" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="786.6" x2="1236.6" y1="330.7594" y2="330.7594"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="790.8" y="327.8455">12</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="2.4" x="801.6" y="327.8455"> </text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="108" x="1240.2" y="317.3484"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="99.6" x="1244.4" y="330.2684">resources:List&lt;Resource&gt;</text><polygon fill="#181818" points="1284,353.925,1290,356.325,1284,358.725,1286.4,356.325" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="786.6" x2="1287.6" y1="356.325" y2="356.325"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="790.8" y="353.4111">13</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="47.4" x="801.6" y="353.4111">add(resource)</text><polygon fill="#181818" points="424.8,394.3359,418.8,396.7359,424.8,399.1359,422.4,396.7359" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="421.2" x2="783" y1="396.7359" y2="396.7359"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="428.4" y="393.8221">14</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="45.6" x="439.2" y="393.8221">addResource</text><path d="M337.8,405.7359 L381.6,405.7359 L381.6,410.7469 L375.6,416.7469 L337.8,416.7469 L337.8,405.7359 " fill="#EEEEEE" style="stroke:#000000;stroke-width:0.8999999999999999;"/><rect fill="none" height="134.775" style="stroke:#000000;stroke-width:0.8999999999999999;" width="1221.6" x="337.8" y="405.7359"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="16.8" x="346.8" y="414.433">loop</text><text fill="#000000" font-family="sans-serif" font-size="6.6" font-weight="bold" lengthAdjust="spacing" textLength="102.6" x="390.6" y="413.7873">[all the resourceDTO in the list]</text><polygon fill="#181818" points="1382.1,427.7578,1388.1,430.1578,1382.1,432.5578,1384.5,430.1578" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="418.2" x2="1385.7" y1="430.1578" y2="430.1578"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="422.4" y="427.2439">15</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="57" x="433.2" y="427.2439">toDTO(resource)</text><polygon fill="#181818" points="1429.2,445.9688,1435.2,448.3688,1429.2,450.7688,1431.6,448.3688" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="1395.3" x2="1432.8" y1="448.3688" y2="448.3688"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="1399.5" y="445.4549">16</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="2.4" x="1410.3" y="445.4549"> </text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="117" x="1436.4" y="434.9578"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="108.6" x="1440.6" y="447.8777">resourceDTO:ResourceDTO</text><polygon fill="#181818" points="424.8,471.5344,418.8,473.9344,424.8,476.3344,422.4,473.9344" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="421.2" x2="1391.7" y1="473.9344" y2="473.9344"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="428.4" y="471.0205">17</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="45.6" x="439.2" y="471.0205">resourceDTO</text><polygon fill="#181818" points="574.8,489.7453,580.8,492.1453,574.8,494.5453,577.2,492.1453" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="418.2" x2="578.4" y1="492.1453" y2="492.1453"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="422.4" y="489.2314">18</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="2.4" x="433.2" y="489.2314"> </text><rect fill="#E2E2F0" height="18.9656" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="144" x="582" y="478.7344"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="135.6" x="586.2" y="491.6543">resourcesDTO:List&lt;ResourceDTO&gt;</text><polygon fill="#181818" points="643.8,515.3109,649.8,517.7109,643.8,520.1109,646.2,517.7109" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="418.2" x2="647.4" y1="517.7109" y2="517.7109"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="422.4" y="514.7971">19</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="63" x="433.2" y="514.7971">add(resourceDTO)</text><polygon fill="#181818" points="285,555.7219,279,558.1219,285,560.5219,282.6,558.1219" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="281.4" x2="414.6" y1="558.1219" y2="558.1219"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="288.6" y="555.208">20</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="49.8" x="299.4" y="555.208">resourcesDTO</text><polygon fill="#181818" points="132,573.9328,126,576.3328,132,578.7328,129.6,576.3328" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="128.4" x2="274.8" y1="576.3328" y2="576.3328"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="8.4" x="135.6" y="573.4189">21</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="118.8" x="146.4" y="573.4189">ResponseEntity(result,HttpStatus)</text><!--MD5=[fbf5736e4df6d754f75843b3b1f6a9e4]
+@startuml
+'https://plantuml.com/sequence-diagram
+participant Routes as route
+participant ":ResourceController" as Controller
+participant ":ApplicationServiceCreateResource" as Application
+participant "projectID: ProjectID " as VOprojID <<Value Object>>
+participant "resourcesDTO:List<ResourceDTO>" as DTOlist
+participant ":ResourceRepositoryImpl" as ResRepo
+participant ":IResourceRepositoryJPA" as JPARepo
+participant "resourceJPA:List<ResourceJPA>" as JPAresource
+participant ":ResourceDomaintoDataAssembler" as AssemblerRes
+participant "resources:List<Resource>" as list
+participant ":ResourceMapper" as Mapper
+participant "resourceDTO:ResourceDTO" as DTO
+
+autonumber
+
+[o- -> route : GET/projects/{pid}/resources
+activate route
+route -> Controller :getResourcesByProjectID(pid,type)
+activate Controller
+Controller -> Application : getAllResourcesByProjectID(pid);
+activate Application
+Application- ->VOprojID**
+Application-> ResRepo : findAllByProjectID(projectID)
+activate ResRepo
+loop all resources in project
+ResRepo -> JPARepo : findByProjectID(projectID)
+activate JPARepo
+JPARepo - -> JPAresource**
+JPARepo -> JPAresource : add(resourceJPA);
+activate JPAresource
+deactivate JPAresource
+JPARepo - -> ResRepo : addresourceJPA
+end loop
+deactivate JPARepo
+
+
+loop all the resourceJPA in the list
+
+ResRepo -> AssemblerRes : toDomain(resourceJPA)
+activate AssemblerRes
+AssemblerRes - -> ResRepo : resource
+deactivate  AssemblerRes
+ResRepo - -> list**
+ResRepo -> list : add(resource)
+activate list
+deactivate list
+end loop
+
+
+ResRepo - -> Application :  addResource
+deactivate ResRepo
+
+
+loop all the resourceDTO in the list
+Application -> Mapper : toDTO(resource)
+activate Mapper
+Mapper- ->DTO**
+Mapper- -> Application : resourceDTO
+deactivate Mapper
+
+Application - -> DTOlist**
+Application- -> DTOlist : add(resourceDTO)
+activate DTOlist
+deactivate DTOlist
+end loop
+Application - -> Controller : resourcesDTO
+deactivate Application
+
+Controller - -> route : ResponseEntity(result,HttpStatus)
+
+deactivate Controller
+deactivate route
+
+
+@enduml
+
+@startuml
+participant Routes as route
+participant ":ResourceController" as Controller
+participant ":ApplicationServiceCreateResource" as Application
+participant "projectID: ProjectID " as VOprojID <<Value Object>>
+participant "resourcesDTO:List<ResourceDTO>" as DTOlist
+participant ":ResourceRepositoryImpl" as ResRepo
+participant ":IResourceRepositoryJPA" as JPARepo
+participant "resourceJPA:List<ResourceJPA>" as JPAresource
+participant ":ResourceDomaintoDataAssembler" as AssemblerRes
+participant "resources:List<Resource>" as list
+participant ":ResourceMapper" as Mapper
+participant "resourceDTO:ResourceDTO" as DTO
+
+autonumber
+
+[o- -> route : GET/projects/{pid}/resources
+activate route
+route -> Controller :getResourcesByProjectID(pid,type)
+activate Controller
+Controller -> Application : getAllResourcesByProjectID(pid);
+activate Application
+Application- ->VOprojID**
+Application-> ResRepo : findAllByProjectID(projectID)
+activate ResRepo
+loop all resources in project
+ResRepo -> JPARepo : findByProjectID(projectID)
+activate JPARepo
+JPARepo - -> JPAresource**
+JPARepo -> JPAresource : add(resourceJPA);
+activate JPAresource
+deactivate JPAresource
+JPARepo - -> ResRepo : addresourceJPA
+end loop
+deactivate JPARepo
+
+
+loop all the resourceJPA in the list
+
+ResRepo -> AssemblerRes : toDomain(resourceJPA)
+activate AssemblerRes
+AssemblerRes - -> ResRepo : resource
+deactivate  AssemblerRes
+ResRepo - -> list**
+ResRepo -> list : add(resource)
+activate list
+deactivate list
+end loop
+
+
+ResRepo - -> Application :  addResource
+deactivate ResRepo
+
+
+loop all the resourceDTO in the list
+Application -> Mapper : toDTO(resource)
+activate Mapper
+Mapper- ->DTO**
+Mapper- -> Application : resourceDTO
+deactivate Mapper
+
+Application - -> DTOlist**
+Application- -> DTOlist : add(resourceDTO)
+activate DTOlist
+deactivate DTOlist
+end loop
+Application - -> Controller : resourcesDTO
+deactivate Application
+
+Controller - -> route : ResponseEntity(result,HttpStatus)
+
+deactivate Controller
+deactivate route
+
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

@@ -1,0 +1,109 @@
+@startuml
+package UI {
+	class ViewScrumBoardUI
+}
+
+package Controllers {
+	class ViewScrumBoardController {
+		+getProjectStore() : projectStore
+		+viewScrumBoard(projectCode) : ScrumBoardDTO
+	}
+
+}
+
+package Domain {
+	package Stores {
+		class ProjectStore {
+			+findProjectByCode(projectCode) : Project
+			+getListOwnProjectsDTO(email) : List
+		}
+
+	}
+
+	class ITCompany {
+		+getProjectStore() : ProjectStore
+	}
+
+	class Project {
+		-code : int
+		-name : String
+		-description : String
+		-startDate : Date
+		-sprintDuration : int
+		-plannedSprints : int
+		-endDate : Date
+		-projectStatus : String
+		-budget : double
+		+determineRunningSprint() : Sprint
+	}
+
+	class UserStory {
+		-number : int
+		-statement : String
+		-detail : String
+		-status : String
+		-priority : int
+		-parent : int
+		-effortEstimate : int
+		+getNumber() : int
+		+getStatement() : String
+	}
+
+	class Sprint {
+		-number : int
+		-startDate : LocalDate
+		-endDate : LocalDate
+		+getSprintBacklog() : SprintBacklog
+	}
+
+	class SprintBacklog {
+		+getToDoList() : List
+		+getInProgList() : List
+		+getCodeReviewList() : List
+		+getDoneList() : List
+	}
+
+}
+
+package Mappers {
+	class ScrumBoardDTOMapper {
+		+viewScrumBoard(sb) : ScrumBoardDTO
+	}
+
+	class UserStoryDTOMapper {
+		+createUserStoryDTO(list) : List
+	}
+
+}
+
+package DTOs {
+	class ScrumBoardDTO {
+		+ScrumBoardDTO(toDoListDTO, inProgListDTO, codeReviewListDTO, doneListDTO)
+	}
+
+	class UserStoryDTO {
+		+UserStoryDTO(number, statement)
+	}
+
+}
+
+
+ScrumBoardDTO ..> UserStoryDTO
+ScrumBoardDTOMapper ..> UserStoryDTOMapper
+UserStoryDTOMapper ..> UserStory
+ScrumBoardDTOMapper ..> SprintBacklog
+ViewScrumBoardController ..> ScrumBoardDTOMapper
+ScrumBoardDTOMapper ..> ScrumBoardDTO
+UserStoryDTOMapper ..> UserStoryDTO
+SprintBacklog "0..*" --> "0..*" UserStory
+SprintBacklog "0..*" --> "0..*" UserStory
+SprintBacklog "0..*" --> "0..*" UserStory
+SprintBacklog "0..*" --> "0..*" UserStory
+ViewScrumBoardUI ..> ViewScrumBoardController
+Sprint "1" --> "1" SprintBacklog
+Project "1" --> "0..*" Sprint
+UserStory "0..*" -- "1" UserStory
+ITCompany --> "1" ProjectStore
+ProjectStore -- "*" Project
+ViewScrumBoardController ..> ITCompany
+@enduml

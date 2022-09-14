@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Administrator -> UI: Create new Profile request
+activate UI
+UI --> "CreateNewProfileController": "CreateNewProfileController"
+activate "CreateNewProfileController"
+"CreateNewProfileController" -> ITCompany: getProfileStore()
+activate ITCompany
+ITCompany -> ProfileStore: getProfileStore()
+activate ProfileStore
+ITCompany <- ProfileStore: return profileStore
+deactivate ProfileStore
+ITCompany -> ProfileStore: createNewProfile( profileType : String, description : String)
+activate ProfileStore
+loop for every Profiles in ProfileStore
+ProfileStore -> ProfileStore : checkIfProfileIsDuplicated(profileType : String)
+end
+ProfileStore -> ProfileStore : isProfileValid(profileType : String)
+ProfileStore -> ProfileStore : isDescriptionValid(description : String)
+alt successful case
+
+
+
+
+ProfileStore -> Profile ** : newProfile = createNewProfile
+ProfileStore -> ProfileStore : add(newProfile)
+end
+ITCompany <- ProfileStore : return true
+deactivate ProfileStore
+"CreateNewProfileController" <- ITCompany : return true
+deactivate ITCompany
+UI <- "CreateNewProfileController" : return true
+deactivate "CreateNewProfileController"
+
+Administrator <- UI : inform user about operation success
+
+@enduml

@@ -1,0 +1,83 @@
+@startuml
+
+actor "PO / SM / Team Member" as User
+boundary ": ShowProductBacklogUI" as UI
+control ": ShowProductBacklogController" as Controller
+entity ": ITCompany" as IT
+participant "ps : ProjectStore" as store
+participant "p : Project" as proj
+participant ": Resource" as resource
+participant ": Account" as account
+participant "pb : ProductBacklog" as productBacklog
+participant ": User Story" as userStory
+
+activate UI
+activate Controller
+
+autonumber
+[o-> User : Output from US017
+User -> UI : Selects project and chooses\n view product backlog
+UI -> Controller : String = listProductBacklogByPriority(code,email)
+Controller -> IT : ps = getProjectStore(email)
+activate IT
+Controller -> store : p = findProjectByCode(code)
+
+loop
+    activate store
+    store -> proj : hasId(code : int) : boolean
+    deactivate store
+end
+
+Controller -> proj : isOwnProject(email) : boolean
+
+loop
+    activate proj
+    proj --> resource : isResourceActive(email) : boolean
+    activate resource
+
+        alt EndDate==null
+        resource -> account : isAccountEqualTo(email : String) : boolean
+        activate account
+        resource -> resource : isStartDateBefore() : boolean
+        deactivate account
+
+        else "else"
+        resource -> account : isAccountEqualTo(email : String) : boolean
+        activate account
+        resource -> resource : isStartDateBefore() : boolean
+        deactivate account
+        resource -> resource : endDate.isAfter(now()) : boolean
+        end
+
+    deactivate resource
+    deactivate proj
+end
+
+Controller -> IT : ps = getProjectStore(email)
+Controller -> store : p = findProjectByCode(code)
+
+loop
+    activate store
+    store -> proj : hasId(code : int) : boolean
+    deactivate store
+end
+
+Controller -> proj : pb = getProductBacklog()
+activate proj
+
+Controller -> productBacklog : priorityOrderUserStoryList = listProductBacklogByPriority()
+deactivate proj
+activate productBacklog
+
+loop
+    productBacklog -> userStory : getPriority()
+    activate userStory
+    productBacklog -> productBacklog : add User Story
+    deactivate userStory
+end
+productBacklog -> productBacklog : Sort User Stories by priority
+Controller --> UI :  (project code+project name) String
+deactivate productBacklog
+UI -> UI : show product backlog
+
+@enduml

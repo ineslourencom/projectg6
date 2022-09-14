@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/geral.css">
+    <script src="../js/newProfileRequest.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body onload="initData()">
+<h2>Project Management System</h2>
+<a href="../indexInner.html">Return to Entrance</a>
+    <br>
+    <br>
+</div>
+<div>
+    <div class="container">
+                    <form action="/action_page.php">
+                <div class="header" style="text-align:center">
+                    <h2> Account </h2>
+                    <h3> Request a Profile change to System Administrator</h3>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <form action="/action_page.php">
+                    <label for="profiles">Profile Type</label>
+                    <select id="profiles" name="profiles">
+                    </select>
+                    <p id="feedbackProfileType"></p>
+                    <br>
+                    <label for="description">Comment</label>
+                    <br>
+                    <textarea id="description" name="description" placeholder="Insert description..." onchange="validateDescription()"
+                              style="height:100px"></textarea>
+                    <br>
+                    <br>
+                    <br>
+                    </select>
+                    <p id="feedbackDescription"></p>
+                    <input type="button" value="Request new Profile Type" onclick="createNewProfileRequest()">
+                </form>
+            </div>
+        </div>
+    </div>
+<div id="result" ></div>
+</div>
+</body>
+</html>

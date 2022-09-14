@@ -1,0 +1,8 @@
+@startuml
+[*] --> ToDo
+ToDo --> InProgress
+CodeReview --> InProgress
+InProgress --> CodeReview
+CodeReview --> Done
+Done --> [*]
+@enduml

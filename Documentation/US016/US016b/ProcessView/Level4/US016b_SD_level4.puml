@@ -1,0 +1,116 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+participant Routes
+control TaskController as cntrl
+participant AppServiceGetTasksStatus as appService
+participant "USRepository" as usRepo
+participant "us : UserStory" as us
+participant "SprintRepository" as sRepo
+participant "sprint : Sprint" as sp
+participant "taskRepo : TaskRepository" as taskRepo
+participant "task : Task" as task
+participant TaskMapper as mapper
+
+
+[o-> Routes : GET tasksStatus
+Routes -> cntrl : GET tasksStatus
+
+cntrl -> appService : viewTaskStatusFromProject(int projID)
+
+activate appService
+
+appService -> usRepo : findAllUSFromProject(int projID)
+activate usRepo
+appService <- usRepo : return List<UserStory> listOfUS
+deactivate usRepo
+
+
+appService -> sRepo : findAllSprintsFromProject(int projID)
+activate sRepo
+appService <- sRepo : return List<Sprint> listOfSprint
+deactivate sRepo
+
+loop for each User Story in listOfUS
+
+appService -> us : id = getContainerID()
+appService -> appService: listContainerIDs.add(id);
+
+end
+
+loop for each Sprint in listOfSprint
+
+appService -> sp : id = getContainerID()
+appService -> appService: listContainerIDs.add(id);
+
+end
+
+
+loop for each id in listContainerIDs
+group taskJPA - ref
+appService -> taskRepo : getAllTasksFromContainerID(ContainerID containerID)
+activate taskRepo
+appService <- taskRepo : return List<Task> listOfTasks
+deactivate taskRepo
+
+end
+end
+
+
+loop for each task in tasksFromProject
+
+appService -> task : findBelongsTo()
+activate task
+alt belongs to Sprint
+appService <- task : String belongsTo = "Sprint"
+else
+appService <- task : String belongsTo = "User Story"
+deactivate task
+
+end
+
+
+appService -> mapper : toDto(Task task, String belongsTo)
+activate mapper
+mapper -> "dto : TaskStatusDTO" **
+
+mapper -> task : taskNumber = getID().getUUID()
+mapper -> "dto : TaskStatusDTO" : dto.taskNumber = taskNumber
+
+mapper -> task : taskName = getName()
+mapper -> "dto : TaskStatusDTO" : dto.name = taskName
+
+mapper -> "dto : TaskStatusDTO" : dto.belongsTo = belongsTo
+
+mapper -> task : containerID = getContainerID().getValue()
+mapper -> "dto : TaskStatusDTO" : dto.containerID = containerID
+
+mapper -> task : taskStatus = getStatus.getValue().getNameFromDB()
+mapper -> "dto : TaskStatusDTO" : dto.status = status
+
+mapper -> task : percentageOfExecution = getPercentageOfExecution.getValue()
+mapper -> "dto : TaskStatusDTO" : dto.percOfExec = percentageOfExecution
+
+
+
+mapper --> appService : return dto
+deactivate mapper
+
+appService -> appService : listOfTaskStatus.add(TaskDTO dto)
+end
+
+
+
+
+cntrl <-- appService : List <TaskDTO> listOfTaskStatus
+deactivate appService
+Routes <-- cntrl : ResponseEntity
+
+
+
+
+
+@enduml

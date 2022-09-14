@@ -1,0 +1,216 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant " Routes" as routes
+
+participant "Controllers" as ctl
+participant "response\n : ResponseEntity<Object>" as response
+participant "ApplicationServices" as appService
+participant "Repositories" as repos
+participant "DataModel" as datamodel
+participant "JPARepositories" as jparepos
+participant "Domain" as domain
+
+
+participant "DTO" as mapper
+
+
+[o-> routes : PUT /projects/{projectID}/resources/productOwner
+activate routes
+routes -> ctl : defineProductOwner(NewProductOwnerDTO dto,  int projectID)
+activate ctl
+ctl -> appService : defineProductOwner(dto, projectID)
+activate appService
+note right
+dto native types are converted to value objects 
+end note
+appService -> repos : find project by id
+activate repos
+repos -> jparepos : find project by id
+activate jparepos
+jparepos --> repos : projectJPA
+deactivate jparepos
+repos -> datamodel : toDomain(projectJPA)
+activate datamodel
+datamodel -> domain : create project
+activate domain
+domain --> datamodel : project
+deactivate domain
+datamodel --> repos : project
+deactivate datamodel
+
+
+repos --> appService : project
+deactivate repos
+
+appService -> repos : verify account exists
+activate repos
+repos ->jparepos : exists by id
+activate jparepos
+jparepos --> repos : true
+deactivate jparepos
+repos --> appService : true
+deactivate repos
+
+
+appService -> repos : find all resources by account Id
+activate repos
+repos -> jparepos : find all resources by account Id
+activate jparepos
+jparepos --> repos : accountResourcesJPA
+deactivate jparepos
+repos -> datamodel : toDomain(accountResourcesJPA)
+activate datamodel
+datamodel -> domain : create accountResources
+activate domain
+domain --> datamodel : accountResources
+deactivate domain
+datamodel --> repos : accountResources
+deactivate datamodel
+
+repos --> appService :accountResources
+deactivate repos
+
+appService -> repos :  find all resources by projectID
+activate repos
+repos -> jparepos : find all resources by project Id
+activate jparepos
+jparepos --> repos : projectResourcesJPA
+deactivate jparepos
+repos -> datamodel : toDomain(projectResourcesJPA)
+activate datamodel
+datamodel -> domain : create projectResources
+activate domain
+domain --> datamodel : projectResources
+deactivate domain
+
+datamodel --> repos : projectResources
+deactivate datamodel
+
+repos --> appService : projectResources
+deactivate repos
+appService -> domain : make validations (project , accountResources, projectResources, role , allocationPeriod)
+
+
+activate domain
+ref over domain
+
+Validations
+
+end ref
+
+domain --> appService : ok
+
+deactivate domain
+appService -> repos : delete resources with the same role within allocation period
+activate repos
+repos -> jparepos : delete
+activate jparepos
+deactivate jparepos
+deactivate repos
+
+appService -> domain : verify if role is unique in period
+activate domain
+ref over domain
+
+Verify role is unique
+
+end ref
+domain --> appService : is unique / is not unique
+
+
+deactivate domain
+opt is not unique
+appService -> repos : find active product Owner
+activate repos
+repos -> jparepos : find active product Owner
+activate jparepos
+jparepos --> repos : productOwnerJPA
+deactivate jparepos
+repos -> datamodel : toDomain(productOwnerJPA)
+activate datamodel
+datamodel -> domain : create  productOwner
+activate domain
+domain --> datamodel :  productOwner
+deactivate domain
+datamodel --> repos : productOwner
+deactivate datamodel
+
+
+repos --> appService : productOwner
+deactivate repos
+
+appService -> domain: change productOwner end date
+activate domain
+ref over domain
+
+Change end date
+
+end ref
+domain-[hidden]>
+deactivate domain
+appService ->repos : save productOwner
+activate repos
+repos -> datamodel : toData(productOwner)
+activate datamodel
+datamodel --> repos : productOwnerJPA
+deactivate datamodel
+repos -> jparepos : save(productOwnerJPA)
+activate jparepos
+jparepos --> repos : savedProductOwnerJPA
+deactivate jparepos
+repos -> datamodel : toDomain(savedProductOwnerJPA)
+activate datamodel
+datamodel -> domain : create  savedProductOwner
+activate domain
+domain --> datamodel :  savedProductOwner
+deactivate domain
+datamodel --> repos : savedProductOwner
+deactivate datamodel
+repos --> appService : savedProductOwner
+
+deactivate repos
+end opt
+appService -> domain : create Product Owner (accountID, resourceID, role, period, percentage, pID, cost)
+activate domain
+
+domain --> appService : newProductOwner
+deactivate domain
+appService -> repos : save newProductOwner
+
+activate repos
+repos -> datamodel : toData(newProductOwner)
+activate datamodel
+datamodel --> repos : newProductOwnerJPA
+deactivate datamodel
+repos -> jparepos : save(newProductOwnerJPA)
+activate jparepos
+jparepos --> repos : savedNewProductOwnerJPA
+deactivate jparepos
+repos -> datamodel : toDomain(savedNewProductOwnerJPA)
+activate datamodel
+datamodel -> domain : create  savedNewProductOwner
+activate domain
+domain --> datamodel :  savedNewProductOwner
+deactivate domain
+datamodel --> repos : savedNewProductOwner
+deactivate datamodel
+repos --> appService : savedNewProductOwner
+deactivate repos
+appService -> mapper : toDTO(savedNewProductOwner)
+activate mapper
+
+mapper --> appService : resourceDTO
+deactivate mapper
+appService --> ctl : resourceDTO
+deactivate appService
+
+
+
+ctl --> routes : new ResponseEntity(resourceDTO, HTTPStatus.CREATED)
+deactivate ctl
+deactivate routes
+
+@enduml

@@ -1,0 +1,86 @@
+#!/bin/bash
+
+
+
+#Este ficheiro tem de ser guardado na pasta cgi/bin do servidor
+
+
+
+#/var/www/data/ ----> Este Ã© o local onde vÃ£o ficar armazenados os ficheiros BASH gerados pelo scprit
+#Antes de mais serÃ¡ necessÃ¡rio criar estas pastas no servidor
+#cada objecto serÃ¡ um ficheiro
+#Atributos de um objecto serao um path para outro objecto representado por um ficheiro
+TYPOLOGY_STORE=/var/www/data/typologies
+M_CONTENT_FILE=/tmp/.typology.$$.tmp
+
+
+
+
+
+#FunÃ§Ã£o de erro
+error_response(){
+echo "Status: 400 Bad Request"
+echo "Content-type: text/plain"
+echo ""
+echo "ERROR: ${1}"
+rm -f $M_CONTENT_FILE
+exit
+}
+
+
+
+#Verifica se o request tem conteÃºdo.
+if [ "$CONTENT_LENGTH" == 0 ]; then error_response "Body is empty"; fi
+cat > $M_CONTENT_FILE
+
+
+
+#Verifica se o tipo de request Ã© POST
+if [ "$REQUEST_METHOD" != "POST" ]; then error_response "Invalid method. The only supported method is POST."; fi
+
+
+
+#Verifica se a query-string nÃ£o estÃ¡ vazia, pois queremos que esteja
+if [ ! -z "$QUERY_STRING" ]; then error_response "Invalid. Data found on the query-string"; fi
+
+
+
+#Criar content
+CONTENT=$(cat $M_CONTENT_FILE);
+
+
+
+#Guardar a primeira variÃ¡vel
+NAME=$(echo $CONTENT | cut -d "_" -f 1 )
+NAME=${NAME#Typology=}
+NAME=$(echo $NAME | xargs)
+if [ -z "$NAME" ]; then error_response "empty name"; fi
+
+
+
+if [ $(ls -1 "$TYPOLOGY_STORE" | grep "$NAME" | wc -l ) -ge "1" ]; then error_response "There already is a typology with same name"; fi
+
+
+
+#Guardar a segunda variÃ¡vel
+DESCRIPTION=$(echo $CONTENT | cut -d "_" -f 2 )
+DESCRIPTION=${DESCRIPTION#description=}
+DESCRIPTION=$(echo $DESCRIPTION | xargs)
+if [ -z "$DESCRIPTION" ]; then error_response "empty typology"; fi
+
+
+
+
+#Criar ficheiro typology
+echo '<?xml version="1.0"?>' > "$TYPOLOGY_STORE/$NAME.txt"
+echo "<typology>" >> "$TYPOLOGY_STORE/$NAME.txt"
+echo "<name>"$NAME"</name>" >> "$TYPOLOGY_STORE/$NAME.txt"
+echo "<description>"$DESCRIPTION"</description>" >> "$TYPOLOGY_STORE/$NAME.txt"
+echo "</typology>" >> "$TYPOLOGY_STORE/$NAME.txt"
+
+
+
+#Enviar resposta http
+rm -f $M_CONTENT_FILE;
+echo "Content-type: text/plain"
+echo ""

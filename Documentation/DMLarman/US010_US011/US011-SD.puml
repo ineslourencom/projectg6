@@ -1,0 +1,96 @@
+@startuml
+actor "Authenticated User" as user
+boundary "ResetPasswordUI" as UI
+control "ResetPasswordController" as Controller
+entity "ITCompany" as ITCompany
+entity "iTCompany : ITCompany" as itc
+participant "as : AccountStore" as accstore
+participant "a : Account" as acc
+participant ": Profile" as prof
+participant "PasswordHashFactory" as phfactory
+participant "pHFactoryInstance : PasswordHashFactory" as pHFactoryInstance
+participant "a.ph : PasswordHash" as passhash
+participant "ph2 : PasswordHash" as passhash2
+
+autonumber
+user -> UI : Open 'Reset Password' UI
+activate UI
+UI -> Controller : isNotVisitorProfile(email : String) : boolean
+activate Controller
+Controller -> ITCompany : iTCompany = getITCompany()
+activate ITCompany
+ITCompany -> itc ** : new ITCompany()
+deactivate ITCompany
+Controller -> itc : as = getAccountStore()
+activate itc
+Controller -> accstore : a = findAccountByEmail(email : String)
+deactivate itc
+activate accstore
+loop
+    accstore -> acc : isAccountEqualTo(email) : boolean
+    activate acc
+end
+deactivate accstore
+deactivate acc
+Controller -> acc : isNotVisitorProfile() : boolean
+activate acc
+acc -> prof : checkIfVisitor() : boolean
+activate prof
+prof --> acc : true
+deactivate prof
+acc --> Controller : true
+deactivate acc
+Controller --> UI : true
+deactivate Controller
+UI --> user : show 'Reset Password' UI\n and ask for old password
+
+user -> UI : input old password
+UI --> user : ask for new password
+user -> UI : input new password
+UI -> UI : validate password rules
+UI --> user : ask to confirm new password
+user -> UI : input new password again
+UI -> UI : check confirmed password is\n the same as new password
+
+UI --> Controller : changePassword(email : String, oldPassword : String,\n newPassword : String) : boolean
+activate Controller
+Controller -> phfactory : pHFactoryInstance = getInstance()
+activate phfactory
+phfactory -> pHFactoryInstance ** : create
+deactivate phfactory
+Controller -> itc : as = getAccountStore()
+activate itc
+Controller -> accstore : a = findAccountByEmail(email : String)
+deactivate itc
+activate accstore
+loop
+    accstore -> acc : isAccountEqualTo(email) : boolean
+    activate acc
+end
+deactivate accstore
+deactivate acc
+Controller -> acc : resetPassword(oldPassword : String, newPassword : String,\n   pHFactoryInstance : PasswordHashFactory) : boolean
+activate acc
+
+acc -> passhash : true = isMatchPassword(oldPassword) : boolean
+activate passhash
+deactivate passhash
+
+acc -> acc : true = [oldPassword != newPassword]
+
+acc -> pHFactoryInstance : createPasswordHash(newPassword)
+activate pHFactoryInstance
+pHFactoryInstance -> passhash2 ** : create
+pHFactoryInstance --> acc : ph2
+deactivate pHFactoryInstance
+
+acc -> acc : a.passwordHash = ph2
+
+acc --> Controller : true
+deactivate acc
+Controller --> UI : operation successful
+
+deactivate Controller
+UI --> user : operation successful
+deactivate UI
+@enduml
